@@ -1,0 +1,108 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для центрирования формы */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%; /* Дополнительный отступ с боков для малых экранов */
+    background-color: black;
+}
+
+/* Стили для формы */
+.auth-form {
+    background-color: gray;
+    padding: 3%; /* Процентные отступы внутри формы */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Заголовок формы */
+h2 {
+    margin-bottom: 5%; /* Процентные отступы для заголовка */
+    color: white;
+}
+
+/* Стили для группы полей ввода */
+.form-group {
+    margin-bottom: 5%; /* Процентные отступы снизу */
+    margin-left: 5%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: white;
+}
+
+/* Поля ввода */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Кнопка отправки */
+button.btn {
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    font-size: 1.2em;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ссылка на регистрацию/авторизацию */
+.auth-link {
+    margin-top: 10%;
+}
+
+.auth-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптация для мобильных устройств с маленьким экраном */
+@media (max-width: 576px) {
+    .auth-form {
+        padding: 10%; /* Увеличение внутреннего отступа на малых экранах */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Уменьшение размера шрифта для заголовка */
+    }
+
+    input, button.btn {
+        font-size: 1em; /* Адаптация размера шрифта для ввода и кнопки */
+    }
+
+    .form-group {
+        margin-bottom: 8%; /* Увеличенные отступы для элементов формы */
+    }
+}
