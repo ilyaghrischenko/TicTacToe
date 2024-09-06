@@ -1,4 +1,4 @@
-namespace Domain.Models;
+namespace Domain.DbModels;
 
 public class User
 {

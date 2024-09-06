@@ -1,6 +1,6 @@
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
-using Domain.Models;
+using Domain.DbModels;
 
 namespace Service;
 
@@ -18,6 +18,7 @@ public class FriendService(IFriendRepository repository) : IFriendService
         return await _repository.GetFriend(id) ?? null;
     }
 
+    //TODO: Finish methods
     public async Task<bool> AddFriend(Friend friend)
     {
         throw new NotImplementedException();

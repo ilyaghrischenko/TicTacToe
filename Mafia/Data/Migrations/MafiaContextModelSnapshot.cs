@@ -22,7 +22,7 @@ namespace Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Data.Models.Friend", b =>
+            modelBuilder.Entity("Data.DbModels.Friend", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace Data.Migrations
                     b.ToTable("Friends");
                 });
 
-            modelBuilder.Entity("Data.Models.Role", b =>
+            modelBuilder.Entity("Data.DbModels.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,7 +70,7 @@ namespace Data.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("Data.Models.Statistic", b =>
+            modelBuilder.Entity("Data.DbModels.Statistic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,7 +94,7 @@ namespace Data.Migrations
                     b.ToTable("Statistics");
                 });
 
-            modelBuilder.Entity("Data.Models.User", b =>
+            modelBuilder.Entity("Data.DbModels.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -127,21 +127,21 @@ namespace Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Data.Models.Friend", b =>
+            modelBuilder.Entity("Data.DbModels.Friend", b =>
                 {
-                    b.HasOne("Data.Models.User", "FriendUser")
+                    b.HasOne("Data.DbModels.User", "FriendUser")
                         .WithMany()
                         .HasForeignKey("FriendUserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Data.Models.User", "User")
+                    b.HasOne("Data.DbModels.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Data.Models.User", null)
+                    b.HasOne("Data.DbModels.User", null)
                         .WithMany("Friends")
                         .HasForeignKey("UserId1");
 
@@ -150,9 +150,9 @@ namespace Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Data.Models.Statistic", b =>
+            modelBuilder.Entity("Data.DbModels.Statistic", b =>
                 {
-                    b.HasOne("Data.Models.User", "User")
+                    b.HasOne("Data.DbModels.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -161,16 +161,16 @@ namespace Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Data.Models.User", b =>
+            modelBuilder.Entity("Data.DbModels.User", b =>
                 {
-                    b.HasOne("Data.Models.Role", "Role")
+                    b.HasOne("Data.DbModels.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId");
 
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("Data.Models.User", b =>
+            modelBuilder.Entity("Data.DbModels.User", b =>
                 {
                     b.Navigation("Friends");
                 });

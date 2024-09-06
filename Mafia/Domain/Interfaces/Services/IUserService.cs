@@ -1,4 +1,4 @@
-using Domain.Models;
+using Domain.DbModels;
 
 namespace Domain.Interfaces.Services;
 

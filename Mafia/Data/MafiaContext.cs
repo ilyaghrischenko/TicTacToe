@@ -1,4 +1,4 @@
-using Domain.Models;
+using Domain.DbModels;
 using Microsoft.EntityFrameworkCore;
 namespace Data;
 
