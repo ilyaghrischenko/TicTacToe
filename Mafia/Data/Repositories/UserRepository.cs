@@ -18,6 +18,12 @@ public class UserRepository : IUserRepository
         return await context.Users.FindAsync(id);
     }
 
+    public async Task<User?> GetUser(string login)
+    {
+        using var context = new MafiaContext();
+        return await context.Users.FirstOrDefaultAsync(user => user.Login == login);
+    }
+
     public async Task<bool> AddUser(User user)
     {
         using var context = new MafiaContext();

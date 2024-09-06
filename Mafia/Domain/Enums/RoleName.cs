@@ -6,5 +6,5 @@ public enum RoleName
     Citizen,
     Doctor,
     Sheriff,
-    Slut
+    Slut,
 }
