@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "Ee4K7z+QMe0erAzf/Epl3d7uS+cp6yJzWSmXR2jB4Cs=",
+  "Hash": "TZfvDx9pwN27mhkgwpPCnoY8um3xVFMlQW0Dt3MUHsA=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Application\\wwwroot",
+      "Source": "Application",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\auth.html",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "RelativePath": "pages/auth.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\auth.html"
+    },
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\registration.html",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "RelativePath": "pages/registration.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\registration.html"
+    },
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\styles\\authRegStyles.css",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "RelativePath": "styles/authRegStyles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\authRegStyles.css"
+    }
+  ]
 }
