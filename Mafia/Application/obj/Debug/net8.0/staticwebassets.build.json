@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TZfvDx9pwN27mhkgwpPCnoY8um3xVFMlQW0Dt3MUHsA=",
+  "Hash": "yZej6T+1OrDf9iJP+4zGQPHMVes95WTjhOK7J3uF8I8=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pages\\registration.html"
+    },
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\scripts\\authScript.js",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "RelativePath": "scripts/authScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\authScript.js"
     },
     {
       "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\styles\\authRegStyles.css",

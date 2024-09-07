@@ -13,13 +13,13 @@ namespace Application.Controllers
         private readonly IUserRepository _userRepository = userRepository;
 
         //TODO: create services and implement them to controller
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
             var user = await _userRepository.GetUser(loginModel.login);
-            if (user == null) return NotFound();
+            if (user == null) return NotFound("User not found");
             
-            if (user.Password != loginModel.password) return NotFound();
+            if (user.Password != loginModel.password) return NotFound("Wrong password");
             
             return Ok();
         }
