@@ -14,3 +14,5 @@ C:\github\Mafia\Mafia\Service\obj\Debug\net8.0\Service.dll
 C:\github\Mafia\Mafia\Service\obj\Debug\net8.0\refint\Service.dll
 C:\github\Mafia\Mafia\Service\obj\Debug\net8.0\Service.pdb
 C:\github\Mafia\Mafia\Service\obj\Debug\net8.0\ref\Service.dll
+C:\github\Mafia\Mafia\Service\bin\Debug\net8.0\DTO.dll
+C:\github\Mafia\Mafia\Service\bin\Debug\net8.0\DTO.pdb

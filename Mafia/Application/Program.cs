@@ -1,6 +1,9 @@
 using Data.Repositories;
+using Domain.DbModels;
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
+using Service.Interfaces;
+using Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +14,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IFriendRepository, FriendRepository>();
-builder.Services.AddScoped<IRoleRepository, RoleRepository>();
-builder.Services.AddScoped<IStatisticRepository, StatisticRepository>();
+builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
+builder.Services.AddScoped<IRepository<Role>, RoleRepository>();
+builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,12 @@
+C:\github\Mafia\Mafia\DTO\bin\Debug\net8.0\DTO.deps.json
+C:\github\Mafia\Mafia\DTO\bin\Debug\net8.0\DTO.dll
+C:\github\Mafia\Mafia\DTO\bin\Debug\net8.0\DTO.pdb
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.sourcelink.json
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.dll
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\refint\DTO.dll
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\DTO.pdb
+C:\github\Mafia\Mafia\DTO\obj\Debug\net8.0\ref\DTO.dll

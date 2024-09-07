@@ -1,30 +1,31 @@
 using Domain.Interfaces.Repositories;
 using Domain.DbModels;
+using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    public async Task<List<User>?> GetUsers()
+    public async Task<List<User>?> GetAll()
     {
         using var context = new MafiaContext();
         return await context.Users.ToListAsync();
     }
 
-    public async Task<User?> GetUser(int id)
+    public async Task<User?> Get(int id)
     {
         using var context = new MafiaContext();
         return await context.Users.FindAsync(id);
     }
 
-    public async Task<User?> GetUser(string login)
+    public async Task<User?> Get(string login)
     {
         using var context = new MafiaContext();
         return await context.Users.FirstOrDefaultAsync(user => user.Login == login);
     }
 
-    public async Task<bool> AddUser(User user)
+    public async Task<bool> Add(User user)
     {
         using var context = new MafiaContext();
         try
@@ -39,7 +40,7 @@ public class UserRepository : IUserRepository
         }
     }
 
-    public async Task<bool> RemoveUser(int id)
+    public async Task<bool> Delete(int id)
     {
         using var context = new MafiaContext();
         try
@@ -55,7 +56,7 @@ public class UserRepository : IUserRepository
         }
     }
 
-    public async Task<bool> UpdateUser(User user)
+    public async Task<bool> Update(User user)
     {
         using var context = new MafiaContext();
         try

@@ -11,7 +11,7 @@ public class Sheriff(IUserRepository userRepository): Role
     
     public async Task<bool> Check(int userId)
     {
-        var userToCheck = await _userRepository.GetUser(userId);
+        var userToCheck = await _userRepository.Get(userId);
         if (userToCheck == null) return false;
 
         return userToCheck.Role.RoleName == RoleName.Mafia;
@@ -21,11 +21,11 @@ public class Sheriff(IUserRepository userRepository): Role
     {
         if (!_canShoot) return false;
         
-        var userToShoot = await _userRepository.GetUser(userId);
+        var userToShoot = await _userRepository.Get(userId);
         if (userToShoot == null) return false;
         
         userToShoot.Role.Statuses.Add(Status.Shot);
-        await _userRepository.UpdateUser(userToShoot);
+        await _userRepository.Update(userToShoot);
         
         _canShoot = false;
         return true;

@@ -10,11 +10,11 @@ public class Slut(IUserRepository userRepository): Role
 
     public async Task<bool> Blocked(int userId)
     {
-        var userToBlock = await _userRepository.GetUser(userId);
+        var userToBlock = await _userRepository.Get(userId);
         if (userToBlock == null) return false;
         
         userToBlock.Role.Statuses.Add(Status.Silenced);
-        await _userRepository.UpdateUser(userToBlock);
+        await _userRepository.Update(userToBlock);
         return true;
     }
 }

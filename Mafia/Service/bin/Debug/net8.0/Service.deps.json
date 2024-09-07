@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Service/1.0.0": {
         "dependencies": {
+          "DTO": "1.0.0",
           "Domain": "1.0.0"
         },
         "runtime": {
@@ -17,6 +18,11 @@
       "Domain/1.0.0": {
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "DTO/1.0.0": {
+        "runtime": {
+          "DTO.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -264,3 +264,5 @@ C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Service.dll
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Data.pdb
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Service.pdb
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Application.staticwebassets.runtime.json
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\DTO.dll
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\DTO.pdb

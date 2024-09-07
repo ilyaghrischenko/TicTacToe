@@ -4,21 +4,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
-public class FriendRepository : IFriendRepository
+public class FriendRepository : IRepository<Friend>
 {
-    public async Task<List<Friend>?> GetFriends()
+    public async Task<List<Friend>?> GetAll()
     {
         using var context = new MafiaContext();
         return await context.Friends.ToListAsync();
     }
 
-    public async Task<Friend?> GetFriend(int id)
+    public async Task<Friend?> Get(int id)
     {
         using var context = new MafiaContext();
         return await context.Friends.FindAsync(id);
     }
 
-    public async Task<bool> AddFriend(Friend friend)
+    public async Task<bool> Add(Friend friend)
     {
         using var context = new MafiaContext();
         try
@@ -33,7 +33,7 @@ public class FriendRepository : IFriendRepository
         }
     }
 
-    public async Task<bool> RemoveFriend(int id)
+    public async Task<bool> Delete(int id)
     {
         using var context = new MafiaContext();
         try
@@ -49,7 +49,7 @@ public class FriendRepository : IFriendRepository
         }
     }
 
-    public async Task<bool> UpdateFriend(Friend friend)
+    public async Task<bool> Update(Friend friend)
     {
         using var context = new MafiaContext();
         try

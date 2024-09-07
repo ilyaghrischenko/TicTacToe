@@ -1,3 +1,3 @@
-namespace Application.Models;
+namespace DTO.Models;
 
 public record LoginModel(string login, string password);

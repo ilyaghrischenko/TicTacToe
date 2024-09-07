@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\scripts\\authScript.js"
     },
     {
+      "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\scripts\\regScript.js",
+      "PackagePath": "staticwebassets\\scripts\\regScript.js"
+    },
+    {
       "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\styles\\authRegStyles.css",
       "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
     },

@@ -4,21 +4,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
-public class StatisticRepository : IStatisticRepository
+public class StatisticRepository : IRepository<Statistic>
 {
-    public async Task<List<Statistic>?> GetStatistics()
+    public async Task<List<Statistic>?> GetAll()
     {
         using var context = new MafiaContext();
         return await context.Statistics.ToListAsync();
     }
 
-    public async Task<Statistic?> GetStatistic(int id)
+    public async Task<Statistic?> Get(int id)
     {
         using var context = new MafiaContext();
         return await context.Statistics.FindAsync(id);
     }
 
-    public async Task<bool> AddStatistic(Statistic statistic)
+    public async Task<bool> Add(Statistic statistic)
     {
         using var context = new MafiaContext();
         try
@@ -33,7 +33,7 @@ public class StatisticRepository : IStatisticRepository
         }
     }
 
-    public async Task<bool> RemoveStatistic(int id)
+    public async Task<bool> Delete(int id)
     {
         using var context = new MafiaContext();
         try
@@ -49,7 +49,7 @@ public class StatisticRepository : IStatisticRepository
         }
     }
 
-    public async Task<bool> UpdateStatistic(Statistic statistic)
+    public async Task<bool> Update(Statistic statistic)
     {
         using var context = new MafiaContext();
         try

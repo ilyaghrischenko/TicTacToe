@@ -2,12 +2,7 @@ using Domain.DbModels;
 
 namespace Domain.Interfaces.Repositories;
 
-public interface IUserRepository
+public interface IUserRepository : IRepository<User>
 {
-    public Task<List<User>?> GetUsers();
-    public Task<User?> GetUser(int id);
-    public Task<User?> GetUser(string login);
-    public Task<bool> AddUser(User user);
-    public Task<bool> RemoveUser(int id);
-    public Task<bool> UpdateUser(User user);
+    public Task<User?> Get(string login);
 }

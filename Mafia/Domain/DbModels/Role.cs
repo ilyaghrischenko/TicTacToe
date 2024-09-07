@@ -24,11 +24,11 @@ public class Role
     //TODO: create services
     public async Task<bool> Vote(int userId)
     {
-        var userToVote = await _userRepository.GetUser(userId);
+        var userToVote = await _userRepository.Get(userId);
         if (userToVote == null) return false;
         
         userToVote.Role.countVotes++;
-        await _userRepository.UpdateUser(userToVote);
+        await _userRepository.Update(userToVote);
         return true;
     }
     

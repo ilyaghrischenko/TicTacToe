@@ -10,11 +10,11 @@ public class Mafia(IUserRepository userRepository): Role
     
     public async Task<bool> Kill(int userId)
     {
-        var userToKill = await _userRepository.GetUser(userId);
+        var userToKill = await _userRepository.Get(userId);
         if (userToKill == null) return false;
 
         userToKill.Role.Statuses.Add(Status.Killed);
-        await _userRepository.UpdateUser(userToKill);
+        await _userRepository.Update(userToKill);
         return true;
     }
 }

@@ -13,13 +13,13 @@ public class Doctor(IUserRepository userRepository): Role
     {
         if (!_canCureSelf) return false;
         
-        var userToCure = await _userRepository.GetUser(userId);
+        var userToCure = await _userRepository.Get(userId);
         if (userToCure == null) return false;
 
         if (Id == userId) _canCureSelf = false;
         
         userToCure.Role.Statuses.Add(Status.Healed);
-        await _userRepository.UpdateUser(userToCure);
+        await _userRepository.Update(userToCure);
         return true;
     }
 }
