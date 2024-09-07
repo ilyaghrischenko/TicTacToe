@@ -17,6 +17,11 @@ namespace Application.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             try
             {
                 await _accountService.Login(loginModel);
@@ -29,6 +34,10 @@ namespace Application.Controllers
             {
                 return Unauthorized(ex.Message);
             }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             
             return Ok();
         }
@@ -36,6 +45,11 @@ namespace Application.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             try
             {
                 await _accountService.Register(registerModel);
@@ -43,6 +57,10 @@ namespace Application.Controllers
             catch (ArgumentException ex)
             {
                 return Conflict(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
 
             return Ok();

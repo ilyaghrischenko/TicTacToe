@@ -12,18 +12,18 @@ public class AccountService(IUserRepository userRepository) : IAccountService
     
     public async Task Login(LoginModel loginModel)
     {
-        var user = await _userRepository.Get(loginModel.login);
+        var user = await _userRepository.Get(loginModel.Login);
         if (user == null) throw new KeyNotFoundException("User not found");
             
-        if (user.Password != loginModel.password) throw new ArgumentException("Wrong password");
+        if (user.Password != loginModel.Password) throw new ArgumentException("Wrong password");
     }
 
     public async Task Register(RegisterModel registerModel)
     {
-        var user = await _userRepository.Get(registerModel.login);
+        var user = await _userRepository.Get(registerModel.Login);
         if (user != null) throw new ArgumentException("User already exists");
             
-        user = new User(registerModel.login, registerModel.password, registerModel.email, null, null);
+        user = new User(registerModel.Login, registerModel.Password, registerModel.Email, null, null);
         await _userRepository.Add(user);
     }
 }

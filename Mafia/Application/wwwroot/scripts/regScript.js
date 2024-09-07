@@ -10,12 +10,6 @@ form.addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
     
-    if (password !== confirmPassword) {
-        document.getElementById('confirm-password').focus();
-        alert('Passwords do not match');
-        return;
-    }
-    
     const response = await fetch('/api/Account/register', {
         method: 'POST',
         headers: {
