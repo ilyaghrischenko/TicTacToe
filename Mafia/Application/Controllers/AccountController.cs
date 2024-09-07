@@ -17,7 +17,7 @@ namespace Application.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid is false)
             {
                 return BadRequest(ModelState);
             }
@@ -39,13 +39,13 @@ namespace Application.Controllers
                 return BadRequest(ex.Message);
             }
             
-            return Ok();
+            return Ok("Successfully login");
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid is false)
             {
                 return BadRequest(ModelState);
             }
@@ -63,7 +63,7 @@ namespace Application.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Ok("Successfully register");
         }
     }
 }

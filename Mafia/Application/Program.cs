@@ -5,7 +5,7 @@ using Domain.Interfaces.Services;
 using Service.Interfaces;
 using Service.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -13,13 +13,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
-builder.Services.AddScoped<IRepository<Role>, RoleRepository>();
-builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
-builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddSingleton<IUserRepository, UserRepository>();
+builder.Services.AddSingleton<IRepository<Friend>, FriendRepository>();
+builder.Services.AddSingleton<IRepository<Role>, RoleRepository>();
+builder.Services.AddSingleton<IRepository<Statistic>, StatisticRepository>();
+builder.Services.AddSingleton<IAccountService, AccountService>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
