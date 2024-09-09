@@ -25,6 +25,7 @@ namespace Application.Controllers
             try
             {
                 await _accountService.Login(loginModel);
+                return Ok("Successfully login");
             }
             catch (KeyNotFoundException ex)
             {
@@ -38,8 +39,6 @@ namespace Application.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
-            return Ok("Successfully login");
         }
 
         [HttpPost("register")]
@@ -53,6 +52,7 @@ namespace Application.Controllers
             try
             {
                 await _accountService.Register(registerModel);
+                return Ok("Successfully register");
             }
             catch (ArgumentException ex)
             {
@@ -62,8 +62,6 @@ namespace Application.Controllers
             {
                 return BadRequest(ex.Message);
             }
-
-            return Ok("Successfully register");
         }
     }
 }

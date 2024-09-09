@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\pages\\auth.html"
     },
     {
+      "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\main.html",
+      "PackagePath": "staticwebassets\\pages\\main.html"
+    },
+    {
       "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\registration.html",
       "PackagePath": "staticwebassets\\pages\\registration.html"
     },
@@ -13,12 +17,20 @@
       "PackagePath": "staticwebassets\\scripts\\authScript.js"
     },
     {
+      "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\scripts\\main.js",
+      "PackagePath": "staticwebassets\\scripts\\main.js"
+    },
+    {
       "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\scripts\\regScript.js",
       "PackagePath": "staticwebassets\\scripts\\regScript.js"
     },
     {
       "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\styles\\authRegStyles.css",
       "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\styles\\main.css",
+      "PackagePath": "staticwebassets\\styles\\main.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Application.Microsoft.AspNetCore.StaticWebAssets.props",
