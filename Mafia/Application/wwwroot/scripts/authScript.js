@@ -19,8 +19,24 @@ loginForm.addEventListener('submit', async (e) => {
         })
     });
     
+    //TODO: Handle errors and display them
     if (!response.ok) {
-        console.error(`Error while login: ${response.status}`);
+        const data = await response.json();
+        const errors = Object.keys(data.errors).map(key=>({
+            Field: key, 
+            Errors: data.errors[key]
+        }));
+        const errorDiv = document.getElementById('errors');
+        errorDiv.innerHTML = '';
+        //
+        console.dir(errors);
+        //
+        errors.forEach(error => {
+            const errorElement = document.createElement('div');
+            errorElement.className = 'error';
+            errorElement.innerText = `${error.field}: ${error.errors.join(', ')}`;
+            errorDiv.appendChild(errorElement);
+        });
     } else {
         console.log(`Successful login: ${response.status}`);
     }
