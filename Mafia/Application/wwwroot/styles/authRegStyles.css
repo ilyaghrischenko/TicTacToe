@@ -16,6 +16,12 @@ body {
     background-color: #292325;
 }
 
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* Стили для формы */
 .auth-form {
     background-color: black;

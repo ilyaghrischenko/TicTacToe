@@ -22,22 +22,24 @@ loginForm.addEventListener('submit', async (e) => {
     //TODO: Handle errors and display them
     if (!response.ok) {
         const data = await response.json();
-        const errors = Object.keys(data.errors).map(key=>({
-            Field: key, 
-            Errors: data.errors[key]
-        }));
+        const errors = data.errors;
+
         const errorDiv = document.getElementById('errors');
         errorDiv.innerHTML = '';
-        //
-        console.dir(errors);
-        //
-        errors.forEach(error => {
-            const errorElement = document.createElement('div');
-            errorElement.className = 'error';
-            errorElement.innerText = `${error.field}: ${error.errors.join(', ')}`;
-            errorDiv.appendChild(errorElement);
+
+        Object.keys(errors).forEach(field => {
+            const errorMessages = errors[field];
+            errorMessages.forEach(message => {
+                const errorElement = document.createElement('div');
+                errorElement.className = 'error';
+                errorElement.innerText = `${field}: ${message}`;
+                errorDiv.appendChild(errorElement);
+            });
         });
+        
+        console.log('Errors while logging in');
     } else {
         console.log(`Successful login: ${response.status}`);
+        window.location.href = '../pages/main.html';
     }
 });

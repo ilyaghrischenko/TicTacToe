@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\img\\avatar.png",
+      "PackagePath": "staticwebassets\\img\\avatar.png"
+    },
+    {
       "Id": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\auth.html",
       "PackagePath": "staticwebassets\\pages\\auth.html"
     },
