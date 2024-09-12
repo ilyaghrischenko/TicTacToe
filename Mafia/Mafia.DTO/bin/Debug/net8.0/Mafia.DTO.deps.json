@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Mafia.DTO/1.0.0": {
+        "runtime": {
+          "Mafia.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mafia.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

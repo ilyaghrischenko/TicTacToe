@@ -1,0 +1,12 @@
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.Domain.deps.json
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.Domain.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.Domain.pdb
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.AssemblyInfoInputs.cache
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.AssemblyInfo.cs
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.csproj.CoreCompileInputs.cache
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.sourcelink.json
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.dll
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\refint\Mafia.Domain.dll
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.pdb
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\ref\Mafia.Domain.dll
