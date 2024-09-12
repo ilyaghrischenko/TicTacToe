@@ -37,7 +37,7 @@ loginForm.addEventListener('submit', async (e) => {
             });
         });
         
-        console.log(`Errors while logging in: ${response.status}`);
+        console.error(`Errors while logging in: ${response.status}`);
     } else {
         console.log(`Successful login: ${response.status}`);
         window.location.href = '../pages/main.html';
