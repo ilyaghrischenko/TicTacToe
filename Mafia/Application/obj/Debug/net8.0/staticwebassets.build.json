@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lZdEhk1SdaAAqQsBbXU8MXIs/KitIRM7vSsyRD2UXdQ=",
+  "Hash": "7w6qhE+CtNmHH2wc37itfHioTwfYwRwSeqtyo7kJtYY=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\img\\avatar.png",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\",
+      "BasePath": "_content/Application",
+      "RelativePath": "img/avatar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\avatar.png"
+    },
     {
       "Identity": "C:\\github\\Mafia\\Mafia\\Application\\wwwroot\\pages\\auth.html",
       "SourceId": "Application",

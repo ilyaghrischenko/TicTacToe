@@ -1,0 +1,16 @@
+C:\github\Mafia\Mafia\Validation\bin\Debug\net8.0\Validation.deps.json
+C:\github\Mafia\Mafia\Validation\bin\Debug\net8.0\Validation.dll
+C:\github\Mafia\Mafia\Validation\bin\Debug\net8.0\Validation.pdb
+C:\github\Mafia\Mafia\Validation\bin\Debug\net8.0\DTO.dll
+C:\github\Mafia\Mafia\Validation\bin\Debug\net8.0\DTO.pdb
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.csproj.AssemblyReference.cache
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.AssemblyInfoInputs.cache
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.AssemblyInfo.cs
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.csproj.CoreCompileInputs.cache
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.sourcelink.json
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.csproj.Up2Date
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.dll
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\refint\Validation.dll
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\Validation.pdb
+C:\github\Mafia\Mafia\Validation\obj\Debug\net8.0\ref\Validation.dll

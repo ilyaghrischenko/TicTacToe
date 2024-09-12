@@ -10,24 +10,25 @@
 <div class="container">
     <div class="auth-form">
         <h2>Register</h2>
-        <form id="regForm" method="post">
+        <div id="errors" class="card error"></div>
+        <form id="regForm">
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <label for="Email">Email:</label>
+                <input type="text" id="Email">
             </div>
             <div class="form-group">
-                <label for="username">Login</label>
-                <input type="text" id="username" required>
+                <label for="Login">Login:</label>
+                <input type="text" id="Login">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password">
             </div>
             <div class="form-group">
-                <label for="confirm-password">Confirm password</label>
-                <input type="password" id="confirm-password">
+                <label for="ConfirmPassword">Confirm Password:</label>
+                <input type="password" id="ConfirmPassword">
             </div>
-            <button type="submit" class="btn">Sign up</button>
+            <button type="submit">Register</button>
         </form>
         <div class="auth-link">
             <p>Already have an account? <a href="../pages/auth.html">Log in</a></p>

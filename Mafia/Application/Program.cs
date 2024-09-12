@@ -2,8 +2,12 @@ using Data.Repositories;
 using Domain.DbModels;
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
 using Service.Interfaces;
 using Service.Services;
+using Validation;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -11,13 +15,18 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
 
-builder.Services.AddSingleton<IUserRepository, UserRepository>();
-builder.Services.AddSingleton<IRepository<Friend>, FriendRepository>();
-builder.Services.AddSingleton<IRepository<Role>, RoleRepository>();
-builder.Services.AddSingleton<IRepository<Statistic>, StatisticRepository>();
-builder.Services.AddSingleton<IAccountService, AccountService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
+builder.Services.AddScoped<IRepository<Role>, RoleRepository>();
+builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+
+builder.Services.AddScoped<PasswordHasher<User>>();
 
 WebApplication app = builder.Build();
 

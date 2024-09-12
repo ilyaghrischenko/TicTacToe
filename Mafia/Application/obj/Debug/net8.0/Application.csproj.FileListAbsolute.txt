@@ -266,3 +266,8 @@ C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Service.pdb
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Application.staticwebassets.runtime.json
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\DTO.dll
 C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\DTO.pdb
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\FluentValidation.dll
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Validation.dll
+C:\github\Mafia\Mafia\Application\bin\Debug\net8.0\Validation.pdb

@@ -10,14 +10,15 @@
 <div class="container">
     <div class="auth-form">
         <h2>Authorization</h2>
-        <form method="post" id="loginForm">
+        <div id="errors" class="card error"></div>
+        <form id="loginForm">
             <div class="form-group">
-                <label for="login">Login</label>
-                <input type="text" id="login">
+                <label for="Login">Login</label>
+                <input type="text" id="Login">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password">
+                <label for="Password">Password</label>
+                <input type="password" id="Password">
             </div>
             <button type="submit" class="btn">Log in</button>
         </form>
