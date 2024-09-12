@@ -1,20 +1,16 @@
 using Domain.DbModels;
 using Domain.Enums;
+using Domain.Interfaces.Models;
 using Domain.Interfaces.Repositories;
 
 namespace Domain.Models;
 
-public class Slut(IUserRepository userRepository): Role
+public class Slut(ISlutService slutService): Role
 {
-    private readonly IUserRepository _userRepository = userRepository;
+    private readonly ISlutService _slutService = slutService;
 
     public async Task<bool> Blocked(int userId)
     {
-        var userToBlock = await _userRepository.Get(userId);
-        if (userToBlock == null) return false;
-        
-        userToBlock.Role.Statuses.Add(Status.Silenced);
-        await _userRepository.Update(userToBlock);
-        return true;
+        return await _slutService.Blocked(userId);
     }
 }

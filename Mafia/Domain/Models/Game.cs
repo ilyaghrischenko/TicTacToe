@@ -1,20 +1,15 @@
 using Domain.DbModels;
+using Domain.Interfaces.Models;
 
 namespace Domain.Models;
 
-public class Game(List<User> players)
+public class Game(List<User> players, IGameService gameService)
 {
     public List<User> Players { get; set; } = players;
+    private readonly IGameService _gameService = gameService;
 
     public async Task<bool> Start()
     {
-        if (Players.Count < 5) return false;
-
-        Players.ForEach(player =>
-        {
-            //TODO: end this class
-        });
-        
-        return true;
+        return await _gameService.Start(Players);
     }
 }

@@ -4,7 +4,7 @@ using DTO.Models;
 using Service.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
-namespace Service.Services;
+namespace Service.Services.Controllers;
 
 //TODO: create services and implement them to controller, there should be IUserService
 public class AccountService

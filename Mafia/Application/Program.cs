@@ -1,5 +1,6 @@
 using Data.Repositories;
 using Domain.DbModels;
+using Domain.Interfaces.Models;
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
 using FluentValidation;
@@ -7,6 +8,8 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Service.Interfaces;
 using Service.Services;
+using Service.Services.Controllers;
+using Service.Services.Models;
 using Validation;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -25,6 +28,11 @@ builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
 builder.Services.AddScoped<IRepository<Role>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IMafiaService, MafiaService>();
+builder.Services.AddScoped<ISheriffService, SheriffService>();
+builder.Services.AddScoped<ISlutService, SlutService>();
 
 builder.Services.AddScoped<PasswordHasher<User>>();
 
