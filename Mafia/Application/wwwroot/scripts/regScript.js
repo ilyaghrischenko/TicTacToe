@@ -5,10 +5,10 @@ const form = document.getElementById('regForm');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const login = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
+    const email = document.getElementById('Email').value;
+    const login = document.getElementById('Login').value;
+    const password = document.getElementById('Password').value;
+    const confirmPassword = document.getElementById('ConfirmPassword').value;
 
     const response = await fetch('/api/Account/register', {
         method: 'POST',
@@ -23,8 +23,8 @@ form.addEventListener('submit', async (e) => {
         })
     });
 
-    const errorDiv = document.getElementById('errors');
-    errorDiv.innerHTML = '';
+    const previousTooltips = document.querySelectorAll('.tooltip');
+    previousTooltips.forEach(tooltip => tooltip.remove());
 
     if (!response.ok) {
         const data = await response.json();
@@ -32,12 +32,18 @@ form.addEventListener('submit', async (e) => {
 
         Object.keys(errors).forEach(field => {
             const errorMessages = errors[field];
-            errorMessages.forEach(message => {
-                const errorElement = document.createElement('div');
-                errorElement.className = 'error';
-                errorElement.innerText = `${field}: ${message}`;
-                errorDiv.appendChild(errorElement);
-            });
+            const inputField = document.getElementById(field);
+
+            if (inputField) {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.innerText = errorMessages.join(', ');
+
+                inputField.parentNode.appendChild(tooltip);
+                inputField.classList.add('input-error');
+            } else {
+                console.warn(`Поле с ID "${field}" не найдено в форме`);
+            }
         });
 
         console.error(`Error while registering: ${response.status}`);

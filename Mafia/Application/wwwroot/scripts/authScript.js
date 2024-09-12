@@ -4,10 +4,10 @@ const loginForm = document.querySelector('#loginForm');
 
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    const login = document.querySelector('#login').value;
-    const password = document.querySelector('#password').value;
-    
+
+    const login = document.getElementById('Login').value;
+    const password = document.getElementById('Password').value;
+
     const response = await fetch('/api/Account/login', {
         method: 'POST',
         headers: {
@@ -18,26 +18,31 @@ loginForm.addEventListener('submit', async (e) => {
             password
         })
     });
-    
-    //TODO: Handle errors and display them
+
+    const previousTooltips = document.querySelectorAll('.tooltip');
+    previousTooltips.forEach(tooltip => tooltip.remove());
+
     if (!response.ok) {
         const data = await response.json();
         const errors = data.errors;
 
-        const errorDiv = document.getElementById('errors');
-        errorDiv.innerHTML = '';
-
         Object.keys(errors).forEach(field => {
             const errorMessages = errors[field];
-            errorMessages.forEach(message => {
-                const errorElement = document.createElement('div');
-                errorElement.className = 'error';
-                errorElement.innerText = `${field}: ${message}`;
-                errorDiv.appendChild(errorElement);
-            });
+            const inputField = document.getElementById(field);
+
+            if (inputField) {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.innerText = errorMessages.join(', ');
+
+                inputField.parentNode.appendChild(tooltip);
+                inputField.classList.add('input-error');
+            } else {
+                console.warn(`Поле с ID "${field}" не найдено в форме`);
+            }
         });
-        
-        console.error(`Errors while logging in: ${response.status}`);
+
+        console.error(`Error while registering: ${response.status}`);
     } else {
         console.log(`Successful login: ${response.status}`);
         window.location.href = '../pages/main.html';

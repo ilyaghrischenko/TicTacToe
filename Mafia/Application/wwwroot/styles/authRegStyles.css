@@ -16,11 +16,36 @@ body {
     background-color: #292325;
 }
 
-.error {
-    color: red;
-    font-weight: bold;
-    text-align: center;
+/* Стили для поля с ошибкой */
+.input-error {
+    border-color: red;
 }
+
+/* Стили для облачка */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    background-color: #f8d7da; /* Красноватый цвет для фона */
+    color: #721c24; /* Цвет текста */
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px; /* Сдвигаем треугольник к полю */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #f8d7da transparent transparent;
+}
+
 
 /* Стили для формы */
 .auth-form {
