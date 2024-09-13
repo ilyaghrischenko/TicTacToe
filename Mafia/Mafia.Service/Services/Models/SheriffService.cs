@@ -14,7 +14,7 @@ public class SheriffService(IUserRepository userRepository): ISheriffService
         var userToCheck = await _userRepository.Get(userId);
         if (userToCheck == null) return false;
 
-        return userToCheck.Role.RoleName == RoleName.Mafia;
+        return userToCheck.GameRole.RoleName == RoleName.Mafia;
     }
 
     public async Task<bool> Shoot(int userId)
@@ -24,7 +24,7 @@ public class SheriffService(IUserRepository userRepository): ISheriffService
         var userToShoot = await _userRepository.Get(userId);
         if (userToShoot == null) return false;
         
-        userToShoot.Role.Statuses.Add(Status.Shot);
+        userToShoot.GameRole.Statuses.Add(Status.Shot);
         await _userRepository.Update(userToShoot);
         
         _canShoot = false;

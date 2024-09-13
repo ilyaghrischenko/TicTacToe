@@ -25,7 +25,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
-builder.Services.AddScoped<IRepository<Role>, RoleRepository>();
+builder.Services.AddScoped<IRepository<GameRole>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();

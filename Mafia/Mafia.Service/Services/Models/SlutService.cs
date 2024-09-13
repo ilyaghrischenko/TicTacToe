@@ -13,7 +13,7 @@ public class SlutService(IUserRepository userRepository): ISlutService
         var userToBlock = await _userRepository.Get(userId);
         if (userToBlock == null) return false;
         
-        userToBlock.Role.Statuses.Add(Status.Silenced);
+        userToBlock.GameRole.Statuses.Add(Status.Silenced);
         await _userRepository.Update(userToBlock);
         return true;
     }

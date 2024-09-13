@@ -1,3 +1,5 @@
+using Mafia.Domain.Enums;
+
 namespace Mafia.Domain.DbModels;
 
 public class User
@@ -6,20 +8,22 @@ public class User
     public string Login { get; set; }
     public string Password { get; set; }
     public string Email { get; set; }
+    public Role Role { get; set; }
     
-    public Role? Role { get; set; }
+    public GameRole? GameRole { get; set; }
     
     public byte[]? Avatar { get; set; }
     
     public virtual List<Friend>? Friends { get; set; } = new();
     
     public User() { }
-    public User(string login, string password, string email, Role? role, byte[]? avatar)
+    public User(string login, string password, string email, Role role, GameRole? gameRole, byte[]? avatar)
     {
         Login = login;
         Password = password;
         Email = email;
         Role = role;
+        GameRole = gameRole;
         Avatar = avatar;
     }
     

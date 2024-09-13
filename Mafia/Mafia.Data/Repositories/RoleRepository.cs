@@ -4,26 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mafia.Data.Repositories;
 
-public class RoleRepository : IRepository<Role>
+public class RoleRepository : IRepository<GameRole>
 {
-    public async Task<List<Role>?> GetAll()
+    public async Task<List<GameRole>?> GetAll()
     {
         using var context = new MafiaContext();
         return await context.Roles.ToListAsync();
     }
 
-    public async Task<Role?> Get(int id)
+    public async Task<GameRole?> Get(int id)
     {
         using var context = new MafiaContext();
         return await context.Roles.FindAsync(id);
     }
 
-    public async Task<bool> Add(Role role)
+    public async Task<bool> Add(GameRole gameRole)
     {
         using var context = new MafiaContext();
         try
         {
-            await context.Roles.AddAsync(role);
+            await context.Roles.AddAsync(gameRole);
             await context.SaveChangesAsync();
             return true;
         }
@@ -49,12 +49,12 @@ public class RoleRepository : IRepository<Role>
         }
     }
 
-    public async Task<bool> Update(Role role)
+    public async Task<bool> Update(GameRole gameRole)
     {
         using var context = new MafiaContext();
         try
         {
-            context.Roles.Update(role);
+            context.Roles.Update(gameRole);
             await context.SaveChangesAsync();
             return true;
         }

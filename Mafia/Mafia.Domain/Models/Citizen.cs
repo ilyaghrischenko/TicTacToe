@@ -2,7 +2,7 @@ using Mafia.Domain.DbModels;
 
 namespace Mafia.Domain.Models;
 
-public class Citizen : Role
+public class Citizen : GameRole
 {
     
 }

@@ -3,7 +3,7 @@ using Mafia.Domain.Interfaces.Repositories;
 
 namespace Mafia.Domain.DbModels;
 
-public class Role
+public class GameRole
 {
     private readonly IUserRepository _userRepository;
     
@@ -13,8 +13,8 @@ public class Role
     public List<Status> Statuses { get; set; } = new();
     public int countVotes { get; set; } = 0;
     
-    public Role() { }
-    public Role(RoleName roleName, string description, IUserRepository userRepository)
+    public GameRole() { }
+    public GameRole(RoleName roleName, string description, IUserRepository userRepository)
     {
         RoleName = roleName;
         Description = description;
@@ -27,11 +27,11 @@ public class Role
         var userToVote = await _userRepository.Get(userId);
         if (userToVote == null) return false;
         
-        userToVote.Role.countVotes++;
+        userToVote.GameRole.countVotes++;
         await _userRepository.Update(userToVote);
         return true;
     }
     
     public override string ToString()
-        => $"Role: {RoleName}, Description: {Description}";
+        => $"GameRole: {RoleName}, Description: {Description}";
 }

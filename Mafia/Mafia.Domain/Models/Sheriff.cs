@@ -5,7 +5,7 @@ using Mafia.Domain.Interfaces.Models;
 
 namespace Mafia.Domain.Models;
 
-public class Sheriff(ISheriffService sheriffService): Role
+public class Sheriff(ISheriffService sheriffService): GameRole
 {
     private readonly ISheriffService _sheriffService = sheriffService;
     

@@ -5,7 +5,7 @@ using Mafia.Domain.Interfaces.Models;
 
 namespace Mafia.Domain.Models;
 
-public class Slut(ISlutService slutService): Role
+public class Slut(ISlutService slutService): GameRole
 {
     private readonly ISlutService _slutService = slutService;
 

@@ -13,7 +13,7 @@ public class MafiaService(IUserRepository userRepository): IMafiaService
         var userToKill = await _userRepository.Get(userId);
         if (userToKill == null) return false;
 
-        userToKill.Role.Statuses.Add(Status.Killed);
+        userToKill.GameRole.Statuses.Add(Status.Killed);
         await _userRepository.Update(userToKill);
         return true;
     }

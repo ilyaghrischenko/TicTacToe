@@ -27,7 +27,7 @@ public class MafiaContext : DbContext
     }
     
     public virtual DbSet<User> Users { get; set; }
-    public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<GameRole> Roles { get; set; }
     public virtual DbSet<Friend> Friends { get; set; }
     public virtual DbSet<Statistic> Statistics { get; set; }
 }

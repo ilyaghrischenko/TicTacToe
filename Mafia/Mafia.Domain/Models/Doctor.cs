@@ -5,7 +5,7 @@ using Mafia.Domain.Interfaces.Models;
 
 namespace Mafia.Domain.Models;
 
-public class Doctor(IDoctorService doctorService): Role
+public class Doctor(IDoctorService doctorService): GameRole
 {
     private readonly IDoctorService _doctorService = doctorService;
     
