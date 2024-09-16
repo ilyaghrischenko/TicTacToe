@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\pages\\registration.html"
     },
     {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\userFriends.html",
+      "PackagePath": "staticwebassets\\pages\\userFriends.html"
+    },
+    {
       "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\authScript.js",
       "PackagePath": "staticwebassets\\scripts\\authScript.js"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
       "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userFriends.css",
+      "PackagePath": "staticwebassets\\styles\\userFriends.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Mafia.Api.Microsoft.AspNetCore.StaticWebAssets.props",

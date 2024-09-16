@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Identity;
 using Mafia.Application.Services;
 using Mafia.Application.Services.Controllers;
 using Mafia.Application.Services.Models;
+using Mafia.Data;
 using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.ModelsServices;
 using Mafia.Validation;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -36,6 +38,8 @@ builder.Services.AddScoped<ISheriffService, SheriffService>();
 builder.Services.AddScoped<ISlutService, SlutService>();
 
 builder.Services.AddScoped<PasswordHasher<User>>();
+builder.Services.AddDbContext<MafiaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MafiaContext")));
 
 WebApplication app = builder.Build();
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends</title>
+    <link rel="stylesheet" href="../styles/userFriends.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>Manage Friends</h1>
+
+        <!-- Search Friend -->
+        <div class="form-group">
+            <label for="search-friend">Search Friend</label>
+            <input type="text" id="search-friend" placeholder="Enter friend's name">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+
+        <!-- Add Friend -->
+        <div class="form-group">
+            <label for="friend-name">Friend's Name</label>
+            <input type="text" id="friend-name" placeholder="Enter friend's name">
+        </div>
+        <div class="form-group">
+            <label for="friend-email">Friend's Email</label>
+            <input type="email" id="friend-email" placeholder="Enter friend's email">
+        </div>
+        <button class="btn" id="add-button">Add Friend</button>
+    </div>
+
+    <div class="center-panel">
+        <h2>Friend List</h2>
+        <ul class="friend-list" id="friend-list">
+            <!-- Friends will be dynamically added here -->
+        </ul>
+    </div>
+
+    <div class="right-panel">
+        <div class="statistics">
+            <h2>Statistics</h2>
+            <p>Total Friends: <span id="total-friends">0</span></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
