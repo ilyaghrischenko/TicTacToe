@@ -1,5 +1,5 @@
 using Mafia.Domain.DbModels;
-using Mafia.Domain.Interfaces.Models;
+using Mafia.Domain.Interfaces.ModelsServices;
 
 namespace Mafia.Domain.Models;
 

@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Application", "Mafia.Application\Mafia.Application.csproj", "{85B08091-09C2-49C5-9C68-80C2AD2120B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Api", "Mafia.Api\Mafia.Api.csproj", "{85B08091-09C2-49C5-9C68-80C2AD2120B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Data", "Mafia.Data\Mafia.Data.csproj", "{38898B72-FD4D-42AF-9757-EE611B6E02EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Domain", "Mafia.Domain\Mafia.Domain.csproj", "{65DAF265-789D-49DA-B835-C33A4DF3A3BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Service", "Mafia.Service\Mafia.Service.csproj", "{C80FA834-E898-44F1-8910-C41AA882CA97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Application", "Mafia.Application\Mafia.Application.csproj", "{C80FA834-E898-44F1-8910-C41AA882CA97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.DTO", "Mafia.DTO\Mafia.DTO.csproj", "{6D34003E-A35D-40E4-8CA1-7E99B14C3C4B}"
 EndProject

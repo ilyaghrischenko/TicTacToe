@@ -1,28 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8"/>
-        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="wwwroot\img\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Mafia.Data\Mafia.Data.csproj" />
       <ProjectReference Include="..\Mafia.Domain\Mafia.Domain.csproj" />
       <ProjectReference Include="..\Mafia.DTO\Mafia.DTO.csproj" />
-      <ProjectReference Include="..\Mafia.Service\Mafia.Service.csproj" />
-      <ProjectReference Include="..\Mafia.Validation\Mafia.Validation.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\img\\avatar.png",
+      "PackagePath": "staticwebassets\\img\\avatar.png"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\auth.html",
+      "PackagePath": "staticwebassets\\pages\\auth.html"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\main.html",
+      "PackagePath": "staticwebassets\\pages\\main.html"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\registration.html",
+      "PackagePath": "staticwebassets\\pages\\registration.html"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\authScript.js",
+      "PackagePath": "staticwebassets\\scripts\\authScript.js"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\main.js",
+      "PackagePath": "staticwebassets\\scripts\\main.js"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\regScript.js",
+      "PackagePath": "staticwebassets\\scripts\\regScript.js"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
+      "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
+      "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Mafia.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Mafia.Api.props",
+      "PackagePath": "build\\Mafia.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Mafia.Api.props",
+      "PackagePath": "buildMultiTargeting\\Mafia.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Mafia.Api.props",
+      "PackagePath": "buildTransitive\\Mafia.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
