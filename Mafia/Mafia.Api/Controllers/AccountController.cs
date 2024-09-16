@@ -19,23 +19,7 @@ namespace Mafia.Api.Controllers
                 return BadRequest(errors);
             }
             
-            try
-            {
-                await _accountControllerService.Login(loginModel);
-                return Ok("Successfully login");
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (ArgumentException ex)
-            {
-                return Unauthorized(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok();
         }
 
         [HttpPost("register")]
@@ -46,20 +30,7 @@ namespace Mafia.Api.Controllers
                 var errors = _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
-            
-            try
-            {
-                await _accountControllerService.Register(registerModel);
-                return Ok("Successfully register");
-            }
-            catch (ArgumentException ex)
-            {
-                return Conflict(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok();
         }
     }
 }
