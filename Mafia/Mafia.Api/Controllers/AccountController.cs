@@ -15,7 +15,7 @@ namespace Mafia.Api.Controllers
         {
             if (ModelState.IsValid is false)
             {
-                var errors = await _accountControllerService.GetErrors(ModelState);
+                var errors = _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
             
@@ -43,7 +43,7 @@ namespace Mafia.Api.Controllers
         {
             if (ModelState.IsValid is false)
             {
-                var errors = await _accountControllerService.GetErrors(ModelState);
+                var errors = _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
             

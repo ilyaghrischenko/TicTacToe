@@ -7,5 +7,5 @@ public interface IAccountControllerService
 {
     public Task Login(LoginModel loginModel);
     public Task Register(RegisterModel registerModel);
-    public Task<List<ValidationError>> GetErrors(ModelStateDictionary modelState);
+    public List<ValidationError> GetErrors(ModelStateDictionary modelState);
 }
