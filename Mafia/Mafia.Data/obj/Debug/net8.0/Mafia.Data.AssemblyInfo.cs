@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd24a062ffda8bfe9ae5f263ad01da30f53d5f6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16196fd948168b24ca1143370208118c13670c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
