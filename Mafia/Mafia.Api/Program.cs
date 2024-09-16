@@ -10,6 +10,7 @@ using Mafia.Application.Services.Models;
 using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.ModelsServices;
 using Mafia.Validation;
+using Microsoft.Extensions.FileProviders;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

@@ -14,7 +14,6 @@
 
     <ItemGroup>
       <Folder Include="Controllers\" />
-      <Folder Include="wwwroot\img\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,6 +22,18 @@
       <ProjectReference Include="..\Mafia.DTO\Mafia.DTO.csproj" />
       <ProjectReference Include="..\Mafia.Application\Mafia.Application.csproj" />
       <ProjectReference Include="..\Mafia.Validation\Mafia.Validation.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\img\avatar.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\pages\auth.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\pages\main.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\pages\registration.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\scripts\authScript.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\scripts\main.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\scripts\regScript.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\styles\authRegStyles.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\styles\main.css" />
     </ItemGroup>
 
 </Project>
