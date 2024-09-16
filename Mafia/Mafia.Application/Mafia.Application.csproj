@@ -15,4 +15,10 @@
       <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+        <HintPath>..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.8\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Validation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd24a062ffda8bfe9ae5f263ad01da30f53d5f6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d443efe30f8874cca9185915c2dc2263250f0c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Validation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Validation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

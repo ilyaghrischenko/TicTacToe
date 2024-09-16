@@ -10,7 +10,8 @@
         "dependencies": {
           "Mafia.DTO": "1.0.0",
           "Mafia.Domain": "1.0.0",
-          "Microsoft.AspNetCore.Identity": "2.2.0"
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "8.0.0.0"
         },
         "runtime": {
           "Mafia.Application.dll": {}
@@ -457,6 +458,30 @@
         "runtime": {
           "Mafia.DTO.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Mvc.Abstractions/8.0.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36908"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Routing.Abstractions/8.0.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Routing.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36908"
+          }
+        }
+      },
+      "Microsoft.Extensions.Features/8.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.Features.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36908"
+          }
+        }
       }
     }
   },
@@ -774,6 +799,21 @@
     },
     "Mafia.DTO/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Abstractions/8.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Routing.Abstractions/8.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Features/8.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
