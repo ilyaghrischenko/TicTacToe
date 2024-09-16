@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mafia.Data.Migrations
 {
     [DbContext(typeof(MafiaContext))]
-    [Migration("20240913155831_changed user model")]
-    partial class changedusermodel
+    [Migration("20240916181130_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -17,7 +17,9 @@ namespace Mafia.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleName = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Statuses = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    countVotes = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,15 +35,16 @@ namespace Mafia.Data.Migrations
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: true),
-                    Avatar = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                    Role = table.Column<int>(type: "int", nullable: false),
+                    Avatar = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    GameRoleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Users_Roles_RoleId",
-                        column: x => x.RoleId,
+                        name: "FK_Users_Roles_GameRoleId",
+                        column: x => x.GameRoleId,
                         principalTable: "Roles",
                         principalColumn: "Id");
                 });
@@ -120,9 +123,9 @@ namespace Mafia.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_RoleId",
+                name: "IX_Users_GameRoleId",
                 table: "Users",
-                column: "RoleId");
+                column: "GameRoleId");
         }
 
         /// <inheritdoc />
