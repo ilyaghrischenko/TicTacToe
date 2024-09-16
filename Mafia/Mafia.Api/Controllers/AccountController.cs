@@ -1,9 +1,5 @@
 using Mafia.DTO.Models;
-using Mafia.Domain.DbModels;
 using Mafia.Domain.Interfaces.Controllers;
-using Mafia.Domain.Interfaces.Repositories;
-using Mafia.Domain.Interfaces.DbModelsServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mafia.Api.Controllers
