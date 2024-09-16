@@ -2178,6 +2178,9 @@
         }
       },
       "Mafia.Domain/1.0.0": {
+        "dependencies": {
+          "Mafia.DTO": "1.0.0"
+        },
         "runtime": {
           "Mafia.Domain.dll": {}
         }
