@@ -1,4 +1,5 @@
 using Mafia.Domain.DbModels;
+using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,20 +8,22 @@ namespace Mafia.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController(IUserRepository userRepository) : ControllerBase
+    public class UserController(IUserControllerService userControllerService) : ControllerBase
     {
-        private readonly IUserRepository _userRepository = userRepository;
+        private readonly IUserControllerService _userControllerService = userControllerService;
         
         [HttpGet("getUser")]
         public async Task<ActionResult<User>> GetUser(int userId)
         {
-            var user = await _userRepository.Get(userId);
-            if (user == null)
+            try
             {
-                return NotFound(user);
+                var user = await _userControllerService.GetUser(userId);
+                return Ok(user);
             }
-            
-            return Ok(user);
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

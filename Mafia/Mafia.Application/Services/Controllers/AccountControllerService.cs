@@ -3,6 +3,7 @@ using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.Repositories;
 using Mafia.DTO.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Mafia.Application.Services.Controllers;
 
@@ -35,5 +36,20 @@ public class AccountControllerService
             Password = _passwordHasher.HashPassword(null, registerModel.Password)
         };
         await _userRepository.Add(user);
+    }
+
+    public async Task<List<ValidationError>> GetErrors(ModelStateDictionary modelState)
+    {
+        return await Task.Run(() =>
+        {
+            return modelState
+                .Where(x => x.Value.Errors.Count > 0)
+                .Select(x => new ValidationError
+                {
+                    Field = x.Key,
+                    Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
+                })
+                .ToList();
+        }); 
     }
 }

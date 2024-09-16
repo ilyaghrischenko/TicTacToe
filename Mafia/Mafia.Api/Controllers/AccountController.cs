@@ -19,15 +19,7 @@ namespace Mafia.Api.Controllers
         {
             if (ModelState.IsValid is false)
             {
-                var errors = ModelState
-                    .Where(x => x.Value.Errors.Count > 0)
-                    .Select(x => new
-                    {
-                        Field = x.Key,
-                        Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
-                    })
-                    .ToList();
-
+                var errors = await _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
             
@@ -55,15 +47,7 @@ namespace Mafia.Api.Controllers
         {
             if (ModelState.IsValid is false)
             {
-                var errors = ModelState
-                    .Where(x => x.Value.Errors.Count > 0)
-                    .Select(x => new
-                    {
-                        Field = x.Key,
-                        Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
-                    })
-                    .ToList();
-
+                var errors = await _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
             
