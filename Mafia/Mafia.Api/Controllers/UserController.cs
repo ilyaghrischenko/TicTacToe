@@ -1,7 +1,5 @@
 using Mafia.Domain.DbModels;
 using Mafia.Domain.Interfaces.Controllers;
-using Mafia.Domain.Interfaces.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mafia.Api.Controllers
@@ -23,6 +21,10 @@ namespace Mafia.Api.Controllers
             catch (KeyNotFoundException ex)
             {
                 return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }
