@@ -3,6 +3,7 @@ using System.Security.Claims;
 using Mafia.Domain.DbModels;
 using Mafia.DTO.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Mafia.Domain.Interfaces.Controllers;
 
@@ -12,4 +13,5 @@ public interface IAccountControllerService
     public Task Register(RegisterModel registerModel);
     public ClaimsIdentity GetIdentity(User user);
     public string? GetToken(ClaimsIdentity identity);
+    public List<ValidationError> GetErrors(ModelStateDictionary modelState);
 }

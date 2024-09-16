@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16196fd948168b24ca1143370208118c13670c34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747f5774d6c3c8124d746b1367ec77f722e13769")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

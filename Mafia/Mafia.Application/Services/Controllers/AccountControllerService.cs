@@ -1,5 +1,3 @@
-
-
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Mafia.Application.AutentificationOptions;
@@ -10,6 +8,7 @@ using Mafia.DTO.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Mafia.Application.Services.Controllers;
@@ -77,5 +76,17 @@ public class AccountControllerService
                 signingCredentials: new SigningCredentials(JwtOptions.GetKey(), SecurityAlgorithms.HmacSha256)
             );
             return new JwtSecurityTokenHandler().WriteToken(jwt);
+    }
+
+    public List<ValidationError> GetErrors(ModelStateDictionary modelState)
+    {
+        return modelState
+            .Where(x => x.Value.Errors.Count > 0)
+            .Select(x => new ValidationError
+            {
+                Field = x.Key,
+                Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
+            })
+            .ToList();
     }
 }
