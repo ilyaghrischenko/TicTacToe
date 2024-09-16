@@ -446,6 +446,9 @@
       },
       "System.Text.Encodings.Web/4.5.0": {},
       "Mafia.Domain/1.0.0": {
+        "dependencies": {
+          "Mafia.DTO": "1.0.0"
+        },
         "runtime": {
           "Mafia.Domain.dll": {}
         }

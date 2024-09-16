@@ -10,3 +10,7 @@ C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.dll
 C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\refint\Mafia.Domain.dll
 C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.pdb
 C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\ref\Mafia.Domain.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.DTO.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.DTO.pdb
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.csproj.AssemblyReference.cache
+C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Do.7758C2AA.Up2Date

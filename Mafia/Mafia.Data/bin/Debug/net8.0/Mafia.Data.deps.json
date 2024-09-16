@@ -991,8 +991,16 @@
         }
       },
       "Mafia.Domain/1.0.0": {
+        "dependencies": {
+          "Mafia.DTO": "1.0.0"
+        },
         "runtime": {
           "Mafia.Domain.dll": {}
+        }
+      },
+      "Mafia.DTO/1.0.0": {
+        "runtime": {
+          "Mafia.DTO.dll": {}
         }
       }
     }
@@ -1578,6 +1586,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Mafia.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mafia.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

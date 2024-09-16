@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Mafia.Domain/1.0.0": {
+        "dependencies": {
+          "Mafia.DTO": "1.0.0"
+        },
         "runtime": {
           "Mafia.Domain.dll": {}
+        }
+      },
+      "Mafia.DTO/1.0.0": {
+        "runtime": {
+          "Mafia.DTO.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Mafia.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mafia.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
