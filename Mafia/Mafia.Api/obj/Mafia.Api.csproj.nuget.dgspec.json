@@ -303,7 +303,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

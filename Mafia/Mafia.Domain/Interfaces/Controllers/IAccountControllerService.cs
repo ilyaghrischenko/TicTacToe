@@ -1,8 +1,8 @@
 using Mafia.DTO.Models;
 
-namespace Mafia.Application.Interfaces;
+namespace Mafia.Domain.Interfaces.Controllers;
 
-public interface IAccountService
+public interface IAccountControllerService
 {
     public Task Login(LoginModel loginModel);
     public Task Register(RegisterModel registerModel);

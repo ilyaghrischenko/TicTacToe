@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Mafia.DTO\Mafia.DTO.csproj" />
+    </ItemGroup>
+
 </Project>

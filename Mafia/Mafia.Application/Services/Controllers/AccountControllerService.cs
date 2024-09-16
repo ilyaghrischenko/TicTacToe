@@ -1,5 +1,5 @@
-using Mafia.Application.Interfaces;
 using Mafia.Domain.DbModels;
+using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.Repositories;
 using Mafia.DTO.Models;
 using Microsoft.AspNetCore.Identity;
@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Identity;
 namespace Mafia.Application.Services.Controllers;
 
 //TODO: create services and implement them to controller, there should be IUserService
-public class AccountService
+public class AccountControllerService
     (IUserRepository userRepository, 
-        PasswordHasher<User> passwordHasher) : IAccountService
+        PasswordHasher<User> passwordHasher) : IAccountControllerService
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly PasswordHasher<User> _passwordHasher = passwordHasher;

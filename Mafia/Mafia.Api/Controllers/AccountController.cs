@@ -1,18 +1,18 @@
 using Mafia.DTO.Models;
 using Mafia.Domain.DbModels;
+using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.Repositories;
 using Mafia.Domain.Interfaces.DbModelsServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Mafia.Application.Interfaces;
 
 namespace Mafia.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController(IAccountService accountService) : ControllerBase
+    public class AccountController(IAccountControllerService accountControllerService) : ControllerBase
     {
-        private readonly IAccountService _accountService = accountService;
+        private readonly IAccountControllerService _accountControllerService = accountControllerService;
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
@@ -33,7 +33,7 @@ namespace Mafia.Api.Controllers
             
             try
             {
-                await _accountService.Login(loginModel);
+                await _accountControllerService.Login(loginModel);
                 return Ok("Successfully login");
             }
             catch (KeyNotFoundException ex)
@@ -69,7 +69,7 @@ namespace Mafia.Api.Controllers
             
             try
             {
-                await _accountService.Register(registerModel);
+                await _accountControllerService.Register(registerModel);
                 return Ok("Successfully register");
             }
             catch (ArgumentException ex)
