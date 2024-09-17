@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18fd7cd936fc9f2a9214d68e90d2bf2389155294")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0680e4cd9ce8c0357d19d7e5bf80c9d7ebe15fb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

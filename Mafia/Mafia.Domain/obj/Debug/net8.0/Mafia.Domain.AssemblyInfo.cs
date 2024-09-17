@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18fd7cd936fc9f2a9214d68e90d2bf2389155294")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b74510d8ee7846da8e87eebeb241b9a3472110f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

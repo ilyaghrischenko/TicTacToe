@@ -13,9 +13,10 @@ public class User
     
     public virtual List<Friend>? Friends { get; set; } = new();
     public GameRole? GameRole { get; set; }
+    public Statistic? Statistic { get; set; }
     
     public User() { }
-    public User(string login, string password, string email, Role role, GameRole? gameRole, byte[]? avatar)
+    public User(string login, string password, string email, Role role, GameRole? gameRole = null, byte[]? avatar = null, Statistic? statistic = null)
     {
         Login = login;
         Password = password;
@@ -23,6 +24,7 @@ public class User
         Role = role;
         GameRole = gameRole;
         Avatar = avatar;
+        Statistic = statistic;
     }
     
     public override string ToString()
