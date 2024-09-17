@@ -271,3 +271,4 @@ C:\github\Mafia\Mafia\Mafia.Api\obj\Debug\net8.0\refint\Mafia.Api.dll
 C:\github\Mafia\Mafia\Mafia.Api\obj\Debug\net8.0\Mafia.Api.pdb
 C:\github\Mafia\Mafia\Mafia.Api\obj\Debug\net8.0\Mafia.Api.genruntimeconfig.cache
 C:\github\Mafia\Mafia\Mafia.Api\obj\Debug\net8.0\ref\Mafia.Api.dll
+C:\github\Mafia\Mafia\Mafia.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

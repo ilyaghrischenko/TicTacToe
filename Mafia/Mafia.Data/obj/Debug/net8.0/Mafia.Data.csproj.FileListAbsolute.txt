@@ -18,11 +18,3 @@ C:\github\Mafia\Mafia\Mafia.Data\obj\Debug\net8.0\Mafia.Data.genruntimeconfig.ca
 C:\github\Mafia\Mafia\Mafia.Data\obj\Debug\net8.0\ref\Mafia.Data.dll
 C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Mafia.DTO.dll
 C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Mafia.DTO.pdb
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Abstractions.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.AspNetCore.Routing.Abstractions.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\System.IO.Pipelines.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
-C:\github\Mafia\Mafia\Mafia.Data\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll

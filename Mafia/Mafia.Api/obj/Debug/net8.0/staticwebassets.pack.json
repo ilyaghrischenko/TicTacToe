@@ -1,44 +1,52 @@
 {
   "Files": [
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\img\\avatar.png",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\img\\avatar.png",
       "PackagePath": "staticwebassets\\img\\avatar.png"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\auth.html",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\auth.html",
       "PackagePath": "staticwebassets\\pages\\auth.html"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\main.html",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\main.html",
       "PackagePath": "staticwebassets\\pages\\main.html"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\registration.html",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\registration.html",
       "PackagePath": "staticwebassets\\pages\\registration.html"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\userFriends.html",
+      "PackagePath": "staticwebassets\\pages\\userFriends.html"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\authScript.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\LoadUserInfo.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
       "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
       "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userFriends.css",
+      "PackagePath": "staticwebassets\\styles\\userFriends.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Mafia.Api.Microsoft.AspNetCore.StaticWebAssets.props",
