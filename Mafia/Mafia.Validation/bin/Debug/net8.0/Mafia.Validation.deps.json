@@ -50,7 +50,10 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {},
       "Mafia.DTO/1.0.0": {
         "runtime": {
-          "Mafia.DTO.dll": {}
+          "Mafia.DTO.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

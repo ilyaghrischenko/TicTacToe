@@ -14,3 +14,13 @@ C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.DTO.dll
 C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Mafia.DTO.pdb
 C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Domain.csproj.AssemblyReference.cache
 C:\github\Mafia\Mafia\Mafia.Domain\obj\Debug\net8.0\Mafia.Do.7758C2AA.Up2Date
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
+C:\github\Mafia\Mafia\Mafia.Domain\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
