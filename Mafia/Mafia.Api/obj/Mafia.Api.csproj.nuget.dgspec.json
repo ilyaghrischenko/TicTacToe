@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj": {}
+    "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj": {}
   },
   "projects": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
         "projectName": "Mafia.Api",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,20 +33,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj"
               },
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj"
               },
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
               },
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
               },
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj"
               }
             }
           }
@@ -94,21 +98,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
         "projectName": "Mafia.Application",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,11 +131,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
               },
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
               }
             }
           }
@@ -168,21 +176,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj",
         "projectName": "Mafia.Data",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -197,8 +209,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
               }
             }
           }
@@ -259,21 +271,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj",
         "projectName": "Mafia.Domain",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -288,8 +304,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
               }
             }
           }
@@ -330,21 +346,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj",
         "projectName": "Mafia.DTO",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -391,21 +411,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
+    "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj",
+        "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj",
         "projectName": "Mafia.Validation",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\obj\\",
+        "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -420,8 +444,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+              "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+                "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
               }
             }
           }
@@ -462,7 +486,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9304,19 +9304,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sannido\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
+      "projectUniqueName": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
       "projectName": "Mafia.Api",
-      "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
-      "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-      "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\obj\\",
+      "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\Mafia.Api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9331,20 +9336,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj"
+            "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj": {
+              "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Application\\Mafia.Application.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj"
+            "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj": {
+              "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Data\\Mafia.Data.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
+            "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj": {
+              "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Domain\\Mafia.Domain.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
+            "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj": {
+              "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.DTO\\Mafia.DTO.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj"
+            "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj": {
+              "projectPath": "C:\\github\\Mafia\\Mafia\\Mafia.Validation\\Mafia.Validation.csproj"
             }
           }
         }
@@ -9396,7 +9401,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
