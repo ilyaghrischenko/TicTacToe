@@ -3,6 +3,7 @@ using Mafia.Domain.DbModels;
 using Mafia.Domain.Interfaces.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Mafia.Application.AutentificationOptions;
 using Microsoft.AspNetCore.Identity;
 using Mafia.Application.Services;
 using Mafia.Application.Services.Controllers;
@@ -11,8 +12,10 @@ using Mafia.Data;
 using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.ModelsServices;
 using Mafia.Validation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.OpenApi.Models;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +43,52 @@ builder.Services.AddScoped<ISlutService, SlutService>();
 builder.Services.AddScoped<PasswordHasher<User>>();
 builder.Services.AddDbContext<MafiaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MafiaContext")));
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuer = true,
+            ValidIssuer = JwtOptions.ISSUER,
+
+            ValidateAudience = true,
+            ValidAudience = JwtOptions.AUDIENCE,
+
+            ValidateLifetime = true,
+
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = JwtOptions.GetKey()
+        };
+    });
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        Description =
+            "Input your JWT token in the 'Authorization' header like this: \"Authorization: Bearer {yourJWT}\""
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 WebApplication app = builder.Build();
 

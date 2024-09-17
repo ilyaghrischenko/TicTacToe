@@ -18,7 +18,7 @@ namespace Mafia.Api.Controllers
         {
             try
             {
-                return Ok(_userControllerService.GetUser());
+                return Ok(await _userControllerService.GetUser());
             }
             catch (KeyNotFoundException ex)
             {

@@ -44,7 +44,10 @@ loginForm.addEventListener('submit', async (e) => {
 
         console.error(`Error while registering: ${response.status}`);
     } else {
-        sessionStorage.setItem('token', response.access_token);
+        const data = await response.json();
+        const token = data.access_token;
+        
+        sessionStorage.setItem('token', token);
         console.log(`Successful login: ${response.status}`);
         window.location.href = '../pages/main.html';
     }

@@ -15,7 +15,7 @@ namespace Mafia.Application.Services.Controllers;
 
 //TODO: create services and implement them to controller, there should be IUserService
 public class AccountControllerService
-    (IUserRepository userRepository, 
+    (IUserRepository userRepository,
         PasswordHasher<User> passwordHasher) : IAccountControllerService
 {
     private readonly IUserRepository _userRepository = userRepository;
@@ -42,12 +42,12 @@ public class AccountControllerService
     {
         var user = await _userRepository.Get(registerModel.Login);
         if (user != null) throw new ArgumentException("User already exists");
-
+        
         user = new User
         {
             Login = registerModel.Login,
             Email = registerModel.Email,
-            Password = _passwordHasher.HashPassword(null, registerModel.Password)
+            Password = _passwordHasher.HashPassword(null, registerModel.Password),
         };
         await _userRepository.Add(user);
     }

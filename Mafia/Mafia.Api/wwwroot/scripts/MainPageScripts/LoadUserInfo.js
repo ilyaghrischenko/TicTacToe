@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    const token = sessionStorage.getItem('jwtToken'); // Получаем токен из sessionStorage
-
+    const token = sessionStorage.getItem('token'); // Получаем токен из sessionStorage
+    
     if (!token) {
         // Если токен отсутствует, перенаправляем на страницу авторизации
         window.location.href = '../pages/auth.html';
-        return;
     }
 
     try {
-        const response = await fetch('/api/Main/userinfo', {
+        const response = await fetch('/api/User/getUser', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`, // Добавляем токен в заголовок Authorization
@@ -19,13 +18,17 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (response.ok) {
             const userData = await response.json();
             document.getElementById('login').textContent = userData.login;
-            document.getElementById('wins').textContent = userData.wins;
-            document.getElementById('losses').textContent = userData.losses;
+            
+            const statistic = userData.statistic;
+            document.getElementById('wins').textContent = statistic.wins;
+            document.getElementById('losses').textContent = statistic.losses;
         } else {
             // В случае ошибки (например, невалидный токен), перенаправляем на страницу входа
             window.location.href = '../pages/auth.html';
         }
     } catch (error) {
+        console.dir(error);
+        alert('Ошибка при получении информации о пользователе');
         console.error('Network error:', error);
         window.location.href = '../pages/auth.html'; // Перенаправляем на страницу входа в случае ошибки
     }
