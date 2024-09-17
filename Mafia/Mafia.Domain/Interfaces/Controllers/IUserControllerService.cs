@@ -4,5 +4,5 @@ namespace Mafia.Domain.Interfaces.Controllers;
 
 public interface IUserControllerService
 {
-    public Task<User> GetUser(int userId);
+    public Task<User> GetUser();
 }

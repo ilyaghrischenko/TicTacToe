@@ -18,8 +18,19 @@ namespace Mafia.Api.Controllers
                 var errors = _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
-            
-            return Ok();
+
+            try
+            {
+                return Ok(await _accountControllerService.Login(loginModel));
+            }
+            catch (KeyNotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpPost("register")]
@@ -30,6 +41,9 @@ namespace Mafia.Api.Controllers
                 var errors = _accountControllerService.GetErrors(ModelState);
                 return BadRequest(errors);
             }
+            
+            await _accountControllerService.Register(registerModel);
+            
             return Ok();
         }
     }

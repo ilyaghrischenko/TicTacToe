@@ -7,7 +7,8 @@ public class MafiaContext : DbContext
     public MafiaContext() { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("data source=(localdb)\\MSSQLLocalDB;initial catalog=MafiaDB;integrated security=True;MultipleActiveResultSets=true");
+        => optionsBuilder.UseSqlServer(@"data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_Mafia;User ID=iluhahr_Mafia;Password=1234; Trust Server Certificate=True;");
+        
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

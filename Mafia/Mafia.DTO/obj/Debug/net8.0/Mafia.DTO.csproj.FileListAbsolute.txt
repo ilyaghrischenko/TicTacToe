@@ -10,3 +10,15 @@ C:\github\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.dll
 C:\github\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\refint\Mafia.DTO.dll
 C:\github\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.pdb
 C:\github\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\ref\Mafia.DTO.dll
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\bin\Debug\net8.0\Mafia.DTO.deps.json
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\bin\Debug\net8.0\Mafia.DTO.dll
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\bin\Debug\net8.0\Mafia.DTO.pdb
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.AssemblyInfoInputs.cache
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.AssemblyInfo.cs
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.csproj.CoreCompileInputs.cache
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.sourcelink.json
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.dll
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\refint\Mafia.DTO.dll
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\Mafia.DTO.pdb
+D:\ForEdu\repos\MyProjects\CSharp\Mafia\Mafia\Mafia.DTO\obj\Debug\net8.0\ref\Mafia.DTO.dll
