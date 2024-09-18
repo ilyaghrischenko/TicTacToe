@@ -95,3 +95,20 @@ body {
     border-bottom: 1px solid #444; /* Темный цвет для разделения статистики */
     color: white;
 }
+.settings-button {
+    background-color: black; /* Цвет фона */
+    border: red; /* Убираем рамку */
+    color: white; /* Белый текст */
+    padding: 15px 32px; /* Отступы */
+    text-align: center; /* Центрируем текст */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Для поддержания размеров */
+    font-size: 16px; /* Размер шрифта */
+    margin: 5px 5px; /* Отступы */
+    cursor: pointer; /* Курсор при наведении */
+    border-radius: 4px; /* Скругление углов */
+}
+
+.settings-button:hover {
+    background-color: #45a049; /* Цвет при наведении */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../styles/userSettingsStyles.css">
+</head>
+<body>
+<div class="profile-container">
+    <!-- Левая колонка с аватаром и кнопкой изменения -->
+    <div class="profile-sidebar">
+        <div class="avatar-section">
+            <img id="avatar" src="avatar.jpg" alt="Avatar" class="avatar">
+            <h2 id = "login" class="username">Login</h2>
+            <h2 id = "email" class="email">Email</h2>
+            <button class="friendsButton btn-change-avatar">Change avatar</button>
+        </div>
+    </div>
+
+    <!-- Основной контент с формами для изменения данных -->
+    <div class="profile-main">
+        <h2>Profile settings</h2>
+
+        <!-- Форма для изменения логина -->
+        <form class="profile-form" id="change-login-form">
+            <h3>Change login</h3>
+            <div class="form-group">
+                <label for="loginInput">New login:</label>
+                <input type="text" id="loginInput" name="login" required>
+            </div>
+            <button type="submit" class="friendsButton btn-save">Save new login</button>
+        </form>
+
+        <!-- Форма для изменения пароля -->
+        <form class="profile-form" id="change-password-form">
+            <h3>Change password</h3>
+            <div class="form-group">
+                <label for="passwordInput">New password:</label>
+                <input type="password" id="passwordInput" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="friendsButton btn-save">Save new password</button>
+        </form>
+
+        <!-- Форма для изменения почты -->
+        <form class="profile-form" id="change-email-form">
+            <h3>Change email</h3>
+            <div class="form-group">
+                <label for="email">New email:</label>
+                <input type="email" id="emailInput" name="email" required>
+            </div>
+            <button type="submit" class="friendsButton btn-save">Save new email</button>
+        </form>
+    </div>
+</div>
+
+<script src="../scripts/userSettingsScripts/loadUserInfo.js"></script>
+
+<script>
+    document.querySelector('.btn-change-avatar').addEventListener('click', function() {
+        alert("Функция изменения аватара пока не реализована.");
+    });
+
+    // Пример валидации пароля
+    document.getElementById('change-password-form').addEventListener('submit', function(event) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+        if (password !== confirmPassword) {
+            event.preventDefault();
+            alert("Пароли не совпадают!");
+        }
+    });
+</script>
+</body>
+</html>
