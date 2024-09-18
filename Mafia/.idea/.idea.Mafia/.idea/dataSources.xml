@@ -9,5 +9,13 @@
       <jdbc-url>data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_Mafia;User ID=iluhahr_Mafia;Password=1234; Trust Server Certificate=True;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains) [2]" uuid="263da1c2-6519-46a2-b871-499483ac5a12">
+      <driver-ref>sqlserver.jb</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
+      <jdbc-url>data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_Mafia;User ID=iluhahr_Mafia;Password=1234; Trust Server Certificate=True;</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

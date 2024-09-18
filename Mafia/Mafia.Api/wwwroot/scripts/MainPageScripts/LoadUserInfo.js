@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', async function () {
             const statistic = userData.statistic;
             document.getElementById('wins').textContent = statistic.wins;
             document.getElementById('losses').textContent = statistic.losses;
+            
+            console.dir(userData);
         } else {
             // В случае ошибки (например, невалидный токен), перенаправляем на страницу входа
             window.location.href = '../pages/auth.html';
         }
     } catch (error) {
-        console.dir(error);
-        alert('Ошибка при получении информации о пользователе');
         console.error('Network error:', error);
         window.location.href = '../pages/auth.html'; // Перенаправляем на страницу входа в случае ошибки
     }

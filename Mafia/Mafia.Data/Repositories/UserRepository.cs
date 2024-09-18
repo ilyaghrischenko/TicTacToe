@@ -22,7 +22,7 @@ public class UserRepository : IUserRepository
     public async Task<User?> Get(string login)
     {
         using var context = new MafiaContext();
-        return await context.Users.FirstOrDefaultAsync(user => user.Login == login);
+        return await context.Users.Include(u => u.Statistic).FirstOrDefaultAsync(user => user.Login == login);
     }
 
     public async Task<bool> Add(User user)
