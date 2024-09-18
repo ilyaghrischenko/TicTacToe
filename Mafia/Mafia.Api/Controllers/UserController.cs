@@ -29,5 +29,39 @@ namespace Mafia.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("getFriends")]
+        public async Task<ActionResult<List<Friend>?>> GetFriends()
+        {
+            try
+            {
+                return Ok(await _userControllerService.GetFriends());
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("getAllUsers")]
+        public async Task<ActionResult<List<User>?>> GetAllUsers()
+        {
+            try
+            {
+                return Ok(await _userControllerService.GetAllUsers());
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

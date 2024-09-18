@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Http;
 
 namespace Mafia.Application.Services.Controllers;
 
-public class UserControllerService(IUserRepository userRepository, IHttpContextAccessor httpContextAccessor) : IUserControllerService
+public class UserControllerService(IUserRepository userRepository,
+    IHttpContextAccessor httpContextAccessor) : IUserControllerService
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
@@ -23,5 +24,29 @@ public class UserControllerService(IUserRepository userRepository, IHttpContextA
         }
         
         return user;
+    }
+
+    public async Task<List<Friend>?> GetFriends()
+    {
+        var userLogin = _httpContextAccessor.HttpContext.User.Claims
+            .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+        var user = await _userRepository.Get(userLogin);
+        if (user == null)
+        {
+            throw new KeyNotFoundException("User not found");
+        }
+        
+        return user.Friends;
+    }
+
+    public async Task<List<User>?> GetAllUsers()
+    {
+        var allUsers = await _userRepository.GetAll();
+        if (allUsers == null)
+        {
+            throw new KeyNotFoundException("Users not found");
+        }
+        
+        return allUsers;
     }
 }

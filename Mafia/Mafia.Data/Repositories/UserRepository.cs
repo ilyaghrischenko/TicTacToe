@@ -16,24 +16,30 @@ public class UserRepository : IUserRepository
     public async Task<User?> Get(int id)
     {
         using var context = new MafiaContext();
-        return await context.Users.FindAsync(id);
+        return await context.Users
+            .Include(u => u.Statistic)
+            .Include(u => u.Friends)
+            .FirstOrDefaultAsync(u => u.Id == id);
     }
 
     public async Task<User?> Get(string login)
     {
         using var context = new MafiaContext();
-        return await context.Users.Include(u => u.Statistic).FirstOrDefaultAsync(user => user.Login == login);
+        return await context.Users
+            .Include(u => u.Statistic)
+            .Include(u => u.Friends)
+            .FirstOrDefaultAsync(user => user.Login == login);
     }
 
     public async Task<bool> Add(User user)
     {
         using var context = new MafiaContext();
-        
+
         Statistic statistic = new Statistic();
         await context.Statistics.AddAsync(statistic);
         await context.SaveChangesAsync();
         user.Statistic = await context.Statistics.FirstAsync(s => s.Id == statistic.Id);
-        
+
         try
         {
             await context.Users.AddAsync(user);
@@ -45,7 +51,7 @@ public class UserRepository : IUserRepository
             return false;
         }
     }
-    
+
     public async Task<bool> Delete(int id)
     {
         using var context = new MafiaContext();

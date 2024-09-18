@@ -2154,10 +2154,7 @@
           "Microsoft.AspNetCore.Identity": "2.2.0"
         },
         "runtime": {
-          "Mafia.Application.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Mafia.Application.dll": {}
         }
       },
       "Mafia.Data/1.0.0": {
@@ -2168,10 +2165,7 @@
           "System.Data.SqlClient": "4.8.6"
         },
         "runtime": {
-          "Mafia.Data.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Mafia.Data.dll": {}
         }
       },
       "Mafia.Domain/1.0.0": {
@@ -2180,18 +2174,12 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8"
         },
         "runtime": {
-          "Mafia.Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Mafia.Domain.dll": {}
         }
       },
       "Mafia.DTO/1.0.0": {
         "runtime": {
-          "Mafia.DTO.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Mafia.DTO.dll": {}
         }
       },
       "Mafia.Validation/1.0.0": {
@@ -2200,10 +2188,7 @@
           "Mafia.DTO": "1.0.0"
         },
         "runtime": {
-          "Mafia.Validation.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Mafia.Validation.dll": {}
         }
       }
     }

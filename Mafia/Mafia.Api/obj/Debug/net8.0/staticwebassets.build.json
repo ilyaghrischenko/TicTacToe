@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sZXwIMEkiYgcDZAwt2EePWhcsCrTq8M0ObolspnYVg0=",
+  "Hash": "S7KmoY5NwFWDJY2eL/XdOc50L07SkzSUhLIift1uavw=",
   "Source": "Mafia.Api",
   "BasePath": "_content/Mafia.Api",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\regScript.js"
+    },
+    {
+      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadAllData.js",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "scripts/FriendsListScripts/loadAllData.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\loadAllData.js"
     },
     {
       "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",

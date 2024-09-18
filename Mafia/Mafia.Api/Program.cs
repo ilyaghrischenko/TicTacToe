@@ -32,13 +32,15 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
 builder.Services.AddScoped<IRepository<GameRole>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
-builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
-builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IGameService, GameService>();
 builder.Services.AddScoped<IMafiaService, MafiaService>();
 builder.Services.AddScoped<ISheriffService, SheriffService>();
 builder.Services.AddScoped<ISlutService, SlutService>();
+
+builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
+builder.Services.AddScoped<IUserControllerService, UserControllerService>();
+builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 
 builder.Services.AddScoped<PasswordHasher<User>>();
 builder.Services.AddDbContext<MafiaContext>(options =>
