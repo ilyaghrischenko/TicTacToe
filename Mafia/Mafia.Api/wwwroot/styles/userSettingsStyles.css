@@ -1,0 +1,149 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #292325;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px 0;
+    overflow-y: auto; /* Добавлена вертикальная прокрутка */
+}
+
+/* Контейнер для страницы профиля */
+.profile-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: auto; /* Добавлена прокрутка для контейнера */
+}
+
+/* Сайдбар для аватара и информации */
+.profile-sidebar {
+    background-color: #111;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.avatar-section {
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #f44336;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.email {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Зеленые кнопки */
+.friendsButton {
+    background-color: #444;
+    color: white;
+    border: 2px solid red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 80%;
+    margin: 10px auto 0;
+}
+
+.friendsButton:hover {
+    background-color: red;
+    border-color: white;
+}
+
+/* Основной контент с формами */
+.profile-main {
+    flex: 2;
+    padding: 20px;
+    background-color: #222;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-height: none;
+    }
+
+    .profile-sidebar {
+        order: 1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-main {
+        order: 2;
+        width: 100%;
+        padding: 20px;
+    }
+}

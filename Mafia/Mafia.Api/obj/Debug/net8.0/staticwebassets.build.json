@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S7KmoY5NwFWDJY2eL/XdOc50L07SkzSUhLIift1uavw=",
+  "Hash": "LI7efnGd7AO4sg0bzi80EkifFCyzpYAta64HBXTw80A=",
   "Source": "Mafia.Api",
   "BasePath": "_content/Mafia.Api",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "Mafia.Api\\wwwroot",
       "Source": "Mafia.Api",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\img\\avatar.png",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\images\\avatar.png",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
-      "RelativePath": "img/avatar.png",
+      "RelativePath": "images/avatar.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,13 +33,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\avatar.png"
+      "OriginalItemSpec": "wwwroot\\images\\avatar.png"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\auth.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\images\\settings.png",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "images/settings.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\settings.png"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\auth.html",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "pages/auth.html",
       "AssetKind": "All",
@@ -55,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\auth.html"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\main.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\main.html",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "pages/main.html",
       "AssetKind": "All",
@@ -74,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\main.html"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\registration.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\registration.html",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "pages/registration.html",
       "AssetKind": "All",
@@ -93,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\registration.html"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\userFriends.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\userFriends.html",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "pages/userFriends.html",
       "AssetKind": "All",
@@ -112,10 +131,29 @@
       "OriginalItemSpec": "wwwroot\\pages\\userFriends.html"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\pages\\userSettings.html",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "pages/userSettings.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\userSettings.html"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "scripts/AccountControllerScripts/authScript.js",
       "AssetKind": "All",
@@ -131,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\authScript.js"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "scripts/AccountControllerScripts/regScript.js",
       "AssetKind": "All",
@@ -150,29 +188,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadAllData.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
-      "BasePath": "_content/Mafia.Api",
-      "RelativePath": "scripts/FriendsListScripts/loadAllData.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\loadAllData.js"
-    },
-    {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
-      "SourceId": "Mafia.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "scripts/MainPageScripts/LoadUserInfo.js",
       "AssetKind": "All",
@@ -188,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "scripts/MainPageScripts/main.js",
       "AssetKind": "All",
@@ -207,10 +226,29 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\main.js"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\loadUserInfo.js",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "scripts/userSettingsScripts/loadUserInfo.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\userSettingsScripts\\loadUserInfo.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "styles/authRegStyles.css",
       "AssetKind": "All",
@@ -226,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\authRegStyles.css"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "styles/main.css",
       "AssetKind": "All",
@@ -245,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\main.css"
     },
     {
-      "Identity": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userFriends.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userFriends.css",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
       "BasePath": "_content/Mafia.Api",
       "RelativePath": "styles/userFriends.css",
       "AssetKind": "All",
@@ -262,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\userFriends.css"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userSettingsStyles.css",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "styles/userSettingsStyles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\userSettingsStyles.css"
     }
   ]
 }
