@@ -16,20 +16,21 @@ public class FriendsControllerService(IUserService userService,
     {
         //TODO: FINISH
         
-        var userLogin = _httpContextAccessor.HttpContext.User.Claims
-            .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-        var user = await _userRepository.Get(userLogin);
-        if (user == null)
-        {
-            throw new KeyNotFoundException("User not found");
-        }
-        
-        var friend = await _userRepository.Get(newFriendId);
-        
-        try
-        {
-            return await _userService.AddFriend(user, friend);
-        }
+        // var userLogin = _httpContextAccessor.HttpContext.User.Claims
+        //     .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+        // var user = await _userRepository.Get(userLogin);
+        // if (user == null)
+        // {
+        //     throw new KeyNotFoundException("User not found");
+        // }
+        //
+        // var friend = await _userRepository.Get(newFriendId);
+        //
+        // try
+        // {
+        //     return await _userService.AddFriend(user, friend);
+        // }
+        return true;
     }
 
     public async Task<bool> DeleteFriend(int friendId)
