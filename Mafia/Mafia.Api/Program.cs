@@ -7,9 +7,11 @@ using Mafia.Application.AutentificationOptions;
 using Microsoft.AspNetCore.Identity;
 using Mafia.Application.Services;
 using Mafia.Application.Services.Controllers;
+using Mafia.Application.Services.DbModels;
 using Mafia.Application.Services.Models;
 using Mafia.Data;
 using Mafia.Domain.Interfaces.Controllers;
+using Mafia.Domain.Interfaces.DbModelsServices;
 using Mafia.Domain.Interfaces.ModelsServices;
 using Mafia.Validation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -29,9 +31,11 @@ builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IRepository<Friend>, FriendRepository>();
 builder.Services.AddScoped<IRepository<GameRole>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
+
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IGameService, GameService>();
 builder.Services.AddScoped<IMafiaService, MafiaService>();

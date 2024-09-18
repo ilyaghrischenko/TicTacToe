@@ -11,7 +11,7 @@ public class User
     public Role Role { get; set; }
     public byte[]? Avatar { get; set; }
     
-    public virtual List<Friend>? Friends { get; set; } = new();
+    public virtual List<User>? Friends { get; set; } = new();
     public GameRole? GameRole { get; set; }
     public Statistic Statistic { get; set; }
     

@@ -26,7 +26,7 @@ public class UserControllerService(IUserRepository userRepository,
         return user;
     }
 
-    public async Task<List<Friend>?> GetFriends()
+    public async Task<List<User>?> GetFriends()
     {
         var userLogin = _httpContextAccessor.HttpContext.User.Claims
             .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;

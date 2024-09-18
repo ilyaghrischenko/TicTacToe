@@ -21,8 +21,4 @@
       </Reference>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Services\DbModels\" />
-    </ItemGroup>
-
 </Project>

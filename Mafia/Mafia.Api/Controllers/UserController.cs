@@ -31,7 +31,7 @@ namespace Mafia.Api.Controllers
         }
 
         [HttpGet("getFriends")]
-        public async Task<ActionResult<List<Friend>?>> GetFriends()
+        public async Task<ActionResult<List<User>?>> GetFriends()
         {
             try
             {
