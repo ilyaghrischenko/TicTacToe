@@ -45,8 +45,10 @@ builder.Services.AddScoped<ISlutService, SlutService>();
 builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
 builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
+builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 
-builder.Services.AddScoped<PasswordHasher<User>>();
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
 builder.Services.AddDbContext<MafiaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MafiaContext")));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

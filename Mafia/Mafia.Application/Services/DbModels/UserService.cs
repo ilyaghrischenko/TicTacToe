@@ -1,12 +1,15 @@
 using Mafia.Domain.DbModels;
 using Mafia.Domain.Interfaces.DbModelsServices;
 using Mafia.Domain.Interfaces.Repositories;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Mafia.Application.Services.DbModels;
 
-public class UserService(IUserRepository userRepository) : IUserService
+public class UserService(IUserRepository userRepository, IPasswordHasher<User> passwordHasher) : IUserService
 {
     private readonly IUserRepository _userRepository = userRepository;
+    private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
     
     public async Task<bool> AddFriend(User user, User friend)
     {
@@ -54,5 +57,74 @@ public class UserService(IUserRepository userRepository) : IUserService
         me.Friends.Remove(friendToDelete);
         await _userRepository.Update(me);
         return true;
+    }
+
+    public async Task ChangeLogin(string userLogin, string newLogin)
+    {
+        var me = await _userRepository.Get(userLogin);
+        if (me == null)
+        {
+            throw new KeyNotFoundException("You not found");
+        }
+        
+        if (me.Login == newLogin)
+        {
+            throw new ArgumentException("New login is the same as old");
+        }
+        
+        me.Login = newLogin;
+        
+        await _userRepository.Update(me);
+    }
+    public async Task ChangePassword(string userLogin, string newPassword)
+    {
+        var me = await _userRepository.Get(userLogin);
+        if (me == null)
+        {
+            throw new KeyNotFoundException("You not found");
+        }
+        
+        if (me.Password == newPassword)
+        {
+            throw new ArgumentException("New password is the same as old");
+        }
+        
+        me.Password = _passwordHasher.HashPassword(null, newPassword);
+        
+        await _userRepository.Update(me);
+    }
+    public async Task ChangeEmail(string userLogin, string newEmail)
+    {
+        var me = await _userRepository.Get(userLogin);
+        if (me == null)
+        {
+            throw new KeyNotFoundException("You not found");
+        }
+        
+        if (me.Email == newEmail)
+        {
+            throw new ArgumentException("New email is the same as old");
+        }
+        
+        me.Email = newEmail;
+        
+        await _userRepository.Update(me);
+    }
+    public async Task ChangeAvatar(string userLogin, byte[] newAvatar)
+    {
+        var me = await _userRepository.Get(userLogin);
+        if (me == null)
+        {
+            throw new KeyNotFoundException("You not found");
+        }
+        
+        if (me.Avatar == newAvatar)
+        {
+            throw new ArgumentException("New avatar is the same as old");
+        }
+        
+        me.Avatar = newAvatar;
+        
+        await _userRepository.Update(me);
     }
 }

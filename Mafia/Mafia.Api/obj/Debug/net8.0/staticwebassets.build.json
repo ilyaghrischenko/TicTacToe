@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LI7efnGd7AO4sg0bzi80EkifFCyzpYAta64HBXTw80A=",
+  "Hash": "J5MOr0NmKx4qvIfgWAP8kyDdpDVXVGPyK0oDEok4ojc=",
   "Source": "Mafia.Api",
   "BasePath": "_content/Mafia.Api",
   "Mode": "Default",
@@ -188,6 +188,25 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadAllData.js",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "scripts/FriendsListScripts/loadAllData.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\loadAllData.js"
+    },
+    {
       "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
       "SourceId": "Mafia.Api",
       "SourceType": "Discovered",
@@ -224,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\main.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\changeAvatar.js",
+      "SourceId": "Mafia.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\",
+      "BasePath": "_content/Mafia.Api",
+      "RelativePath": "scripts/userSettingsScripts/changeAvatar.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\userSettingsScripts\\changeAvatar.js"
     },
     {
       "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\loadUserInfo.js",

@@ -16,10 +16,10 @@ namespace Mafia.Application.Services.Controllers;
 //TODO: create services and implement them to controller, there should be IUserService
 public class AccountControllerService
     (IUserRepository userRepository,
-        PasswordHasher<User> passwordHasher) : IAccountControllerService
+        IPasswordHasher<User> passwordHasher) : IAccountControllerService
 {
     private readonly IUserRepository _userRepository = userRepository;
-    private readonly PasswordHasher<User> _passwordHasher = passwordHasher;
+    private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
     
     public async Task<object> Login(LoginModel loginModel)
     {

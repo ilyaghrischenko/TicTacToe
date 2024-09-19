@@ -12,9 +12,12 @@
     <div class="profile-sidebar">
         <div class="avatar-section">
             <img id="avatar" src="avatar.jpg" alt="Avatar" class="avatar">
-            <h2 id = "login" class="username">Login</h2>
-            <h2 id = "email" class="email">Email</h2>
-            <button class="friendsButton btn-change-avatar">Change avatar</button>
+            <h2 id="login" class="username">Login</h2>
+            <h2 id="email" class="email">Email</h2>
+            <form id="change-avatar-form">
+                <input type="file" id="avatarImage" accept="image/*"/>
+                <button type="submit" class="friendsButton btn-change-avatar">Change avatar</button>
+            </form>
         </div>
     </div>
 
@@ -59,21 +62,7 @@
 </div>
 
 <script src="../scripts/userSettingsScripts/loadUserInfo.js"></script>
+<script src="../scripts/userSettingsScripts/changeAvatar.js"></script>
 
-<script>
-    document.querySelector('.btn-change-avatar').addEventListener('click', function() {
-        alert("Функция изменения аватара пока не реализована.");
-    });
-
-    // Пример валидации пароля
-    document.getElementById('change-password-form').addEventListener('submit', function(event) {
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('confirm-password').value;
-        if (password !== confirmPassword) {
-            event.preventDefault();
-            alert("Пароли не совпадают!");
-        }
-    });
-</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Mafia.Domain.DbModels;
 using Mafia.Domain.Interfaces.Controllers;
+using Mafia.Domain.Interfaces.DbModelsServices;
 using Mafia.Domain.Interfaces.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -9,10 +10,11 @@ using Microsoft.AspNetCore.Http;
 namespace Mafia.Application.Services.Controllers;
 
 public class UserControllerService(IUserRepository userRepository,
-    IHttpContextAccessor httpContextAccessor) : IUserControllerService
+    IHttpContextAccessor httpContextAccessor, IUserService userService) : IUserControllerService
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
+    private readonly IUserService _userService = userService;
     public async Task<User> GetUser()
     {
         var userLogin = _httpContextAccessor.HttpContext.User.Claims

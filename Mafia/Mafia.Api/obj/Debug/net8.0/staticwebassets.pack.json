@@ -37,12 +37,20 @@
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadAllData.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadAllData.js"
+    },
+    {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\LoadUserInfo.js"
     },
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\changeAvatar.js",
+      "PackagePath": "staticwebassets\\scripts\\userSettingsScripts\\changeAvatar.js"
     },
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\loadUserInfo.js",
