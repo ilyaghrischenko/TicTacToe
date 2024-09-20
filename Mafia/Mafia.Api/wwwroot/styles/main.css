@@ -14,13 +14,14 @@ body {
     height: 100vh;
     justify-content: space-between;
     padding: 20px;
+   
 }
 
 .left-panel, .center-panel, .right-panel {
-    background-color: black; /* Заменен цвет фона панелей на черный */
-    border-radius: 10px;
+    background-color: #111; /* Заменен цвет фона панелей на черный */
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     color: white; /* Цвет текста сделан белым для лучшего контраста */
 }
 
@@ -95,20 +96,38 @@ body {
     border-bottom: 1px solid #444; /* Темный цвет для разделения статистики */
     color: white;
 }
-.settings-button {
-    background-color: black; /* Цвет фона */
-    border: red; /* Убираем рамку */
-    color: white; /* Белый текст */
-    padding: 15px 32px; /* Отступы */
-    text-align: center; /* Центрируем текст */
-    text-decoration: none; /* Убираем подчеркивание */
-    display: inline-block; /* Для поддержания размеров */
-    font-size: 16px; /* Размер шрифта */
-    margin: 5px 5px; /* Отступы */
-    cursor: pointer; /* Курсор при наведении */
-    border-radius: 4px; /* Скругление углов */
+
+.btn {
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.settings-button:hover {
-    background-color: #45a049; /* Цвет при наведении */
+.btn:hover {
+    background-color: red;
+    border-color: white;
+}
+
+.friendsButton.btn {
+    background-color: #222;
+    padding: 10px 20px;
+    margin: 10px auto 0;
+    width: 80%;
+}
+.friendsButton.btn:hover {
+    background-color: red;
+}
+
+.settings-button.btn{
+    background-color: #333;
+    padding: 5px 10px;
+    margin: 5px auto 0;
+    width: 50%;
+}
+.settings-button.btn a {
+    text-decoration: none;
+    color: white;
 }
