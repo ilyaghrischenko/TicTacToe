@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TicTacToe.Data.Repositories;
 
-public class StatisticRepository(MafiaContext context) : IRepository<Statistic>
+public class StatisticRepository(TicTacToeContext context) : IRepository<Statistic>
 {
-    private readonly MafiaContext _context = context;
+    private readonly TicTacToeContext _context = context;
     
     public async Task<List<Statistic>?> GetAll()
     {

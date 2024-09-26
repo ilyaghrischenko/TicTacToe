@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TicTacToe.Data.Repositories;
 
-public class FriendRepository(MafiaContext context) : IFriendRepository
+public class FriendRepository(TicTacToeContext context) : IFriendRepository
 {
-    private readonly MafiaContext _context = context;
+    private readonly TicTacToeContext _context = context;
     
     public async Task<List<Friend>?> GetAll()
     {
