@@ -28,7 +28,7 @@ namespace TicTacToe.Api.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return StatusCode(500, e.Message);
             }
         }
 

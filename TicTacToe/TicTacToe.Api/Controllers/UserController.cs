@@ -26,7 +26,7 @@ namespace TicTacToe.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -44,7 +44,7 @@ namespace TicTacToe.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -56,13 +56,9 @@ namespace TicTacToe.Api.Controllers
                 var users = await _userControllerService.GetAllUsers();
                 return Ok(users);
             }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(new { message = ex.Message }); // Возвращаем JSON
-            }
             catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message }); // Возвращаем JSON
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 

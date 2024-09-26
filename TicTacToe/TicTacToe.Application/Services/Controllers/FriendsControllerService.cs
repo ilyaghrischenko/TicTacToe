@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Http;
 
 namespace TicTacToe.Application.Services.Controllers;
 
-public class FriendsControllerService(IUserService userService,
+public class FriendsControllerService(
+    IUserService userService,
     IHttpContextAccessor httpContextAccessor) : IFriendsControllerService
 {
     private readonly IUserService _userService = userService;
@@ -17,11 +18,41 @@ public class FriendsControllerService(IUserService userService,
 
     public async Task AddFriend(int newFriendId)
     {
-        await _userService.AddFriend(_userId, newFriendId);
+        try
+        {
+            await _userService.AddFriend(_userId, newFriendId);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            throw new KeyNotFoundException(ex.Message);
+        }
+        catch (ArgumentException ex)
+        {
+            throw new ArgumentException(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
     }
 
     public async Task DeleteFriend(int friendId)
     {
-        await _userService.DeleteFriend(_userId, friendId);
+        try
+        {
+            await _userService.DeleteFriend(_userId, friendId);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            throw new KeyNotFoundException(ex.Message);
+        }
+        catch (ArgumentException ex)
+        {
+            throw new ArgumentException(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
     }
 }
