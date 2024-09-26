@@ -1,0 +1,16 @@
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Validation.deps.json
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Validation.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Validation.pdb
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.DTO.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.DTO.pdb
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.csproj.AssemblyReference.cache
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.AssemblyInfoInputs.cache
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.AssemblyInfo.cs
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.csproj.CoreCompileInputs.cache
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.sourcelink.json
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacTo.94A04079.Up2Date
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\refint\TicTacToe.Validation.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\TicTacToe.Validation.pdb
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\ref\TicTacToe.Validation.dll

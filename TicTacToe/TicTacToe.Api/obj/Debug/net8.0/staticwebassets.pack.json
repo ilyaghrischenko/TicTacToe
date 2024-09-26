@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\avatar.png",
+      "PackagePath": "staticwebassets\\images\\avatar.png"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
+      "PackagePath": "staticwebassets\\images\\settings.png"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
+      "PackagePath": "staticwebassets\\pages\\auth.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
+      "PackagePath": "staticwebassets\\pages\\main.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\registration.html",
+      "PackagePath": "staticwebassets\\pages\\registration.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userFriends.html",
+      "PackagePath": "staticwebassets\\pages\\userFriends.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userSettings.html",
+      "PackagePath": "staticwebassets\\pages\\userSettings.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\authScript.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
+      "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderUsers.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeAvatar.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeEmail.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeLogin.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changePassword.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\loadUserInfo.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
+      "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
+      "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
+      "PackagePath": "staticwebassets\\styles\\sharedStyles\\errorTooltip.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
+      "PackagePath": "staticwebassets\\styles\\userFriends.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",
+      "PackagePath": "staticwebassets\\styles\\userSettingsStyles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TicTacToe.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TicTacToe.Api.props",
+      "PackagePath": "build\\TicTacToe.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TicTacToe.Api.props",
+      "PackagePath": "buildMultiTargeting\\TicTacToe.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TicTacToe.Api.props",
+      "PackagePath": "buildTransitive\\TicTacToe.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
