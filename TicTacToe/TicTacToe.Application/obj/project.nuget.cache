@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "asst0qMoI0Q=",
+  "dgSpecHash": "ZmAMPR2WLlE=",
   "success": true,
-  "projectFilePath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Application\\TicTacToe.Application.csproj",
+  "projectFilePath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

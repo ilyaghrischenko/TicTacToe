@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {}
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {}
   },
   "projects": {
-    "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
+        "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
         "projectName": "TicTacToe.DTO",
-        "projectPath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
+        "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\obj\\",
+        "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
+        "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
         "projectName": "TicTacToe.Validation",
-        "projectPath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
+        "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.Validation\\obj\\",
+        "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
-                "projectPath": "C:\\github\\TicTacToe\\Mafia\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
+              "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+                "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
               }
             }
           }
