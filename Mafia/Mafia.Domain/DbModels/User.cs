@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Mafia.Domain.Enums;
 
 namespace Mafia.Domain.DbModels;
@@ -10,8 +11,6 @@ public class User
     public string Email { get; set; }
     public Role Role { get; set; }
     public byte[]? Avatar { get; set; }
-    
-    public virtual List<User>? Friends { get; set; } = new();
     public GameRole? GameRole { get; set; }
     public Statistic Statistic { get; set; }
     

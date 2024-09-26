@@ -1,6 +1,6 @@
 namespace Mafia.DTO.Models;
 
-public class ChangeEmailModel(string email)
+public class ChangeEmailModel(string emailInput)
 {
-    public string Email { get; set; } = email;
+    public string EmailInput { get; set; } = emailInput;
 }

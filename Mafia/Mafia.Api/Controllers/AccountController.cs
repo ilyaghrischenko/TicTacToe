@@ -13,19 +13,18 @@ namespace Mafia.Api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            if (ModelState.IsValid is false)
-            {
-                var errors = _accountControllerService.GetErrors(ModelState);
-                return BadRequest(errors);
-            }
-
             try
             {
+                _accountControllerService.GetErrors(ModelState);
                 return Ok(await _accountControllerService.Login(loginModel));
             }
             catch (KeyNotFoundException e)
             {
                 return NotFound(e.Message);
+            }
+            catch (ArgumentException e)
+            {
+                return BadRequest(e.Message);
             }
             catch (Exception e)
             {
@@ -36,14 +35,20 @@ namespace Mafia.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
-            if (ModelState.IsValid is false)
+            try
             {
-                var errors = _accountControllerService.GetErrors(ModelState);
-                return BadRequest(errors);
+                _accountControllerService.GetErrors(ModelState);
+                await _accountControllerService.Register(registerModel);
             }
-            
-            await _accountControllerService.Register(registerModel);
-            
+            catch (ArgumentException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+
             return Ok();
         }
     }

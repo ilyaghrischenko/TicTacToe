@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Mafia.Domain.Interfaces.Controllers;
 
-public interface ISettingsControllerService
+public interface ISettingsControllerService : IBaseControllerService
 {
     public Task ChangeAvatar(IFormFile avatar);
     public Task ChangePassword(ChangePasswordModel changePasswordModel);

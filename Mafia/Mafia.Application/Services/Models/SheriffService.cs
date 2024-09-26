@@ -24,8 +24,10 @@ public class SheriffService(IUserRepository userRepository): ISheriffService
         var userToShoot = await _userRepository.Get(userId);
         if (userToShoot == null) return false;
         
-        userToShoot.GameRole.Statuses.Add(Status.Shot);
-        await _userRepository.Update(userToShoot);
+        await _userRepository.Update(userToShoot, () =>
+        {
+            userToShoot.GameRole.Statuses.Add(Status.Shot);
+        });
         
         _canShoot = false;
         return true;

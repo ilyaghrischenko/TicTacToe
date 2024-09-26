@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mafia.Data.Migrations
 {
     [DbContext(typeof(MafiaContext))]
-    [Migration("20240916162750_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240925123547_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,16 +39,11 @@ namespace Mafia.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("FriendUserId");
 
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Friends");
                 });
@@ -91,15 +86,10 @@ namespace Mafia.Data.Migrations
                     b.Property<int>("Losses")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Wins")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Statistics");
                 });
@@ -133,9 +123,14 @@ namespace Mafia.Data.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int>("StatisticId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("GameRoleId");
+
+                    b.HasIndex("StatisticId");
 
                     b.ToTable("Users");
                 });
@@ -149,27 +144,12 @@ namespace Mafia.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Mafia.Domain.DbModels.User", "User")
-                        .WithMany()
+                        .WithMany("Friends")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Mafia.Domain.DbModels.User", null)
-                        .WithMany("Friends")
-                        .HasForeignKey("UserId1");
-
                     b.Navigation("FriendUser");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Mafia.Domain.DbModels.Statistic", b =>
-                {
-                    b.HasOne("Mafia.Domain.DbModels.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -180,7 +160,15 @@ namespace Mafia.Data.Migrations
                         .WithMany()
                         .HasForeignKey("GameRoleId");
 
+                    b.HasOne("Mafia.Domain.DbModels.Statistic", "Statistic")
+                        .WithMany()
+                        .HasForeignKey("StatisticId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("GameRole");
+
+                    b.Navigation("Statistic");
                 });
 
             modelBuilder.Entity("Mafia.Domain.DbModels.User", b =>

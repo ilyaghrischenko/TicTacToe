@@ -35,7 +35,8 @@ namespace Mafia.Api.Controllers
         {
             try
             {
-                return Ok(await _userControllerService.GetFriends());
+                var friends = await _userControllerService.GetFriends();
+                return Ok(friends);
             }
             catch (KeyNotFoundException ex)
             {
@@ -48,20 +49,22 @@ namespace Mafia.Api.Controllers
         }
 
         [HttpGet("getAllUsers")]
-        public async Task<ActionResult<List<User>?>> GetAllUsers()
+        public async Task<ActionResult<List<User>>> GetAllUsers()
         {
             try
             {
-                return Ok(await _userControllerService.GetAllUsers());
+                var users = await _userControllerService.GetAllUsers();
+                return Ok(users);
             }
             catch (KeyNotFoundException ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(new { message = ex.Message }); // Возвращаем JSON
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message }); // Возвращаем JSON
             }
         }
+
     }
 }

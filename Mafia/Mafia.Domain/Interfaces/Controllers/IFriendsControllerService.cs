@@ -1,7 +1,7 @@
 namespace Mafia.Domain.Interfaces.Controllers;
 
-public interface IFriendsControllerService
+public interface IFriendsControllerService: IBaseControllerService
 {
-    public Task<bool> AddFriend(int newFriendId);
-    public Task<bool> DeleteFriend(int friendId);
+    public Task AddFriend(int newFriendId);
+    public Task DeleteFriend(int friendId);
 }

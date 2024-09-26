@@ -46,6 +46,9 @@ loginForm.addEventListener('submit', async (e) => {
                 if (!response.ok) {
                     console.error('Error changing avatar:', response.status);
                 }
+                else{
+                    window.location.reload();
+                }
             })
             .catch(error => {
                 console.error('Error:', error);

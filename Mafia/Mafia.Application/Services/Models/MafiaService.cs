@@ -14,7 +14,7 @@ public class MafiaService(IUserRepository userRepository): IMafiaService
         if (userToKill == null) return false;
 
         userToKill.GameRole.Statuses.Add(Status.Killed);
-        await _userRepository.Update(userToKill);
+        // await _userRepository.Update(userToKill);
         return true;
     }
 }

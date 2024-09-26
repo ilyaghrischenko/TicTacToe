@@ -14,7 +14,7 @@ public class SlutService(IUserRepository userRepository): ISlutService
         if (userToBlock == null) return false;
         
         userToBlock.GameRole.Statuses.Add(Status.Silenced);
-        await _userRepository.Update(userToBlock);
+        // await _userRepository.Update(userToBlock);
         return true;
     }
 }

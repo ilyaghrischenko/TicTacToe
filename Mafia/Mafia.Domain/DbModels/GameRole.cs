@@ -28,7 +28,7 @@ public class GameRole
         if (userToVote == null) return false;
         
         userToVote.GameRole.countVotes++;
-        await _userRepository.Update(userToVote);
+        // await _userRepository.Update(userToVote);
         return true;
     }
     

@@ -20,6 +20,7 @@ namespace Mafia.Api.Controllers
         {
             try
             {
+                _settingsControllerService.GetErrors(ModelState);
                 await _settingsControllerService.ChangeAvatar(avatar);
             }
             catch (KeyNotFoundException k)
@@ -43,6 +44,7 @@ namespace Mafia.Api.Controllers
         {
             try
             {
+                _settingsControllerService.GetErrors(ModelState);
                 await _settingsControllerService.ChangePassword(changePasswordModel);
             }
             catch (KeyNotFoundException k)
@@ -66,6 +68,7 @@ namespace Mafia.Api.Controllers
         {
             try
             {
+                _settingsControllerService.GetErrors(ModelState);
                 await _settingsControllerService.ChangeEmail(changeEmailModel);
             }
             catch (KeyNotFoundException k)
@@ -89,6 +92,7 @@ namespace Mafia.Api.Controllers
         {
             try
             {
+                _settingsControllerService.GetErrors(ModelState);
                 await _settingsControllerService.ChangeLogin(changeLoginModel);
             }
             catch (KeyNotFoundException k)

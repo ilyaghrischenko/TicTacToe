@@ -10,31 +10,18 @@ namespace Mafia.Application.Services.Controllers;
 public class FriendsControllerService(IUserService userService,
     IHttpContextAccessor httpContextAccessor) : IFriendsControllerService
 {
-    private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
+    private readonly IUserService _userService = userService;
+    private readonly int _userId = int.Parse(
+        httpContextAccessor.HttpContext.User.Claims
+            .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value);
 
-    public async Task<bool> AddFriend(int newFriendId)
+    public async Task AddFriend(int newFriendId)
     {
-        //TODO: FINISH
-        
-        // var userLogin = _httpContextAccessor.HttpContext.User.Claims
-        //     .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-        // var user = await _userRepository.Get(userLogin);
-        // if (user == null)
-        // {
-        //     throw new KeyNotFoundException("User not found");
-        // }
-        //
-        // var friend = await _userRepository.Get(newFriendId);
-        //
-        // try
-        // {
-        //     return await _userService.AddFriend(user, friend);
-        // }
-        return true;
+        await _userService.AddFriend(_userId, newFriendId);
     }
 
-    public async Task<bool> DeleteFriend(int friendId)
+    public async Task DeleteFriend(int friendId)
     {
-        throw new NotImplementedException();
+        await _userService.DeleteFriend(_userId, friendId);
     }
 }

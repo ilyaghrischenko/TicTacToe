@@ -9,23 +9,29 @@
 <body>
 
 <div class="container">
-    <!-- Левый блок - Список всех пользователей -->
-    <div class="left-panel">
-        <h2>All Users</h2>
-        <ul class="user-list" id="user-list">
-            
-        </ul>
+    <!-- Левая панель - Список друзей -->
+    <div class="panel">
+        <div class="panel-header">
+            <h3>Friends List</h3>
+        </div>
+        <div class="panel-content">
+            <ul id="friend-list"></ul>
+        </div>
     </div>
 
-    <!-- Правый блок - Список моих друзей -->
-    <div class="right-panel">
-        <h2>My Friends</h2>
-        <ul class="friend-list" id="friend-list">
-            
-        </ul>
+    <!-- Правая панель - Список всех пользователей -->
+    <div class="panel">
+        <div class="panel-header">
+            <h3>All Users</h3>
+        </div>
+        <div class="panel-content">
+            <ul id="user-list"></ul>
+        </div>
     </div>
 </div>
+<script src="../scripts/FriendsListScripts/loadUsersNFriends.js"></script>
+<script src="../scripts/FriendsListScripts/renderUsers.js"></script>
+<script src="../scripts/FriendsListScripts/apiRequests.js"></script>
 
-<script src="../scripts/FriendsListScripts/loadAllData.js"></script>
 </body>
 </html>

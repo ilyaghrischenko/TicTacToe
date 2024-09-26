@@ -1,6 +1,7 @@
 namespace Mafia.DTO.Models;
 
-public class ChangePasswordModel(string password)
+public class ChangePasswordModel(string passwordInput, string confirmPassword)
 {
-    public string Password { get; set; } = password;
+    public string PasswordInput { get; set; } = passwordInput;
+    public string ConfirmPassword { get; set; } = confirmPassword;
 }

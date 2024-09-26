@@ -37,24 +37,44 @@
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadAllData.js",
-      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadAllData.js"
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\LoadUserInfo.js",
-      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\LoadUserInfo.js"
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderUsers.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\changeAvatar.js",
-      "PackagePath": "staticwebassets\\scripts\\userSettingsScripts\\changeAvatar.js"
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeAvatar.js"
     },
     {
-      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\userSettingsScripts\\loadUserInfo.js",
-      "PackagePath": "staticwebassets\\scripts\\userSettingsScripts\\loadUserInfo.js"
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeEmail.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeLogin.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changePassword.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
+      "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\loadUserInfo.js"
     },
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\authRegStyles.css",
@@ -63,6 +83,10 @@
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\main.css",
       "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
+      "PackagePath": "staticwebassets\\styles\\sharedStyles\\errorTooltip.css"
     },
     {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\Mafia\\Mafia\\Mafia.Api\\wwwroot\\styles\\userFriends.css",

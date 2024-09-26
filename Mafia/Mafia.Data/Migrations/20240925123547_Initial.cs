@@ -27,6 +27,20 @@ namespace Mafia.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Statistics",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Wins = table.Column<int>(type: "int", nullable: false),
+                    Losses = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Statistics", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -37,7 +51,8 @@ namespace Mafia.Data.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
                     Avatar = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    GameRoleId = table.Column<int>(type: "int", nullable: true)
+                    GameRoleId = table.Column<int>(type: "int", nullable: true),
+                    StatisticId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -47,6 +62,12 @@ namespace Mafia.Data.Migrations
                         column: x => x.GameRoleId,
                         principalTable: "Roles",
                         principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Users_Statistics_StatisticId",
+                        column: x => x.StatisticId,
+                        principalTable: "Statistics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,8 +77,7 @@ namespace Mafia.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    FriendUserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<int>(type: "int", nullable: true)
+                    FriendUserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,32 +94,6 @@ namespace Mafia.Data.Migrations
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Friends_Users_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Statistics",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    Wins = table.Column<int>(type: "int", nullable: false),
-                    Losses = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Statistics", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Statistics_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -113,19 +107,14 @@ namespace Mafia.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Friends_UserId1",
-                table: "Friends",
-                column: "UserId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Statistics_UserId",
-                table: "Statistics",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Users_GameRoleId",
                 table: "Users",
                 column: "GameRoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_StatisticId",
+                table: "Users",
+                column: "StatisticId");
         }
 
         /// <inheritdoc />
@@ -135,13 +124,13 @@ namespace Mafia.Data.Migrations
                 name: "Friends");
 
             migrationBuilder.DropTable(
-                name: "Statistics");
-
-            migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "Statistics");
         }
     }
 }

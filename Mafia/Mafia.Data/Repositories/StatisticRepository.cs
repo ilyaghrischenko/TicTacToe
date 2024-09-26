@@ -4,27 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mafia.Data.Repositories;
 
-public class StatisticRepository : IRepository<Statistic>
+public class StatisticRepository(MafiaContext context) : IRepository<Statistic>
 {
+    private readonly MafiaContext _context = context;
+    
     public async Task<List<Statistic>?> GetAll()
     {
-        using var context = new MafiaContext();
-        return await context.Statistics.ToListAsync();
+        return await _context.Statistics.ToListAsync();
     }
 
     public async Task<Statistic?> Get(int id)
     {
-        using var context = new MafiaContext();
-        return await context.Statistics.FindAsync(id);
+        return await _context.Statistics.FindAsync(id);
     }
 
     public async Task<bool> Add(Statistic statistic)
     {
-        using var context = new MafiaContext();
         try
         {
-            await context.Statistics.AddAsync(statistic);
-            await context.SaveChangesAsync();
+            await _context.Statistics.AddAsync(statistic);
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -35,12 +34,11 @@ public class StatisticRepository : IRepository<Statistic>
 
     public async Task<bool> Delete(int id)
     {
-        using var context = new MafiaContext();
         try
         {
-            var statistic = await context.Statistics.FindAsync(id);
-            context.Statistics.Remove(statistic);
-            await context.SaveChangesAsync();
+            var statistic = await _context.Statistics.FindAsync(id);
+            _context.Statistics.Remove(statistic);
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -49,13 +47,13 @@ public class StatisticRepository : IRepository<Statistic>
         }
     }
 
-    public async Task<bool> Update(Statistic statistic)
+    public async Task<bool> Update(Statistic statistic, Action updateAction)
     {
-        using var context = new MafiaContext();
         try
         {
-            context.Statistics.Update(statistic);
-            await context.SaveChangesAsync();
+            _context.Statistics.Update(statistic);
+            updateAction();
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception)

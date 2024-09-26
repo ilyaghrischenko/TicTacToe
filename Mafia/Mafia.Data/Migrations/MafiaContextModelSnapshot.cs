@@ -22,6 +22,29 @@ namespace Mafia.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Mafia.Domain.DbModels.Friend", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("FriendUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FriendUserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Friends");
+                });
+
             modelBuilder.Entity("Mafia.Domain.DbModels.GameRole", b =>
                 {
                     b.Property<int>("Id")
@@ -100,18 +123,32 @@ namespace Mafia.Data.Migrations
                     b.Property<int>("StatisticId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("GameRoleId");
 
                     b.HasIndex("StatisticId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Mafia.Domain.DbModels.Friend", b =>
+                {
+                    b.HasOne("Mafia.Domain.DbModels.User", "FriendUser")
+                        .WithMany()
+                        .HasForeignKey("FriendUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Mafia.Domain.DbModels.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("FriendUser");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Mafia.Domain.DbModels.User", b =>
@@ -126,18 +163,9 @@ namespace Mafia.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Mafia.Domain.DbModels.User", null)
-                        .WithMany("Friends")
-                        .HasForeignKey("UserId");
-
                     b.Navigation("GameRole");
 
                     b.Navigation("Statistic");
-                });
-
-            modelBuilder.Entity("Mafia.Domain.DbModels.User", b =>
-                {
-                    b.Navigation("Friends");
                 });
 #pragma warning restore 612, 618
         }

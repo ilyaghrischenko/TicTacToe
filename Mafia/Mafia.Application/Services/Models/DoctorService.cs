@@ -19,7 +19,7 @@ public class DoctorService(IUserRepository userRepository): IDoctorService
         if (selfId == userId) _canCureSelf = false;
         
         userToCure.GameRole.Statuses.Add(Status.Healed);
-        await _userRepository.Update(userToCure);
+        // await _userRepository.Update(userToCure);
         return true;
     }
 }

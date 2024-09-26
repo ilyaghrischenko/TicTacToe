@@ -7,7 +7,7 @@ loginForm.addEventListener('submit', async (e) => {
 
     const login = document.getElementById('Login').value;
     const password = document.getElementById('Password').value;
-
+try {
     const response = await fetch('/api/Account/login', {
         method: 'POST',
         headers: {
@@ -19,36 +19,36 @@ loginForm.addEventListener('submit', async (e) => {
         })
     });
 
-    const previousTooltips = document.querySelectorAll('.tooltip');
-    previousTooltips.forEach(tooltip => tooltip.remove());
-
+    document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
     if (!response.ok) {
-        const data = await response.json();
-        const errors = data.errors;
-
+        const {errors} = await response.json();
         Object.keys(errors).forEach(field => {
-            const errorMessages = errors[field];
             const inputField = document.getElementById(field);
-
             if (inputField) {
-                const tooltip = document.createElement('div');
-                tooltip.className = 'tooltip';
-                tooltip.innerText = errorMessages.join(', ');
-
-                inputField.parentNode.appendChild(tooltip);
-                inputField.classList.add('input-error');
+                showTooltip(inputField, errors[field].join(', '));
             } else {
-                console.warn(`Поле с ID "${field}" не найдено в форме`);
+                console.warn(`Field with ID "${field}" not found in form`);
             }
         });
-
-        console.error(`Error while registering: ${response.status}`);
     } else {
         const data = await response.json();
         const token = data.access_token;
-        
+
         sessionStorage.setItem('token', token);
-        console.log(`Successful login: ${response.status}`);
         window.location.href = '../pages/main.html';
     }
+} catch (error) {
+    alert('User not found\nPlease check your login and password');
+}
 });
+
+
+
+function showTooltip(inputField, message) {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'error-tooltip';
+    tooltip.innerText = message;
+
+    inputField.parentNode.appendChild(tooltip);
+    inputField.classList.add('input-error');
+}

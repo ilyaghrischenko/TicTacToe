@@ -23,32 +23,28 @@ form.addEventListener('submit', async (e) => {
         })
     });
 
-    const previousTooltips = document.querySelectorAll('.tooltip');
-    previousTooltips.forEach(tooltip => tooltip.remove());
-
+    document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
     if (!response.ok) {
-        const data = await response.json();
-        const errors = data.errors;
-
+        const {errors} = await response.json();
         Object.keys(errors).forEach(field => {
-            const errorMessages = errors[field];
             const inputField = document.getElementById(field);
-
             if (inputField) {
-                const tooltip = document.createElement('div');
-                tooltip.className = 'tooltip';
-                tooltip.innerText = errorMessages.join(', ');
-
-                inputField.parentNode.appendChild(tooltip);
-                inputField.classList.add('input-error');
+                showTooltip(inputField, errors[field].join(', '));
             } else {
-                console.warn(`Поле с ID "${field}" не найдено в форме`);
+                console.warn(`Field with ID "${field}" not found in form`);
             }
         });
-
-        console.error(`Error while registering: ${response.status}`);
     } else {
-        console.log(`Successful registration: ${response.status}`);
+        alert(`Successful registration! You can now log in with your new account`);
         window.location.href = '../pages/auth.html';
     }
 });
+
+function showTooltip(inputField, message) {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'error-tooltip';
+    tooltip.innerText = message;
+
+    inputField.parentNode.appendChild(tooltip);
+    inputField.classList.add('input-error');
+}

@@ -14,6 +14,7 @@ using Mafia.Domain.Interfaces.Controllers;
 using Mafia.Domain.Interfaces.DbModelsServices;
 using Mafia.Domain.Interfaces.ModelsServices;
 using Mafia.Validation;
+using Mafia.Validation.SettingsModelsValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -27,12 +28,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+
 builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<GameRole>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
+builder.Services.AddScoped<IFriendRepository, FriendRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 

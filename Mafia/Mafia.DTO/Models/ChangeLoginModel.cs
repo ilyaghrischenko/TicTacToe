@@ -1,6 +1,6 @@
 namespace Mafia.DTO.Models;
 
-public class ChangeLoginModel(string login)
+public class ChangeLoginModel(string loginInput)
 {
-    public string Login { get; set; } = login;
+    public string LoginInput { get; set; } = loginInput;
 }

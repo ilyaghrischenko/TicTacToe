@@ -56,7 +56,7 @@ public class AccountControllerService
     {
             var claims = new List<Claim>
             {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, user.Login),
+                new Claim(ClaimsIdentity.DefaultNameClaimType, user.Id.ToString()),
                 new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role.ToString())
             };
             ClaimsIdentity identity = new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,
@@ -76,17 +76,5 @@ public class AccountControllerService
                 signingCredentials: new SigningCredentials(JwtOptions.GetKey(), SecurityAlgorithms.HmacSha256)
             );
             return new JwtSecurityTokenHandler().WriteToken(jwt);
-    }
-
-    public List<ValidationError> GetErrors(ModelStateDictionary modelState)
-    {
-        return modelState
-            .Where(x => x.Value.Errors.Count > 0)
-            .Select(x => new ValidationError
-            {
-                Field = x.Key,
-                Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
-            })
-            .ToList();
     }
 }
