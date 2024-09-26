@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace TicTacToe.Data.Repositories;
 
-public class UserRepository(MafiaContext context) : IUserRepository
+public class UserRepository(TicTacToeContext context) : IUserRepository
 {
-    private readonly MafiaContext _context = context;
+    private readonly TicTacToeContext _context = context;
     
     public async Task<List<User>?> GetAll()
     {

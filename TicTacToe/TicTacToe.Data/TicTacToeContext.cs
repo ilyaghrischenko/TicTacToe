@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TicTacToe.Data
 {
-    public class MafiaContext : DbContext
+    public class TicTacToeContext : DbContext
     {
-        public MafiaContext() { }
-        public MafiaContext(DbContextOptions<MafiaContext> options) : base(options) { }
+        public TicTacToeContext() { }
+        public TicTacToeContext(DbContextOptions<TicTacToeContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(@"data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_Mafia;User ID=iluhahr_Mafia;Password=1234; Trust Server Certificate=True;");
+            => optionsBuilder.UseSqlServer(@"data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,7 +31,6 @@ namespace TicTacToe.Data
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Friend> Friends { get; set; }
-        public virtual DbSet<GameRole> Roles { get; set; }
         public virtual DbSet<Statistic> Statistics { get; set; }
     }
 }

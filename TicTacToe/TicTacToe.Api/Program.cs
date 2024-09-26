@@ -29,13 +29,11 @@ builder.Services.AddControllers()
 
 builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
-
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IRepository<GameRole>, RoleRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
 
@@ -48,8 +46,9 @@ builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
-builder.Services.AddDbContext<MafiaContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MafiaContext")));
+builder.Services.AddDbContext<TicTacToeContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -68,7 +67,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = JwtOptions.GetKey()
         };
     });
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
