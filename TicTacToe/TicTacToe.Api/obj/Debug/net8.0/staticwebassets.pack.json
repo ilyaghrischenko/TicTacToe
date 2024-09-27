@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderUsers.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\game.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\game.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
