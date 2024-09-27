@@ -12,7 +12,7 @@ body {
 .container {
     display: flex;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -49,17 +49,92 @@ body {
     font-weight: bold;
 }
 
+.friends-list {
+    margin-bottom: 20px;
+}
+
 .friends-list h3 {
     margin-bottom: 10px;
 }
 
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center;
+}
+
 .friends-list ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .friends-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid #444; /* Темный цвет для разделения друзей */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    margin-bottom: 8px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 300px; /* Ширина элемента */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 65px;
+}
+
+.friends-list li:hover {
+    transform: scale(1.05); /* Увеличиваем размер всего блока на 5% */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); /* Сохраняем эффект тени */
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Увеличиваем отступы */
+    margin-bottom: 10px; /* Пространство между элементами */
+    background-color: #222;
+    border-radius: 10px; /* Более округленные углы */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    width: 325px; /* Увеличиваем ширину блока */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 70px; /* Увеличиваем высоту блока */
+}
+
+.invite-button {
+    padding: 6px 14px; /* Чуть увеличиваем размеры кнопки */
+    background-color: #333;
+    border: 1px solid red;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Увеличиваем размер шрифта на кнопке */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.invite-button:hover {
+    background-color: red;
+    border-color: white;
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+}
+
+.friend-info .avatar {
+    width: 45px; /* Уменьшенный размер аватара */
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid red;
+}
+
+.friend-info span {
+    font-size: 16px; /* Уменьшенный размер шрифта */
+    font-weight: bold;
     color: white;
 }
 
@@ -138,6 +213,10 @@ h1 {
     margin-left: 10px;
 }
 
+.statistics {
+    margin-bottom: 20px; /* Добавим отступ для статистики */
+}
+
 .statistics p {
     padding: 5px 0;
     border-bottom: 1px solid #444; /* Темный цвет для разделения статистики */
@@ -163,6 +242,11 @@ h1 {
     padding: 10px 20px;
     margin: 10px auto 0;
     width: 80%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 .friendsButton.btn:hover {
     background-color: red;
