@@ -49,12 +49,20 @@
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderUsers.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\game.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\game.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\renderFriendsList.js"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",

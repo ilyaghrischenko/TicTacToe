@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
     const token = sessionStorage.getItem('token'); // Получаем токен из sessionStorage
-
+    const frindsList = document.getElementById('friends-list');
     if (!token) {
         // Если токен отсутствует, перенаправляем на страницу авторизации
         window.location.href = '../pages/auth.html';
@@ -15,14 +15,22 @@ document.addEventListener('DOMContentLoaded', async function () {
             }
         });
 
-        if (response.ok) {
+        const friendsResponse = await fetch('/api/User/getFriends', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok && friendsResponse.ok) {
             const userData = await response.json();
             document.getElementById('login').textContent = userData.login;
 
             const statistic = userData.statistic;
             document.getElementById('wins').textContent = statistic.wins;
             document.getElementById('losses').textContent = statistic.losses;
-
+            renderFriendsList(await friendsResponse.json(), frindsList);
             if (userData.avatar !== null && userData.avatar.length > 0) {
                 document.getElementById('avatar').src = `data:image/png;base64,${userData.avatar}`;
             } else {

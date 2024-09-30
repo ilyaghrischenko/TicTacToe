@@ -20,8 +20,9 @@ using Microsoft.OpenApi.Models;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//TODO: Доработать игру, изменить разметку, стили, скрипты. Сделать переход на страницу игры.
-//TODO: Изменить главную страницу, убрать правый блок(сместить его содержимое в левый), и в правом блоке должны отображаться все друзья пользователя, рядом с ними должна быть кнопка для того чтобы позвать в игру.
+//TODO: Прописать игровую локигу (WebSockets/SignalR). Сделать сохранения статистики.
+//TODO: Сделать страницу админа.
+//TODO: Почистить стили, код, скрипты.
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

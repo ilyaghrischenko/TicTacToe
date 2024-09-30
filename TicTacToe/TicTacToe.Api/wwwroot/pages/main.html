@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main menu - Mafia</title>
+    <title>Main menu</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
 </head>
 <body>
 <div class="container">
@@ -12,45 +13,53 @@
     <div class="left-panel">
         <!-- Аватар и Никнейм -->
         <div class="profile">
-            <img src="../images/avatar.png" alt="Avatar" class="avatar" id="avatar">
+            <img alt="Avatar" class="avatar" id="avatar">
             <h2 class="nickname" id="login">Login</h2>
             <button class="settings-button btn">
                 <a class="settings-button" href="../pages/userSettings.html">Settings</a>
             </button>
         </div>
-        <!-- Список друзей -->
-        <div class="friends-list">
-            <h3 >Friends list</h3>
-            <ul id="friendsList">
-                <li>Друг 1</li>
-                <li>Друг 2</li>
-                <li>Друг 3</li>
-            </ul>
+        <div class="statistics" id="statistics">
+            <h3>Statistics</h3>
+            <p>Wins: </p> <span id="wins"></span>
+            <p>Losses: </p> <span id="losses"></span>
         </div>
-        <button class="friendsButton btn" id="friends-button">Manage Friends</button>
     </div>
 
     <!-- Центральная панель -->
-    <div class="center-panel">
-        <h3>Rooms list</h3>
-        <ul class="rooms-list" id="roomsList">
-            <li>Комната 1</li>
-            <li>Комната 2</li>
-            <li>Комната 3</li>
-        </ul>
+    <div class="central-panel">
+        <h1>Game</h1>
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <p id="status"></p>
+        <button id="restartBtn" class="btn">Restart</button>
     </div>
 
     <!-- Правая панель -->
     <div class="right-panel">
-        <h3>Statistics</h3>
-        <div class="statistics" id="statistics">
-            <p>Победы: </p> <span id="wins"></span>
-            <p>Проигрыши: </p> <span id="losses"></span>
+        <!-- Список друзей -->
+        <div class="friends-list">
+            <h3>Friends list</h3>
+            <div class="scroll">
+                <ul id="friends-list"></ul>
+            </div>
         </div>
+        <button class="friendsButton btn" id="friends-button">Manage Friends</button>
     </div>
 </div>
 
 <script src="../scripts/MainPageScripts/loadUserInfo.js"></script>
 <script src="../scripts/MainPageScripts/main.js"></script>
+<script src="../scripts/MainPageScripts/game.js"></script>
+<script src="../scripts/MainPageScripts/renderFriendsList.js"></script>
 </body>
 </html>
