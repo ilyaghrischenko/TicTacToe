@@ -85,8 +85,7 @@ body {
 }
 
 .friends-list li:hover {
-    transform: scale(1.05); /* Увеличиваем размер всего блока на 5% */
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); /* Сохраняем эффект тени */
+    background-color: #4c4141;
 }
 
 .user-item {

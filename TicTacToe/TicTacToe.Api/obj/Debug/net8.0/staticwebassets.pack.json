@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\renderFriendsList.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeAvatar.js"
     },

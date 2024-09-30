@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VFByYQP3svkctYh89iZ99jhRYK1wheyxx7MvdbMnjJ4=",
+  "Hash": "SGp4lufnfyp4TVt6Ba/0gZIX6X1i0JJrhE8qWG8+D/8=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\main.js"
+    },
+    {
+      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/renderFriendsList.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js"
     },
     {
       "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",

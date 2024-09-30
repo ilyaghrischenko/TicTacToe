@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main menu</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
 </head>
 <body>
 <div class="container">
@@ -47,8 +48,10 @@
     <div class="right-panel">
         <!-- Список друзей -->
         <div class="friends-list">
-            <h3 >Friends list</h3>
-            <ul id="friends-list"></ul>
+            <h3>Friends list</h3>
+            <div class="scroll">
+                <ul id="friends-list"></ul>
+            </div>
         </div>
         <button class="friendsButton btn" id="friends-button">Manage Friends</button>
     </div>
