@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main menu</title>
+    
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
+    <link rel="stylesheet" href="../styles/modalWindow.css">
 </head>
 <body>
 <div class="container">
@@ -28,6 +30,9 @@
 
     <!-- Центральная панель -->
     <div class="central-panel">
+        <!-- Кнопка с иконкой "!" -->
+        <button id="reportBtn" class="report-button">!</button>
+        
         <h1>Game</h1>
         <div class="game-board" id="gameBoard">
             <div class="cell" data-index="0"></div>
@@ -42,6 +47,16 @@
         </div>
         <p id="status"></p>
         <button id="restartBtn" class="btn">Restart</button>
+    </div>
+
+    <!-- Модальное окно для жалоб -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Report</h2>
+            <textarea id="reportText" placeholder="Enter your report..."></textarea>
+            <button id="sendReportBtn" class="btn">Send</button>
+        </div>
     </div>
 
     <!-- Правая панель -->
@@ -61,5 +76,6 @@
 <script src="../scripts/MainPageScripts/main.js"></script>
 <script src="../scripts/MainPageScripts/game.js"></script>
 <script src="../scripts/MainPageScripts/renderFriendsList.js"></script>
+<script src="../scripts/MainPageScripts/report.js"></script>
 </body>
 </html>

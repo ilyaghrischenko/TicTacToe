@@ -2,7 +2,7 @@
 
 //TODO: renderUserList нужно тут как-то использовать
 
-const userList = document.getElementById('user-list');
+const userUl = document.getElementById('user-list');
 const token = sessionStorage.getItem('token');
 
 if (!token) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         console.log('users:');
         console.dir(users);
 
-        renderUserList(users);
+        renderAllUsers(userUl, users);
     }
     catch (error) {
         console.error('Ошибка:', error.message);

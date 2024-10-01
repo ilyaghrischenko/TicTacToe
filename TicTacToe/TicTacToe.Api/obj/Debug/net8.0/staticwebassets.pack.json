@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\loadAllUsers.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js",
+      "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\renderAllUsers.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
     },

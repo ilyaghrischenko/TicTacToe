@@ -32,5 +32,6 @@ namespace TicTacToe.Data
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Friend> Friends { get; set; }
         public virtual DbSet<Statistic> Statistics { get; set; }
+        public virtual DbSet<Report> Reports { get; set; }
     }
 }
