@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\renderFriendsList.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\report.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\report.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeAvatar.js"
     },
@@ -107,6 +111,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
       "PackagePath": "staticwebassets\\styles\\main.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\modalWindow.css",
+      "PackagePath": "staticwebassets\\styles\\modalWindow.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",

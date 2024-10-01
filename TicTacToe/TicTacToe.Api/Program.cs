@@ -40,6 +40,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidato
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
+builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 
