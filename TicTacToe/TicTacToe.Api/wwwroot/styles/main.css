@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #292325; /* Заменен цвет фона на темный */
+    background-color: #393033; /* Заменен цвет фона на темный */
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 }
 
 .left-panel, .central-panel, .right-panel {
-    background-color: #111; /* Заменен цвет фона панелей на черный */
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -218,7 +218,7 @@ h1 {
 
 .statistics p {
     padding: 5px 0;
-    border-bottom: 1px solid #444; /* Темный цвет для разделения статистики */
+    border-bottom: 1px solid #333; /* Темный цвет для разделения статистики */
     color: white;
 }
 

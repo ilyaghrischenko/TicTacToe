@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     padding: 0 5%; /* Дополнительный отступ с боков для малых экранов */
-    background-color: #292325;
+    background-color: #393033;
 }
 
 /* Стили для поля с ошибкой */
