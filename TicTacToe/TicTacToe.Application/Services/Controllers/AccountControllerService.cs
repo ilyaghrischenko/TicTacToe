@@ -32,7 +32,9 @@ public class AccountControllerService(
             var response = new
             {
                 access_token = token,
+                user_role = user.Role.ToString()
             };
+            
             return response;
         }
         catch (KeyNotFoundException ex)

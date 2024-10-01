@@ -16,7 +16,8 @@ namespace TicTacToe.Api.Controllers
             try
             {
                 _accountControllerService.GetErrors(ModelState);
-                return Ok(await _accountControllerService.Login(loginModel));
+                var response = await _accountControllerService.Login(loginModel);
+                return Ok(response);
             }
             catch (KeyNotFoundException e)
             {

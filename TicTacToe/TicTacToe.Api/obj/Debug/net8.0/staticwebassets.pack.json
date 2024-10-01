@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\images\\settings.png"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
+      "PackagePath": "staticwebassets\\pages\\admin.html"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
       "PackagePath": "staticwebassets\\pages\\auth.html"
     },
@@ -95,6 +99,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
       "PackagePath": "staticwebassets\\styles\\sharedStyles\\errorTooltip.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\scroll.css",
+      "PackagePath": "staticwebassets\\styles\\sharedStyles\\scroll.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
