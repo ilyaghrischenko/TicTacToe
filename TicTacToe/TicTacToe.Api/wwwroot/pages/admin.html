@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
 </head>
 <body>
-    
+<div class="scroll">
+    <div class="panel">
+        <div class="panel-header">
+            <h3>All Users</h3>
+        </div>
+        <div class="scroll">
+            <div class="panel-content">
+                <ul id="user-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/AdminPageScripts/loadAllUsers.js"></script>
 </body>
 </html>

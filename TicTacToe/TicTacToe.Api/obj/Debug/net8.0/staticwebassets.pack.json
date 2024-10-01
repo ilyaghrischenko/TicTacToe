@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
+      "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\loadAllUsers.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
     },
@@ -87,6 +91,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\loadUserInfo.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\admin.css",
+      "PackagePath": "staticwebassets\\styles\\admin.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
