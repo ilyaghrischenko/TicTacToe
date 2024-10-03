@@ -10,22 +10,38 @@ body {
     color: #f1f1f1;
     display: flex;
     justify-content: center;
-    /*align-items: flex-start;*/
     align-items: center;
     min-height: 100vh;
     padding: 20px;
 }
 
+/*.panel {*/
+/*    flex: 1;*/
+/*    background-color: #222;*/
+/*    border-radius: 10px;*/
+/*    margin: 0 10px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    overflow: hidden;*/
+/*    min-height: 500px; !* Заменить height на min-height *!*/
+/*    height: 85vh; !* Увеличить высоту на 80% от доступного пространства *!*/
+/*}*/
+
 .panel {
-    flex: 1;
+    width: 30%; /* Ширина панели сделана в 3 раза тоньше */
     background-color: #222;
     border-radius: 10px;
     margin: 0 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 500px;
+    min-height: 500px;
+    height: 85vh;
+
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
 
 .panel-header {
     background-color: #333;
@@ -49,17 +65,6 @@ ul {
     padding: 0;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #333;
-    border-radius: 8px;
-    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
-}
-
 .user-item {
     display: flex;
     justify-content: space-between;
@@ -68,6 +73,7 @@ li {
     margin-bottom: 10px;
     background-color: #333;
     border-radius: 8px;
+    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
 }
 
 .user-info {

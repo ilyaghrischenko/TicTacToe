@@ -5,6 +5,7 @@ using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Application.Services.DbModels;
 
@@ -167,11 +168,16 @@ public class UserService(
         {
             throw new KeyNotFoundException("User not found");
         }
-            
+
         var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginModel.Password);
         if (result == PasswordVerificationResult.Failed)
         {
             throw new ArgumentException("Wrong password");
+        }
+        
+        if (user.Status == UserStatus.Blocked)
+        {
+            throw new ArgumentException("User is blocked");
         }
         
         return user;
