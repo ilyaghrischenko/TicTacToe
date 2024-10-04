@@ -129,8 +129,8 @@
       "PackagePath": "staticwebassets\\styles\\main.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\modalWindow.css",
-      "PackagePath": "staticwebassets\\styles\\modalWindow.css"
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\reportModal.css",
+      "PackagePath": "staticwebassets\\styles\\reportModal.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
@@ -143,6 +143,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
       "PackagePath": "staticwebassets\\styles\\userFriends.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userReportsModal.css",
+      "PackagePath": "staticwebassets\\styles\\userReportsModal.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",

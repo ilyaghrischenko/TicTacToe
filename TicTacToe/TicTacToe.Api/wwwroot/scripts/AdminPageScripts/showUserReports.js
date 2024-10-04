@@ -22,8 +22,34 @@ async function showUserReports(userId) {
             throw new Error(`Ошибка при получении отчётов: ${errorText}`);
         }
 
-        return response.json();
+        const data = await response.json();
+        
+        const modal = document.getElementById('reportModal');
+        const reportList = document.getElementById('report-list');
+        reportList.innerHTML = '';
+        
+        let i = 1;
+        data.forEach(report => {
+            const li = document.createElement('li');
+            li.textContent = `${i++}: ${report.message}`;
+            reportList.appendChild(li);
+        });
+        
+        modal.style.display = 'block';
     } catch (error) {
         console.error('Ошибка:', error.message);
     }
 }
+
+const modal = document.getElementById('reportModal');
+const closeBtn = document.querySelector('.close');
+
+closeBtn.onclick = () => {
+    modal.style.display = 'none';
+};
+
+window.onclick = event => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};

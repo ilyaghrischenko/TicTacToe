@@ -45,7 +45,7 @@ function renderUserList(users, friends) {
         // Создаем кнопку (Добавить/Удалить)
         const button = document.createElement('button');
         button.classList.add('btn', isFriend ? 'delete-button' : 'add-button');
-        button.textContent = isFriend ? 'Удалить' : 'Добавить';
+        button.textContent = isFriend ? 'Delete' : 'Add';
         button.onclick = isFriend ? () => deleteFriend(user.id) : () => addFriend(user.id);
 
         // Добавляем всё в li

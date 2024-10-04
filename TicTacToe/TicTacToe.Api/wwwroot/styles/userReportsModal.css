@@ -1,0 +1,86 @@
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный чёрный фон для большего контраста */
+}
+
+.modal-content {
+    background-color: #393033;
+    color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Добавим тени */
+    position: relative; /* Чтобы кнопка закрытия располагалась корректно */
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f1f1f1;
+    transition: 0.3s ease;
+}
+
+/* Стили для списка жалоб */
+#report-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-height: 300px; /* Ограничение высоты списка */
+    overflow-y: auto; /* Скролл для длинных списков */
+}
+
+#report-list li {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 16px;
+    color: #eaeaea;
+    line-height: 1.5; /* Более приятное расстояние между строками */
+}
+
+/* Стиль для отчётов с чередующимися цветами */
+/*#report-list li:nth-child(odd) {*/
+/*    background-color: #3e3e3e;*/
+/*}*/
+
+/* Добавляем небольшой hover-эффект */
+#report-list li:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+#report-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#report-list::-webkit-scrollbar-track {
+    background: #333;
+}
+
+#report-list::-webkit-scrollbar-thumb {
+    background-color: #ff0000; /* Красный цвет для прокрутки */
+    border-radius: 10px;
+    border: 2px solid #333;
+}

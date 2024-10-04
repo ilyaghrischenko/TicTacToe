@@ -16,7 +16,7 @@ body {
 }
 
 .panel {
-    width: 50%; /* Ширина панели сделана в 3 раза тоньше */
+    width: 35%; /* Ширина панели сделана в 3 раза тоньше */
     background-color: #222;
     margin: 0 10px;
     display: flex;

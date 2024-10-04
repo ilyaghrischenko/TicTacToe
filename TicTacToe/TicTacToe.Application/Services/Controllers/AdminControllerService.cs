@@ -1,3 +1,5 @@
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Interfaces;
 using TicTacToe.Domain.Interfaces.Controllers;
@@ -6,12 +8,14 @@ using TicTacToe.Domain.Interfaces.Repositories;
 
 namespace TicTacToe.Application.Services.Controllers;
 
-public class AdminControllerService
-    (IReportService reportService, 
-        IAdminService adminService) : IAdminControllerService
+public class AdminControllerService(
+    IReportService reportService, 
+    IAdminService adminService,
+    IHttpContextAccessor httpContextAccessor) : IAdminControllerService
 {
     private readonly IReportService _reportService = reportService;
     private readonly IAdminService _adminService = adminService;
+    private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     public async Task<List<User>?> GetAppealedUsers()
     {

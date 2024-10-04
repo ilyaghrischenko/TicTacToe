@@ -67,8 +67,8 @@ button.btn {
     width: 90%;
     height: 50px;
     padding: 10px;
-    background-color: red;
-    color: white;
+    background-color: #008000;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -77,7 +77,7 @@ button.btn {
 }
 
 button.btn:hover {
-    background-color: #0056b3;
+    background-color: darkred;
 }
 
 /* Ссылка на регистрацию/авторизацию */

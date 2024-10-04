@@ -65,9 +65,9 @@ body {
 }
 
 .btn-accept {
-    background-color: #444;
+    background-color: #008000;
     color: white;
-    border: 2px solid red;
+    border: 2px solid #008000;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -78,7 +78,7 @@ body {
 }
 
 .btn-accept:hover {
-    background-color: red;
+    background-color: darkgreen;
     border-color: white;
 }
 
