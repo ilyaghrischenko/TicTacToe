@@ -29,13 +29,20 @@ function renderAllUsers(userUl, users) {
 
         userInfo.appendChild(userStats);
         
-        //TODO: Finish buttons (delete and report)
-        const button = document.createElement('button');
-        button.classList.add('btn', 'reports-button');
-        button.textContent = 'Show reports';
+        //TODO: Прописать логику показа жалоб пользователя (модальное окно)
+        const showReportsButton = document.createElement('button');
+        showReportsButton.classList.add('btn', 'reports-button');
+        showReportsButton.textContent = 'Show reports';
+        showReportsButton.onclick = () => showUserReports(user.id);
+        
+        const blockButton = document.createElement('button');
+        blockButton.classList.add('btn', 'block-button');
+        blockButton.textContent = 'Block';
+        blockButton.onclick = () => blockUser(user.id);
         
         li.appendChild(userInfo);
-        li.appendChild(button);
+        li.appendChild(showReportsButton);
+        li.appendChild(blockButton);
         userUl.appendChild(li);
     });
 }

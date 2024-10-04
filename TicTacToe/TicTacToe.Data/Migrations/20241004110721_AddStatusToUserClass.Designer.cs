@@ -11,8 +11,8 @@ using TicTacToe.Data;
 namespace TicTacToe.Data.Migrations
 {
     [DbContext(typeof(TicTacToeContext))]
-    [Migration("20241003134824_ChangeUserClass")]
-    partial class ChangeUserClass
+    [Migration("20241004110721_AddStatusToUserClass")]
+    partial class AddStatusToUserClass
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -115,6 +115,9 @@ namespace TicTacToe.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("StatisticId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

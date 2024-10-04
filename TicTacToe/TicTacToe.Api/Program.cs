@@ -22,7 +22,6 @@ using TicTacToe.Domain.Interfaces;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 //TODO: Прописать игровую локигу (WebSockets/SignalR). Сделать сохранения статистики.
-//TODO: Сделать страницу админа.
 //TODO: Почистить стили, код, скрипты.
 
 // Add services to the container.

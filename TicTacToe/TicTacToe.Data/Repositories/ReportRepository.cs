@@ -12,6 +12,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
     {
         return await _context.Reports
             .Include(u => u.User)
+            .Include(u => u.User.Statistic)
             .ToListAsync();
     }
 
@@ -19,6 +20,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
     {
         return await _context.Reports
             .Include(u => u.User)
+            .Include(u => u.User.Statistic)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 

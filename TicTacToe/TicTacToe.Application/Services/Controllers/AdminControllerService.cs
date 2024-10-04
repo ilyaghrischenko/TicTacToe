@@ -6,14 +6,18 @@ using TicTacToe.Domain.Interfaces.Repositories;
 
 namespace TicTacToe.Application.Services.Controllers;
 
-//TODO
 public class AdminControllerService
     (IReportService reportService, 
         IAdminService adminService) : IAdminControllerService
 {
     private readonly IReportService _reportService = reportService;
     private readonly IAdminService _adminService = adminService;
-    
+
+    public async Task<List<User>?> GetAppealedUsers()
+    {
+        return await _adminService.GetAppealedUsers();
+    }
+
     public async Task<List<Report>> GetUserReports(int userId)
     {
         return await _reportService.GetUserReports(userId);

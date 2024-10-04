@@ -15,22 +15,9 @@ body {
     padding: 20px;
 }
 
-/*.panel {*/
-/*    flex: 1;*/
-/*    background-color: #222;*/
-/*    border-radius: 10px;*/
-/*    margin: 0 10px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    overflow: hidden;*/
-/*    min-height: 500px; !* Заменить height на min-height *!*/
-/*    height: 85vh; !* Увеличить высоту на 80% от доступного пространства *!*/
-/*}*/
-
 .panel {
-    width: 30%; /* Ширина панели сделана в 3 раза тоньше */
+    width: 50%; /* Ширина панели сделана в 3 раза тоньше */
     background-color: #222;
-    border-radius: 10px;
     margin: 0 10px;
     display: flex;
     flex-direction: column;
@@ -94,4 +81,35 @@ ul {
     height: 60px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+/* Стили для кнопок */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Кнопка для показа отчётов */
+.reports-button {
+    background-color: #0056b3;/* Красный цвет для отчётов */
+}
+
+.reports-button:hover {
+    background-color: #004494;
+}
+
+/* Кнопка для блокировки */
+.block-button {
+    background-color: #f44336; /* Синий цвет для блокировки */
+}
+
+.block-button:hover {
+    background-color: #d32f2f; /* Более тёмный оттенок при наведении */
 }

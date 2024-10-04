@@ -5,18 +5,25 @@
 namespace TicTacToe.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class ChangeUserClass : Migration
+    public partial class AddStatusToUserClass : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.AddColumn<int>(
+                name: "Status",
+                table: "Users",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.DropColumn(
+                name: "Status",
+                table: "Users");
         }
     }
 }

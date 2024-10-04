@@ -1,7 +1,5 @@
 'use strict';
 
-//TODO: renderUserList нужно тут как-то использовать
-
 const userUl = document.getElementById('user-list');
 const token = sessionStorage.getItem('token');
 
@@ -11,7 +9,7 @@ if (!token) {
 
 document.addEventListener('DOMContentLoaded', async (e) => {
     try {
-        const response = await fetch('/api/User/getAllUsers', {
+        const response = await fetch('/api/Admin/getAppealedUsers', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -25,9 +23,6 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         }
         
         const users = await response.json();
-        console.log('users:');
-        console.dir(users);
-
         renderAllUsers(userUl, users);
     }
     catch (error) {

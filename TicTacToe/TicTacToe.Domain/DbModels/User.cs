@@ -9,19 +9,18 @@ public class User
     public string Login { get; set; }
     public string Password { get; set; }
     public string Email { get; set; }
-    public byte[]? Avatar { get; set; }
+    public byte[]? Avatar { get; set; } = null;
     public Role Role { get; set; }
     public Statistic Statistic { get; set; }
-    public UserStatus Status = UserStatus.Available;
+    public UserStatus Status { get; set; } = UserStatus.Available;
     
     public User() { }
-    public User(string login, string password, string email, Role role, byte[]? avatar = null)
+    public User(string login, string password, string email, Role role)
     {
         Login = login;
         Password = password;
         Email = email;
         Role = role;
-        Avatar = avatar;
     }
     
     public override string ToString()

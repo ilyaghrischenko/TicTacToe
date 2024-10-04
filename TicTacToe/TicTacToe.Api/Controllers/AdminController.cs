@@ -11,15 +11,22 @@ namespace TicTacToe.Api.Controllers
     {
         private readonly IAdminControllerService _adminControllerService = adminControllerService;
         
-        [HttpGet("getUserReports")]
-        public async Task<ActionResult<List<Report>>> GetUserReports(int userId)
+        [HttpGet("getAppealedUsers")]
+        public async Task<ActionResult<List<User>?>> GetAppealedUsers()
+        {
+            var users = await _adminControllerService.GetAppealedUsers();
+            return Ok(users);
+        }
+        
+        [HttpPost("getUserReports")]
+        public async Task<ActionResult<List<Report>>> GetUserReports([FromBody] int userId)
         {
             var reports = await _adminControllerService.GetUserReports(userId);
             return Ok(reports);
         }
         
         [HttpPost("blockUser")]
-        public async Task<IActionResult> BlockUser(int userId)
+        public async Task<IActionResult> BlockUser([FromBody] int userId)
         {
             try
             {

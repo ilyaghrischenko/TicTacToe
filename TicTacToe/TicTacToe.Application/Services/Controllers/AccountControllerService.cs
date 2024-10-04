@@ -32,7 +32,8 @@ public class AccountControllerService(
             var response = new
             {
                 access_token = token,
-                user_role = user.Role.ToString()
+                user_role = user.Role.ToString(),
+                user_status = user.Status.ToString()
             };
             
             return response;

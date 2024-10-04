@@ -175,11 +175,6 @@ public class UserService(
             throw new ArgumentException("Wrong password");
         }
         
-        if (user.Status == UserStatus.Blocked)
-        {
-            throw new ArgumentException("User is blocked");
-        }
-        
         return user;
     }
 
