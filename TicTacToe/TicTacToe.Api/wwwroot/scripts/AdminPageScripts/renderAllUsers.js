@@ -29,7 +29,6 @@ function renderAllUsers(userUl, users) {
 
         userInfo.appendChild(userStats);
         
-        //TODO: Прописать логику показа жалоб пользователя (модальное окно)
         const showReportsButton = document.createElement('button');
         showReportsButton.classList.add('btn', 'reports-button');
         showReportsButton.textContent = 'Show reports';
