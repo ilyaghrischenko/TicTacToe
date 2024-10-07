@@ -46,13 +46,16 @@ builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReportService, ReportService>();
+
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IGameService, GameService>();
 
 builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
 builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
+builder.Services.AddScoped<IGameControllerService, GameControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
