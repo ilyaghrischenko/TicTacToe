@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,8 +7,9 @@ using TicTacToe.Domain.Interfaces.Controllers;
 
 namespace TicTacToe.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Authorize(Roles = "Admin")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AdminController(IAdminControllerService adminControllerService) : ControllerBase
     {
