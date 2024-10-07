@@ -1,155 +1,167 @@
 {
   "Files": [
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\avatar.png",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\avatar.png",
       "PackagePath": "staticwebassets\\images\\avatar.png"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
       "PackagePath": "staticwebassets\\images\\settings.png"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
       "PackagePath": "staticwebassets\\pages\\admin.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
       "PackagePath": "staticwebassets\\pages\\auth.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\blocked.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\blocked.html",
       "PackagePath": "staticwebassets\\pages\\blocked.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
       "PackagePath": "staticwebassets\\pages\\main.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\registration.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\registration.html",
       "PackagePath": "staticwebassets\\pages\\registration.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userFriends.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userFriends.html",
       "PackagePath": "staticwebassets\\pages\\userFriends.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userSettings.html",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userSettings.html",
       "PackagePath": "staticwebassets\\pages\\userSettings.html"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\authScript.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
       "PackagePath": "staticwebassets\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\blockUser.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\blockUser.js",
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\blockUser.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\loadAllUsers.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js",
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\renderAllUsers.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\showUserReports.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\showUserReports.js",
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\showUserReports.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderUsers.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\game.js",
-      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\game.js"
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\game.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\game.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js"
+    },
+    {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\main.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\renderFriendsList.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\report.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\report.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\report.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeAvatar.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeEmail.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changeLogin.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\changePassword.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\UserSettingsScripts\\loadUserInfo.js"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\admin.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\admin.css",
       "PackagePath": "staticwebassets\\styles\\admin.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
       "PackagePath": "staticwebassets\\styles\\authRegStyles.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\blocked.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\blocked.css",
       "PackagePath": "staticwebassets\\styles\\blocked.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
       "PackagePath": "staticwebassets\\styles\\main.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\reportModal.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\reportModal.css",
       "PackagePath": "staticwebassets\\styles\\reportModal.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
       "PackagePath": "staticwebassets\\styles\\sharedStyles\\errorTooltip.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\scroll.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\scroll.css",
       "PackagePath": "staticwebassets\\styles\\sharedStyles\\scroll.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
       "PackagePath": "staticwebassets\\styles\\userFriends.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userReportsModal.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userReportsModal.css",
       "PackagePath": "staticwebassets\\styles\\userReportsModal.css"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",
       "PackagePath": "staticwebassets\\styles\\userSettingsStyles.css"
     },
     {

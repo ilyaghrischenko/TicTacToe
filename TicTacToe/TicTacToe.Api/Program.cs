@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
+using TicTacToe.Application.SignalRHub;
 using TicTacToe.Domain.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+builder.Services.AddSignalR();
 
 builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
@@ -121,5 +123,6 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
 app.UseStaticFiles();
+app.MapHub<GameHub>("/gameHub");
 
 app.Run();
