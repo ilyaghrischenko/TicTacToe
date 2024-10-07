@@ -21,7 +21,6 @@ using TicTacToe.Domain.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//TODO: Прописать игровую локигу (WebSockets/SignalR). Сделать сохранения статистики.
 //TODO: Почистить стили, код, скрипты.
 
 //TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
