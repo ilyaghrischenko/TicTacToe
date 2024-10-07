@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #393033;
+    background-color: #4A0E2E;
     color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
 
 /* Сайдбар для аватара и информации */
 .profile-sidebar {
-    background-color: #1e1e1e;
+    background-color: #5D4037;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -49,7 +49,7 @@ body {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 3px solid #f44336;
+    border: 3px solid green;
 }
 
 .username {
@@ -86,7 +86,7 @@ body {
 .profile-main {
     flex: 2;
     padding: 20px;
-    background-color: #222;
+    background-color: #380A23;
 }
 
 h2 {

@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #393033;
+    background-color: #4A0E2E;
     color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     width: 90%;
     max-width: 1200px;
-    background-color: #1e1e1e;
+    background-color: #380A23;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -30,7 +30,7 @@ body {
 
 .panel {
     flex: 1;
-    background-color: #222;
+    background-color: #5D4037;
     border-radius: 10px;
     margin: 0 10px;
     display: flex;
@@ -46,7 +46,7 @@ body {
 }
 
 .panel-header h3 {
-    color: #f44336;
+    color: green;
     margin: 0;
 }
 
@@ -120,7 +120,7 @@ li {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333;
+    background-color: #4A332D;
     border-radius: 8px;
 }
 

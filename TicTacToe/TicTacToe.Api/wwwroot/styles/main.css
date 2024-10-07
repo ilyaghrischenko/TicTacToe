@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #393033; /* Заменен цвет фона на темный */
+    background-color: #4A0E2E ; /* Заменен цвет фона на темный */
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 }
 
 .left-panel, .central-panel, .right-panel {
-    background-color: #1e1e1e;
+    background-color: #5D4037;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -41,7 +41,7 @@ body {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 2px solid red; /* Добавлен красный бордер для аватара */
+    border: 2px solid #008000; /* Добавлен красный бордер для аватара */
 }
 
 .nickname {
@@ -76,7 +76,7 @@ body {
     align-items: center;
     padding: 6px;
     margin-bottom: 8px;
-    background-color: #222;
+    background-color: #4A0E2E;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 300px; /* Ширина элемента */
@@ -85,7 +85,7 @@ body {
 }
 
 .friends-list li:hover {
-    background-color: #4c4141;
+    background-color: #380A23;
 }
 
 .user-item {
@@ -126,9 +126,7 @@ body {
 .friend-info .avatar {
     width: 45px; /* Уменьшенный размер аватара */
     height: 45px;
-    border-radius: 50%;
     margin-right: 10px;
-    border: 1px solid red;
 }
 
 .friend-info span {
@@ -165,8 +163,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #292325;
-    border: 1px solid red;
+    background-color: #4A0E2E;
+    border: 1px solid #008000;
     font-size: 36px;
     font-weight: bold;
     cursor: pointer;

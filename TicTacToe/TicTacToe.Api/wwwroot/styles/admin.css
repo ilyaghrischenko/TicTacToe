@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #393033;
+    background-color: #4A0E2E;
     color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 
 .panel {
     width: 35%; /* Ширина панели сделана в 3 раза тоньше */
-    background-color: #222;
+    background-color: #5D4037;
     margin: 0 10px;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ body {
 }
 
 .panel-header h3 {
-    color: #f44336;
+    color: green;
     margin: 0;
 }
 
@@ -58,7 +58,7 @@ ul {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333;
+    background-color: #4A332D;
     border-radius: 8px;
     overflow: hidden; /* Скрываем элементы, выходящие за пределы */
 }
@@ -98,18 +98,18 @@ ul {
 
 /* Кнопка для показа отчётов */
 .reports-button {
-    background-color: #0056b3;/* Красный цвет для отчётов */
+    background-color: green;/* Красный цвет для отчётов */
 }
 
 .reports-button:hover {
-    background-color: #004494;
+    background-color: darkgreen;
 }
 
 /* Кнопка для блокировки */
 .block-button {
-    background-color: #f44336; /* Синий цвет для блокировки */
+    background-color: red; /* Синий цвет для блокировки */
 }
 
 .block-button:hover {
-    background-color: #d32f2f; /* Более тёмный оттенок при наведении */
+    background-color: darkred; /* Более тёмный оттенок при наведении */
 }

@@ -24,7 +24,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 //TODO: Прописать игровую локигу (WebSockets/SignalR). Сделать сохранения статистики.
 //TODO: Почистить стили, код, скрипты.
 
-//TODO: Поменять цвета кнопок на каждой странице(сделать как было).
+//TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

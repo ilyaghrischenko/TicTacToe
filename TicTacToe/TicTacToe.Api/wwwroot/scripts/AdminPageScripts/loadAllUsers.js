@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         });
 
         if (!response.ok) {
+            if (response.status === 401) {
+                window.location.href = '../pages/main.html';
+            }
+            
             const errorText = await response.text();
             throw new Error(`Ошибка при получении пользователей: ${errorText}`);
         }
