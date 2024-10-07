@@ -35,6 +35,7 @@ loginForm.addEventListener('submit', async (e) => {
             const token = data.access_token;
 
             sessionStorage.setItem('token', token);
+            sessionStorage.setItem('userLogin', data.user_login);
             
             if (data.user_role === 'User') {
                 if (data.user_status === 'Available') {
