@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DQ2WGj/b5gSsgqiDbKPtkCKnmraRUXKeit6WkgUDLa4=",
+  "Hash": "DWF2hUupuNbv/GyH057d8mn6r4fLJpppoW9LPUKW3PE=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TicTacToe.Api\\wwwroot",
       "Source": "TicTacToe.Api",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\avatar.png",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\avatar.png",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "images/avatar.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar.png"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "images/settings.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\settings.png"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/admin.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\admin.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\auth.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/auth.html",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\auth.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/main.html",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\main.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\registration.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\registration.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/registration.html",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\registration.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userFriends.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userFriends.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/userFriends.html",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\userFriends.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userSettings.html",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\userSettings.html",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "pages/userSettings.html",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\pages\\userSettings.html"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\authScript.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/AccountControllerScripts/authScript.js",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\authScript.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AccountControllerScripts\\regScript.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/AccountControllerScripts/regScript.js",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AccountControllerScripts\\regScript.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/AdminPageScripts/loadAllUsers.js",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/AdminPageScripts/renderAllUsers.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\AdminPageScripts\\renderAllUsers.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/FriendsListScripts/apiRequests.js",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\apiRequests.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/FriendsListScripts/loadUsersNFriends.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/FriendsListScripts/renderUsers.js",
       "AssetKind": "All",
@@ -302,29 +302,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\renderUsers.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\game.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
-      "BasePath": "_content/TicTacToe.Api",
-      "RelativePath": "scripts/MainPageScripts/game.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\game.js"
-    },
-    {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
-      "SourceId": "TicTacToe.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/MainPageScripts/loadUserInfo.js",
       "AssetKind": "All",
@@ -340,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\main.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/MainPageScripts/main.js",
       "AssetKind": "All",
@@ -359,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\main.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/MainPageScripts/renderFriendsList.js",
       "AssetKind": "All",
@@ -378,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\renderFriendsList.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\report.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\report.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/MainPageScripts/report.js",
       "AssetKind": "All",
@@ -397,10 +378,86 @@
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\report.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\game.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/SignalRScripts/game.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\game.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/SignalRScripts/invitationModalWindow.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/SignalRScripts/signalR.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/UserSettingsScripts/changeAvatar.js",
       "AssetKind": "All",
@@ -416,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\UserSettingsScripts\\changeAvatar.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/UserSettingsScripts/changeEmail.js",
       "AssetKind": "All",
@@ -435,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\UserSettingsScripts\\changeEmail.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/UserSettingsScripts/changeLogin.js",
       "AssetKind": "All",
@@ -454,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\UserSettingsScripts\\changeLogin.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\changePassword.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/UserSettingsScripts/changePassword.js",
       "AssetKind": "All",
@@ -473,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\UserSettingsScripts\\changePassword.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "scripts/UserSettingsScripts/loadUserInfo.js",
       "AssetKind": "All",
@@ -492,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\scripts\\UserSettingsScripts\\loadUserInfo.js"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\admin.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\admin.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/admin.css",
       "AssetKind": "All",
@@ -511,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\admin.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\authRegStyles.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/authRegStyles.css",
       "AssetKind": "All",
@@ -530,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\authRegStyles.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/main.css",
       "AssetKind": "All",
@@ -549,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\main.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\modalWindow.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\modalWindow.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/modalWindow.css",
       "AssetKind": "All",
@@ -568,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\modalWindow.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\errorTooltip.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/sharedStyles/errorTooltip.css",
       "AssetKind": "All",
@@ -587,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\sharedStyles\\errorTooltip.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\scroll.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\sharedStyles\\scroll.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/sharedStyles/scroll.css",
       "AssetKind": "All",
@@ -606,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\sharedStyles\\scroll.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userFriends.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/userFriends.css",
       "AssetKind": "All",
@@ -625,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\userFriends.css"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\userSettingsStyles.css",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
       "RelativePath": "styles/userSettingsStyles.css",
       "AssetKind": "All",
