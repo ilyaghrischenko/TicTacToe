@@ -102,6 +102,19 @@ namespace TicTacToe.Application.SignalRHub
                 }
             }
         }
+        
+        public async Task RestartGame(string gameId)
+        {
+            if (GameSessions.TryGetValue(gameId, out var gameSession))
+            {
+                // Устанавливаем начальное состояние игры
+                gameSession.CurrentTurn = gameSession.PlayerX;
+
+                // Отправляем обоим игрокам сообщение о перезапуске игры
+                await Clients.Group(gameId).SendAsync("RestartGame");
+            }
+        }
+
 
 
         public async Task SendMessageToAll(string message)

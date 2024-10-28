@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js"
     },
     {
+      "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\restartButton.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\restartButton.js"
+    },
+    {
       "Id": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js"
     },

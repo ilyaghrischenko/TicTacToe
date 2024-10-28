@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LkziM3VmXJdecjIqpEl9dmUltAPr5CqlVy33JhAqFfY=",
+  "Hash": "it0nfqW2RPIgpqxlNQJIF41fPENEAF0jVMZrrlTkEtE=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -471,6 +471,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\invitationModalWindow.js"
+    },
+    {
+      "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\restartButton.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/MainPageScripts/SignalRScripts/restartButton.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\restartButton.js"
     },
     {
       "Identity": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalR.js",

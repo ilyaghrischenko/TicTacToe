@@ -29,11 +29,25 @@ async function putOnEventHandlers() {
         cell.textContent = symbol;
         cell.classList.add('active');
 
-        checkWinner();
-
         // Переключаем очередность хода
         isMyTurn = (playerName !== sessionStorage.getItem('userLogin'));
         statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
+
+        checkWinner();
+    });
+
+    connection.on("RestartGame", function () {
+        gameActive = true;
+        board = ['', '', '', '', '', '', '', '', ''];
+        statusText.textContent = `Ход игрока: ${playerSymbol}`;
+        cells.forEach(cell => {
+            cell.textContent = '';
+            cell.classList.remove('active');
+        });
+        isMyTurn = true; // Возвращение права хода текущему игроку
+
+        const restartButton = document.getElementById('restartBtn');
+        if (restartButton) restartButton.remove(); // Удаление кнопки после перезапуска
     });
 
 }
