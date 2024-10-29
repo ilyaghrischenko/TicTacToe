@@ -54,7 +54,6 @@ builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
-builder.Services.AddScoped<IGameControllerService, GameControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
