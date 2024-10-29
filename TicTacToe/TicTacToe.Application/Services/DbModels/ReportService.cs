@@ -5,10 +5,13 @@ using TicTacToe.Domain.Interfaces.Repositories;
 
 namespace TicTacToe.Application.Services.DbModels;
 
-public class ReportService(IRepository<Report> reportRepository) : IReportService
+public class ReportService(
+    IRepository<Report> reportRepository,
+    IUserRepository userRepository) : IReportService
 {
     private readonly IRepository<Report> _reportRepository = reportRepository;
-
+    private readonly IUserRepository _userRepository = userRepository;
+    
     public async Task<List<Report>> GetUserReports(int userId)
     {
         var allReports = await _reportRepository.GetAll();
@@ -19,5 +22,17 @@ public class ReportService(IRepository<Report> reportRepository) : IReportServic
 
         var userReports = allReports?.Where(r => r.User.Id == userId).ToList();
         return userReports;
+    }
+
+    public async Task SendReport(string login, string message)
+    {
+        var user = await _userRepository.Get(login);
+        if (user == null)
+        {
+            throw new Exception("User not found");
+        }
+        
+        var report = new Report(user, message);
+        await _reportRepository.Add(report);
     }
 }
