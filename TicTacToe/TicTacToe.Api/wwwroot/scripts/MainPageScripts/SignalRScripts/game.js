@@ -40,7 +40,7 @@ function handleCellClick(event) {
         return console.error(err.toString());
     });
 
-    if(checkWinner() === true){
+    if (checkWinner() === true) {
         return;
     }
 

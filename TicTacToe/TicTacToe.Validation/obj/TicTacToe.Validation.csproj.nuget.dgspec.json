@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {}
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {}
   },
   "projects": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
+        "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
         "projectName": "TicTacToe.DTO",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\obj\\",
+        "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,21 +65,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
+        "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
         "projectName": "TicTacToe.Validation",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\obj\\",
+        "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
-                "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
+              "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+                "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
               }
             }
           }
@@ -132,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

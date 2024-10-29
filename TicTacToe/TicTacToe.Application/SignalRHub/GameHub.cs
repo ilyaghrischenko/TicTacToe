@@ -9,7 +9,6 @@ namespace TicTacToe.Application.SignalRHub
     {
         // Хранение подключенных пользователей
         private static ConcurrentDictionary<string, string> ConnectedUsers = new();
-
         // Отслеживание активных игр
         private static ConcurrentDictionary<string, GameSession> GameSessions = new();
 
@@ -102,19 +101,10 @@ namespace TicTacToe.Application.SignalRHub
                 }
             }
         }
-
-
+        
         public async Task SendMessageToAll(string message)
         {
             await Clients.All.SendAsync("ReceiveMessage", message);
         }
-    }
-
-    public class GameSession
-    {
-        public string GameId { get; set; }
-        public string PlayerX { get; set; }
-        public string PlayerO { get; set; }
-        public string CurrentTurn { get; set; }
     }
 }

@@ -26,8 +26,6 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 //TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
