@@ -23,7 +23,6 @@ using TicTacToe.Domain.Interfaces;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 //TODO: Почистить стили, код, скрипты.
-
 //TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
 
 builder.Services.AddEndpointsApiExplorer();
@@ -107,6 +106,20 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 WebApplication app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<TicTacToeContext>();
+        DatabaseInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred while initializing the database: {ex.Message}");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

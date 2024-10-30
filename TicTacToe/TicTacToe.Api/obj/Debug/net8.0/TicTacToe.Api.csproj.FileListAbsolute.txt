@@ -568,3 +568,4 @@ C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extension
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\appsettings.example.json
