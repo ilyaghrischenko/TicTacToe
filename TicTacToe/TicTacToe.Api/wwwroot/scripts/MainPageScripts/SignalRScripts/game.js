@@ -4,12 +4,11 @@ const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
 const restartBtn = document.getElementById('restartBtn');
 let gameActive = false;
-let board = ['', '', '', '', '', '', '', '', ''];
+let board = Array(9).fill('');
 let currentGameId = null;
 let playerSymbol = null;
 let isMyTurn = false;
 
-// Комбинации для победы
 const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -39,7 +38,7 @@ function handleCellClick(event) {
             endTurn();
         })
         .catch((err) => {
-            console.error(err.toString());
+            console.error("Error in move:", err.toString());
             isMyTurn = true;
             statusText.textContent = "Ошибка при передаче хода, попробуйте еще раз";
         });
@@ -50,12 +49,9 @@ function endTurn() {
     statusText.textContent = "Ход соперника";
 }
 
-
-
 function checkWinner() {
     for (let condition of winningConditions) {
         const [a, b, c] = condition;
-
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
             endGame(`Победил игрок с символом ${board[a]}`);
             return true;
@@ -75,8 +71,5 @@ function endGame(message) {
     gameActive = false;
     statusText.textContent = message;
 }
-
-
-
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));

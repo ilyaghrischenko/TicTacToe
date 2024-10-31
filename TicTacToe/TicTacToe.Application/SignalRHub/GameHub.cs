@@ -1,16 +1,11 @@
 using System.Collections.Concurrent;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.Logging;
 
 namespace TicTacToe.Application.SignalRHub
 {
     public class GameHub : Hub
     {
-        // Хранение подключенных пользователей
         private static ConcurrentDictionary<string, string> ConnectedUsers = new();
-
-        // Отслеживание активных игр
         private static ConcurrentDictionary<string, GameSession> GameSessions = new();
 
         public override Task OnConnectedAsync()
@@ -26,13 +21,13 @@ namespace TicTacToe.Application.SignalRHub
             return base.OnConnectedAsync();
         }
 
-        public override Task OnDisconnectedAsync(Exception exception)
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
-            ConnectedUsers.TryRemove(Context.ConnectionId, out _);
-            return base.OnDisconnectedAsync(exception);
+            ConnectedUsers.TryRemove(Context.ConnectionId, out var userName);
+            await EndGameOnDisconnect(Context.ConnectionId); // Завершаем игру при отключении пользователя
+            await base.OnDisconnectedAsync(exception);
         }
 
-        // Отправка приглашения
         public async Task SendInvitation(string toUserName)
         {
             var fromUserName = ConnectedUsers[Context.ConnectionId];
@@ -43,7 +38,6 @@ namespace TicTacToe.Application.SignalRHub
             }
         }
 
-        // Принятие приглашения
         public async Task AcceptInvitation(string fromUserName)
         {
             var toUserName = ConnectedUsers[Context.ConnectionId];
@@ -51,7 +45,6 @@ namespace TicTacToe.Application.SignalRHub
 
             if (fromConnectionId != null)
             {
-                // Создаем новую игровую сессию
                 var gameId = Guid.NewGuid().ToString();
                 var gameSession = new GameSession
                 {
@@ -62,43 +55,34 @@ namespace TicTacToe.Application.SignalRHub
                 };
                 GameSessions[gameId] = gameSession;
 
-                // Добавляем игроков в группу игры
                 await Groups.AddToGroupAsync(fromConnectionId, gameId);
                 await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
 
-                // Начинаем игру
                 await Clients.Client(fromConnectionId).SendAsync("StartGame", gameId, "X");
                 await Clients.Client(Context.ConnectionId).SendAsync("StartGame", gameId, "O");
             }
         }
 
-        // Отклонение приглашения
         public async Task DeclineInvitation(string fromUserName)
         {
             var fromConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == fromUserName).Key;
-
             if (fromConnectionId != null)
             {
-                await Clients.Client(fromConnectionId)
-                    .SendAsync("InvitationDeclined", ConnectedUsers[Context.ConnectionId]);
+                await Clients.Client(fromConnectionId).SendAsync("InvitationDeclined", ConnectedUsers[Context.ConnectionId]);
             }
         }
 
-        // Обработка хода игрока
         public async Task MakeMove(string gameId, int cellIndex)
         {
             if (GameSessions.TryGetValue(gameId, out var gameSession))
             {
                 if (gameSession.CurrentTurn == Context.ConnectionId)
                 {
-                    // Передаем ход другому игроку
                     gameSession.CurrentTurn = gameSession.PlayerX == Context.ConnectionId
                         ? gameSession.PlayerO
                         : gameSession.PlayerX;
 
-                    // Отправляем ход обоим игрокам
-                    await Clients.Group(gameId)
-                        .SendAsync("ReceiveMove", cellIndex, ConnectedUsers[Context.ConnectionId]);
+                    await Clients.Group(gameId).SendAsync("ReceiveMove", cellIndex, ConnectedUsers[Context.ConnectionId]);
                 }
             }
         }
@@ -107,19 +91,26 @@ namespace TicTacToe.Application.SignalRHub
         {
             if (GameSessions.TryGetValue(gameId, out var gameSession))
             {
-                // Устанавливаем начальное состояние игры
                 gameSession.CurrentTurn = gameSession.PlayerX;
 
-                // Отправляем обоим игрокам сообщение о перезапуске игры
                 await Clients.Group(gameId).SendAsync("RestartGame");
             }
         }
 
-
-
-        public async Task SendMessageToAll(string message)
+        private async Task EndGameOnDisconnect(string connectionId)
         {
-            await Clients.All.SendAsync("ReceiveMessage", message);
+            var gameSession = GameSessions.Values.FirstOrDefault(session => session.PlayerX == connectionId || session.PlayerO == connectionId);
+            if (gameSession != null)
+            {
+                string remainingPlayer = gameSession.PlayerX == connectionId ? gameSession.PlayerO : gameSession.PlayerX;
+                string gameId = gameSession.GameId;
+                GameSessions.TryRemove(gameId, out _);
+
+                await Clients.Client(remainingPlayer).SendAsync("EndGame", gameId);
+                
+                await Groups.RemoveFromGroupAsync(connectionId, gameId);
+                await Groups.RemoveFromGroupAsync(remainingPlayer, gameId);
+            }
         }
     }
 
