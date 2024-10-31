@@ -221,6 +221,7 @@ h1 {
 }
 
 .btn {
+    background-color: var(--button-color);
     color: white;
     border: 2px solid var(--border-color);
     border-radius: 5px;
@@ -270,7 +271,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000; /* Обеспечивает отображение поверх других элементов */
-    background-color: var(--main-color); /* Полупрозрачный фон */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
     width: 100%;
     height: 100%;
     display: flex;

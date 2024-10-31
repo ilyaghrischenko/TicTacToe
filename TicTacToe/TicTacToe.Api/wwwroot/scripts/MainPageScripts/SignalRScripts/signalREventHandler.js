@@ -60,12 +60,13 @@ async function putOnEventHandlers() {
         allButtons.forEach(button => {
             if (button.innerText !== 'Restart') {
                 button.disabled = false;
-                button.style.backgroundColor = 'green';
+                button.style.backgroundColor = 'var(--button-color)';
             }
         });
 
         const endGameBtn = document.getElementById('endGameBtn');
         const restartBtn = document.getElementById('restartBtn');
+        
         if (restartBtn) restartBtn.remove();
         if (endGameBtn) endGameBtn.remove();
         
