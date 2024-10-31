@@ -9,6 +9,15 @@ async function putOnEventHandlers() {
     });
 
     await connection.on("StartGame", function (gameId, symbol) {
+        const allButtons = document.querySelectorAll('.btn');
+        allButtons.forEach(button => {
+            if (button.innerText !== 'Restart') {
+                button.disabled = true;
+                button.innerHTML = 'Unavailable'
+                button.style.backgroundColor = 'black';
+            }
+        });
+        
         currentGameId = gameId;
         playerSymbol = symbol;
         gameActive = true;

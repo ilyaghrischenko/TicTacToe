@@ -2,8 +2,8 @@ using TicTacToe.Domain.Interfaces.Controllers;
 
 namespace TicTacToe.Domain.Interfaces;
 
-public interface IGameService : ICurrentUserId
+public interface IGameService
 {
-    Task<string> Win();
-    Task<string> Lose();
+    Task Win(string login);
+    Task Lose(string login);
 }

@@ -23,11 +23,8 @@ using TicTacToe.Domain.Interfaces;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 //TODO: Почистить стили, код, скрипты.
-
 //TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
@@ -56,7 +53,6 @@ builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
-builder.Services.AddScoped<IGameControllerService, GameControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
@@ -110,6 +106,20 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 WebApplication app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<TicTacToeContext>();
+        DatabaseInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred while initializing the database: {ex.Message}");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

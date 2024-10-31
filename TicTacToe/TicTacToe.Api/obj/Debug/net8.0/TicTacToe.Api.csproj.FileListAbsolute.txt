@@ -557,3 +557,15 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\obj\Debug\ne
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\obj\Debug\net8.0\TicTacToe.Api.pdb
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\obj\Debug\net8.0\TicTacToe.Api.genruntimeconfig.cache
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\obj\Debug\net8.0\ref\TicTacToe.Api.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\appsettings.example.json

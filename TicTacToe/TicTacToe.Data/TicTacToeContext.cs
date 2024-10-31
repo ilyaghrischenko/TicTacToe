@@ -1,15 +1,24 @@
 using TicTacToe.Domain.DbModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace TicTacToe.Data
 {
     public class TicTacToeContext : DbContext
     {
         public TicTacToeContext() { }
-        public TicTacToeContext(DbContextOptions<TicTacToeContext> options) : base(options) { }
+
+        public TicTacToeContext(DbContextOptions<TicTacToeContext> options, IConfiguration configuration)
+            : base(options)
+        {
+            _configuration = configuration;
+            DatabaseInitializer.Initialize(this);
+        }
+
+        private readonly IConfiguration _configuration;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(@"data source=sql.bsite.net\MSSQL2016;initial catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;");
+            => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TicTacToeContext"));
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
