@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #4A0E2E ; /* Заменен цвет фона на темный */
+    background-color: var(--main-color) ; /* Заменен цвет фона на темный */
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 }
 
 .left-panel, .central-panel, .right-panel {
-    background-color: #5D4037;
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -41,7 +41,7 @@ body {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 2px solid #008000; /* Добавлен красный бордер для аватара */
+    border: 2px solid var(--border-color); /* Добавлен красный бордер для аватара */
 }
 
 .nickname {
@@ -76,7 +76,7 @@ body {
     align-items: center;
     padding: 6px;
     margin-bottom: 8px;
-    background-color: #4A0E2E;
+    background-color: var(--main-color);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 300px; /* Ширина элемента */
@@ -85,7 +85,7 @@ body {
 }
 
 .friends-list li:hover {
-    background-color: #380A23;
+    background-color: var(--secondary-color);
 }
 
 .user-item {
@@ -94,7 +94,6 @@ body {
     align-items: center;
     padding: 10px; /* Увеличиваем отступы */
     margin-bottom: 10px; /* Пространство между элементами */
-    background-color: #222;
     border-radius: 10px; /* Более округленные углы */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     width: 325px; /* Увеличиваем ширину блока */
@@ -104,8 +103,8 @@ body {
 
 .invite-button {
     padding: 6px 14px; /* Чуть увеличиваем размеры кнопки */
-    background-color: #008000;
-    border: 1px solid white;
+    background-color: var(--button-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     color: white;
     cursor: pointer;
@@ -114,8 +113,8 @@ body {
 }
 
 .invite-button:hover {
-    background-color: darkgreen;
-    border-color: white;
+    background-color: var(--button-hover-color);
+    /*border-color: var;*/
 }
 
 .friend-info {
@@ -163,8 +162,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4A0E2E;
-    border: 1px solid #008000;
+    background-color: var(--cell-color);
+    border: 1px solid var(--border-color);
     font-size: 36px;
     font-weight: bold;
     cursor: pointer;
@@ -172,7 +171,7 @@ h1 {
 }
 
 .cell:hover {
-    background-color: #6a5353;
+    background-color: var(--cell-hover-color);
     transform: scale(1.05);
 }
 
@@ -199,11 +198,11 @@ h1 {
 #restartBtn {
     padding: 8px 16px; /* Уменьшите отступы, чтобы кнопка была меньше */
     font-size: 14px; /* Уменьшите размер шрифта */
-    background-color: #008000; /* Замените цвет фона, если нужно */
+    background-color: var(--button-color); /* Замените цвет фона, если нужно */
     margin-top: 10px; /* Добавьте верхний отступ для отделения от текста статуса */
 }
 #restartBtn:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
 }
 
 .right-panel {
@@ -217,13 +216,13 @@ h1 {
 
 .statistics p {
     padding: 5px 0;
-    border-bottom: 1px solid #333; /* Темный цвет для разделения статистики */
+    border-bottom: 1px solid var(--border-color); /* Темный цвет для разделения статистики */
     color: white;
 }
 
 .btn {
     color: white;
-    border: 2px solid #008000;
+    border: 2px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -231,12 +230,12 @@ h1 {
 }
 
 .btn:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
     border-color: white;
 }
 
 .friendsButton.btn {
-    background-color: #008000;
+    background-color: var(--button-color);
     padding: 10px 20px;
     margin: 10px auto 0;
     width: 80%;
@@ -247,17 +246,17 @@ h1 {
     margin-top: 20px;
 }
 .friendsButton.btn:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
 }
 
 .settings-button.btn{
-    background-color: #008000;
+    background-color: var(--button-color);
     padding: 5px 10px;
     margin: 5px auto 0;
     width: 50%;
 }
 .settings-button.btn:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
 }
 .settings-button.btn a {
     text-decoration: none;
@@ -271,7 +270,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000; /* Обеспечивает отображение поверх других элементов */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    background-color: var(--main-color); /* Полупрозрачный фон */
     width: 100%;
     height: 100%;
     display: flex;
@@ -280,7 +279,7 @@ h1 {
 }
 
 .invitation-modal-content {
-    background-color: #fff; /* Белый фон для контента */
+    background-color: var(--secondary-color); /* Белый фон для контента */
     padding: 20px; /* Внутренние отступы */
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
@@ -297,7 +296,7 @@ h1 {
 .invitation-modal-content .btn {
     padding: 10px 20px;
     margin: 10px; /* Отступ между кнопками */
-    background-color: #007bff; /* Синий фон для кнопок */
+    background-color: var(--button-color); /* Синий фон для кнопок */
     color: white; /* Белый цвет текста */
     border: none;
     border-radius: 5px;
@@ -305,7 +304,7 @@ h1 {
 }
 
 .invitation-modal-content .btn:hover {
-    background-color: #0056b3; /* Темно-синий фон при наведении */
+    background-color: var(--button-hover-color); /* Темно-синий фон при наведении */
 }
 
 /* Стили для кнопки закрытия модального окна (если нужно добавить) */

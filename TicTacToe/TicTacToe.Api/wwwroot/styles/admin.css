@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #4A0E2E;
-    color: #f1f1f1;
+    background-color: var(--main-color);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 
 .panel {
     width: 35%; /* Ширина панели сделана в 3 раза тоньше */
-    background-color: #5D4037;
+    background-color: var(--secondary-color);
     margin: 0 10px;
     display: flex;
     flex-direction: column;
@@ -31,14 +31,14 @@ body {
 
 
 .panel-header {
-    background-color: #333;
+    background-color: var(--main-color);
     padding: 10px;
     text-align: center;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .panel-header h3 {
-    color: green;
+    color: red;
     margin: 0;
 }
 
@@ -58,7 +58,7 @@ ul {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #4A332D;
+    background-color: var(--main-color);
     border-radius: 8px;
     overflow: hidden; /* Скрываем элементы, выходящие за пределы */
 }
@@ -86,7 +86,7 @@ ul {
 /* Стили для кнопок */
 .btn {
     padding: 10px 15px;
-    border: none;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
@@ -98,18 +98,18 @@ ul {
 
 /* Кнопка для показа отчётов */
 .reports-button {
-    background-color: green;/* Красный цвет для отчётов */
+    background-color: #1e1e1e;/* Красный цвет для отчётов */
 }
 
 .reports-button:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
 }
 
 /* Кнопка для блокировки */
 .block-button {
-    background-color: red; /* Синий цвет для блокировки */
+    background-color: #1e1e1e; /* Синий цвет для блокировки */
 }
 
 .block-button:hover {
-    background-color: darkred; /* Более тёмный оттенок при наведении */
+    background-color: var(--button-hover-color); /* Более тёмный оттенок при наведении */
 }

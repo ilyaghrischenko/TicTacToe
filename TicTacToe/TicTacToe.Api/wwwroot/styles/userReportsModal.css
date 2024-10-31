@@ -11,11 +11,11 @@
 }
 
 .modal-content {
-    background-color: #393033;
+    background-color: var(--main-color);
     color: white;
     margin: 10% auto;
     padding: 30px;
-    border: 1px solid #888;
+    border: 1px solid var(--border-color);
     width: 40%;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Добавим тени */
@@ -50,24 +50,19 @@
 }
 
 #report-list li {
-    background-color: #222;
+    background-color: var(--secondary-color);
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
-    border: 1px solid #444;
+    border: 1px solid var(--border-color);
     font-size: 16px;
-    color: #eaeaea;
+    color: white;
     line-height: 1.5; /* Более приятное расстояние между строками */
 }
 
-/* Стиль для отчётов с чередующимися цветами */
-/*#report-list li:nth-child(odd) {*/
-/*    background-color: #3e3e3e;*/
-/*}*/
-
 /* Добавляем небольшой hover-эффект */
 #report-list li:hover {
-    background-color: #555;
+    background-color: var(--main-color);
     transition: background-color 0.3s ease;
 }
 
@@ -82,5 +77,5 @@
 #report-list::-webkit-scrollbar-thumb {
     background-color: #ff0000; /* Красный цвет для прокрутки */
     border-radius: 10px;
-    border: 2px solid #333;
+    border: 2px solid var(--border-color);
 }

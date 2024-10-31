@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #4A0E2E;
-    color: #f1f1f1;
+    background-color: var(--main-color);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -22,7 +22,7 @@ body {
     display: flex;
     width: 80%;
     max-width: 1200px;
-    background-color: #1e1e1e;
+    background-color: var(--main-color);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -31,7 +31,7 @@ body {
 
 /* Сайдбар для аватара и информации */
 .profile-sidebar {
-    background-color: #5D4037;
+    background-color: var(--secondary-color);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -65,9 +65,9 @@ body {
 }
 
 .btn-accept {
-    background-color: #008000;
+    background-color: var(--button-color);
     color: white;
-    border: 2px solid #008000;
+    border: 2px solid var(--border-color);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -78,7 +78,7 @@ body {
 }
 
 .btn-accept:hover {
-    background-color: darkgreen;
+    background-color: var(--button-hover-color);
     border-color: white;
 }
 
@@ -86,7 +86,7 @@ body {
 .profile-main {
     flex: 2;
     padding: 20px;
-    background-color: #380A23;
+    background-color: var(--main-color);
 }
 
 h2 {

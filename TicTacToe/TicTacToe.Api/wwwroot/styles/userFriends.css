@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #4A0E2E;
-    color: #f1f1f1;
+    background-color: var(--main-color);
+    color: white;
     display: flex;
     justify-content: center;
     /*align-items: flex-start;*/
@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     width: 90%;
     max-width: 1200px;
-    background-color: #380A23;
+    background-color: var(--secondary-color);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -30,7 +30,7 @@ body {
 
 .panel {
     flex: 1;
-    background-color: #5D4037;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     margin: 0 10px;
     display: flex;
@@ -39,14 +39,14 @@ body {
 }
 
 .panel-header {
-    background-color: #333;
+    background-color: var(--main-color);
     padding: 10px;
     text-align: center;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .panel-header h3 {
-    color: green;
+    color: red;
     margin: 0;
 }
 
@@ -66,7 +66,7 @@ li {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333;
+    background-color: var(--main-color);
     border-radius: 8px;
     overflow: hidden; /* Скрываем элементы, выходящие за пределы */
 }
@@ -85,24 +85,24 @@ li {
 
 /* Стили для кнопок добавления (наследует стили из .btn) */
 .add-button {
-    border: 2px solid #008000;
-    background-color: #008000;
+    border: 2px solid var(--border-color);
+    background-color: var(--button-color);
 }
 
 .add-button:hover {
-    background-color: darkgreen;
-    border-color: white;
+    background-color: var(--button-hover-color);
+    border-color: var(--border-color);
 }
 
 /* Стили для кнопок удаления (наследует стили из .btn) */
 .delete-button {
-    border: 2px solid red;
-    background-color: red;
+    border: 2px solid var(--border-color);
+    background-color: var(--button-color);
 }
 
 .delete-button:hover {
-    background-color: darkred;
-    border-color: white;
+    background-color: var(--button-hover-color);
+    border-color: var(--border-color);
 }
 
 /* Стили для аватара */
@@ -120,7 +120,7 @@ li {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #4A332D;
+    background-color: var(--main-color);
     border-radius: 8px;
 }
 
