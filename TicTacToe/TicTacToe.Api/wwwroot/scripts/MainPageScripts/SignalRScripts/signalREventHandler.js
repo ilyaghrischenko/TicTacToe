@@ -13,7 +13,6 @@ async function putOnEventHandlers() {
         allButtons.forEach(button => {
             if (button.innerText !== 'Restart') {
                 button.disabled = true;
-                button.innerHTML = 'Unavailable'
                 button.style.backgroundColor = 'black';
             }
         });
@@ -48,13 +47,28 @@ async function putOnEventHandlers() {
             cell.textContent = '';
             cell.classList.remove('active');
         });
-        isMyTurn = true;
-
+        document.getElementById('endGameBtn').remove();
+        
+        
         const restartButton = document.getElementById('restartBtn');
         if (restartButton) restartButton.remove();
     });
     
     connection.on("EndGame", function () {
+        
+        const allButtons = document.querySelectorAll('.btn');
+        allButtons.forEach(button => {
+            if (button.innerText !== 'Restart') {
+                button.disabled = false;
+                button.style.backgroundColor = 'green';
+            }
+        });
+
+        const endGameBtn = document.getElementById('endGameBtn');
+        const restartBtn = document.getElementById('restartBtn');
+        if (restartBtn) restartBtn.remove();
+        if (endGameBtn) endGameBtn.remove();
+        
         currentGameId = null;
         gameActive = false;
         board.fill('');
