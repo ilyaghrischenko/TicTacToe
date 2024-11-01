@@ -27,7 +27,7 @@ async function putOnEventHandlers() {
         statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
     });
 
-    connection.on("ReceiveMove", function (cellIndex, playerName) {
+    connection.on("ReceiveMove", async function (cellIndex, playerName) {
         const symbol = playerName === sessionStorage.getItem('userLogin') ? playerSymbol : (playerSymbol === 'X' ? 'O' : 'X');
         board[cellIndex] = symbol;
 
@@ -38,7 +38,7 @@ async function putOnEventHandlers() {
         isMyTurn = (playerName !== sessionStorage.getItem('userLogin'));
         statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
 
-        checkWinner();
+        await checkWinner();
     });
 
     connection.on("RestartGame", function () {
@@ -57,7 +57,6 @@ async function putOnEventHandlers() {
     });
     
     connection.on("EndGame", function () {
-        
         const allButtons = document.querySelectorAll('.btn');
         allButtons.forEach(button => {
             if (button.innerText !== 'Restart') {

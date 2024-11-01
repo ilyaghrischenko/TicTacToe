@@ -33,8 +33,8 @@ function handleCellClick(event) {
     cell.classList.add('active');
 
     connection.invoke("MakeMove", currentGameId, parseInt(cellIndex))
-        .then(() => {
-            if (checkWinner()) return;
+        .then(async () => {
+            if (await checkWinner()) return;
             endTurn();
         })
         .catch((err) => {
@@ -49,7 +49,7 @@ function endTurn() {
     statusText.textContent = "Ход соперника";
 }
 
-function checkWinner() {
+async function checkWinner() {
     for (let condition of winningConditions) {
         const [a, b, c] = condition;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
@@ -60,6 +60,11 @@ function checkWinner() {
                     .catch(function (err) {
                         console.error("Error in write statistic:", err.toString());
                     });
+            }
+
+            const token = sessionStorage.getItem('token');
+            if (!token) {
+                window.location.href = '../pages/auth.html';
             }
             
             const response = await fetch('/api/User/getUserStatistics', {
@@ -72,6 +77,8 @@ function checkWinner() {
 
             if (response.ok) {
                 const data = await response.json();
+                document.getElementById('wins').textContent = data.wins;
+                document.getElementById('losses').textContent = data.losses;
             }
             
             return true;
