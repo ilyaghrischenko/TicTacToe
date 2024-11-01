@@ -21,7 +21,6 @@ async function addFriend(userId) {
     }
 }
 
-// Функция для удаления друга
 async function deleteFriend(userId) {
     try {
         const response = await fetch(`/api/Friends/deleteFriend`, {

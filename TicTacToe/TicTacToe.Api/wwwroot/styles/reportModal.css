@@ -32,6 +32,7 @@
 }
 
 .modal-content {
+    position: relative; /* Добавляем позиционирование для родительского элемента */
     background-color: var(--main-color);
     color: white;
     margin: 15% auto;
@@ -42,10 +43,11 @@
     text-align: center;
 }
 
-/* Кнопка закрытия модального окна */
 .close {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ сверху */
+    right: 15px; /* Отступ справа */
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;

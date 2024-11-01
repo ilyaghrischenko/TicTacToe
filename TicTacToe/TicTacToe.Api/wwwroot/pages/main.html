@@ -12,9 +12,7 @@
 </head>
 <body>
 <div class="container">
-    <!-- Левая панель -->
     <div class="left-panel">
-        <!-- Аватар и Никнейм -->
         <div class="profile">
             <img alt="Avatar" class="avatar" id="avatar">
             <h2 class="nickname" id="login">Login</h2>
@@ -27,9 +25,7 @@
         </div>
     </div>
 
-    <!-- Центральная панель -->
-    <div class="central-panel">
-        <!-- Кнопка с иконкой "!" -->
+    <div id="central-panel" class="central-panel">
         <button id="reportBtn" class="report-button hidden-report-button">!</button>
         
         <h1>Game</h1>
@@ -44,22 +40,14 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
+        
         <p id="status"></p>
-    </div>
-
-    <!-- Модальное окно для жалоб -->
-    <div id="reportModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Report</h2>
-            <textarea id="reportText" placeholder="Enter your report..."></textarea>
-            <button id="sendReportBtn" class="btn">Send</button>
+        <div class="game-buttons-container">
+            
         </div>
     </div>
 
-    <!-- Правая панель -->
     <div class="right-panel">
-        <!-- Список друзей -->
         <div class="friends-list">
             <h3>Friends list</h3>
             <div class="scroll">

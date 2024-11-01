@@ -1,14 +1,19 @@
 using System.Collections.Concurrent;
 using Microsoft.AspNetCore.SignalR;
 using TicTacToe.Domain.Interfaces;
+using TicTacToe.Domain.Interfaces.DbModelsServices;
 
 namespace TicTacToe.Application.SignalRHub
 {
-    public class GameHub(IGameService gameService) : Hub
+    public class GameHub(
+        IGameService gameService,
+        IReportService reportService) : Hub
     {
         private static ConcurrentDictionary<string, string> ConnectedUsers = new();
         private static ConcurrentDictionary<string, GameSession> GameSessions = new();
+        
         private readonly IGameService _gameService = gameService;
+        private readonly IReportService _reportService = reportService;
 
         public override Task OnConnectedAsync()
         {
@@ -25,7 +30,7 @@ namespace TicTacToe.Application.SignalRHub
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            await EndGameOnDisconnect(Context.ConnectionId); // Завершаем игру при отключении пользователя
+            await EndGameOnDisconnect(Context.ConnectionId);
             ConnectedUsers.TryRemove(Context.ConnectionId, out var userName);
             await base.OnDisconnectedAsync(exception);
         }
@@ -91,6 +96,21 @@ namespace TicTacToe.Application.SignalRHub
             }
         }
 
+        public async Task SendReport(string gameId, string message)
+        {
+            if (GameSessions.TryGetValue(gameId, out var gameSession))
+            {
+                if (gameSession.PlayerO == Context.ConnectionId)
+                {
+                    await _reportService.SendReport(ConnectedUsers[gameSession.PlayerX], message);
+                }
+                else
+                {
+                    await _reportService.SendReport(ConnectedUsers[gameSession.PlayerO], message);
+                }
+            }
+        }
+
         public async Task RestartGame(string gameId)
         {
             await Clients.Group(gameId).SendAsync("RestartGame");
@@ -108,14 +128,11 @@ namespace TicTacToe.Application.SignalRHub
         {
             if (GameSessions.TryGetValue(gameId, out var gameSession))
             {
-                // Проверка на победителя
                 if (!string.IsNullOrEmpty(winedSymbol))
                 {
-                    // Получаем логины обоих игроков
                     var playerX = ConnectedUsers[gameSession.PlayerX];
                     var playerO = ConnectedUsers[gameSession.PlayerO];
 
-                    // Обновляем статистику для победителя и проигравшего
                     if (winedSymbol == "X")
                     {
                         await _gameService.Win(playerX);
@@ -152,10 +169,5 @@ namespace TicTacToe.Application.SignalRHub
                 await Groups.RemoveFromGroupAsync(remainingPlayer, gameId);
             }
         }
-
-        // private async Task Punish(string connectionId)
-        // {
-        //     
-        // }
     }
 }

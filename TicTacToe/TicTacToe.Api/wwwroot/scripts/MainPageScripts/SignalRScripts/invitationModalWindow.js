@@ -5,45 +5,40 @@ async function inviteToGame(toUserName) {
 }
 
 function showInvitationModal(fromUserName) {
-    // Создаем модальное окно
     const modal = document.createElement('div');
-    modal.classList.add('invitation-modal'); // Применяем класс для модального окна
+    modal.classList.add('invitation-modal');
 
     const modalContent = document.createElement('div');
-    modalContent.classList.add('invitation-modal-content'); // Применяем класс для контента модального окна
+    modalContent.classList.add('invitation-modal-content');
 
     const message = document.createElement('p');
-    message.textContent = `${fromUserName} приглашает вас на игру.`;
+    message.textContent = `${fromUserName} inviting you to a game.`;
 
-    // Кнопка "Принять"
     const acceptBtn = document.createElement('button');
-    acceptBtn.textContent = 'Принять';
-    acceptBtn.classList.add('btn'); // Применяем класс стиля для кнопок
+    acceptBtn.textContent = 'Accept';
+    acceptBtn.classList.add('btn');
     acceptBtn.onclick = function () {
         connection.invoke("AcceptInvitation", fromUserName).catch(function (err) {
             return console.error(err.toString());
         });
-        modal.remove(); // Удаляем модальное окно
+        modal.remove();
     };
 
-    // Кнопка "Отклонить"
     const declineBtn = document.createElement('button');
-    declineBtn.textContent = 'Отклонить';
-    declineBtn.classList.add('btn'); // Применяем класс стиля для кнопок
+    declineBtn.textContent = 'Decline';
+    declineBtn.classList.add('btn');
     declineBtn.onclick = function () {
         connection.invoke("DeclineInvitation", fromUserName).catch(function (err) {
             return console.error(err.toString());
         });
-        modal.remove(); // Удаляем модальное окно
+        modal.remove();
     };
 
-    // Добавляем элементы в модальное окно
     modalContent.appendChild(message);
     modalContent.appendChild(acceptBtn);
     modalContent.appendChild(declineBtn);
     modal.appendChild(modalContent);
 
-    // Добавляем модальное окно в центральную панель
     const centralPanel = document.querySelector('.central-panel');
     centralPanel.appendChild(modal);
 }

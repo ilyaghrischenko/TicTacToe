@@ -5,7 +5,7 @@ async function putOnEventHandlers() {
     });
 
     await connection.on("InvitationDeclined", function (toUserName) {
-        alert(`${toUserName} отклонил ваше приглашение.`);
+        alert(`${toUserName} declined your invitation.`);
     });
 
     await connection.on("StartGame", function (gameId, symbol) {
@@ -18,13 +18,16 @@ async function putOnEventHandlers() {
         });
         document.getElementById('reportBtn').classList.remove('hidden-report-button');
         document.getElementById('reportBtn').classList.add('visible-report-button');
+        document.getElementById('reportBtn').addEventListener('click', function () {
+            renderReportModal();
+        });
         
         currentGameId = gameId;
         playerSymbol = symbol;
         gameActive = true;
         isMyTurn = symbol === 'X';
 
-        statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
+        statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
     });
 
     connection.on("ReceiveMove", async function (cellIndex, playerName) {
@@ -36,7 +39,7 @@ async function putOnEventHandlers() {
         cell.classList.add('active');
 
         isMyTurn = (playerName !== sessionStorage.getItem('userLogin'));
-        statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
+        statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
 
         await checkWinner();
     });
@@ -44,7 +47,7 @@ async function putOnEventHandlers() {
     connection.on("RestartGame", function () {
         gameActive = true;
         board.fill('');
-        statusText.textContent = isMyTurn ? "Ваш ход" : "Ход соперника";
+        statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
         cells.forEach(cell => {
             cell.textContent = '';
             cell.classList.remove('active');
@@ -80,6 +83,6 @@ async function putOnEventHandlers() {
             cell.textContent = '';
             cell.classList.remove('active');
         });
-        statusText.textContent = "Игра окончена";
+        statusText.textContent = "Game finished";
     });
 }

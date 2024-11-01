@@ -7,3 +7,5 @@ document.getElementById('friends-button').addEventListener('click', function () 
 document.getElementById('settings-button').addEventListener('click', function () {
     window.location.href = '../pages/userSettings.html';
 });
+
+

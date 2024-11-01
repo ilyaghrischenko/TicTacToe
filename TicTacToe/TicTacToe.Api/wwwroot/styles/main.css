@@ -202,6 +202,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+.game-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 #restartBtn {
     padding: 8px 16px; /* Уменьшите отступы, чтобы кнопка была меньше */
     font-size: 14px; /* Уменьшите размер шрифта */
@@ -209,6 +216,16 @@ h1 {
     margin-top: 10px; /* Добавьте верхний отступ для отделения от текста статуса */
 }
 #restartBtn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#endGameBtn {
+    padding: 8px 16px; /* Уменьшите отступы, чтобы кнопка была меньше */
+    font-size: 14px; /* Уменьшите размер шрифта */
+    background-color: var(--button-color); /* Замените цвет фона, если нужно */
+    margin-top: 10px;
+}
+#endGameBtn:hover {
     background-color: var(--button-hover-color);
 }
 

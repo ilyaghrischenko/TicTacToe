@@ -8,9 +8,8 @@ function renderEndGameButton() {
 
         button.addEventListener('click', handleEndGameButtonClick);
 
-        const centralPanel = document.querySelector('.central-panel');
-        const statusElement = document.getElementById('status');
-        centralPanel.insertBefore(button, statusElement);
+        const gameButtonsContainer = document.querySelector('.game-buttons-container');
+        gameButtonsContainer.appendChild(button);
     }
 }
 

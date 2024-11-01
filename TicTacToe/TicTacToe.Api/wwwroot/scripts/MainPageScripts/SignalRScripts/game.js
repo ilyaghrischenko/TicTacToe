@@ -40,20 +40,20 @@ function handleCellClick(event) {
         .catch((err) => {
             console.error("Error in move:", err.toString());
             isMyTurn = true;
-            statusText.textContent = "Ошибка при передаче хода, попробуйте еще раз";
+            statusText.textContent = "Error in transmitting your move, try again";
         });
 }
 
 function endTurn() {
     isMyTurn = false;
-    statusText.textContent = "Ход соперника";
+    statusText.textContent = "Enemy's turn";
 }
 
 async function checkWinner() {
     for (let condition of winningConditions) {
         const [a, b, c] = condition;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            endGame(`Победил игрок с символом ${board[a]}`);
+            endGame(`Player with symbol ${board[a]} won`);
 
             if (isMyTurn) {
                 connection.invoke("WriteStatistic", currentGameId, board[a])
@@ -86,7 +86,7 @@ async function checkWinner() {
     }
 
     if (!board.includes('')) {
-        endGame('Ничья');
+        endGame('Draw');
         return true;
     }
 

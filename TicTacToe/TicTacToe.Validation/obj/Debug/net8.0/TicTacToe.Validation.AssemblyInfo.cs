@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicTacToe.Validation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e3a1d5823432d9f958950db3bd14d819599a4ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64d0c935701ea33ae8345778932d46974d94914b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicTacToe.Validation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicTacToe.Validation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

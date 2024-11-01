@@ -1,17 +1,16 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const token = sessionStorage.getItem('token'); // Получаем токен из sessionStorage
+    const token = sessionStorage.getItem('token');
     const frindsList = document.getElementById('friends-list');
     if (!token) {
-        // Если токен отсутствует, перенаправляем на страницу авторизации
         window.location.href = '../pages/auth.html';
     }
 
     try {
         const response = await fetch('/api/User/getUser', {
             method: 'GET', headers: {
-                'Authorization': `Bearer ${token}`, // Добавляем токен в заголовок Authorization
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
             }
         });
@@ -44,12 +43,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
            
         } else {
-            // В случае ошибки (например, невалидный токен), перенаправляем на страницу входа
             window.location.href = '../pages/auth.html';
         }
     } catch (error) {
         alert('Network error:', error.toString());
-        window.location.href = '../pages/auth.html'; // Перенаправляем на страницу входа в случае ошибки
+        window.location.href = '../pages/auth.html';
     }
 });
 
