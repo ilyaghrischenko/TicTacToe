@@ -18,7 +18,12 @@ namespace TicTacToe.Api.Controllers
         {
             try
             {
-                return Ok(await _userControllerService.GetUser());
+                var user = await _userControllerService.GetUser();
+                return user;
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
             }
             catch (KeyNotFoundException ex)
             {

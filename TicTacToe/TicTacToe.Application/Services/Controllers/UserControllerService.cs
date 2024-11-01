@@ -6,6 +6,7 @@ using TicTacToe.Domain.Interfaces.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Application.Services.Controllers;
 
@@ -24,6 +25,11 @@ public class UserControllerService(
         {
             var userId = GetCurrentUserId();
             var user = await _userService.GetUserById(userId);
+            if (user.Status == UserStatus.Blocked)
+            {
+                throw new UnauthorizedAccessException("User is blocked");
+            }
+            
             return user;
         }
         catch (UnauthorizedAccessException ex)
