@@ -30,6 +30,24 @@ namespace TicTacToe.Api.Controllers
             }
         }
 
+        [HttpGet("getUserStatistics")]
+        public async Task<ActionResult<Statistic>> GetUserStatistics()
+        {
+            try
+            {
+                var userStatistics = await _userControllerService.GetUserStatistics();
+                return Ok(userStatistics);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpGet("getFriends")]
         public async Task<ActionResult<List<User>?>> GetFriends()
         {

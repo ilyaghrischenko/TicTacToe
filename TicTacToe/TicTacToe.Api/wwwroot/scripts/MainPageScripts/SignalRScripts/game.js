@@ -62,6 +62,18 @@ function checkWinner() {
                     });
             }
             
+            const response = await fetch('/api/User/getUserStatistics', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+            }
+            
             return true;
         }
     }

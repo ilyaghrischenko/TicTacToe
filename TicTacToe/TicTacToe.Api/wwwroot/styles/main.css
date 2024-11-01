@@ -114,7 +114,14 @@ body {
 
 .invite-button:hover {
     background-color: var(--button-hover-color);
-    /*border-color: var;*/
+}
+
+.hidden-report-button {
+    display: none;
+}
+
+.visible-report-button {
+    display: block;
 }
 
 .friend-info {

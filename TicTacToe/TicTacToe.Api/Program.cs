@@ -25,6 +25,11 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 //TODO: Почистить стили, код, скрипты.
 //TODO: Сделать так, чтобы админ не мог лазить по страницам обычных пользователей, а пользователи не смогли лазить по страницам админа.
 
+//TODO: Прописать логику отрпавления жалобы на пользователя, с которым коннект.
+//TODO: Обновление статистики после конца игры.
+//TODO: Поправить кнопки рестарт и закончить игру.
+//TODO: Везде сделать англ язык.
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
@@ -44,6 +49,7 @@ builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IStatisticService, StatisticService>();
 
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IGameService, GameService>();

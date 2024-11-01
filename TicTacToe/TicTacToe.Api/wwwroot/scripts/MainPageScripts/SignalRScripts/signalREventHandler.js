@@ -16,6 +16,8 @@ async function putOnEventHandlers() {
                 button.style.backgroundColor = 'black';
             }
         });
+        document.getElementById('reportBtn').classList.remove('hidden-report-button');
+        document.getElementById('reportBtn').classList.add('visible-report-button');
         
         currentGameId = gameId;
         playerSymbol = symbol;
@@ -63,6 +65,8 @@ async function putOnEventHandlers() {
                 button.style.backgroundColor = 'var(--button-color)';
             }
         });
+        document.getElementById('reportBtn').classList.remove('visible-report-button');
+        document.getElementById('reportBtn').classList.add('hidden-report-button');
 
         const endGameBtn = document.getElementById('endGameBtn');
         const restartBtn = document.getElementById('restartBtn');

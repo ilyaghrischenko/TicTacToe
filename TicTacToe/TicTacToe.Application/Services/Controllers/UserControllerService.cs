@@ -11,10 +11,12 @@ namespace TicTacToe.Application.Services.Controllers;
 
 public class UserControllerService(
     IHttpContextAccessor httpContextAccessor,
-    IUserService userService) : IUserControllerService
+    IUserService userService,
+    IStatisticService statisticService) : IUserControllerService
 {
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
     private readonly IUserService _userService = userService;
+    private readonly IStatisticService _statisticService = statisticService;
     
     public async Task<User> GetUser()
     {
@@ -27,6 +29,24 @@ public class UserControllerService(
         catch (UnauthorizedAccessException ex)
         {
             throw new UnauthorizedAccessException(ex.Message);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            throw new KeyNotFoundException(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<Statistic> GetUserStatistics()
+    {
+        try
+        {
+            var userId = GetCurrentUserId();
+            var userStatistics = await _statisticService.GetUserStatistics(userId);
+            return userStatistics;
         }
         catch (KeyNotFoundException ex)
         {
