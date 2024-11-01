@@ -1,6 +1,6 @@
-async function initiateConnection(userLogin) {
+async function initiateConnection(userId) {
     window.connection = new signalR.HubConnectionBuilder()
-        .withUrl(`/gameHub?userName=${encodeURIComponent(userLogin)}`)
+        .withUrl(`/gameHub?userId=${encodeURIComponent(userId)}`)
         .build();
 
     await connection.start().then(() => {

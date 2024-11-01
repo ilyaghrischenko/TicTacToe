@@ -9,9 +9,9 @@ public class GameService(IUserRepository userRepository) : IGameService
 {
     private readonly IUserRepository _userRepository = userRepository;
 
-    public async Task Win(string login)
+    public async Task Win(int id)
     {
-        var user = await _userRepository.Get(login);
+        var user = await _userRepository.Get(id);
         if (user == null)
         {
             throw new Exception("User not found");
@@ -23,9 +23,9 @@ public class GameService(IUserRepository userRepository) : IGameService
         });
     }
 
-    public async Task Lose(string login)
+    public async Task Lose(int id)
     {
-        var user = await _userRepository.Get(login);
+        var user = await _userRepository.Get(id);
         if (user == null)
         {
             throw new Exception("User not found");

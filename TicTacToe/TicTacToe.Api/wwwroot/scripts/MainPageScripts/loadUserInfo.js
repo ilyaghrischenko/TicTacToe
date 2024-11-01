@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.getElementById('wins').textContent = statistic.wins;
             document.getElementById('losses').textContent = statistic.losses;
             
-            await initiateConnection(userData.login);
+            sessionStorage.setItem('userId', userData.id);
+            await initiateConnection(userData.id);
             await putOnEventHandlers();
             
             renderFriendsList(await friendsResponse.json(), frindsList);

@@ -34,7 +34,10 @@ function handleCellClick(event) {
 
     connection.invoke("MakeMove", currentGameId, parseInt(cellIndex))
         .then(async () => {
-            if (await checkWinner()) return;
+            if (await checkWinner()) {
+                isMyTurn = !isMyTurn;
+                return;
+            }
             endTurn();
         })
         .catch((err) => {
@@ -66,7 +69,7 @@ async function checkWinner() {
             if (!token) {
                 window.location.href = '../pages/auth.html';
             }
-            
+
             const response = await fetch('/api/User/getUserStatistics', {
                 method: 'GET',
                 headers: {
@@ -80,7 +83,7 @@ async function checkWinner() {
                 document.getElementById('wins').textContent = data.wins;
                 document.getElementById('losses').textContent = data.losses;
             }
-            
+
             return true;
         }
     }

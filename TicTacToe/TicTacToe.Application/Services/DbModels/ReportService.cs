@@ -24,9 +24,9 @@ public class ReportService(
         return userReports;
     }
 
-    public async Task SendReport(string login, string message)
+    public async Task SendReport(int id, string message)
     {
-        var user = await _userRepository.Get(login);
+        var user = await _userRepository.Get(id);
         if (user == null)
         {
             throw new Exception("User not found");

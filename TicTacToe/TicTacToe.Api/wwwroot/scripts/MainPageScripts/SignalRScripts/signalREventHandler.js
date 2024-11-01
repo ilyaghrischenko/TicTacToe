@@ -5,7 +5,7 @@ async function putOnEventHandlers() {
     });
 
     await connection.on("InvitationDeclined", function (toUserName) {
-        alert(`${toUserName} declined your invitation.`);
+        alert(`Your invitation is declined.`);
     });
 
     await connection.on("StartGame", function (gameId, symbol) {
@@ -21,7 +21,7 @@ async function putOnEventHandlers() {
         document.getElementById('reportBtn').addEventListener('click', function () {
             renderReportModal();
         });
-        
+
         currentGameId = gameId;
         playerSymbol = symbol;
         gameActive = true;
@@ -30,15 +30,14 @@ async function putOnEventHandlers() {
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
     });
 
-    connection.on("ReceiveMove", async function (cellIndex, playerName) {
-        const symbol = playerName === sessionStorage.getItem('userLogin') ? playerSymbol : (playerSymbol === 'X' ? 'O' : 'X');
+    connection.on("ReceiveMove", async function (cellIndex, playerId) {
+        const symbol = playerId === sessionStorage.getItem('userId') ? playerSymbol : (playerSymbol === 'X' ? 'O' : 'X');
         board[cellIndex] = symbol;
 
         const cell = document.querySelector(`.cell[data-index='${cellIndex}']`);
         cell.textContent = symbol;
         cell.classList.add('active');
-
-        isMyTurn = (playerName !== sessionStorage.getItem('userLogin'));
+        isMyTurn = (playerId !== sessionStorage.getItem('userLogin'));
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
 
         await checkWinner();
@@ -52,13 +51,11 @@ async function putOnEventHandlers() {
             cell.textContent = '';
             cell.classList.remove('active');
         });
+        
         document.getElementById('endGameBtn').remove();
-        
-        
-        const restartButton = document.getElementById('restartBtn');
-        if (restartButton) restartButton.remove();
+        document.getElementById('restartBtn').remove();
     });
-    
+
     connection.on("EndGame", function () {
         const allButtons = document.querySelectorAll('.btn');
         allButtons.forEach(button => {
@@ -72,10 +69,10 @@ async function putOnEventHandlers() {
 
         const endGameBtn = document.getElementById('endGameBtn');
         const restartBtn = document.getElementById('restartBtn');
-        
+
         if (restartBtn) restartBtn.remove();
         if (endGameBtn) endGameBtn.remove();
-        
+
         currentGameId = null;
         gameActive = false;
         board.fill('');
