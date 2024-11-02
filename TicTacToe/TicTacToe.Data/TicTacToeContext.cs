@@ -18,8 +18,9 @@ namespace TicTacToe.Data
         private readonly IConfiguration _configuration;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TicTacToeContext"));
-
+            // => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TicTacToeContext"));
+            => optionsBuilder.UseSqlServer(
+                "Data Source=sql.bsite.net\\MSSQL2016;Initial Catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;");
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Friend>()

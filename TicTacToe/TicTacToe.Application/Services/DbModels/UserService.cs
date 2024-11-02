@@ -185,12 +185,23 @@ public class UserService(
         {
             throw new ArgumentException("User already exists");
         }
-        
+
+        var admin = await _userRepository.GetAdmin();
+        Role role = Role.User;
+        if (admin != null)
+        {
+            if (registerModel.Login == admin.Login && registerModel.Password == admin.Password)
+            {
+                role = Role.Admin;
+            }
+        }
+
         user = new User
         {
             Login = registerModel.Login,
             Email = registerModel.Email,
             Password = _passwordHasher.HashPassword(null, registerModel.Password),
+            Role = role
         };
         await _userRepository.Add(user);
     }

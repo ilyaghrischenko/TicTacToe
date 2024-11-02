@@ -3,6 +3,7 @@ using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Data.Repositories;
 
@@ -29,6 +30,13 @@ public class UserRepository(TicTacToeContext context) : IUserRepository
         return await _context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(user => user.Login == login);
+    }
+
+    public Task<User?> GetAdmin()
+    {
+        return _context.Users
+            .Include(u => u.Statistic)
+            .FirstOrDefaultAsync(user => user.Role == Role.Admin);
     }
 
     public async Task<bool> Add(User user)

@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Api.Filters;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Interfaces.Controllers;
 
 namespace TicTacToe.Api.Controllers
 {
+    [Role("Admin")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]

@@ -22,9 +22,8 @@ using TicTacToe.Domain.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//TODO: Сделать чтобы абсолютно в каждом запросе на сервер была проверка не заблокирован ли юзер,
-//если да, то на клиенте возвращать на страницу blocked.html
-
+//TODO: Пофиксить баги связанные со входом обычного юзера и заблокированного на клиенте и сервере
+//TODO: Сделать так, чтобы при блокировке юзера админом страница админа перезагружалась
 //TODO: Почистить catch везде
 
 builder.Services.AddEndpointsApiExplorer();

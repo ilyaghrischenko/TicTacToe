@@ -3,9 +3,11 @@ using TicTacToe.Domain.Interfaces.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Api.Filters;
 
 namespace TicTacToe.Api.Controllers
 {
+    [Role("User")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
