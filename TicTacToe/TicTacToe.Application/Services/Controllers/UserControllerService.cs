@@ -25,7 +25,7 @@ public class UserControllerService(
         {
             var userId = GetCurrentUserId();
             var user = await _userService.GetUserById(userId);
-            if (user.Status == UserStatus.Blocked)
+            if (user.Role == Role.Blocked)
             {
                 throw new UnauthorizedAccessException("User is blocked");
             }

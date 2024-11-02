@@ -36,13 +36,13 @@ loginForm.addEventListener('submit', async (e) => {
 
             sessionStorage.setItem('token', token);
             
-            if (data.user_role === 'User') {
-                if (data.user_status === 'Available') {
-                    window.location.href = '../pages/main.html';
-                } else {
-                    window.location.href = '../pages/blocked.html';
-                }
-            } else {
+            if (data.user_role === 'Blocked') {
+                window.location.href = '../pages/blocked.html';
+            }
+            else if (data.user_role === 'User') {
+                window.location.href = '../pages/main.html';
+            }
+            else {
                 window.location.href = '../pages/admin.html';
             }
         }

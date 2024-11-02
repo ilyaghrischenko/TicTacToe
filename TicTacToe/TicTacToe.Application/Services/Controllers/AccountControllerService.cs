@@ -33,7 +33,6 @@ public class AccountControllerService(
             {
                 access_token = token,
                 user_role = user.Role.ToString(),
-                user_status = user.Status.ToString(),
                 user_login = user.Login
             };
             

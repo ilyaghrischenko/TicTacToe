@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             } else {
                 document.getElementById('avatar').src = '../images/avatar.png';
             }
-            
-
-           
         } else {
             window.location.href = '../pages/auth.html';
         }

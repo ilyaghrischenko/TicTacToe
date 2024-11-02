@@ -215,7 +215,7 @@ public class UserService(
 
         allUsers.RemoveAll(user => user.Id == currentUserId
                                    || user.Role == Role.Admin
-                                   || user.Status == UserStatus.Blocked);
+                                   || user.Role == Role.Blocked);
 
         return allUsers;
     }

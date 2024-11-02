@@ -32,8 +32,7 @@ public class AdminService(
         }
 
         var appealedUsers = allReports?
-            .Where(report => report.User.Status == UserStatus.Available
-            && report.User.Role == Role.User)
+            .Where(report => report.User.Role == Role.User)
             .Select(report => report.User)
             .Distinct()
             .ToList();
@@ -56,7 +55,7 @@ public class AdminService(
 
         await _userRepository.Update(user, () =>
         {
-            user.Status = UserStatus.Blocked;
+            user.Role = Role.Blocked;
         });
     }
 
