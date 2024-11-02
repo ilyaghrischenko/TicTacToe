@@ -44,30 +44,30 @@ namespace TicTacToe.Application.SignalRHub
             var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
             if (toConnectionId != null)
             {
-                await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName);
+                await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName, sender.Id);
             }
         }
 
-        public async Task AcceptInvitation(int fromUserId)
+        public async Task AcceptInvitation(int senderUserId)
         {
-            var fromConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == fromUserId).Key;
+            var senderConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == senderUserId).Key;
 
-            if (fromConnectionId != null)
+            if (senderConnectionId != null)
             {
                 var gameId = Guid.NewGuid().ToString();
                 var gameSession = new GameSession
                 {
                     GameId = gameId,
-                    PlayerX = fromConnectionId,
+                    PlayerX = senderConnectionId,
                     PlayerO = Context.ConnectionId,
-                    CurrentTurn = fromConnectionId
+                    CurrentTurn = senderConnectionId
                 };
                 GameSessions[gameId] = gameSession;
 
-                await Groups.AddToGroupAsync(fromConnectionId, gameId);
+                await Groups.AddToGroupAsync(senderConnectionId, gameId);
                 await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
 
-                await Clients.Client(fromConnectionId).SendAsync("StartGame", gameId, "X");
+                await Clients.Client(senderConnectionId).SendAsync("StartGame", gameId, "X");
                 await Clients.Client(Context.ConnectionId).SendAsync("StartGame", gameId, "O");
             }
         }

@@ -4,7 +4,7 @@ async function inviteToGame(toUserName) {
     });
 }
 
-function showInvitationModal(fromUserName) {
+function showInvitationModal(senderUserName, senderUserId) {
     const modal = document.createElement('div');
     modal.classList.add('invitation-modal');
 
@@ -12,13 +12,13 @@ function showInvitationModal(fromUserName) {
     modalContent.classList.add('invitation-modal-content');
 
     const message = document.createElement('p');
-    message.textContent = `${fromUserName} inviting you to a game.`;
+    message.textContent = `${senderUserName} inviting you to a game.`;
 
     const acceptBtn = document.createElement('button');
     acceptBtn.textContent = 'Accept';
     acceptBtn.classList.add('btn');
     acceptBtn.onclick = function () {
-        connection.invoke("AcceptInvitation", fromUserName).catch(function (err) {
+        connection.invoke("AcceptInvitation", senderUserId).catch(function (err) {
             return console.error(err.toString());
         });
         modal.remove();
@@ -28,7 +28,7 @@ function showInvitationModal(fromUserName) {
     declineBtn.textContent = 'Decline';
     declineBtn.classList.add('btn');
     declineBtn.onclick = function () {
-        connection.invoke("DeclineInvitation", fromUserName).catch(function (err) {
+        connection.invoke("DeclineInvitation", senderUserName).catch(function (err) {
             return console.error(err.toString());
         });
         modal.remove();

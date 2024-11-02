@@ -1,7 +1,7 @@
 async function putOnEventHandlers() {
-    await connection.on("ReceiveInvitation", function (fromUserName) {
+    await connection.on("ReceiveInvitation", function (senderUserName, senderUserId) {
         console.log("ReceiveInvitation");
-        showInvitationModal(fromUserName);
+        showInvitationModal(senderUserName, senderUserId);
     });
 
     await connection.on("InvitationDeclined", function (toUserName) {
