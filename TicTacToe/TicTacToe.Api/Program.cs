@@ -22,6 +22,13 @@ using TicTacToe.Domain.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+//TODO: Убрать юзер статус и добавить блокд в роль
+//TODO: Пофиксить все баги связанные с этим (клиент и сервер)
+//TODO: Сделать чтобы абсолютно в каждом запросе на сервер была проверка не заблокирован ли юзер,
+//если да, то на клиенте возвращать на страницу blocked.html
+
+//TODO: Почистить catch везде
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
