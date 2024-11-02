@@ -12,7 +12,6 @@ public class User
     public byte[]? Avatar { get; set; } = null;
     public Role Role { get; set; }
     public Statistic Statistic { get; set; }
-    public UserStatus Status { get; set; } = UserStatus.Available;
     
     public User() { }
     public User(string login, string password, string email, Role role)
