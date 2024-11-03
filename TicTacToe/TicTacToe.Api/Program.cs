@@ -15,16 +15,18 @@ using TicTacToe.Validation;
 using TicTacToe.Validation.SettingsModelsValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.OpenApi.Models;
+using TicTacToe.Api.Middleware;
+using TicTacToe.Application.Services.Token;
 using TicTacToe.Application.SignalRHub;
 using TicTacToe.Domain.Interfaces;
+using TicTacToe.Domain.Interfaces.TokenServices;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 //TODO: Пофиксить баги связанные со входом обычного юзера и заблокированного на клиенте и сервере
 //TODO: Сделать так, чтобы при блокировке юзера админом страница админа перезагружалась
-//TODO: Почистить catch везде
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -49,6 +51,8 @@ builder.Services.AddScoped<IStatisticService, StatisticService>();
 
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+// builder.Services.AddScoped<ITokenBlacklistService, TokenBlacklistService>();
 
 builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
 builder.Services.AddScoped<IUserControllerService, UserControllerService>();
@@ -57,6 +61,7 @@ builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddScoped<IMemoryCache, MemoryCache>();
 
 builder.Services.AddDbContext<TicTacToeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
@@ -135,6 +140,8 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
 app.UseStaticFiles();
+
 app.MapHub<GameHub>("/gameHub");
+// app.UseMiddleware<TokenBlacklistMiddleware>();
 
 app.Run();

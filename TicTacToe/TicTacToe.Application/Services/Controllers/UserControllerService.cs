@@ -18,90 +18,38 @@ public class UserControllerService(
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
     private readonly IUserService _userService = userService;
     private readonly IStatisticService _statisticService = statisticService;
-    
+
     public async Task<User> GetUser()
     {
-        try
+        var userId = GetCurrentUserId();
+        var user = await _userService.GetUserById(userId);
+        if (user.Role == Role.Blocked)
         {
-            var userId = GetCurrentUserId();
-            var user = await _userService.GetUserById(userId);
-            if (user.Role == Role.Blocked)
-            {
-                throw new UnauthorizedAccessException("User is blocked");
-            }
-            
-            return user;
+            throw new UnauthorizedAccessException("User is blocked");
         }
-        catch (UnauthorizedAccessException ex)
-        {
-            throw new UnauthorizedAccessException(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            throw new KeyNotFoundException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+
+        return user;
     }
 
     public async Task<Statistic> GetUserStatistics()
     {
-        try
-        {
-            var userId = GetCurrentUserId();
-            var userStatistics = await _statisticService.GetUserStatistics(userId);
-            return userStatistics;
-        }
-        catch (KeyNotFoundException ex)
-        {
-            throw new KeyNotFoundException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+        var userId = GetCurrentUserId();
+        var userStatistics = await _statisticService.GetUserStatistics(userId);
+        return userStatistics;
     }
 
     public async Task<List<User>?> GetFriends()
     {
-        try
-        {
-            var userId = GetCurrentUserId();
-            var userFriends = await _userService.GetFriends(userId);
-            return userFriends;
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            throw new UnauthorizedAccessException(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            throw new KeyNotFoundException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+        var userId = GetCurrentUserId();
+        var userFriends = await _userService.GetFriends(userId);
+        return userFriends;
     }
 
     public async Task<List<User>?> GetAllUsers()
     {
-        try
-        {
-            var userId = GetCurrentUserId();
-            var allUsers = await _userService.GetAllUsers(userId);
-            return allUsers;
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            throw new UnauthorizedAccessException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+        var userId = GetCurrentUserId();
+        var allUsers = await _userService.GetAllUsers(userId);
+        return allUsers;
     }
 
     public int GetCurrentUserId()

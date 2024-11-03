@@ -35,14 +35,13 @@ loginForm.addEventListener('submit', async (e) => {
             const token = data.access_token;
 
             sessionStorage.setItem('token', token);
-            
+
             if (data.user_role === 'Blocked') {
                 window.location.href = '../pages/blocked.html';
             }
             else if (data.user_role === 'User') {
                 window.location.href = '../pages/main.html';
-            }
-            else {
+            } else {
                 window.location.href = '../pages/admin.html';
             }
         }

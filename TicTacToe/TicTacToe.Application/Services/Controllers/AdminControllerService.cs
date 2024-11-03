@@ -29,6 +29,12 @@ public class AdminControllerService(
 
     public async Task BlockUser(int userId)
     {
-        await _adminService.BlockUser(userId);
+        var token = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+        if (string.IsNullOrEmpty(token))
+        {
+            throw new UnauthorizedAccessException("Token is not provided");
+        }
+        
+        await _adminService.BlockUser(userId, token);
     }
 }

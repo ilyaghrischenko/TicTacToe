@@ -61,6 +61,10 @@ namespace TicTacToe.Api.Controllers
                 await _adminControllerService.BlockUser(userId);
                 return Ok();
             }
+            catch (UnauthorizedAccessException e)
+            {
+                return Unauthorized(e.Message);
+            }
             catch (ArgumentNullException)
             {
                 return BadRequest();

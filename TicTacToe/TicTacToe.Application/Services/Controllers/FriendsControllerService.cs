@@ -12,47 +12,18 @@ public class FriendsControllerService(
     IHttpContextAccessor httpContextAccessor) : IFriendsControllerService
 {
     private readonly IUserService _userService = userService;
+
     private readonly int _userId = int.Parse(
         httpContextAccessor.HttpContext.User.Claims
             .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value);
 
     public async Task AddFriend(int newFriendId)
     {
-        try
-        {
-            await _userService.AddFriend(_userId, newFriendId);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            throw new KeyNotFoundException(ex.Message);
-        }
-        catch (ArgumentException ex)
-        {
-            throw new ArgumentException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+        await _userService.AddFriend(_userId, newFriendId);
     }
 
     public async Task DeleteFriend(int friendId)
     {
-        try
-        {
-            await _userService.DeleteFriend(_userId, friendId);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            throw new KeyNotFoundException(ex.Message);
-        }
-        catch (ArgumentException ex)
-        {
-            throw new ArgumentException(ex.Message);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
+        await _userService.DeleteFriend(_userId, friendId);
     }
 }

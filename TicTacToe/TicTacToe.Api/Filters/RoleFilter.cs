@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -21,11 +22,10 @@ public class RoleFilter : IAuthorizationFilter
             return;
         }
         
-        var role = user.Claims.FirstOrDefault(c => c.Type == "role")?.Value;
+        var role = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
         if (role == "Banned")
         {
             context.Result = new RedirectResult("/pages/banned.html");
-            return;
         }
     }
 }

@@ -6,6 +6,6 @@ namespace TicTacToe.Domain.Interfaces;
 public interface IAdminService : ICurrentUserId
 {
     Task<List<User>?> GetAppealedUsers();
-    Task BlockUser(int userId);
+    Task BlockUser(int userId, string token);
     Task<bool> IsAdmin();
 }
