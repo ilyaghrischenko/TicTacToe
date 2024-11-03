@@ -19,12 +19,14 @@ async function blockUser(userId) {
         
         if (!response.ok) {
             if (response.status === 401) {
-                window.location.href = '../pages/main.html';
+                window.location.href = '../pages/auth.html';
             }
             
             const errorText = await response.text();
             throw new Error(`Ошибка при блокировке пользователя: ${errorText}`);
         }
+        
+        window.location.reload();
     } catch (error) {
         console.error('Ошибка:', error.message);
     }

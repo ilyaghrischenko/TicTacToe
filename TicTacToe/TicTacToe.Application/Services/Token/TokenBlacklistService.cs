@@ -5,24 +5,18 @@ using TicTacToe.Domain.Interfaces.TokenServices;
 
 namespace TicTacToe.Application.Services.Token;
 
-public class TokenBlacklistMiddleware
+public class TokenBlacklistService(IMemoryCache cache) : ITokenBlacklistService
 {
-    private readonly RequestDelegate _next;
-
-    public TokenBlacklistMiddleware(RequestDelegate next)
+    private readonly IMemoryCache _cache = cache;
+    
+    public Task AddToBlacklistAsync(string token)
     {
-        _next = next;
+        _cache.Set(token, true, TimeSpan.FromHours(1));
+        return Task.CompletedTask;
     }
 
-    public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
+    public Task<bool> IsTokenBlacklistedAsync(string token)
     {
-        using (var scope = serviceProvider.CreateScope())
-        {
-            var tokenBlacklistService = scope.ServiceProvider.GetRequiredService<ITokenBlacklistService>();
-
-            // Implement your token blacklisting logic here
-
-            await _next(context);
-        }
+        return Task.FromResult(_cache.TryGetValue(token, out _));
     }
 }

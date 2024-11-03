@@ -5,23 +5,26 @@ namespace TicTacToe.Api.Middleware;
 public class TokenBlacklistMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly ITokenBlacklistService _blacklistService;
 
-    public TokenBlacklistMiddleware(RequestDelegate next, ITokenBlacklistService blacklistService)
+    public TokenBlacklistMiddleware(RequestDelegate next)
     {
         _next = next;
-        _blacklistService = blacklistService;
     }
 
-    public async Task Invoke(HttpContext context)
+    public async Task Invoke(HttpContext context, IServiceProvider serviceProvider)
     {
         var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
-        if (token != null && await _blacklistService.IsTokenBlacklistedAsync(token))
+        if (token != null)
         {
-            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-            await context.Response.WriteAsync("Token is inactive.");
-            return;
+            var blacklistService = serviceProvider.GetRequiredService<ITokenBlacklistService>();
+
+            if (await blacklistService.IsTokenBlacklistedAsync(token))
+            {
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                await context.Response.WriteAsync("Token is inactive.");
+                return;
+            }
         }
 
         await _next(context);
