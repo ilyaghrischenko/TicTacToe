@@ -45,7 +45,6 @@ changePasswordForm.addEventListener('submit', async (e) => {
                 }
             });
         } else {
-            alert('Password successfully changed');
             window.location.reload();
         }
     } catch (error) {

@@ -44,7 +44,6 @@ changeEmailForm.addEventListener('submit', async (e) => {
                 }
             });
         } else {
-            alert('Email successfully changed');
             window.location.reload();
         }
     } catch (error) {

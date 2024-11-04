@@ -44,7 +44,6 @@ changeLoginForm.addEventListener('submit', async (e) => {
                 }
             });
         } else {
-            alert('Login successfully changed');
             window.location.reload();
         }
     } catch (error) {
