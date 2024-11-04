@@ -14,11 +14,14 @@ public class RegisterModelValidator : AbstractValidator<RegisterModel>
         
         RuleFor(x => x.Login)
             .NotEmpty().WithMessage("Login is required")
-            .Length(4, 20).WithMessage("Login must be between 4 and 20 characters long");
+            .Length(4, 20).WithMessage("Login must be between 4 and 20 characters long")
+            .Matches("^[a-zA-Z0-9]+$").WithMessage("Login must contain only Latin letters and numbers");
         
         RuleFor(x => x.Password)
             .NotEmpty().WithMessage("Password is required")
-            .Length(6, 20).WithMessage("Password must be between 6 and 20 characters long");
+            .Length(6, 20).WithMessage("Password must be between 6 and 20 characters long")
+            .Must((model, password) => password != model.Login).WithMessage("Password must not match the login")
+            .Matches("^[a-zA-Z0-9]+$").WithMessage("Password must contain only Latin letters and numbers");
         
         RuleFor(x => x.ConfirmPassword)
             .NotEmpty().WithMessage("Confirm password is required")

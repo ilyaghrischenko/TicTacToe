@@ -25,7 +25,6 @@ using TicTacToe.Domain.Interfaces.TokenServices;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//TODO: Настроить проверку при авторизации, там не учитывается регист символов (как логин так и пароль)
 //TODO: Продумать всё и сделать так, чтобы при заходе на страницу забаненого перебрасывало обратно
 
 builder.Services.AddEndpointsApiExplorer();

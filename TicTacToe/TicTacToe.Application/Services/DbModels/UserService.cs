@@ -168,6 +168,10 @@ public class UserService(
         {
             throw new KeyNotFoundException("User not found");
         }
+        if (user.Login != loginModel.Login)
+        {
+            throw new KeyNotFoundException("User not found");
+        }
 
         var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginModel.Password);
         if (result == PasswordVerificationResult.Failed)
