@@ -1,7 +1,7 @@
 using TicTacToe.DTO.Models;
 using FluentValidation;
 
-namespace TicTacToe.Validation;
+namespace TicTacToe.Validation.AccountModelsValidators;
 
 public class RegisterModelValidator : AbstractValidator<RegisterModel>
 {

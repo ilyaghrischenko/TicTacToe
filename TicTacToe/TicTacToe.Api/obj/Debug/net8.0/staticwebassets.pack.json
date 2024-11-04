@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\showUserReports.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\BlockedPageScripts\\blocked.js",
+      "PackagePath": "staticwebassets\\scripts\\BlockedPageScripts\\blocked.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\apiRequests.js"
     },

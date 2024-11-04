@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SZN7uTJVCGPBaznkKUHqnPJeadoITK/SceYt3wf/EAA=",
+  "Hash": "jUfBm2Eel/n2bSFEL71lNdH7sm1Wfnj2xD1IeN8CIeM=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\AdminPageScripts\\showUserReports.js"
+    },
+    {
+      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\BlockedPageScripts\\blocked.js",
+      "SourceId": "TicTacToe.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
+      "BasePath": "_content/TicTacToe.Api",
+      "RelativePath": "scripts/BlockedPageScripts/blocked.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\BlockedPageScripts\\blocked.js"
     },
     {
       "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\apiRequests.js",

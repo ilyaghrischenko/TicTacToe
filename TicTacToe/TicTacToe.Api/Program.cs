@@ -11,8 +11,6 @@ using TicTacToe.Application.Services.DbModels;
 using TicTacToe.Data;
 using TicTacToe.Domain.Interfaces.Controllers;
 using TicTacToe.Domain.Interfaces.DbModelsServices;
-using TicTacToe.Validation;
-using TicTacToe.Validation.SettingsModelsValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -22,10 +20,10 @@ using TicTacToe.Application.Services.Token;
 using TicTacToe.Application.SignalRHub;
 using TicTacToe.Domain.Interfaces;
 using TicTacToe.Domain.Interfaces.TokenServices;
+using TicTacToe.Validation.AccountModelsValidators;
+using TicTacToe.Validation.SettingsModelsValidators;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-
-//TODO: Продумать всё и сделать так, чтобы при заходе на страницу забаненого перебрасывало обратно
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
