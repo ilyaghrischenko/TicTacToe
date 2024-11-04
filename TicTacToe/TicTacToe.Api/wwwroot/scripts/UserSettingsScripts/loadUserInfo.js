@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 document.getElementById('avatar').src = '../images/avatar.png';
             }
         } else {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             window.location.href = '../pages/auth.html';
         }
     } catch (error) {

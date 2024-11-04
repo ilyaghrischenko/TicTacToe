@@ -5,6 +5,7 @@ async function showUserReports(userId) {
 
     if (!token) {
         window.location.href = '../pages/auth.html';
+        return;
     }
     
     try {
@@ -18,8 +19,13 @@ async function showUserReports(userId) {
         });
 
         if (!response.ok) {
-            if (response.status === 401) {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            else if (response.status === 401) {
                 window.location.href = '../pages/main.html';
+                return;
             }
             
             const errorText = await response.text();

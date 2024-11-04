@@ -44,9 +44,14 @@ loginForm.addEventListener('submit', async (e) => {
         })
             .then(response => {
                 if (!response.ok) {
+                    if (response.status === 403) {
+                        window.history.back();
+                        return;
+                    }
+                    
                     console.error('Error changing avatar:', response.status);
                 }
-                else{
+                else {
                     window.location.reload();
                 }
             })

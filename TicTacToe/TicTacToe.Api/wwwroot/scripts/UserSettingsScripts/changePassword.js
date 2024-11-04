@@ -30,6 +30,11 @@ changePasswordForm.addEventListener('submit', async (e) => {
 
         document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
         if (!response.ok) {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             const {errors} = await response.json();
             Object.keys(errors).forEach(field => {
                 const inputField = document.getElementById(field);

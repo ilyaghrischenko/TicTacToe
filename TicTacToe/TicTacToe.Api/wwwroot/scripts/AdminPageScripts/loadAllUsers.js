@@ -18,12 +18,18 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         });
 
         if (!response.ok) {
-            if (response.status === 401) {
-                window.location.href = '../pages/main.html';
+            if (response.status === 403) {
+                window.history.back();
+                return;
             }
-            
-            const errorText = await response.text();
-            throw new Error(`Ошибка при получении пользователей: ${errorText}`);
+            else if (response.status === 401) {
+                window.location.href = '../pages/auth.html';
+                return;
+            }
+            else {
+                const errorText = await response.text();
+                throw new Error(`Ошибка при получении пользователей: ${errorText}`);
+            }
         }
         
         const users = await response.json();
@@ -31,5 +37,6 @@ document.addEventListener('DOMContentLoaded', async (e) => {
     }
     catch (error) {
         console.error('Ошибка:', error.message);
+        console.dir(error);
     }
 });

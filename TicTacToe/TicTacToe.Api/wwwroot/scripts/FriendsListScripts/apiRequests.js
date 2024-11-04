@@ -14,6 +14,11 @@ async function addFriend(userId) {
         if (response.ok) {
             await loadUsersNFriends();
         } else {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             alert(`Ошибка: ${response.status}`);
         }
     } catch (error) {
@@ -35,6 +40,11 @@ async function deleteFriend(userId) {
         if (response.ok) {
             await loadUsersNFriends();
         } else {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             alert(`Ошибка: ${response.status}`);
         }
     } catch (error) {

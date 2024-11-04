@@ -25,9 +25,6 @@ using TicTacToe.Domain.Interfaces.TokenServices;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//TODO: Пофиксить баги связанные со входом обычного юзера и заблокированного на клиенте и сервере
-//TODO: Пользователи не могут зайти на страницу админа и админ на их страницы 
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()

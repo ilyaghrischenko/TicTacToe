@@ -1,22 +1,25 @@
-'use strict'
+'use strict';
 
 document.addEventListener('DOMContentLoaded', async function () {
     const token = sessionStorage.getItem('token');
     const frindsList = document.getElementById('friends-list');
     if (!token) {
         window.location.href = '../pages/auth.html';
+        return;
     }
 
     try {
         const response = await fetch('/api/User/getUser', {
-            method: 'GET', headers: {
+            method: 'GET',
+            headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
             }
         });
 
         const friendsResponse = await fetch('/api/User/getFriends', {
-            method: 'GET', headers: {
+            method: 'GET',
+            headers: {
                 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json'
             }
         });
@@ -41,6 +44,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 document.getElementById('avatar').src = '../images/avatar.png';
             }
         } else {
+            if (response.status === 403 || friendsResponse.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             window.location.href = '../pages/auth.html';
         }
     } catch (error) {

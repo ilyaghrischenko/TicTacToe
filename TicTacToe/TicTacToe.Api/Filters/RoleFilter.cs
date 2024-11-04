@@ -1,31 +1,42 @@
 using System.Security.Claims;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Api.Filters;
 
 public class RoleFilter : IAuthorizationFilter
 {
-    private readonly string _role;
-    
-    public RoleFilter(string role)
+    private readonly Role _requiredRole;
+
+    public RoleFilter(Role requiredRole)
     {
-        _role = role;
+        _requiredRole = requiredRole;
     }
-    
+
     public void OnAuthorization(AuthorizationFilterContext context)
     {
-        var user = context.HttpContext.User;
-        if (!user.Identity.IsAuthenticated)
+        var userClaims = context.HttpContext.User;
+        var roleClaim = userClaims.FindFirst(ClaimTypes.Role)?.Value;
+
+        if (string.IsNullOrEmpty(roleClaim))
         {
-            context.Result = new RedirectResult("/pages/auth.html");
+            context.Result = new UnauthorizedResult();
             return;
         }
-        
-        var role = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
-        if (role == "Banned")
+
+        if (roleClaim == Role.Blocked.ToString())
         {
-            context.Result = new RedirectResult("/pages/banned.html");
+            context.Result = new ForbidResult();
+        }
+        else if (roleClaim == Role.User.ToString() && _requiredRole == Role.Admin)
+        {
+            context.Result = new ForbidResult();
+        }
+        else if (roleClaim == Role.Admin.ToString() && _requiredRole == Role.User)
+        {
+            context.Result = new ForbidResult();
         }
     }
 }

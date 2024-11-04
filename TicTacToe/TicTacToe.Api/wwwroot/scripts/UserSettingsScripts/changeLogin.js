@@ -28,6 +28,11 @@ changeLoginForm.addEventListener('submit', async (e) => {
 
         document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
         if (!response.ok) {
+            if (response.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             const {errors} = await response.json();
             console.error('Error while changing login:', errors);
             Object.keys(errors).forEach(field => {

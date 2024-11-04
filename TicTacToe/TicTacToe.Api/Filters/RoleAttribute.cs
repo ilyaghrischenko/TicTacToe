@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Api.Filters;
 
 public class RoleAttribute : TypeFilterAttribute
 {
-    public RoleAttribute(string role) : base(typeof(RoleFilter))
+    public RoleAttribute(Role requiredRole) : base(typeof(RoleFilter))
     {
-        Arguments = new object[] { role };
+        Arguments = new object[] { requiredRole };
     }
 }

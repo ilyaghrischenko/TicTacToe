@@ -27,11 +27,21 @@ async function loadUsersNFriends() {
         });
 
         if (!usersResponse.ok) {
+            if (usersResponse.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             const errorText = await usersResponse.text();
             throw new Error(`Ошибка при получении пользователей: ${errorText}`);
         }
 
         if (!friendsResponse.ok) {
+            if (friendsResponse.status === 403) {
+                window.history.back();
+                return;
+            }
+            
             const errorText = await friendsResponse.text();
             throw new Error(`Ошибка при получении друзей: ${errorText}`);
         }
