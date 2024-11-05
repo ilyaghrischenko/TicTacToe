@@ -21,9 +21,9 @@ function renderAllUsers(userUl, users) {
         const userStats = document.createElement('div');
         userStats.classList.add('user-stats');
         const wins = document.createElement('span');
-        wins.textContent = `Победы: ${user.statistic.wins}`;
+        wins.textContent = `Wins: ${user.statistic.wins}`;
         const losses = document.createElement('span');
-        losses.textContent = `Проигрыши: ${user.statistic.losses}`;
+        losses.textContent = `Losses: ${user.statistic.losses}`;
         userStats.appendChild(wins);
         userStats.appendChild(losses);
 
