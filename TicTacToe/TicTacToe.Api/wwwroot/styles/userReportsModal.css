@@ -60,6 +60,15 @@
     line-height: 1.5; /* Более приятное расстояние между строками */
 }
 
+.report-date {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.report-message {
+    margin-left: 50px;
+}
+
 /* Добавляем небольшой hover-эффект */
 #report-list li:hover {
     background-color: var(--main-color);

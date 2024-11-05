@@ -6,6 +6,8 @@ public class Report
     public User User { get; set; }
     public string Message { get; set; }
     
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    
     public Report() { }
     
     public Report(User user, string message)
