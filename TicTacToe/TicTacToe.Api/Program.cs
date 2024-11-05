@@ -31,12 +31,15 @@ builder.Services.AddControllers()
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
 builder.Services.AddSignalR();
 
+#region Validators
 builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
+#endregion
 
+#region Services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
@@ -59,6 +62,7 @@ builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IMemoryCache, MemoryCache>();
+#endregion
 
 builder.Services.AddDbContext<TicTacToeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
