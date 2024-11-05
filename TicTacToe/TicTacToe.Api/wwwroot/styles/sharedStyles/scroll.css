@@ -2,7 +2,6 @@
     width: 8px;
 }
 
-/* Фон полосы прокрутки */
 .scroll::-webkit-scrollbar-track {
     background: #333;
 }
@@ -13,9 +12,8 @@
     max-height: 550px;
 }
 
-/* Ползунок полосы прокрутки */
 .scroll::-webkit-scrollbar-thumb {
-    background-color: #ff0000; /* Красный цвет в стиле твоей кнопки */
+    background-color: #ff0000;
     border-radius: 10px;
-    border: 2px solid #333; /* Граница между ползунком и фоном */
+    border: 2px solid #333;
 }

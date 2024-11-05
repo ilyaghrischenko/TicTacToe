@@ -16,7 +16,7 @@ body {
 }
 
 .panel {
-    width: 35%; /* Ширина панели сделана в 3 раза тоньше */
+    width: 35%;
     background-color: var(--secondary-color);
     margin: 0 10px;
     display: flex;
@@ -60,21 +60,20 @@ ul {
     margin-bottom: 10px;
     background-color: var(--main-color);
     border-radius: 8px;
-    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
+    overflow: hidden;
 }
 
 .user-info {
     display: flex;
-    flex-direction: column; /* Вертикальное выравнивание */
-    flex-grow: 1; /* Позволяет занимать доступное пространство */
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* Стиль для статистики пользователя */
 .user-stats {
     display: flex;
     gap: 10px;
-    justify-content: left; /* Для равномерного распределения статистики */
-    margin-top: 5px; /* Отступ сверху для отделения от имени */
+    justify-content: left;
+    margin-top: 5px;
 }
 
 .avatar {
@@ -84,7 +83,6 @@ ul {
     margin-right: 10px;
 }
 
-/* Стили для кнопок */
 .btn {
     padding: 10px 15px;
     border: 1px solid var(--border-color);
@@ -97,20 +95,18 @@ ul {
     margin-left: 10px;
 }
 
-/* Кнопка для показа отчётов */
 .reports-button {
-    background-color: #1e1e1e;/* Красный цвет для отчётов */
+    background-color: var(--button-color);
 }
 
 .reports-button:hover {
     background-color: var(--button-hover-color);
 }
 
-/* Кнопка для блокировки */
 .block-button {
-    background-color: #1e1e1e; /* Синий цвет для блокировки */
+    background-color: var(--button-color);
 }
 
 .block-button:hover {
-    background-color: var(--button-hover-color); /* Более тёмный оттенок при наведении */
+    background-color: var(--button-hover-color);
 }

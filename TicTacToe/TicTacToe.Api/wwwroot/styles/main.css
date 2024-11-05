@@ -256,7 +256,7 @@ h1 {
 
 .btn:hover {
     background-color: var(--button-hover-color);
-    border-color: white;
+    border-color: var(--border-color);
 }
 
 .friendsButton.btn {

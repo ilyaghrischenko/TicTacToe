@@ -77,7 +77,7 @@ body {
 
 .btn-accept:hover {
     background-color: var(--button-hover-color);
-    border-color: white;
+    border-color: var(--border-color);
 }
 
 .profile-main {
