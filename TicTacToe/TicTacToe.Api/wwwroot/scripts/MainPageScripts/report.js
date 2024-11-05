@@ -43,6 +43,7 @@ function renderReportModal() {
                 console.error("Error in sending report:", err.toString());
             });
             reportModal.style.display = "none";
+            document.getElementById('reportBtn').style.display = "none";
             document.getElementById('central-panel').removeChild(reportModal);
         } else {
             console.error("Пожалуйста, введите сообщение для отчета.");
