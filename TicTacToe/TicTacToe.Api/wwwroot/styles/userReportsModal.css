@@ -1,13 +1,12 @@
-/* Модальное окно */
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный чёрный фон для большего контраста */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
@@ -17,13 +16,14 @@
     padding: 30px;
     border: 1px solid var(--border-color);
     width: 40%;
+    min-height: 10%;
+    max-height: 80vh;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Добавим тени */
-    position: relative; /* Чтобы кнопка закрытия располагалась корректно */
-    text-align: left; /* Выравнивание по левому краю */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: left;
 }
 
-/* Кнопка закрытия модального окна */
 .close {
     color: #aaa;
     position: absolute;
@@ -39,14 +39,14 @@
     transition: 0.3s ease;
 }
 
-/* Стили для списка жалоб */
 #report-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: left;
-    max-height: 300px; /* Ограничение высоты списка */
-    overflow-y: auto; /* Скролл для длинных списков */
+    min-height: 20%;
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
 #report-list li {
@@ -57,7 +57,7 @@
     border: 1px solid var(--border-color);
     font-size: 16px;
     color: white;
-    line-height: 1.5; /* Более приятное расстояние между строками */
+    line-height: 1.5;
 }
 
 .report-date {
@@ -67,9 +67,9 @@
 
 .report-message {
     margin-left: 50px;
+    word-break: break-word;
 }
 
-/* Добавляем небольшой hover-эффект */
 #report-list li:hover {
     background-color: var(--main-color);
     transition: background-color 0.3s ease;
@@ -84,7 +84,7 @@
 }
 
 #report-list::-webkit-scrollbar-thumb {
-    background-color: #ff0000; /* Красный цвет для прокрутки */
+    background-color: #ff0000;
     border-radius: 10px;
     border: 2px solid var(--border-color);
 }
