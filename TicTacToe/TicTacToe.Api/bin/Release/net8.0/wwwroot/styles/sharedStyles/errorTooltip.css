@@ -1,0 +1,38 @@
+.error-tooltip {
+    position: absolute;
+    background-color: rgba(237, 190, 190, 0.9);
+    color: #111;
+    border: 1px solid #8f0000;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    white-space: normal;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.form-group .error-tooltip {
+    width: 100%;
+    top: 100%;
+    left: 0;
+}

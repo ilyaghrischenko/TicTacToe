@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.panel {
+    flex: 1;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    background-color: var(--main-color);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.panel-header h3 {
+    color: red;
+    margin: 0;
+}
+
+.panel-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.btn {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.add-button {
+    border: 2px solid var(--border-color);
+    background-color: var(--button-color);
+}
+
+.add-button:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--border-color);
+}
+
+.delete-button {
+    border: 2px solid var(--border-color);
+    background-color: var(--button-color);
+}
+
+.delete-button:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--border-color);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.user-stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.user-stats span {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .panel {
+        margin: 10px 0;
+    }
+
+    .user-item {
+        flex-wrap: wrap;
+    }
+}

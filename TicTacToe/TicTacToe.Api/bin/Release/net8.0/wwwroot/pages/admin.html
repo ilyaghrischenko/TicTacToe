@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
+    <link rel="stylesheet" href="../styles/userReportsModal.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+
+<div class="panel">
+    <div class="panel-header">
+        <h3>Appealed Users</h3>
+    </div>
+    <div class="scroll">
+        <div class="panel-content">
+            <ul id="user-list"></ul>
+        </div>
+    </div>
+</div>
+
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="scroll">
+            <ul id="report-list"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/AdminPageScripts/loadAllUsers.js"></script>
+<script src="../scripts/AdminPageScripts/renderAllUsers.js"></script>
+<script src="../scripts/AdminPageScripts/blockUser.js"></script>
+<script src="../scripts/AdminPageScripts/showUserReports.js"></script>
+</body>
+</html>
