@@ -21,96 +21,32 @@ namespace TicTacToe.Api.Controllers
         [HttpPost("changeAvatar")]
         public async Task<IActionResult> ChangeAvatar(IFormFile avatar)
         {
-            try
-            {
-                _settingsControllerService.GetErrors(ModelState);
-                await _settingsControllerService.ChangeAvatar(avatar);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _settingsControllerService.GetErrors(ModelState);
+            await _settingsControllerService.ChangeAvatar(avatar);
             return Ok();
         }
 
         [HttpPost("changePassword")]
         public async Task<IActionResult> ChangePassword(ChangePasswordModel changePasswordModel)
         {
-            try
-            {
-                _settingsControllerService.GetErrors(ModelState);
-                await _settingsControllerService.ChangePassword(changePasswordModel);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _settingsControllerService.GetErrors(ModelState);
+            await _settingsControllerService.ChangePassword(changePasswordModel);
             return Ok();
         }
 
         [HttpPost("changeEmail")]
         public async Task<IActionResult> ChangeEmail(ChangeEmailModel changeEmailModel)
         {
-            try
-            {
-                _settingsControllerService.GetErrors(ModelState);
-                await _settingsControllerService.ChangeEmail(changeEmailModel);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _settingsControllerService.GetErrors(ModelState);
+            await _settingsControllerService.ChangeEmail(changeEmailModel);
             return Ok();
         }
 
         [HttpPost("changeLogin")]
         public async Task<IActionResult> ChangeLogin(ChangeLoginModel changeLoginModel)
         {
-            try
-            {
-                _settingsControllerService.GetErrors(ModelState);
-                await _settingsControllerService.ChangeLogin(changeLoginModel);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _settingsControllerService.GetErrors(ModelState);
+            await _settingsControllerService.ChangeLogin(changeLoginModel);
             return Ok();
         }
     }

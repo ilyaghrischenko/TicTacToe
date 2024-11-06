@@ -14,43 +14,16 @@ namespace TicTacToe.Api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            try
-            {
-                _accountControllerService.GetErrors(ModelState);
-                var response = await _accountControllerService.Login(loginModel);
-                return Ok(response);
-            }
-            catch (KeyNotFoundException e)
-            {
-                return NotFound(e.Message);
-            }
-            catch (ArgumentException e)
-            {
-                return BadRequest(e.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
+            _accountControllerService.GetErrors(ModelState);
+            var response = await _accountControllerService.Login(loginModel);
+            return Ok(response);
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
-            try
-            {
-                _accountControllerService.GetErrors(ModelState);
-                await _accountControllerService.Register(registerModel);
-            }
-            catch (ArgumentException e)
-            {
-                return BadRequest(e.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _accountControllerService.GetErrors(ModelState);
+            await _accountControllerService.Register(registerModel);
             return Ok();
         }
     }

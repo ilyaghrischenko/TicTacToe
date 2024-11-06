@@ -1,8 +1,9 @@
+using TicTacToe.Domain.Interfaces.Middleware;
 using TicTacToe.Domain.Interfaces.TokenServices;
 
 namespace TicTacToe.Api.Middleware;
 
-public class TokenBlacklistMiddleware
+public class TokenBlacklistMiddleware : ITokenBlacklistMiddleware
 {
     private readonly RequestDelegate _next;
 

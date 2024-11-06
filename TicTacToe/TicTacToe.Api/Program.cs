@@ -143,6 +143,8 @@ app.MapControllers();
 app.UseStaticFiles();
 
 app.MapHub<GameHub>("/gameHub");
+
 app.UseMiddleware<TokenBlacklistMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.Run();
