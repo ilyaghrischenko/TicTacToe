@@ -4,6 +4,6 @@ namespace TicTacToe.Domain.Interfaces.DbModelsServices;
 
 public interface IReportService
 {
-    Task<List<Report>> GetUserReports(int userId);
-    Task SendReport(int id, string message);
+    Task<List<Report>> GetUserReportsAsync(int userId);
+    Task SendReportAsync(int id, string message);
 }

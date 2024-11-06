@@ -10,36 +10,36 @@ namespace TicTacToe.Data.Repositories;
 public class UserRepository(TicTacToeContext context) : IUserRepository
 {
     private readonly TicTacToeContext _context = context;
-    
-    public async Task<List<User>?> GetAll()
+
+    public async Task<List<User>?> GetAllAsync()
     {
         return await _context.Users
             .Include(u => u.Statistic)
             .ToListAsync();
     }
 
-    public async Task<User?> Get(int id)
+    public async Task<User?> GetAsync(int id)
     {
         return await _context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
-    public async Task<User?> Get(string login)
+    public async Task<User?> GetAsync(string login)
     {
         return await _context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(user => user.Login == login);
     }
 
-    public Task<User?> GetAdmin()
+    public async Task<User?> GetAdminAsync()
     {
-        return _context.Users
+        return await _context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(user => user.Role == Role.Admin);
     }
 
-    public async Task<bool> Add(User user)
+    public async Task<bool> AddAsync(User user)
     {
         var statistic = new Statistic();
         await _context.Statistics.AddAsync(statistic);
@@ -58,7 +58,7 @@ public class UserRepository(TicTacToeContext context) : IUserRepository
         }
     }
 
-    public async Task<bool> Delete(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         try
         {
@@ -73,7 +73,7 @@ public class UserRepository(TicTacToeContext context) : IUserRepository
         }
     }
 
-    public async Task<bool> Update(User user, Action updateAction)
+    public async Task<bool> UpdateAsync(User user, Action updateAction)
     {
         try
         {

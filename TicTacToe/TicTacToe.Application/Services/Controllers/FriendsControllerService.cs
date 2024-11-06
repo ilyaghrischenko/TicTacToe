@@ -17,13 +17,13 @@ public class FriendsControllerService(
         httpContextAccessor.HttpContext.User.Claims
             .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value);
 
-    public async Task AddFriend(int newFriendId)
+    public async Task AddFriendAsync(int newFriendId)
     {
-        await _userService.AddFriend(_userId, newFriendId);
+        await _userService.AddFriendAsync(_userId, newFriendId);
     }
 
-    public async Task DeleteFriend(int friendId)
+    public async Task DeleteFriendAsync(int friendId)
     {
-        await _userService.DeleteFriend(_userId, friendId);
+        await _userService.DeleteFriendAsync(_userId, friendId);
     }
 }

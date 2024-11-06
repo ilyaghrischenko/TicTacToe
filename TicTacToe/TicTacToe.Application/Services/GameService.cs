@@ -9,29 +9,29 @@ public class GameService(IUserRepository userRepository) : IGameService
 {
     private readonly IUserRepository _userRepository = userRepository;
 
-    public async Task Win(int id)
+    public async Task WinAsync(int id)
     {
-        var user = await _userRepository.Get(id);
+        var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
             throw new Exception("User not found");
         }
 
-        await _userRepository.Update(user, () =>
+        await _userRepository.UpdateAsync(user, () =>
         {
             user.Statistic.Wins++;
         });
     }
 
-    public async Task Lose(int id)
+    public async Task LoseAsync(int id)
     {
-        var user = await _userRepository.Get(id);
+        var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
             throw new Exception("User not found");
         }
 
-        await _userRepository.Update(user, () =>
+        await _userRepository.UpdateAsync(user, () =>
         {
             user.Statistic.Losses++;
         });

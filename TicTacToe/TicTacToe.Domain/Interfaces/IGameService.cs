@@ -4,6 +4,6 @@ namespace TicTacToe.Domain.Interfaces;
 
 public interface IGameService
 {
-    Task Win(int id);
-    Task Lose(int id);
+    Task WinAsync(int id);
+    Task LoseAsync(int id);
 }

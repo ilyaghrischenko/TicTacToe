@@ -16,28 +16,28 @@ public class SettingsControllerService(
     private readonly string _userId = httpContextAccessor.HttpContext.User.Claims
         .FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-    public async Task ChangeAvatar(IFormFile avatar)
+    public async Task ChangeAvatarAsync(IFormFile avatar)
     {
-        var changeAvatarModel = await GetChangeAvatarModel(avatar);
-        await _userService.ChangeAvatar(_userId, changeAvatarModel);
+        var changeAvatarModel = await GetChangeAvatarModelAsync(avatar);
+        await _userService.ChangeAvatarAsync(_userId, changeAvatarModel);
     }
 
-    public async Task ChangePassword(ChangePasswordModel changePasswordModel)
+    public async Task ChangePasswordAsync(ChangePasswordModel changePasswordModel)
     {
-        await _userService.ChangePassword(_userId, changePasswordModel.PasswordInput);
+        await _userService.ChangePasswordAsync(_userId, changePasswordModel.PasswordInput);
     }
 
-    public async Task ChangeEmail(ChangeEmailModel changeEmailModel)
+    public async Task ChangeEmailAsync(ChangeEmailModel changeEmailModel)
     {
-        await _userService.ChangeEmail(_userId, changeEmailModel.EmailInput);
+        await _userService.ChangeEmailAsync(_userId, changeEmailModel.EmailInput);
     }
 
-    public async Task ChangeLogin(ChangeLoginModel changeLoginModel)
+    public async Task ChangeLoginAsync(ChangeLoginModel changeLoginModel)
     {
-        await _userService.ChangeLogin(_userId, changeLoginModel.LoginInput);
+        await _userService.ChangeLoginAsync(_userId, changeLoginModel.LoginInput);
     }
 
-    public async Task<ChangeAvatarModel> GetChangeAvatarModel(IFormFile avatar)
+    public async Task<ChangeAvatarModel> GetChangeAvatarModelAsync(IFormFile avatar)
     {
         using var memoryStream = new MemoryStream();
         await avatar.CopyToAsync(memoryStream);

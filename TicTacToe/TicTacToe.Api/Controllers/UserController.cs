@@ -19,28 +19,28 @@ namespace TicTacToe.Api.Controllers
         [HttpGet("getUser")]
         public async Task<ActionResult<User>> GetUser()
         {
-            var user = await _userControllerService.GetUser();
-            return user;
+            var user = await _userControllerService.GetUserAsync();
+            return Ok(user);
         }
 
         [HttpGet("getUserStatistics")]
         public async Task<ActionResult<Statistic>> GetUserStatistics()
         {
-            var userStatistics = await _userControllerService.GetUserStatistics();
+            var userStatistics = await _userControllerService.GetUserStatisticsAsync();
             return Ok(userStatistics);
         }
 
         [HttpGet("getFriends")]
         public async Task<ActionResult<List<User>?>> GetFriends()
         {
-            var friends = await _userControllerService.GetFriends();
+            var friends = await _userControllerService.GetFriendsAsync();
             return Ok(friends);
         }
 
         [HttpGet("getAllUsers")]
-        public async Task<ActionResult<List<User>>> GetAllUsers()
+        public async Task<ActionResult<List<User>?>> GetAllUsers()
         {
-            var users = await _userControllerService.GetAllUsers();
+            var users = await _userControllerService.GetAllUsersAsync();
             return Ok(users);
         }
     }

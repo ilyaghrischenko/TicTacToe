@@ -39,7 +39,7 @@ namespace TicTacToe.Application.SignalRHub
 
         public async Task SendInvitation(int toUserId)
         {
-            var sender = await _userRepository.Get(ConnectedUsers[Context.ConnectionId]);
+            var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
             var senderUserName = sender.Login;
             var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
             if (toConnectionId != null)
@@ -74,7 +74,7 @@ namespace TicTacToe.Application.SignalRHub
 
         public async Task DeclineInvitation(string senderUserLogin)
         {
-            var senderUserId = (await  _userRepository.Get(senderUserLogin)).Id;
+            var senderUserId = (await  _userRepository.GetAsync(senderUserLogin)).Id;
             var senderConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == senderUserId).Key;
             if (senderConnectionId != null)
             {
@@ -105,11 +105,11 @@ namespace TicTacToe.Application.SignalRHub
             {
                 if (gameSession.PlayerO == Context.ConnectionId)
                 {
-                    await _reportService.SendReport(ConnectedUsers[gameSession.PlayerX], message);
+                    await _reportService.SendReportAsync(ConnectedUsers[gameSession.PlayerX], message);
                 }
                 else
                 {
-                    await _reportService.SendReport(ConnectedUsers[gameSession.PlayerO], message);
+                    await _reportService.SendReportAsync(ConnectedUsers[gameSession.PlayerO], message);
                 }
             }
         }
@@ -145,13 +145,13 @@ namespace TicTacToe.Application.SignalRHub
 
                     if (winedSymbol == "X")
                     {
-                        await _gameService.Win(playerX);
-                        await _gameService.Lose(playerO);
+                        await _gameService.WinAsync(playerX);
+                        await _gameService.LoseAsync(playerO);
                     }
                     else
                     {
-                        await _gameService.Win(playerO);
-                        await _gameService.Lose(playerX);
+                        await _gameService.WinAsync(playerO);
+                        await _gameService.LoseAsync(playerX);
                     }
                 }
             }
@@ -166,7 +166,7 @@ namespace TicTacToe.Application.SignalRHub
             {
                 if (ConnectedUsers.TryGetValue(connectionId, out var losingUserId))
                 {
-                    await _gameService.Lose(losingUserId);
+                    await _gameService.LoseAsync(losingUserId);
                 }
 
                 string remainingPlayer =

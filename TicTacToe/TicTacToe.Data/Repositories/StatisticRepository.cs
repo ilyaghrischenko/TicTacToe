@@ -8,17 +8,17 @@ public class StatisticRepository(TicTacToeContext context) : IRepository<Statist
 {
     private readonly TicTacToeContext _context = context;
     
-    public async Task<List<Statistic>?> GetAll()
+    public async Task<List<Statistic>?> GetAllAsync()
     {
         return await _context.Statistics.ToListAsync();
     }
 
-    public async Task<Statistic?> Get(int id)
+    public async Task<Statistic?> GetAsync(int id)
     {
         return await _context.Statistics.FindAsync(id);
     }
 
-    public async Task<bool> Add(Statistic statistic)
+    public async Task<bool> AddAsync(Statistic statistic)
     {
         try
         {
@@ -32,7 +32,7 @@ public class StatisticRepository(TicTacToeContext context) : IRepository<Statist
         }
     }
 
-    public async Task<bool> Delete(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         try
         {
@@ -47,7 +47,7 @@ public class StatisticRepository(TicTacToeContext context) : IRepository<Statist
         }
     }
 
-    public async Task<bool> Update(Statistic statistic, Action updateAction)
+    public async Task<bool> UpdateAsync(Statistic statistic, Action updateAction)
     {
         try
         {

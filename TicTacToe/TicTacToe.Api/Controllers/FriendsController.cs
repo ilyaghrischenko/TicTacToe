@@ -20,7 +20,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> AddFriend([FromBody] int userId)
         {
             _friendsControllerService.GetErrors(ModelState);
-            await _friendsControllerService.AddFriend(userId);
+            await _friendsControllerService.AddFriendAsync(userId);
             return Ok();
         }
 
@@ -28,7 +28,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> DeleteFriend([FromBody] int userId)
         {
             _friendsControllerService.GetErrors(ModelState);
-            await _friendsControllerService.DeleteFriend(userId);
+            await _friendsControllerService.DeleteFriendAsync(userId);
             return Ok();
         }
     }

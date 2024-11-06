@@ -4,5 +4,5 @@ namespace TicTacToe.Domain.Interfaces.Middleware;
 
 public interface ITokenBlacklistMiddleware
 {
-    public Task Invoke(HttpContext context, IServiceProvider serviceProvider);
+    public Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider);
 }

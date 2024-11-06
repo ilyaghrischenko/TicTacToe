@@ -8,7 +8,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
 {
     private readonly TicTacToeContext _context = context;
     
-    public async Task<List<Report>?> GetAll()
+    public async Task<List<Report>?> GetAllAsync()
     {
         return await _context.Reports
             .Include(u => u.User)
@@ -16,7 +16,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
             .ToListAsync();
     }
 
-    public async Task<Report?> Get(int id)
+    public async Task<Report?> GetAsync(int id)
     {
         return await _context.Reports
             .Include(u => u.User)
@@ -24,7 +24,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
-    public async Task<bool> Add(Report entity)
+    public async Task<bool> AddAsync(Report entity)
     {
         try
         {
@@ -38,7 +38,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
         }
     }
 
-    public async Task<bool> Update(Report entity, Action updateAction)
+    public async Task<bool> UpdateAsync(Report entity, Action updateAction)
     {
         try
         {
@@ -53,7 +53,7 @@ public class ReportRepository(TicTacToeContext context) : IRepository<Report>
         }
     }
 
-    public async Task<bool> Delete(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         try
         {

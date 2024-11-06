@@ -20,21 +20,21 @@ namespace TicTacToe.Api.Controllers
         [HttpGet("getAppealedUsers")]
         public async Task<ActionResult<List<User>?>> GetAppealedUsers()
         {
-            var users = await _adminControllerService.GetAppealedUsers();
+            var users = await _adminControllerService.GetAppealedUsersAsync();
             return Ok(users);
         }
 
         [HttpPost("getUserReports")]
         public async Task<ActionResult<List<Report>>> GetUserReports([FromBody] int userId)
         {
-            var reports = await _adminControllerService.GetUserReports(userId);
+            var reports = await _adminControllerService.GetUserReportsAsync(userId);
             return Ok(reports);
         }
 
         [HttpPost("blockUser")]
         public async Task<IActionResult> BlockUser([FromBody] int userId)
         {
-            await _adminControllerService.BlockUser(userId);
+            await _adminControllerService.BlockUserAsync(userId);
             return Ok();
         }
     }

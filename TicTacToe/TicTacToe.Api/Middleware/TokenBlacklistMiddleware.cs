@@ -12,7 +12,7 @@ public class TokenBlacklistMiddleware : ITokenBlacklistMiddleware
         _next = next;
     }
 
-    public async Task Invoke(HttpContext context, IServiceProvider serviceProvider)
+    public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
     {
         var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 

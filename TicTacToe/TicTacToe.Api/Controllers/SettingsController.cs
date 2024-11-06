@@ -22,7 +22,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> ChangeAvatar(IFormFile avatar)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangeAvatar(avatar);
+            await _settingsControllerService.ChangeAvatarAsync(avatar);
             return Ok();
         }
 
@@ -30,7 +30,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> ChangePassword(ChangePasswordModel changePasswordModel)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangePassword(changePasswordModel);
+            await _settingsControllerService.ChangePasswordAsync(changePasswordModel);
             return Ok();
         }
 
@@ -38,7 +38,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> ChangeEmail(ChangeEmailModel changeEmailModel)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangeEmail(changeEmailModel);
+            await _settingsControllerService.ChangeEmailAsync(changeEmailModel);
             return Ok();
         }
 
@@ -46,7 +46,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> ChangeLogin(ChangeLoginModel changeLoginModel)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangeLogin(changeLoginModel);
+            await _settingsControllerService.ChangeLoginAsync(changeLoginModel);
             return Ok();
         }
     }

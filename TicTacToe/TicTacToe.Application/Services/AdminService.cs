@@ -20,14 +20,14 @@ public class AdminService(
     private readonly ITokenBlacklistService _blacklistService = blacklistService;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
-    public async Task<List<User>?> GetAppealedUsers()
+    public async Task<List<User>?> GetAppealedUsersAsync()
     {
-        if (await IsAdmin() is false)
+        if (await IsAdminAsync() is false)
         {
             throw new UnauthorizedAccessException("User is not admin");
         }
         
-        var allReports = await _reportRepository.GetAll();
+        var allReports = await _reportRepository.GetAllAsync();
         if (allReports.IsNullOrEmpty())
         {
             return new();
@@ -42,20 +42,20 @@ public class AdminService(
         return appealedUsers;
     }
 
-    public async Task BlockUser(int userId, string token)
+    public async Task BlockUserAsync(int userId, string token)
     {
-        if (await IsAdmin() is false)
+        if (await IsAdminAsync() is false)
         {
             throw new UnauthorizedAccessException("User is not admin");
         }
         
-        var user = await _userRepository.Get(userId);
+        var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
             throw new ArgumentNullException("User not found");
         }
 
-        await _userRepository.Update(user, () =>
+        await _userRepository.UpdateAsync(user, () =>
         {
             user.Role = Role.Blocked;
         });
@@ -63,10 +63,10 @@ public class AdminService(
         await _blacklistService.AddToBlacklistAsync(token);
     }
 
-    public async Task<bool> IsAdmin()
+    public async Task<bool> IsAdminAsync()
     {
         var userId = GetCurrentUserId();
-        var user = await _userRepository.Get(userId);
+        var user = await _userRepository.GetAsync(userId);
         
         return user.Role == Role.Admin;
     }

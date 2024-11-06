@@ -17,17 +17,17 @@ public class AdminControllerService(
     private readonly IAdminService _adminService = adminService;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
-    public async Task<List<User>?> GetAppealedUsers()
+    public async Task<List<User>?> GetAppealedUsersAsync()
     {
-        return await _adminService.GetAppealedUsers();
+        return await _adminService.GetAppealedUsersAsync();
     }
 
-    public async Task<List<Report>> GetUserReports(int userId)
+    public async Task<List<Report>> GetUserReportsAsync(int userId)
     {
-        return await _reportService.GetUserReports(userId);
+        return await _reportService.GetUserReportsAsync(userId);
     }
 
-    public async Task BlockUser(int userId)
+    public async Task BlockUserAsync(int userId)
     {
         var token = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
         if (string.IsNullOrEmpty(token))
@@ -35,6 +35,6 @@ public class AdminControllerService(
             throw new UnauthorizedAccessException("Token is not provided");
         }
         
-        await _adminService.BlockUser(userId, token);
+        await _adminService.BlockUserAsync(userId, token);
     }
 }

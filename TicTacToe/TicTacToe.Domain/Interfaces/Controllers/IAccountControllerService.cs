@@ -9,8 +9,8 @@ namespace TicTacToe.Domain.Interfaces.Controllers;
 
 public interface IAccountControllerService : IBaseControllerService
 {
-    public Task<object> Login(LoginModel loginModel);
-    public Task Register(RegisterModel registerModel);
+    public Task<object> LoginAsync(LoginModel loginModel);
+    public Task RegisterAsync(RegisterModel registerModel);
     public ClaimsIdentity GetIdentity(User user);
     public string? GetToken(ClaimsIdentity identity);
 }

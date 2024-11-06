@@ -19,10 +19,10 @@ public class UserControllerService(
     private readonly IUserService _userService = userService;
     private readonly IStatisticService _statisticService = statisticService;
 
-    public async Task<User> GetUser()
+    public async Task<User> GetUserAsync()
     {
         var userId = GetCurrentUserId();
-        var user = await _userService.GetUserById(userId);
+        var user = await _userService.GetUserByIdAsync(userId);
         if (user.Role == Role.Blocked)
         {
             throw new UnauthorizedAccessException("User is blocked");
@@ -31,24 +31,24 @@ public class UserControllerService(
         return user;
     }
 
-    public async Task<Statistic> GetUserStatistics()
+    public async Task<Statistic> GetUserStatisticsAsync()
     {
         var userId = GetCurrentUserId();
-        var userStatistics = await _statisticService.GetUserStatistics(userId);
+        var userStatistics = await _statisticService.GetUserStatisticsAsync(userId);
         return userStatistics;
     }
 
-    public async Task<List<User>?> GetFriends()
+    public async Task<List<User>?> GetFriendsAsync()
     {
         var userId = GetCurrentUserId();
-        var userFriends = await _userService.GetFriends(userId);
+        var userFriends = await _userService.GetFriendsAsync(userId);
         return userFriends;
     }
 
-    public async Task<List<User>?> GetAllUsers()
+    public async Task<List<User>?> GetAllUsersAsync()
     {
         var userId = GetCurrentUserId();
-        var allUsers = await _userService.GetAllUsers(userId);
+        var allUsers = await _userService.GetAllUsersAsync(userId);
         return allUsers;
     }
 

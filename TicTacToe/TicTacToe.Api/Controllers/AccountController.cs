@@ -15,7 +15,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
             _accountControllerService.GetErrors(ModelState);
-            var response = await _accountControllerService.Login(loginModel);
+            var response = await _accountControllerService.LoginAsync(loginModel);
             return Ok(response);
         }
 
@@ -23,7 +23,7 @@ namespace TicTacToe.Api.Controllers
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
             _accountControllerService.GetErrors(ModelState);
-            await _accountControllerService.Register(registerModel);
+            await _accountControllerService.RegisterAsync(registerModel);
             return Ok();
         }
     }

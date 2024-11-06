@@ -12,9 +12,9 @@ public class ReportService(
     private readonly IRepository<Report> _reportRepository = reportRepository;
     private readonly IUserRepository _userRepository = userRepository;
     
-    public async Task<List<Report>> GetUserReports(int userId)
+    public async Task<List<Report>> GetUserReportsAsync(int userId)
     {
-        var allReports = await _reportRepository.GetAll();
+        var allReports = await _reportRepository.GetAllAsync();
         if (allReports.IsNullOrEmpty())
         {
             return new();
@@ -24,15 +24,15 @@ public class ReportService(
         return userReports;
     }
 
-    public async Task SendReport(int id, string message)
+    public async Task SendReportAsync(int id, string message)
     {
-        var user = await _userRepository.Get(id);
+        var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
             throw new Exception("User not found");
         }
         
         var report = new Report(user, message);
-        await _reportRepository.Add(report);
+        await _reportRepository.AddAsync(report);
     }
 }
