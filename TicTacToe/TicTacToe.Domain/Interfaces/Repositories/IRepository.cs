@@ -1,6 +1,8 @@
+using TicTacToe.Domain.DbModels;
+
 namespace TicTacToe.Domain.Interfaces.Repositories;
 
-public interface IRepository<T>
+public interface IRepository<T> where T : BaseEntity
 {
     Task<List<T>?> GetAllAsync();
     Task<T?> GetAsync(int id);
