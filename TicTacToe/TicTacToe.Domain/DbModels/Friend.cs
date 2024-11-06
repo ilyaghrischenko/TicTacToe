@@ -1,8 +1,7 @@
 namespace TicTacToe.Domain.DbModels;
 
-public class Friend
+public class Friend : BaseEntity
 {
-    public int Id { get; set; }
     public int UserId { get; set; }
     public User User { get; set; }
 
