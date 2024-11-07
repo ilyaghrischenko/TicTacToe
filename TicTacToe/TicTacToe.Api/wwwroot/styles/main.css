@@ -385,4 +385,19 @@ h1 {
         flex-direction: column;
         gap: 10px;
     }
+    
+    .invitation-modal-content {
+        width: 85%;
+    }
+    
+    .modal {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 150px 20px;
+    }
 }
