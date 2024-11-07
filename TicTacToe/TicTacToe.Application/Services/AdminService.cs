@@ -60,7 +60,10 @@ public class AdminService(
             throw new ArgumentNullException("User not found");
         }
 
-        await _userRepository.UpdateAsync(user, () => { user.Role = Role.Blocked; });
+        await _userRepository.UpdateAsync(user, () =>
+        {
+            user.Role = Role.Blocked;
+        });
 
         await _blacklistService.AddToBlacklistAsync(token);
 

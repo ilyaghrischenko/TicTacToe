@@ -144,6 +144,17 @@ li {
     }
 
     .user-item {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .user-info {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    span {
+        text-align: center;
     }
 }
