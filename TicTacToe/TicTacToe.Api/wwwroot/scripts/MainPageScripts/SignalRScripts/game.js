@@ -56,51 +56,50 @@ async function checkWinner() {
     for (let condition of winningConditions) {
         const [a, b, c] = condition;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            endGame(`Player with symbol ${board[a]} won`);
-
-            if (isMyTurn) {
+            if (isMyTurn && board[a] === playerSymbol) {
                 connection.invoke("WriteStatistic", currentGameId, board[a])
                     .catch(function (err) {
                         console.error("Error in write statistic:", err.toString());
                     });
             }
 
-            const token = sessionStorage.getItem('token');
-            if (!token) {
-                window.location.href = '../pages/auth.html';
-            }
-
-            const response = await fetch('/api/User/getUserStatistics', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                document.getElementById('wins').textContent = data.wins;
-                document.getElementById('losses').textContent = data.losses;
-            }
-
+            await endGame(`Player with symbol ${board[a]} won`);
             return true;
         }
     }
 
     if (!board.includes('')) {
-        endGame('Draw');
+        await endGame('Draw');
         return true;
     }
 
     return false;
 }
 
-function endGame(message) {
+async function endGame(message) {
     renderRestartButton();
     renderEndGameButton();
     gameActive = false;
     statusText.textContent = message;
+
+    const token = sessionStorage.getItem('token');
+    if (!token) {
+        window.location.href = '../pages/auth.html';
+    }    
+    
+    const response = await fetch('/api/User/getUserStatistics', {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        document.getElementById('wins').textContent = data.wins;
+        document.getElementById('losses').textContent = data.losses;
+    }
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
