@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\images\\avatar.png"
     },
     {
-      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
-      "PackagePath": "staticwebassets\\images\\settings.png"
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\block.png",
+      "PackagePath": "staticwebassets\\images\\block.png"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
@@ -71,6 +71,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js",
       "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderFriends.js",
+      "PackagePath": "staticwebassets\\scripts\\FriendsListScripts\\renderFriends.js"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
