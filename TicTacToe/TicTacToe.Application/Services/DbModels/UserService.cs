@@ -229,8 +229,7 @@ public class UserService(
         }
 
         allUsers.RemoveAll(user => user.Id == currentUserId
-                                   || user.Role == Role.Admin
-                                   || user.Role == Role.Blocked);
+                                   || user.Role == Role.Admin);
 
         return allUsers;
     }
