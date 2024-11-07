@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jUfBm2Eel/n2bSFEL71lNdH7sm1Wfnj2xD1IeN8CIeM=",
+  "Hash": "FPNqSnN/Wo0UeisBLAuoAZdjFfw4RqvJX0klwU71LNY=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -36,12 +36,12 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar.png"
     },
     {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\settings.png",
+      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\block.png",
       "SourceId": "TicTacToe.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
       "BasePath": "_content/TicTacToe.Api",
-      "RelativePath": "images/settings.png",
+      "RelativePath": "images/block.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\settings.png"
+      "OriginalItemSpec": "wwwroot\\images\\block.png"
     },
     {
       "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
