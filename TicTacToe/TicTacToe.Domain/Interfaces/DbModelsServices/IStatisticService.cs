@@ -4,5 +4,5 @@ namespace TicTacToe.Domain.Interfaces.DbModelsServices;
 
 public interface IStatisticService
 {
-    public Task<Statistic> GetUserStatistics(int userId);
+    public Task<Statistic> GetUserStatisticsAsync(int userId);
 }

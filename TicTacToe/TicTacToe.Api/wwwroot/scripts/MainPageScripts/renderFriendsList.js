@@ -23,7 +23,7 @@ function renderFriendsList(friends, friendList) {
         const button = document.createElement('button');
         button.classList.add('btn', 'invite-button');
         button.textContent = 'Invite';
-        button.onclick = () => inviteToGame(user.id);
+        button.onclick = () => inviteToGame(user.id, button);
 
         li.appendChild(userInfo);
         li.appendChild(button);

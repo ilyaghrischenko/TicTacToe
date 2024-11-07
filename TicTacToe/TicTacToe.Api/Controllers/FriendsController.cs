@@ -19,48 +19,16 @@ namespace TicTacToe.Api.Controllers
         [HttpPost("addFriend")]
         public async Task<IActionResult> AddFriend([FromBody] int userId)
         {
-            try
-            {
-                _friendsControllerService.GetErrors(ModelState);
-                await _friendsControllerService.AddFriend(userId);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _friendsControllerService.GetErrors(ModelState);
+            await _friendsControllerService.AddFriendAsync(userId);
             return Ok();
         }
 
         [HttpPost("deleteFriend")]
         public async Task<IActionResult> DeleteFriend([FromBody] int userId)
         {
-            try
-            {
-                _friendsControllerService.GetErrors(ModelState);
-                await _friendsControllerService.DeleteFriend(userId);
-            }
-            catch (KeyNotFoundException k)
-            {
-                return NotFound(k.Message);
-            }
-            catch (ArgumentException a)
-            {
-                return BadRequest(a.Message);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
+            _friendsControllerService.GetErrors(ModelState);
+            await _friendsControllerService.DeleteFriendAsync(userId);
             return Ok();
         }
     }

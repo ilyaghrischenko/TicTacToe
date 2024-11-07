@@ -21,9 +21,9 @@ public class AccountControllerService(
     private readonly IUserService _userService = userService;
     private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
 
-    public async Task<object> Login(LoginModel loginModel)
+    public async Task<object> LoginAsync(LoginModel loginModel)
     {
-        var user = await _userService.Login(loginModel);
+        var user = await _userService.LoginAsync(loginModel);
 
         var identity = GetIdentity(user);
         var token = GetToken(identity);
@@ -37,9 +37,9 @@ public class AccountControllerService(
         return response;
     }
 
-    public async Task Register(RegisterModel registerModel)
+    public async Task RegisterAsync(RegisterModel registerModel)
     {
-        await _userService.Register(registerModel);
+        await _userService.RegisterAsync(registerModel);
     }
 
     public ClaimsIdentity GetIdentity(User user)

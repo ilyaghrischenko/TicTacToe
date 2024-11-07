@@ -1,10 +1,12 @@
+using TicTacToe.Domain.DbModels;
+
 namespace TicTacToe.Domain.Interfaces.Repositories;
 
-public interface IRepository<T>
+public interface IRepository<T> where T : BaseEntity
 {
-    Task<List<T>?> GetAll();
-    Task<T?> Get(int id);
-    Task<bool> Add(T entity);
-    Task<bool> Update(T entity, Action updateAction);
-    Task<bool> Delete(int id);
+    Task<List<T>?> GetAllAsync();
+    Task<T?> GetAsync(int id);
+    Task<bool> AddAsync(T entity);
+    Task<bool> UpdateAsync(T entity, Action updateAction);
+    Task<bool> DeleteAsync(int id);
 }

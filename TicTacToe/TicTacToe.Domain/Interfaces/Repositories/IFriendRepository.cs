@@ -4,6 +4,6 @@ namespace TicTacToe.Domain.Interfaces.Repositories;
 
 public interface IFriendRepository : IRepository<Friend>
 {
-    public Task<List<User>?> GetUserFriends(int userId);
-    public Task<Friend?> Get(int userId, int friendId);
+    public Task<List<User>?> GetUserFriendsAsync(int userId);
+    public Task<Friend?> GetAsync(int userId, int friendId);
 }

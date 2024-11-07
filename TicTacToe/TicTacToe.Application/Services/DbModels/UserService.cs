@@ -18,22 +18,22 @@ public class UserService(
     private readonly IFriendRepository _friendRepository = friendRepository;
     private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
 
-    public async Task AddFriend(int userId, int friendId)
+    public async Task AddFriendAsync(int userId, int friendId)
     {
-        var me = await _userRepository.Get(userId);
+        var me = await _userRepository.GetAsync(userId);
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
         }
 
-        var friendToAdd = await _userRepository.Get(friendId);
+        var friendToAdd = await _userRepository.GetAsync(friendId);
         if (friendToAdd == null)
         {
             throw new KeyNotFoundException("New friend not found");
         }
 
-        var meFriends = await _friendRepository.GetUserFriends(me.Id);
-        var friendToAddFriends = await _friendRepository.GetUserFriends(friendToAdd.Id);
+        var meFriends = await _friendRepository.GetUserFriendsAsync(me.Id);
+        var friendToAddFriends = await _friendRepository.GetUserFriendsAsync(friendToAdd.Id);
 
         if (meFriends.Any(x => x.Id == friendToAdd.Id))
         {
@@ -45,26 +45,26 @@ public class UserService(
             throw new ArgumentException("This user already has you as a friend");
         }
 
-        await _friendRepository.Add(new Friend(me, friendToAdd));
-        await _friendRepository.Add(new Friend(friendToAdd, me));
+        await _friendRepository.AddAsync(new Friend(me, friendToAdd));
+        await _friendRepository.AddAsync(new Friend(friendToAdd, me));
     }
 
-    public async Task DeleteFriend(int userId, int friendId)
+    public async Task DeleteFriendAsync(int userId, int friendId)
     {
-        var me = await _userRepository.Get(userId);
+        var me = await _userRepository.GetAsync(userId);
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
         }
 
-        var friendToRemove = await _userRepository.Get(friendId);
+        var friendToRemove = await _userRepository.GetAsync(friendId);
         if (friendToRemove == null)
         {
             throw new KeyNotFoundException("Friend not found");
         }
 
-        var meFrend = await _friendRepository.Get(me.Id, friendToRemove.Id);
-        var friendToRemoveFriend = await _friendRepository.Get(friendToRemove.Id, me.Id);
+        var meFrend = await _friendRepository.GetAsync(me.Id, friendToRemove.Id);
+        var friendToRemoveFriend = await _friendRepository.GetAsync(friendToRemove.Id, me.Id);
 
         if (meFrend == null)
         {
@@ -76,13 +76,13 @@ public class UserService(
             throw new ArgumentException("This user already hasn't you as a friend");
         }
 
-        await _friendRepository.Delete(meFrend.Id);
-        await _friendRepository.Delete(friendToRemoveFriend.Id);
+        await _friendRepository.DeleteAsync(meFrend.Id);
+        await _friendRepository.DeleteAsync(friendToRemoveFriend.Id);
     }
 
-    public async Task ChangeLogin(string userId, string newLogin)
+    public async Task ChangeLoginAsync(string userId, string newLogin)
     {
-        var me = await _userRepository.Get(int.Parse(userId));
+        var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
@@ -93,20 +93,20 @@ public class UserService(
             throw new ArgumentException("New login is the same as old");
         }
 
-        if (await _userRepository.Get(newLogin) != null)
+        if (await _userRepository.GetAsync(newLogin) != null)
         {
             throw new ArgumentException("New login already exists");
         }
 
-        await _userRepository.Update(me, () =>
+        await _userRepository.UpdateAsync(me, () =>
         {
             me.Login = newLogin;
         });
     }
 
-    public async Task ChangePassword(string userId, string newPassword)
+    public async Task ChangePasswordAsync(string userId, string newPassword)
     {
-        var me = await _userRepository.Get(int.Parse(userId));
+        var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
@@ -117,15 +117,15 @@ public class UserService(
             throw new ArgumentException("New password is the same as old");
         }
         
-        await _userRepository.Update(me, () =>
+        await _userRepository.UpdateAsync(me, () =>
         {
             me.Password = _passwordHasher.HashPassword(null, newPassword);
         });
     }
 
-    public async Task ChangeEmail(string userId, string newEmail)
+    public async Task ChangeEmailAsync(string userId, string newEmail)
     {
-        var me = await _userRepository.Get(int.Parse(userId));
+        var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
@@ -136,15 +136,15 @@ public class UserService(
             throw new ArgumentException("New email is the same as old");
         }
 
-        await _userRepository.Update(me, () =>
+        await _userRepository.UpdateAsync(me, () =>
         {
             me.Email = newEmail;
         });
     }
 
-    public async Task ChangeAvatar(string userId, ChangeAvatarModel changeAvatarModel)
+    public async Task ChangeAvatarAsync(string userId, ChangeAvatarModel changeAvatarModel)
     {
-        var me = await _userRepository.Get(int.Parse(userId));
+        var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
@@ -155,15 +155,15 @@ public class UserService(
             throw new ArgumentException("New avatar is the same as old");
         }
         
-        await _userRepository.Update(me, () =>
+        await _userRepository.UpdateAsync(me, () =>
         {
             me.Avatar = changeAvatarModel.Avatar;
         });
     }
 
-    public async Task<User> Login(LoginModel loginModel)
+    public async Task<User> LoginAsync(LoginModel loginModel)
     {
-        var user = await _userRepository.Get(loginModel.Login);
+        var user = await _userRepository.GetAsync(loginModel.Login);
         if (user == null)
         {
             throw new KeyNotFoundException("User not found");
@@ -182,15 +182,15 @@ public class UserService(
         return user;
     }
 
-    public async Task Register(RegisterModel registerModel)
+    public async Task RegisterAsync(RegisterModel registerModel)
     {
-        var user = await _userRepository.Get(registerModel.Login);
+        var user = await _userRepository.GetAsync(registerModel.Login);
         if (user != null)
         {
             throw new ArgumentException("User already exists");
         }
 
-        var admin = await _userRepository.GetAdmin();
+        var admin = await _userRepository.GetAdminAsync();
         Role role = Role.User;
         if (admin != null)
         {
@@ -207,12 +207,12 @@ public class UserService(
             Password = _passwordHasher.HashPassword(null, registerModel.Password),
             Role = role
         };
-        await _userRepository.Add(user);
+        await _userRepository.AddAsync(user);
     }
 
-    public async Task<User> GetUserById(int userId)
+    public async Task<User> GetUserByIdAsync(int userId)
     {
-        var user = await _userRepository.Get(userId);
+        var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
             throw new KeyNotFoundException("User not found");
@@ -220,29 +220,28 @@ public class UserService(
         return user;
     }
 
-    public async Task<List<User>> GetAllUsers(int currentUserId)
+    public async Task<List<User>> GetAllUsersAsync(int currentUserId)
     {
-        var allUsers = await _userRepository.GetAll();
+        var allUsers = await _userRepository.GetAllAsync();
         if (allUsers == null || allUsers.Count == 0)
         {
             return new List<User>();
         }
 
         allUsers.RemoveAll(user => user.Id == currentUserId
-                                   || user.Role == Role.Admin
-                                   || user.Role == Role.Blocked);
+                                   || user.Role == Role.Admin);
 
         return allUsers;
     }
 
-    public async Task<List<User>> GetFriends(int userId)
+    public async Task<List<User>> GetFriendsAsync(int userId)
     {
-        var user = await _userRepository.Get(userId);
+        var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
             throw new KeyNotFoundException("User not found");
         }
-        var userFriends = await _friendRepository.GetUserFriends(user.Id);
+        var userFriends = await _friendRepository.GetUserFriendsAsync(user.Id);
         return userFriends ?? new List<User>();
     }
 }

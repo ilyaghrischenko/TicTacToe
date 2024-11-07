@@ -341,3 +341,48 @@ h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-panel, .central-panel, .right-panel {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 4px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .friends-list li {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .game-buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

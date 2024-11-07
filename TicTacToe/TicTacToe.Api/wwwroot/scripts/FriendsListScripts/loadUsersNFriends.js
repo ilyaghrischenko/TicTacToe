@@ -49,11 +49,6 @@ async function loadUsersNFriends() {
         const users = await usersResponse.json();
         const friends = await friendsResponse.json();
 
-        console.log('users:')
-        console.dir(users);
-        console.log('friends:')
-        console.dir(friends);
-
         renderUserList(users, friends);
     } catch (error) {
         console.error('Ошибка:', error.message);

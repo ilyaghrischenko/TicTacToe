@@ -11,15 +11,15 @@ public class StatisticService(
     private readonly IRepository<Statistic> _statisticRepository = statisticRepository;
     private readonly IUserRepository _userRepository = userRepository;
     
-    public async Task<Statistic> GetUserStatistics(int userId)
+    public async Task<Statistic> GetUserStatisticsAsync(int userId)
     {
-        var user = await _userRepository.Get(userId);
+        var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
             throw new KeyNotFoundException("User not found");
         }
 
-        var statistic = await _statisticRepository.Get(user.Statistic.Id);
+        var statistic = await _statisticRepository.GetAsync(user.Statistic.Id);
         return statistic;
     }
 }

@@ -1,8 +1,7 @@
 namespace TicTacToe.Domain.DbModels;
 
-public class Statistic
+public class Statistic : BaseEntity
 {
-    public int Id { get; set; }
     public int Wins { get; set; }
     public int Losses { get; set; }
 

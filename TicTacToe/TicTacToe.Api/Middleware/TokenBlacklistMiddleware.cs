@@ -1,8 +1,9 @@
+using TicTacToe.Domain.Interfaces.Middleware;
 using TicTacToe.Domain.Interfaces.TokenServices;
 
 namespace TicTacToe.Api.Middleware;
 
-public class TokenBlacklistMiddleware
+public class TokenBlacklistMiddleware : ITokenBlacklistMiddleware
 {
     private readonly RequestDelegate _next;
 
@@ -11,7 +12,7 @@ public class TokenBlacklistMiddleware
         _next = next;
     }
 
-    public async Task Invoke(HttpContext context, IServiceProvider serviceProvider)
+    public async Task InvokeAsync(HttpContext context, IServiceProvider serviceProvider)
     {
         var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 

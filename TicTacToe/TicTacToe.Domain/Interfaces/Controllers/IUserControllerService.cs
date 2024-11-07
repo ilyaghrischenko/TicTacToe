@@ -4,8 +4,8 @@ namespace TicTacToe.Domain.Interfaces.Controllers;
 
 public interface IUserControllerService : IBaseControllerService, ICurrentUserId
 {
-    public Task<User> GetUser();
-    public Task<Statistic> GetUserStatistics();
-    public Task<List<User>?> GetFriends();
-    public Task<List<User>?> GetAllUsers();
+    public Task<User> GetUserAsync();
+    public Task<Statistic> GetUserStatisticsAsync();
+    public Task<List<User>?> GetFriendsAsync();
+    public Task<List<User>?> GetAllUsersAsync();
 }

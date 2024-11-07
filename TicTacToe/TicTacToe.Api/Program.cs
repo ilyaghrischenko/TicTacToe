@@ -39,12 +39,14 @@ builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>(
 builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
 #endregion
 
-#region Services
+#region Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
 builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
+#endregion
 
+#region Services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
@@ -143,6 +145,8 @@ app.MapControllers();
 app.UseStaticFiles();
 
 app.MapHub<GameHub>("/gameHub");
+
 app.UseMiddleware<TokenBlacklistMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.Run();

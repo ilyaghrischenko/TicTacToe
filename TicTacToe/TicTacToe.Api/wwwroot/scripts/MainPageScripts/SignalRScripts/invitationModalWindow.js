@@ -1,7 +1,21 @@
-async function inviteToGame(toUserName) {
-    await connection.invoke("SendInvitation", toUserName).catch(function (err) {
-        return console.error(err.toString());
-    });
+async function inviteToGame(toUserName, button) {
+    await connection.invoke("SendInvitation", toUserName)
+        .then(() => {
+            button.disabled = true;
+            button.textContent = 'Invited';
+            button.style.backgroundColor = 'black';
+            
+            setTimeout(() => {
+                if(!gameActive) {
+                    button.disabled = false;
+                    button.style.backgroundColor = 'var(--button-color)';
+                }
+                    button.textContent = 'Invite';
+            }, 6000);
+        })
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
 }
 
 function showInvitationModal(senderUserName, senderUserId) {
@@ -41,5 +55,10 @@ function showInvitationModal(senderUserName, senderUserId) {
 
     const centralPanel = document.querySelector('.central-panel');
     centralPanel.appendChild(modal);
+
+    setTimeout(() => {
+        modal.remove();
+    }, 5000);
 }
+
 

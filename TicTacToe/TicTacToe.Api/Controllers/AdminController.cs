@@ -16,63 +16,26 @@ namespace TicTacToe.Api.Controllers
     public class AdminController(IAdminControllerService adminControllerService) : ControllerBase
     {
         private readonly IAdminControllerService _adminControllerService = adminControllerService;
-        
+
         [HttpGet("getAppealedUsers")]
         public async Task<ActionResult<List<User>?>> GetAppealedUsers()
         {
-            try
-            {
-                var users = await _adminControllerService.GetAppealedUsers();
-                return Ok(users);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Unauthorized();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            var users = await _adminControllerService.GetAppealedUsersAsync();
+            return Ok(users);
         }
-        
+
         [HttpPost("getUserReports")]
         public async Task<ActionResult<List<Report>>> GetUserReports([FromBody] int userId)
         {
-            try
-            {
-                var reports = await _adminControllerService.GetUserReports(userId);
-                return Ok(reports);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Unauthorized();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            var reports = await _adminControllerService.GetUserReportsAsync(userId);
+            return Ok(reports);
         }
-        
+
         [HttpPost("blockUser")]
         public async Task<IActionResult> BlockUser([FromBody] int userId)
         {
-            try
-            {
-                await _adminControllerService.BlockUser(userId);
-                return Ok();
-            }
-            catch (UnauthorizedAccessException e)
-            {
-                return Unauthorized(e.Message);
-            }
-            catch (ArgumentNullException)
-            {
-                return BadRequest();
-            }
-            catch (Exception)
-            {
-                return StatusCode(500);
-            }
+            await _adminControllerService.BlockUserAsync(userId);
+            return Ok();
         }
     }
 }

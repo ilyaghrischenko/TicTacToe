@@ -8,22 +8,22 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
 {
     private readonly TicTacToeContext _context = context;
     
-    public async Task<List<Friend>?> GetAll()
+    public async Task<List<Friend>?> GetAllAsync()
     {
         return await _context.Friends.ToListAsync();
     }
 
-    public async Task<Friend?> Get(int id)
+    public async Task<Friend?> GetAsync(int id)
     {
         return await _context.Friends.FindAsync(id);
     }
 
-    public async Task<Friend?> Get(int userId, int friendId)
+    public async Task<Friend?> GetAsync(int userId, int friendId)
     {
         return await _context.Friends.FirstAsync(x => x.UserId == userId && x.FriendUserId == friendId);
     }
 
-    public async Task<List<User>?> GetUserFriends(int userId)
+    public async Task<List<User>?> GetUserFriendsAsync(int userId)
     {
         var friends = await _context.Friends
             .Include(friend => friend.FriendUser)
@@ -35,7 +35,7 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
         return userFriends;
     }
 
-    public async Task<bool> Add(Friend entity)
+    public async Task<bool> AddAsync(Friend entity)
     {
         try
         {
@@ -49,7 +49,7 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
         }
     }
 
-    public async Task<bool> Update(Friend entity, Action updateAction)
+    public async Task<bool> UpdateAsync(Friend entity, Action updateAction)
     {
         try
         {
@@ -64,7 +64,7 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
         }
     }
 
-    public async Task<bool> Delete(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         try
         {
