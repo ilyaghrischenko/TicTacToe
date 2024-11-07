@@ -5,10 +5,13 @@ function renderUserList(users, friends) {
     userList.innerHTML = '';
     
     users.forEach(user => {
+        const isFriend = friends.some(friend => friend.id === user.id);
+        if (!isFriend && user.role === 2) {
+            return;
+        }
+        
         const li = document.createElement('li');
         li.classList.add('user-item');
-
-        const isFriend = friends.some(friend => friend.id === user.id);
 
         const userInfo = document.createElement('div');
         userInfo.classList.add('user-info');

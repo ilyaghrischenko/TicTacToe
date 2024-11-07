@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1+FbXz10FxFhBy+g2eCuebdYt6bU4a7h12q0RaHmZdQ=",
+  "Hash": "FPNqSnN/Wo0UeisBLAuoAZdjFfw4RqvJX0klwU71LNY=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -357,25 +357,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\loadUsersNFriends.js"
-    },
-    {
-      "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderFriends.js",
-      "SourceId": "TicTacToe.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\",
-      "BasePath": "_content/TicTacToe.Api",
-      "RelativePath": "scripts/FriendsListScripts/renderFriends.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\scripts\\FriendsListScripts\\renderFriends.js"
     },
     {
       "Identity": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\FriendsListScripts\\renderUsers.js",
