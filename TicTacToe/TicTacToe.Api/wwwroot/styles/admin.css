@@ -159,4 +159,30 @@ ul {
         justify-content: center;
         margin-top: 10px;
     }
+
+    .modal-content {
+        width: 85%;
+        max-height: 80vh;  /* Ограничиваем высоту окна */
+        overflow-y: auto;  /* Добавляем вертикальную прокрутку */
+    }
+
+    #report-list {
+        max-height: 80vh;  /* Ограничиваем высоту списка жалоб */
+        overflow-y: auto;  /* Добавляем прокрутку для списка */
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .report-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        width: 90%;
+    }
+    
+    .report-message {
+        text-align: center;
+    }
 }

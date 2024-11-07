@@ -39,19 +39,18 @@ async function showUserReports(userId) {
 
         data.forEach(report => {
             const li = document.createElement('li');
+            li.classList.add('report-item');
             const date = new Date(report.createdAt);
             const formattedDate =
                 `${date.toLocaleDateString('ru-RU')} ${date.toLocaleTimeString('ru-RU', {
                     hour: '2-digit',
                     minute: '2-digit'
                 })}`;
-            // li.textContent = `${formattedDate}: ${report.message}`;
 
             li.innerHTML = `
                 <span class="report-date">${formattedDate}</span>
                 <span class="report-message">${report.message}</span>
             `;
-
             reportList.appendChild(li);
         });
 
