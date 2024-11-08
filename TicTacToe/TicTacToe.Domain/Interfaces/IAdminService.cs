@@ -9,7 +9,6 @@ public interface IAdminService : ICurrentUserId, IPngToIFormFile
 {
     Task<List<User>?> GetAppealedUsersAsync();
     Task BlockUserAsync(int userId, string token);
-    Task<bool> IsAdminAsync();
     public Task ChangeAvatarAsync(IFormFile avatar, int userId);
     public Task<ChangeAvatarModel> GetChangeAvatarModelAsync(IFormFile avatar);
 }

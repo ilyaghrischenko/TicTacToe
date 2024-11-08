@@ -27,11 +27,6 @@ public class AdminService(
 
     public async Task<List<User>?> GetAppealedUsersAsync()
     {
-        if (await IsAdminAsync() is false)
-        {
-            throw new UnauthorizedAccessException("User is not admin");
-        }
-
         var allReports = await _reportRepository.GetAllAsync();
         if (allReports.IsNullOrEmpty())
         {
@@ -49,11 +44,6 @@ public class AdminService(
 
     public async Task BlockUserAsync(int userId, string token)
     {
-        if (await IsAdminAsync() is false)
-        {
-            throw new UnauthorizedAccessException("User is not admin");
-        }
-
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
@@ -70,14 +60,6 @@ public class AdminService(
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "block.png");
         var formFile = ConvertPngToIFormFile(filePath);
         await ChangeAvatarAsync(formFile, userId);
-    }
-
-    public async Task<bool> IsAdminAsync()
-    {
-        var userId = GetCurrentUserId();
-        var user = await _userRepository.GetAsync(userId);
-
-        return user.Role == Role.Admin;
     }
 
     public int GetCurrentUserId()
