@@ -1,6 +1,11 @@
 'use strict'
 
-async function addFriend(userId) {
+async function addFriend(userId, button) {
+
+    button.disabled = true;
+    button.textContent = 'Adding...';
+    button.style.backgroundColor = 'black';
+    
     try {
         const response = await fetch(`/api/Friends/addFriend`, {
             method: 'POST',
@@ -26,7 +31,12 @@ async function addFriend(userId) {
     }
 }
 
-async function deleteFriend(userId) {
+async function deleteFriend(userId, button) {
+
+    button.disabled = true;
+    button.textContent = 'Deleting...';
+    button.style.backgroundColor = 'black';
+    
     try {
         const response = await fetch(`/api/Friends/deleteFriend`, {
             method: 'POST',

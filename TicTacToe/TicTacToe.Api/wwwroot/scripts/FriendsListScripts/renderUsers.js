@@ -40,7 +40,7 @@ function renderUserList(users, friends) {
         const button = document.createElement('button');
         button.classList.add('btn', isFriend ? 'delete-button' : 'add-button');
         button.textContent = isFriend ? 'Delete' : 'Add';
-        button.onclick = isFriend ? () => deleteFriend(user.id) : () => addFriend(user.id);
+        button.onclick = isFriend ? () => deleteFriend(user.id, button) : () => addFriend(user.id, button);
 
         li.appendChild(userInfo);
         li.appendChild(button);
