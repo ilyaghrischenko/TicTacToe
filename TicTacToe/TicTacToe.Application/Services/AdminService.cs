@@ -17,12 +17,14 @@ public class AdminService(
     IRepository<Report> reportRepository,
     ITokenBlacklistService blacklistService,
     IUserService userService,
+    IReportService reportService,
     IHttpContextAccessor httpContextAccessor) : IAdminService
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IRepository<Report> _reportRepository = reportRepository;
     private readonly ITokenBlacklistService _blacklistService = blacklistService;
     private readonly IUserService _userService = userService;
+    private readonly IReportService _reportService = reportService;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     public async Task<List<User>?> GetAppealedUsersAsync()
@@ -54,7 +56,8 @@ public class AdminService(
         {
             user.Role = Role.Blocked;
         });
-
+        await _reportService.DeleteAllUserReportsAsync(userId);
+        
         await _blacklistService.AddToBlacklistAsync(token);
 
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "block.png");

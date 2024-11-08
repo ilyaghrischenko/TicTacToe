@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains) [2]" uuid="c04a50dc-7b55-4795-95a9-8d17c91566bc">
-      <driver-ref>sqlserver.jb</driver-ref>
-      <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Data Source=sql.bsite.net\MSSQL2016;Initial Catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;</jdbc-url>
-      <jdbc-additional-properties>
-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
-      </jdbc-additional-properties>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains) [2]" uuid="ebc8c9d1-d139-4d38-9364-8f4eb6f1c220">
+    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains)" uuid="a8b10dd5-7405-4111-bfb4-274bed5322e3">
       <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>
