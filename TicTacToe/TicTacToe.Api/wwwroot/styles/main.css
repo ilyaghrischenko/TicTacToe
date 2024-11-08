@@ -104,6 +104,22 @@ body {
     height: 70px; /* Увеличиваем высоту блока */
 }
 
+.online-status {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
+
 .invite-button {
     padding: 6px 14px; /* Чуть увеличиваем размеры кнопки */
     background-color: var(--button-color);
@@ -130,6 +146,7 @@ body {
 .friend-info {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .friend-info .avatar {
