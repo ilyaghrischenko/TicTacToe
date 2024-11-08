@@ -17,21 +17,18 @@ public class AdminService(
     IRepository<Report> reportRepository,
     ITokenBlacklistService blacklistService,
     IUserService userService,
+    IReportService reportService,
     IHttpContextAccessor httpContextAccessor) : IAdminService
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IRepository<Report> _reportRepository = reportRepository;
     private readonly ITokenBlacklistService _blacklistService = blacklistService;
     private readonly IUserService _userService = userService;
+    private readonly IReportService _reportService = reportService;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     public async Task<List<User>?> GetAppealedUsersAsync()
     {
-        if (await IsAdminAsync() is false)
-        {
-            throw new UnauthorizedAccessException("User is not admin");
-        }
-
         var allReports = await _reportRepository.GetAllAsync();
         if (allReports.IsNullOrEmpty())
         {
@@ -49,11 +46,6 @@ public class AdminService(
 
     public async Task BlockUserAsync(int userId, string token)
     {
-        if (await IsAdminAsync() is false)
-        {
-            throw new UnauthorizedAccessException("User is not admin");
-        }
-
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
@@ -64,20 +56,13 @@ public class AdminService(
         {
             user.Role = Role.Blocked;
         });
-
+        await _reportService.DeleteAllUserReportsAsync(userId);
+        
         await _blacklistService.AddToBlacklistAsync(token);
 
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "block.png");
         var formFile = ConvertPngToIFormFile(filePath);
         await ChangeAvatarAsync(formFile, userId);
-    }
-
-    public async Task<bool> IsAdminAsync()
-    {
-        var userId = GetCurrentUserId();
-        var user = await _userRepository.GetAsync(userId);
-
-        return user.Role == Role.Admin;
     }
 
     public int GetCurrentUserId()

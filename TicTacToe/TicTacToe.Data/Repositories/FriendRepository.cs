@@ -27,6 +27,7 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
     {
         var friends = await _context.Friends
             .Include(friend => friend.FriendUser)
+            .Include(friend => friend.FriendUser.Statistic)
             .Where(x => x.UserId == userId)
             .ToListAsync();
         var userFriends = new List<User>();

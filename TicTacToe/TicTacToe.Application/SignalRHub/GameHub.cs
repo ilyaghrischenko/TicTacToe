@@ -11,32 +11,58 @@ namespace TicTacToe.Application.SignalRHub
         IReportService reportService,
         IUserRepository userRepository) : Hub
     {
-        private static ConcurrentDictionary<string, int> ConnectedUsers = new();
-        private static ConcurrentDictionary<string, GameSession> GameSessions = new();
-        
         private readonly IGameService _gameService = gameService;
         private readonly IReportService _reportService = reportService;
         private readonly IUserRepository _userRepository = userRepository;
+        
+        private static ConcurrentDictionary<int, bool> OnlineStatus = new();
+        private static ConcurrentDictionary<string, int> ConnectedUsers = new();
+        private static ConcurrentDictionary<string, GameSession> GameSessions = new();
 
         public override Task OnConnectedAsync()
         {
             var userId = Context.GetHttpContext().Request.Query["userId"];
             if (int.TryParse(userId, out var userIdValue))
+            {
                 ConnectedUsers[Context.ConnectionId] = userIdValue;
+                OnlineStatus[userIdValue] = true;
+                NotifyStatusChange(userIdValue, true);
+            }
             else
+            {
                 throw new Exception("UserId is not valid");
-    
+            }
+
             Console.WriteLine($"User: {userId}, ConnectionId: {Context.ConnectionId}");
             return base.OnConnectedAsync();
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
+            if (ConnectedUsers.TryRemove(Context.ConnectionId, out var userId))
+            {
+                OnlineStatus[userId] = false;
+            }
+            
             await EndGameOnDisconnect(Context.ConnectionId);
-            ConnectedUsers.TryRemove(Context.ConnectionId, out var userName);
+            await NotifyStatusChange(userId, false);
             await base.OnDisconnectedAsync(exception);
         }
 
+        public Task<Dictionary<int, bool>> GetFriendsOnlineStatus(List<int> friendIds)
+        {
+            var friendsStatus = friendIds.ToDictionary(
+                friendId => friendId,
+                friendId => OnlineStatus.ContainsKey(friendId) && OnlineStatus[friendId]
+            );
+            return Task.FromResult(friendsStatus);
+        }
+        
+        public async Task NotifyStatusChange(int userId, bool isOnline)
+        {
+            await Clients.All.SendAsync("ReceiveStatusUpdate", userId, isOnline);
+        }
+        
         public async Task SendInvitation(int toUserId)
         {
             var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);

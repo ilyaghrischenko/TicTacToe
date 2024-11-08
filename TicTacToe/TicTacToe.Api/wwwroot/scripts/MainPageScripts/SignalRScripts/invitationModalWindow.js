@@ -1,16 +1,16 @@
 async function inviteToGame(toUserName, button) {
+    button.disabled = true;
+    button.textContent = 'Invited';
+    button.style.backgroundColor = 'black';
+    
     await connection.invoke("SendInvitation", toUserName)
         .then(() => {
-            button.disabled = true;
-            button.textContent = 'Invited';
-            button.style.backgroundColor = 'black';
-            
             setTimeout(() => {
-                if(!gameActive) {
+                if (!gameActive) {
                     button.disabled = false;
                     button.style.backgroundColor = 'var(--button-color)';
                 }
-                    button.textContent = 'Invite';
+                button.textContent = 'Invite';
             }, 6000);
         })
         .catch(function (err) {

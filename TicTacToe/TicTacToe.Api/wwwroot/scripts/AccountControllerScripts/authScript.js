@@ -1,13 +1,18 @@
 'use strict';
 
 const loginForm = document.querySelector('#loginForm');
-
+const authBtn = document.getElementById("authorize")
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const login = document.getElementById('Login').value;
-    const password = document.getElementById('Password').value;
+    authBtn.disabled = true;
+    authBtn.innerText = 'Logging in...';
+    authBtn.style.backgroundColor = 'black';
+
     try {
+        const login = document.getElementById('Login').value;
+        const password = document.getElementById('Password').value;
+
         const response = await fetch('/api/Account/login', {
             method: 'POST',
             headers: {
@@ -38,8 +43,7 @@ loginForm.addEventListener('submit', async (e) => {
 
             if (data.user_role === 'Blocked') {
                 window.location.href = '../pages/blocked.html';
-            }
-            else if (data.user_role === 'User') {
+            } else if (data.user_role === 'User') {
                 window.location.href = '../pages/main.html';
             } else {
                 window.location.href = '../pages/admin.html';
@@ -47,6 +51,11 @@ loginForm.addEventListener('submit', async (e) => {
         }
     } catch (error) {
         alert('User not found\nPlease check your login and password');
+    }
+    finally {
+        authBtn.disabled = false;
+        authBtn.style.backgroundColor = 'var(--button-color)';
+        authBtn.innerText = 'Log in';
     }
 });
 
