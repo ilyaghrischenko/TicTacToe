@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\images\\block.png"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\admin.html",
       "PackagePath": "staticwebassets\\pages\\admin.html"
     },
