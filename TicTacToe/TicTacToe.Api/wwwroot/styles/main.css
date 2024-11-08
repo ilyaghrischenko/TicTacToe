@@ -43,6 +43,9 @@ body {
     margin-bottom: 10px;
     border: 2px solid var(--border-color); /* Добавлен красный бордер для аватара */
 }
+.avatar:hover {
+    cursor: pointer;
+}
 
 .nickname {
     font-size: 18px;

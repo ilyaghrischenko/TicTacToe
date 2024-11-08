@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\friendProfileModal.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\friendProfileModal.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\loadUserInfo.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\loadUserInfo.js"
     },
@@ -151,6 +155,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\blocked.css",
       "PackagePath": "staticwebassets\\styles\\blocked.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\friendProfileModal.css",
+      "PackagePath": "staticwebassets\\styles\\friendProfileModal.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\main.css",

@@ -14,6 +14,7 @@ function renderFriendsList(friends, friendList) {
         avatarImg.src = user.avatar && user.avatar.length > 0 ? `data:image/png;base64,${user.avatar}` : '../images/avatar.png';
         avatarImg.alt = `${user.login}'s avatar`;
         avatarImg.classList.add('avatar');
+        avatarImg.onclick = () => showProfileModal(avatarImg.src, user.login, user.statistic);
         userInfo.appendChild(avatarImg);
 
         const userName = document.createElement('span');
