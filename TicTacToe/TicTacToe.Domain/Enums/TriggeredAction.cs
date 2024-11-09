@@ -14,5 +14,6 @@ public enum TriggeredAction
     ChangeEmail,
     ChangeAvatar,
     AddFriend,
-    DeleteFriend
+    DeleteFriend,
+    Other
 }
