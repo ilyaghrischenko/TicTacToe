@@ -2,12 +2,14 @@
 
 const form = document.getElementById('regForm');
 const regBtn = document.getElementById('register');
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     regBtn.disabled = true;
     regBtn.innerText = 'Registering...';
     regBtn.style.backgroundColor = 'black';
+    regBtn.style.cursor = 'wait';
 
     try {
         const email = document.getElementById('Email').value;
@@ -49,6 +51,7 @@ form.addEventListener('submit', async (e) => {
         regBtn.disabled = false;
         regBtn.style.backgroundColor = 'var(--button-color)';
         regBtn.innerText = 'Register';
+        regBtn.style.cursor = 'pointer';
     }
 });
 

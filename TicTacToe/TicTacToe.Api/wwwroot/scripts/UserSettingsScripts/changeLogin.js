@@ -1,6 +1,7 @@
 'use strict';
 
 const changeLoginForm = document.querySelector('#change-login-form');
+const loginButton = document.querySelector('#change-login-button');
 
 changeLoginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -11,8 +12,12 @@ changeLoginForm.addEventListener('submit', async (e) => {
         return;
     }
 
+    loginButton.disabled = true;
+    loginButton.innerText = 'Saving...';
+    loginButton.style.backgroundColor = 'black';
+    loginButton.style.cursor = 'wait';
+    
     try {
-
         const newLogin = {
             LoginInput: document.getElementById('LoginInput').value
         }
@@ -48,6 +53,11 @@ changeLoginForm.addEventListener('submit', async (e) => {
         }
     } catch (error) {
         console.error('Error during request:', error);
+    } finally {
+        loginButton.disabled = false;
+        loginButton.style.backgroundColor = 'var(--button-color)';
+        loginButton.innerText = 'Save';
+        loginButton.style.cursor = 'pointer';
     }
 });
 

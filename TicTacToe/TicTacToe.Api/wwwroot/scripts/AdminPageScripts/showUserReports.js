@@ -2,11 +2,17 @@
 
 async function showUserReports(userId) {
     const token = sessionStorage.getItem('token');
+    const showReportsButton = document.getElementById(`show-reports-button-${userId}`);
 
     if (!token) {
         window.location.href = '../pages/auth.html';
         return;
     }
+
+    showReportsButton.disabled = true;
+    showReportsButton.textContent = 'Loading...';
+    showReportsButton.style.backgroundColor = 'black';
+    showReportsButton.style.cursor = 'wait';
 
     try {
         const response = await fetch("/api/Admin/getUserReports", {
@@ -57,6 +63,11 @@ async function showUserReports(userId) {
         modal.style.display = 'block';
     } catch (error) {
         console.error('Ошибка:', error.message);
+    } finally {
+        showReportsButton.disabled = false;
+        showReportsButton.style.backgroundColor = 'var(--button-color)';
+        showReportsButton.textContent = 'Show reports';
+        showReportsButton.style.cursor = 'pointer';
     }
 }
 
