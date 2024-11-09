@@ -12,7 +12,6 @@ namespace TicTacToe.Data
             : base(options)
         {
             _configuration = configuration;
-            DatabaseInitializer.Initialize(this);
         }
 
         private readonly IConfiguration _configuration;
@@ -43,5 +42,6 @@ namespace TicTacToe.Data
         public virtual DbSet<Friend> Friends { get; set; }
         public virtual DbSet<Statistic> Statistics { get; set; }
         public virtual DbSet<Report> Reports { get; set; }
+        public virtual DbSet<Bug> Bugs { get; set; }
     }
 }

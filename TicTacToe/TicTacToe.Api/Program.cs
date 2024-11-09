@@ -44,6 +44,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
 builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
+builder.Services.AddScoped<IRepository<Bug>, BugRepository>();
 #endregion
 
 #region Services
