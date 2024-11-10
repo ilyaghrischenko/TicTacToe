@@ -1,13 +1,13 @@
-using TicTacToe.Application.Services.DbModels;
 using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.DTO.Models;
 
 namespace TicTacToe.Application.Services.Controllers;
 
-public class BugControllerService(BugService bugService) : IBugControllerService
+public class BugControllerService(IBugService bugService) : IBugControllerService
 {
-    private readonly BugService _bugService = bugService;
+    private readonly IBugService _bugService = bugService;
     
     public async Task SendBugAsync(BugModel bug)
     {

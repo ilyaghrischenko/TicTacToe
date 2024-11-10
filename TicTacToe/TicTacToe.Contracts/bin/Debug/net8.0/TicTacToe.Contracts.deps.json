@@ -115,6 +115,9 @@
         }
       },
       "TicTacToe.DTO/1.0.0": {
+        "dependencies": {
+          "TicTacToe.Domain": "1.0.0"
+        },
         "runtime": {
           "TicTacToe.DTO.dll": {
             "assemblyVersion": "1.0.0",

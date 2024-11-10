@@ -61,3 +61,7 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\ne
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\net8.0\refint\TicTacToe.DTO.dll
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\net8.0\TicTacToe.DTO.pdb
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\net8.0\ref\TicTacToe.DTO.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.DTO\bin\Debug\net8.0\TicTacToe.Domain.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.DTO\bin\Debug\net8.0\TicTacToe.Domain.pdb
+C:\github\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\net8.0\TicTacToe.DTO.csproj.AssemblyReference.cache
+C:\github\TicTacToe\TicTacToe\TicTacToe.DTO\obj\Debug\net8.0\TicTacTo.1BE92D1A.Up2Date

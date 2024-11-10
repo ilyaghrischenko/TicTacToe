@@ -10,7 +10,16 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
     
     public async Task SendBugAsync(Bug bug)
     {
+        var allBugs = await _bugRepository.GetAllAsync();
+        var existingBug = allBugs?.FirstOrDefault(b =>
+            b.Action == bug.Action &&
+            b.Importance == bug.Importance &&
+            b.Description == bug.Description);
         
+        if (existingBug != null)
+        {
+            throw new ArgumentException("Bug already exists");
+        }
         
         await _bugRepository.AddAsync(bug);
     }
