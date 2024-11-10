@@ -1,0 +1,75 @@
+/* Общие стили для модального окна */
+.bug-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bug-modal-content {
+    position: relative;
+    background-color: var(--main-color);
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    width: 40%;
+    border-radius: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Закрытие модального окна */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Стили для выпадающих списков и полей ввода */
+textarea, select {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    resize: none;
+}
+
+/* Кнопка отправки */
+.bug-send-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.bug-send-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .bug-modal-content {
+        width: 80%;
+    }
+}

@@ -1,4 +1,3 @@
-function renderReportModal() {
     const reportModal = document.createElement("div");
     reportModal.id = "reportModal";
     reportModal.classList.add("modal");
@@ -55,4 +54,3 @@ function renderReportModal() {
             document.getElementById('central-panel').removeChild(reportModal);
         }
     };
-}

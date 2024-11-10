@@ -25,6 +25,8 @@ using TicTacToe.Validation.SettingsModelsValidators;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+//TODO: Доработать стили для модального окна для бага, и отправку на сервер
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
