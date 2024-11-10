@@ -249,6 +249,41 @@ h1 {
     background-color: var(--button-hover-color);
 }
 
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.bug-report-button {
+    position: absolute; /* Открываем кнопку в центре экрана */
+    top: 20px;
+    left: 20px;
+    background-color: darkred; /* Цвет фона для кнопки */
+    border: none; /* Без рамки */
+    border-radius: 50%; /* Кнопка круглая */
+    padding: 12px; /* Отступы */
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    display: flex; /* Для выравнивания иконки по центру */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Курсор при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы */
+}
+
+.bug-report-button:hover {
+    background-color: var(--button-hover-color); /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+.bug-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+}
+
 .right-panel {
     flex: 1;
     margin-left: 10px;

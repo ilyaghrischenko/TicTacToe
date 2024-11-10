@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main menu</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
     <link rel="stylesheet" href="../styles/reportModal.css">
     <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
@@ -28,8 +28,11 @@
     </div>
 
     <div id="central-panel" class="central-panel">
+        <button class="bug-report-button" id="bugReportButton">
+            <img src="../images/bug-icon.png" alt="Bug Report Icon" class="bug-icon">
+        </button>
         <button id="reportBtn" class="report-button hidden-report-button">!</button>
-        
+
         <h1>Game</h1>
         <div class="game-board" id="gameBoard">
             <div class="cell" data-index="0"></div>
@@ -42,12 +45,13 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
-        
+
         <p id="status"></p>
         <div class="game-buttons-container">
-            
+
         </div>
     </div>
+
 
     <div class="right-panel">
         <div class="friends-list">
