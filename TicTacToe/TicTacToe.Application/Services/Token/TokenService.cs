@@ -2,8 +2,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Application.AutentificationOptions;
+using TicTacToe.Contracts.Interfaces.TokenServices;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.TokenServices;
 
 namespace TicTacToe.Application.Services.Token;
 
@@ -20,8 +20,6 @@ public class TokenService : ITokenService
         var identity = new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,
             ClaimsIdentity.DefaultRoleClaimType);
 
-        // Добавьте код для генерации токена с использованием вашей JWT-конфигурации.
-        // Примерный код:
         var tokenHandler = new JwtSecurityTokenHandler();
         var tokenDescriptor = new SecurityTokenDescriptor
         {

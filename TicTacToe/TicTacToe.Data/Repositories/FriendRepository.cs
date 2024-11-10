@@ -1,6 +1,6 @@
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
+using TicTacToe.Contracts.Interfaces.Repositories;
 
 namespace TicTacToe.Data.Repositories;
 

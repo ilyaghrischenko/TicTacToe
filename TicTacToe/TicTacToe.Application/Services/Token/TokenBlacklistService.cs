@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.DependencyInjection;
-using TicTacToe.Domain.Interfaces.TokenServices;
+using TicTacToe.Contracts.Interfaces.TokenServices;
 
 namespace TicTacToe.Application.Services.Token;
 

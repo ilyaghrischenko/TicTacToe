@@ -1,15 +1,12 @@
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.deps.json
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.pdb
-C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.DTO.dll
-C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.DTO.pdb
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.csproj.AssemblyReference.cache
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.AssemblyInfoInputs.cache
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.AssemblyInfo.cs
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.csproj.CoreCompileInputs.cache
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.sourcelink.json
-C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacTo.2DC5C263.Up2Date
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\refint\TicTacToe.Domain.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.pdb

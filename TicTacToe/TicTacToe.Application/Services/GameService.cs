@@ -1,7 +1,5 @@
-using System.Security.Claims;
-using Microsoft.AspNetCore.Http;
-using TicTacToe.Domain.Interfaces;
-using TicTacToe.Domain.Interfaces.Repositories;
+using TicTacToe.Contracts.Interfaces;
+using TicTacToe.Contracts.Interfaces.Repositories;
 
 namespace TicTacToe.Application.Services;
 

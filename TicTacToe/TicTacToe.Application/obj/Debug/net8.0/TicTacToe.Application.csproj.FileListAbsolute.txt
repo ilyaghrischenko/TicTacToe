@@ -34,3 +34,5 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Application\obj\
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Application\obj\Debug\net8.0\refint\TicTacToe.Application.dll
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Application\obj\Debug\net8.0\TicTacToe.Application.pdb
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Application\obj\Debug\net8.0\ref\TicTacToe.Application.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Application\bin\Debug\net8.0\TicTacToe.Contracts.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Application\bin\Debug\net8.0\TicTacToe.Contracts.pdb

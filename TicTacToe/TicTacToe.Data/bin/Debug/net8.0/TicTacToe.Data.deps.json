@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.8",
           "System.Data.SqlClient": "4.8.6",
+          "TicTacToe.Contracts": "1.0.0",
           "TicTacToe.Domain": "1.0.0"
         },
         "runtime": {
@@ -917,10 +918,21 @@
           }
         }
       },
+      "TicTacToe.Contracts/1.0.0": {
+        "dependencies": {
+          "TicTacToe.DTO": "1.0.0",
+          "TicTacToe.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicTacToe.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "TicTacToe.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
-          "TicTacToe.DTO": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8"
         },
         "runtime": {
           "TicTacToe.Domain.dll": {
@@ -1490,6 +1502,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "TicTacToe.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "TicTacToe.Domain/1.0.0": {
       "type": "project",

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.DTO", "TicTacToe.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Validation", "TicTacToe.Validation\TicTacToe.Validation.csproj", "{8185130C-2A0C-4192-B11A-5780B3E5B85F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Contracts", "TicTacToe.Contracts\TicTacToe.Contracts.csproj", "{EAF87454-D85F-44E5-AFD3-C09470B90470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{8185130C-2A0C-4192-B11A-5780B3E5B85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8185130C-2A0C-4192-B11A-5780B3E5B85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8185130C-2A0C-4192-B11A-5780B3E5B85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF87454-D85F-44E5-AFD3-C09470B90470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF87454-D85F-44E5-AFD3-C09470B90470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF87454-D85F-44E5-AFD3-C09470B90470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF87454-D85F-44E5-AFD3-C09470B90470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

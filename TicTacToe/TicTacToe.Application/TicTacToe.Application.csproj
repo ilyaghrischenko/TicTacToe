@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TicTacToe.Domain\TicTacToe.Domain.csproj" />
+      <ProjectReference Include="..\TicTacToe.Contracts\TicTacToe.Contracts.csproj" />
       <ProjectReference Include="..\TicTacToe.DTO\TicTacToe.DTO.csproj" />
     </ItemGroup>
 

@@ -14,7 +14,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\TicTacToe.Data\TicTacToe.Data.csproj" />
-      <ProjectReference Include="..\TicTacToe.Domain\TicTacToe.Domain.csproj" />
       <ProjectReference Include="..\TicTacToe.DTO\TicTacToe.DTO.csproj" />
       <ProjectReference Include="..\TicTacToe.Application\TicTacToe.Application.csproj" />
       <ProjectReference Include="..\TicTacToe.Validation\TicTacToe.Validation.csproj" />

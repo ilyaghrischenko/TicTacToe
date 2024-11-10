@@ -1,16 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.Controllers;
-using TicTacToe.Domain.Interfaces.Repositories;
 using TicTacToe.DTO.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Application.AutentificationOptions;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
 
 namespace TicTacToe.Application.Services.Controllers;
 

@@ -21,6 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TicTacToe.Contracts\TicTacToe.Contracts.csproj" />
       <ProjectReference Include="..\TicTacToe.Domain\TicTacToe.Domain.csproj" />
     </ItemGroup>
 

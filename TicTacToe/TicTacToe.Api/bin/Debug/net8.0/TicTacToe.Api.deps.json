@@ -14,7 +14,6 @@
           "TicTacToe.Application": "1.0.0",
           "TicTacToe.DTO": "1.0.0",
           "TicTacToe.Data": "1.0.0",
-          "TicTacToe.Domain": "1.0.0",
           "TicTacToe.Validation": "1.0.0"
         },
         "runtime": {
@@ -2267,11 +2266,23 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.SignalR.Client": "8.0.8",
+          "TicTacToe.Contracts": "1.0.0",
+          "TicTacToe.DTO": "1.0.0"
+        },
+        "runtime": {
+          "TicTacToe.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TicTacToe.Contracts/1.0.0": {
+        "dependencies": {
           "TicTacToe.DTO": "1.0.0",
           "TicTacToe.Domain": "1.0.0"
         },
         "runtime": {
-          "TicTacToe.Application.dll": {
+          "TicTacToe.Contracts.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2282,6 +2293,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "System.Data.SqlClient": "4.8.6",
+          "TicTacToe.Contracts": "1.0.0",
           "TicTacToe.Domain": "1.0.0"
         },
         "runtime": {
@@ -2293,8 +2305,7 @@
       },
       "TicTacToe.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
-          "TicTacToe.DTO": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8"
         },
         "runtime": {
           "TicTacToe.Domain.dll": {
@@ -3753,6 +3764,11 @@
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
     "TicTacToe.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicTacToe.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
