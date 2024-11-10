@@ -25,6 +25,8 @@ using TicTacToe.Validation.SettingsModelsValidators;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+//TODO: Дописать сервисы для бага(контроллер, сервис)
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
@@ -62,6 +64,7 @@ builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
+builder.Services.AddScoped<IBugControllerService, BugControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IMemoryCache, MemoryCache>();

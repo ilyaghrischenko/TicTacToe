@@ -175,7 +175,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
+                "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
