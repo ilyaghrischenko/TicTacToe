@@ -17,7 +17,7 @@ namespace TicTacToe.Api.Controllers
     {
         private readonly IBugControllerService _bugControllerService = bugControllerService;
         
-        [HttpPost]
+        [HttpPost("sendBug")]
         public async Task<IActionResult> SendBug([FromBody] BugModel bug)
         {
             await _bugControllerService.SendBugAsync(bug);

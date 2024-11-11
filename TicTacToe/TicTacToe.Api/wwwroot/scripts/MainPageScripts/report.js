@@ -1,3 +1,4 @@
+function renderReportModal() {
     const reportModal = document.createElement("div");
     reportModal.id = "reportModal";
     reportModal.classList.add("modal");
@@ -31,11 +32,11 @@
 
     reportModal.style.display = "block";
 
-    closeModal.onclick = function() {
+    closeModal.onclick = function () {
         document.getElementById('central-panel').removeChild(reportModal);
     };
 
-    reportModalBtn.onclick = function() {
+    reportModalBtn.onclick = function () {
         const reportText = reportModalTextarea.value;
         if (reportText.trim() !== "") {
             connection.invoke("SendReport", currentGameId, reportText).catch(function (err) {
@@ -49,8 +50,9 @@
         }
     };
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target === reportModal) {
             document.getElementById('central-panel').removeChild(reportModal);
         }
     };
+}

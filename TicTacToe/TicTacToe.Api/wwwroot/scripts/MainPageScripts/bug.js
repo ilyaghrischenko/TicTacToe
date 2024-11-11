@@ -1,91 +1,121 @@
-function renderBugModal() {
-    const bugModal = document.createElement("div");
-    bugModal.id = "bugModal";
-    bugModal.classList.add("bug-modal");
+'use strict';
 
-    const bugModalContent = document.createElement("div");
-    bugModalContent.classList.add("bug-modal-content");
+const bugButton = document.getElementById("bugReportButton");
 
-    const closeModal = document.createElement("span");
-    closeModal.classList.add("close");
-    closeModal.innerHTML = "&times;";
+const bugModal = document.createElement("div");
+bugModal.id = "bugModal";
+bugModal.classList.add("bug-modal");
 
-    const bugModalHeader = document.createElement("h2");
-    bugModalHeader.textContent = "Bug Report";
+const bugModalContent = document.createElement("div");
+bugModalContent.classList.add("bug-modal-content");
 
-    // Выпадающий список для TriggeredAction
-    const actionSelect = document.createElement("select");
-    actionSelect.id = "triggeredAction";
-    const actionOptions = ["Action 1", "Action 2", "Action 3"];
-    actionOptions.forEach(action => {
-        const option = document.createElement("option");
-        option.value = action;
-        option.textContent = action;
-        actionSelect.appendChild(option);
-    });
+const closeModal = document.createElement("span");
+closeModal.classList.add("close");
+closeModal.innerHTML = "&times;";
 
-    // Поле для ввода описания
-    const descriptionTextarea = document.createElement("textarea");
-    descriptionTextarea.id = "description";
-    descriptionTextarea.placeholder = "Enter your description...";
+const bugModalHeader = document.createElement("h2");
+bugModalHeader.textContent = "Bug Report";
 
-    // Выпадающий список для приоритетности
-    const prioritySelect = document.createElement("select");
-    prioritySelect.id = "priority";
-    const priorityOptions = ["High", "Medium", "Low"];
-    priorityOptions.forEach(priority => {
-        const option = document.createElement("option");
-        option.value = priority;
-        option.textContent = priority;
-        prioritySelect.appendChild(option);
-    });
+const actionSelect = document.createElement("select");
+actionSelect.id = "triggeredAction";
+const actionOptions = [
+    "Log in", "Sign up", "Invite to game", "Accept invite",
+    "Reject Invite", "Game", "Statistics update", "Change login",
+    "Change password", "Change email", "Change avatar",
+    "Add friend", "Delete friend", "Other"
+];
 
-    // Кнопка отправки
-    const sendBugBtn = document.createElement("button");
-    sendBugBtn.id = "sendBugBtn";
-    sendBugBtn.classList.add("btn", "bug-send-button");
-    sendBugBtn.textContent = "Send";
+actionOptions.forEach(action => {
+    const option = document.createElement("option");
+    option.value = action;
+    option.textContent = action;
+    actionSelect.appendChild(option);
+});
 
-    // Добавление всех элементов в модальное окно
-    bugModalContent.appendChild(closeModal);
-    bugModalContent.appendChild(bugModalHeader);
-    bugModalContent.appendChild(actionSelect);
-    bugModalContent.appendChild(descriptionTextarea);
-    bugModalContent.appendChild(prioritySelect);
-    bugModalContent.appendChild(sendReportBtn);
+const descriptionTextarea = document.createElement("textarea");
+descriptionTextarea.id = "description";
+descriptionTextarea.placeholder = "Enter your description...";
 
-    bugModal.appendChild(bugModalContent);
-    document.getElementById('central-panel').appendChild(bugModal);
+const prioritySelect = document.createElement("select");
+prioritySelect.id = "priority";
+const priorityOptions = ["High", "Medium", "Low"];
 
+priorityOptions.forEach(priority => {
+    const option = document.createElement("option");
+    option.value = priority;
+    option.textContent = priority;
+    prioritySelect.appendChild(option);
+});
+
+const sendBugBtn = document.createElement("button");
+sendBugBtn.id = "sendBugBtn";
+sendBugBtn.classList.add("btn", "bug-send-button");
+sendBugBtn.textContent = "Send";
+
+bugModalContent.appendChild(closeModal);
+bugModalContent.appendChild(bugModalHeader);
+bugModalContent.appendChild(actionSelect);
+bugModalContent.appendChild(descriptionTextarea);
+bugModalContent.appendChild(prioritySelect);
+bugModalContent.appendChild(sendBugBtn);
+bugModal.appendChild(bugModalContent);
+document.getElementById('central-panel').appendChild(bugModal);
+
+bugModal.style.display = "none";
+
+bugButton.onclick = () => {
     bugModal.style.display = "block";
+};
 
-    // Закрытие модального окна
-    closeModal.onclick = function() {
-        document.getElementById('central-panel').removeChild(bugModal);
-    };
+closeModal.onclick = () => {
+    bugModal.style.display = "none";
+};
 
-    // Обработка отправки
-    sendBugBtn.onclick = function() {
-        const triggeredAction = actionSelect.value;
-        const description = descriptionTextarea.value;
-        const priority = prioritySelect.value;
+window.onclick = event => {
+    if (event.target === bugModal) {
+        bugModal.style.display = "none";
+    }
+};
 
-        if (description.trim() !== "") {
-            // Логика отправки данных на сервер
-            
+sendBugBtn.onclick = async () => {
+    const description = descriptionTextarea.value;
+    const triggeredAction = actionSelect.value;
+    const priority = prioritySelect.value;
 
-            // Закрытие модального окна после отправки
-            bugModal.style.display = "none";
-            document.getElementById('central-panel').removeChild(bugModal);
+    const actionEnumValue = actionOptions.indexOf(triggeredAction);
+    const priorityEnumValue = priorityOptions.indexOf(priority);
+
+    if (description.trim() !== "") {
+        await sendBug(actionEnumValue, description, priorityEnumValue);
+        bugModal.style.display = "none";
+    } else {
+        console.error("Please enter a description.");
+    }
+};
+
+async function sendBug(triggeredActionInt, description, importanceInt) {
+    const token = sessionStorage.getItem('token');
+    try {
+        const response = await fetch("/api/Bug/sendBug", {
+            method: "POST",
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                action: triggeredActionInt,
+                description: description,
+                importance: importanceInt
+            })
+        });
+
+        if (!response.ok) {
+            console.error("Error in sending bug:", response.status);
         } else {
-            console.error("Please enter a description.");
+            console.log("Bug sent successfully");
+            await response.json();
         }
-    };
-
-    // Закрытие модального окна при клике вне окна
-    window.onclick = function(event) {
-        if (event.target === bugModal) {
-            document.getElementById('central-panel').removeChild(bugModal);
-        }
-    };
+    } catch (error) {
+        console.error("Error in sending bug:", error.toString());
+    }
 }
