@@ -1,6 +1,5 @@
 using TicTacToe.Data.Repositories;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using TicTacToe.Application.AutentificationOptions;
@@ -9,8 +8,6 @@ using TicTacToe.Application.Services;
 using TicTacToe.Application.Services.Controllers;
 using TicTacToe.Application.Services.DbModels;
 using TicTacToe.Data;
-using TicTacToe.Domain.Interfaces.Controllers;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -18,12 +15,17 @@ using Microsoft.OpenApi.Models;
 using TicTacToe.Api.Middleware;
 using TicTacToe.Application.Services.Token;
 using TicTacToe.Application.SignalRHub;
-using TicTacToe.Domain.Interfaces;
-using TicTacToe.Domain.Interfaces.TokenServices;
+using TicTacToe.Contracts.Interfaces;
+using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts.Interfaces.TokenServices;
 using TicTacToe.Validation.AccountModelsValidators;
 using TicTacToe.Validation.SettingsModelsValidators;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+//TODO: Доработать стили для модального окна для бага, и отправку на сервер
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -44,12 +46,14 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
 builder.Services.AddScoped<IFriendRepository, FriendRepository>();
 builder.Services.AddScoped<IRepository<Report>, ReportRepository>();
+builder.Services.AddScoped<IRepository<Bug>, BugRepository>();
 #endregion
 
 #region Services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
+builder.Services.AddScoped<IBugService, BugService>();
 
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IGameService, GameService>();
@@ -61,6 +65,7 @@ builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
+builder.Services.AddScoped<IBugControllerService, BugControllerService>();
 
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IMemoryCache, MemoryCache>();

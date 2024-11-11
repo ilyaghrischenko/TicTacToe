@@ -12,7 +12,6 @@ namespace TicTacToe.Data
             : base(options)
         {
             _configuration = configuration;
-            DatabaseInitializer.Initialize(this);
         }
 
         private readonly IConfiguration _configuration;
@@ -21,6 +20,9 @@ namespace TicTacToe.Data
             // => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TicTacToeContext"));
             => optionsBuilder.UseSqlServer(
                 "Data Source=sql.bsite.net\\MSSQL2016;Initial Catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;");
+            // => optionsBuilder.UseSqlServer(
+            //     "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TicTacToe;Integrated Security=True;TrustServerCertificate=True;");
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Friend>()
@@ -43,5 +45,6 @@ namespace TicTacToe.Data
         public virtual DbSet<Friend> Friends { get; set; }
         public virtual DbSet<Statistic> Statistics { get; set; }
         public virtual DbSet<Report> Reports { get; set; }
+        public virtual DbSet<Bug> Bugs { get; set; }
     }
 }

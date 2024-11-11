@@ -1,9 +1,11 @@
 'use strict';
 
 const loginForm = document.querySelector('#change-avatar-form');
+const avatarButton = document.querySelector('#avatar-button');
 
 document.getElementById('avatarImage').addEventListener('change', function (event) {
     event.preventDefault();
+    
     const file = event.target.files[0];
     if (file) {
         const validImageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
@@ -28,6 +30,11 @@ loginForm.addEventListener('submit', async (e) => {
         alert("Please, select a file!");
         return;
     }
+
+    avatarButton.disabled = true;
+    avatarButton.innerText = 'Saving...';
+    avatarButton.style.backgroundColor = 'black';
+    avatarButton.style.cursor = 'wait';
 
     const file = imageInput.files[0];
 

@@ -10,12 +10,13 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .report-button:hover {
     background-color: var(--button-hover-color);
-    transition: background-color 0.4s ease;
+    transform: scale(1.1);
 }
 
 .modal {

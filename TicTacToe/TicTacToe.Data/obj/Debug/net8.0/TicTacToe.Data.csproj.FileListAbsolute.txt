@@ -38,3 +38,5 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Data\obj\Debug\n
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.pdb
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.genruntimeconfig.cache
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\ref\TicTacToe.Data.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Contracts.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Contracts.pdb

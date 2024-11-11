@@ -43,6 +43,9 @@ body {
     margin-bottom: 10px;
     border: 2px solid var(--border-color); /* Добавлен красный бордер для аватара */
 }
+.avatar:hover {
+    cursor: pointer;
+}
 
 .nickname {
     font-size: 18px;
@@ -101,6 +104,22 @@ body {
     height: 70px; /* Увеличиваем высоту блока */
 }
 
+.online-status {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
+
 .invite-button {
     padding: 6px 14px; /* Чуть увеличиваем размеры кнопки */
     background-color: var(--button-color);
@@ -127,6 +146,7 @@ body {
 .friend-info {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .friend-info .avatar {
@@ -227,6 +247,13 @@ h1 {
 }
 #endGameBtn:hover {
     background-color: var(--button-hover-color);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
 
 .right-panel {
@@ -341,3 +368,68 @@ h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-panel, .central-panel, .right-panel {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 4px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .friends-list li {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .game-buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .invitation-modal-content {
+        width: 85%;
+    }
+    
+    .report-button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .modal {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 150px 20px;
+    }
+}

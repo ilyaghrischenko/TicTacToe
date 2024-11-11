@@ -1,8 +1,8 @@
 using System.Collections.Concurrent;
 using Microsoft.AspNetCore.SignalR;
-using TicTacToe.Domain.Interfaces;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
-using TicTacToe.Domain.Interfaces.Repositories;
+using TicTacToe.Contracts.Interfaces;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Interfaces.Repositories;
 
 namespace TicTacToe.Application.SignalRHub
 {

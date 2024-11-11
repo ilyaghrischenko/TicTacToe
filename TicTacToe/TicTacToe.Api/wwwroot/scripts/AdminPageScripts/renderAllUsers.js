@@ -30,11 +30,13 @@ function renderAllUsers(userUl, users) {
         userInfo.appendChild(userStats);
         
         const showReportsButton = document.createElement('button');
+        showReportsButton.id = `show-reports-button-${user.id}`;
         showReportsButton.classList.add('btn', 'reports-button');
         showReportsButton.textContent = 'Show reports';
         showReportsButton.onclick = () => showUserReports(user.id);
         
         const blockButton = document.createElement('button');
+        blockButton.id = `block-button-${user.id}`;
         blockButton.classList.add('btn', 'block-button');
         blockButton.textContent = 'Block';
         blockButton.onclick = () => blockUser(user.id);

@@ -1,4 +1,19 @@
 async function putOnEventHandlers() {
+    await connection.on("ReceiveStatusUpdate", (userId, isOnline) => {
+        const statusElement = document.getElementById(`online-status-${userId}`);
+        if (statusElement) {
+            if (isOnline) {
+                statusElement.textContent = '';
+                statusElement.classList.add('online');
+                statusElement.classList.remove('offline');
+            } else {
+                statusElement.textContent = '';
+                statusElement.classList.add('offline');
+                statusElement.classList.remove('online');
+            }
+        }
+    });
+    
     await connection.on("ReceiveInvitation", function (senderUserName, senderUserId) {
         console.log("ReceiveInvitation");
         showInvitationModal(senderUserName, senderUserId);

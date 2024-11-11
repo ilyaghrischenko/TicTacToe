@@ -1,5 +1,5 @@
 using System.Net;
-using TicTacToe.Domain.Interfaces.Middleware;
+using TicTacToe.Contracts.Interfaces.Middleware;
 
 namespace TicTacToe.Api.Middleware;
 

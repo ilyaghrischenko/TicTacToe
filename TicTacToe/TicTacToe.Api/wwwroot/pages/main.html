@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main menu</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
     <link rel="stylesheet" href="../styles/reportModal.css">
     <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
     <link rel="stylesheet" href="../styles/friendProfileModal.css">
+    <link rel="stylesheet" href="../styles/bugModal.css">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
@@ -28,8 +29,11 @@
     </div>
 
     <div id="central-panel" class="central-panel">
+        <button class="bug-report-button" id="bugReportButton">
+            <img src="../images/bug-icon.png" alt="Bug Report Icon" class="bug-icon">
+        </button>
         <button id="reportBtn" class="report-button hidden-report-button">!</button>
-        
+
         <h1>Game</h1>
         <div class="game-board" id="gameBoard">
             <div class="cell" data-index="0"></div>
@@ -42,16 +46,17 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
-        
+
         <p id="status"></p>
         <div class="game-buttons-container">
-            
+
         </div>
     </div>
 
+
     <div class="right-panel">
         <div class="friends-list">
-            <h3>Friends list</h3>
+            <h3>Friends</h3>
             <div class="scroll">
                 <ul id="friends-list"></ul>
             </div>
@@ -66,6 +71,7 @@
 <script src="../scripts/MainPageScripts/renderFriendsList.js"></script>
 <script src="../scripts/MainPageScripts/report.js"></script>
 <script src="../scripts/MainPageScripts/friendProfileModal.js"></script>
+<script src="../scripts/MainPageScripts/bug.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.8/signalr.min.js"></script>
 <script src="../scripts/MainPageScripts/SignalRScripts/signalR.js"></script>

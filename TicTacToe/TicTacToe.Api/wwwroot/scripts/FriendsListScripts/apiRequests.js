@@ -5,6 +5,7 @@ async function addFriend(userId, button) {
     button.disabled = true;
     button.textContent = 'Adding...';
     button.style.backgroundColor = 'black';
+    button.style.cursor = 'wait';
     
     try {
         const response = await fetch(`/api/Friends/addFriend`, {
@@ -36,6 +37,7 @@ async function deleteFriend(userId, button) {
     button.disabled = true;
     button.textContent = 'Deleting...';
     button.style.backgroundColor = 'black';
+    button.style.cursor = 'wait';
     
     try {
         const response = await fetch(`/api/Friends/deleteFriend`, {

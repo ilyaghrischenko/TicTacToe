@@ -1,7 +1,7 @@
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Interfaces.Repositories;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
-using TicTacToe.Domain.Interfaces.Repositories;
 
 namespace TicTacToe.Application.Services.DbModels;
 

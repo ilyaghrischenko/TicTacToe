@@ -1,6 +1,7 @@
 'use strict';
 
 const changePasswordForm = document.querySelector('#change-password-form');
+const passwordButton = document.querySelector('#change-password-button');
 
 changePasswordForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -11,8 +12,12 @@ changePasswordForm.addEventListener('submit', async (e) => {
         return;
     }
 
+    passwordButton.disabled = true;
+    passwordButton.innerText = 'Saving...';
+    passwordButton.style.backgroundColor = 'black';
+    passwordButton.style.cursor = 'wait';
+    
     try {
-
         const newPassword = {
             ConfirmPassword: document.getElementById('ConfirmPassword').value,
             PasswordInput: document.getElementById('PasswordInput').value
@@ -49,6 +54,11 @@ changePasswordForm.addEventListener('submit', async (e) => {
         }
     } catch (error) {
         console.error('Error during request:', error);
+    } finally {
+        passwordButton.disabled = false;
+        passwordButton.style.backgroundColor = 'var(--button-color)';
+        passwordButton.innerText = 'Save';
+        passwordButton.style.cursor = 'pointer';
     }
 });
 

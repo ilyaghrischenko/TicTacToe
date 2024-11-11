@@ -1,9 +1,9 @@
 using TicTacToe.Domain.DbModels;
-using TicTacToe.Domain.Interfaces.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Api.Filters;
+using TicTacToe.Contracts.Interfaces.Controllers;
 using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Api.Controllers

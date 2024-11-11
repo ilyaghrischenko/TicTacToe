@@ -1,9 +1,9 @@
 using System.Security.Claims;
-using TicTacToe.Domain.Interfaces.Controllers;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
 using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
 
 namespace TicTacToe.Application.Services.Controllers;
 

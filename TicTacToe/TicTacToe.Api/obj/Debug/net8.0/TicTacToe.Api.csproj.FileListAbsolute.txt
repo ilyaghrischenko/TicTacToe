@@ -570,3 +570,6 @@ C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extension
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\appsettings.example.json
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\appsettings.example.json
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.pdb

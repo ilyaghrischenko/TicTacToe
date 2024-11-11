@@ -9,21 +9,22 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-        const response = await fetch('/api/User/getUser', {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            }
-        });
-
-        const friendsResponse = await fetch('/api/User/getFriends', {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            }
-        });
+        const [response, friendsResponse] = await Promise.all([
+            fetch('/api/User/getUser', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            }),
+            fetch('/api/User/getFriends', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+        ]);
 
         if (response.ok && friendsResponse.ok) {
             const userData = await response.json();

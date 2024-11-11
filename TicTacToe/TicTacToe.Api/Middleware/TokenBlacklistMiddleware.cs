@@ -1,5 +1,5 @@
-using TicTacToe.Domain.Interfaces.Middleware;
-using TicTacToe.Domain.Interfaces.TokenServices;
+using TicTacToe.Contracts.Interfaces.Middleware;
+using TicTacToe.Contracts.Interfaces.TokenServices;
 
 namespace TicTacToe.Api.Middleware;
 

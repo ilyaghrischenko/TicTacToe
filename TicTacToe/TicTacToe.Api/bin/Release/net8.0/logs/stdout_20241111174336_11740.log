@@ -55,5 +55,3 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
       WHERE [f].[UserId] = @__userId_0
 User: 1, ConnectionId: lXatVF_F4EmfV71BZJhYig
-info: Microsoft.Hosting.Lifetime[0]
-      Application is shutting down...

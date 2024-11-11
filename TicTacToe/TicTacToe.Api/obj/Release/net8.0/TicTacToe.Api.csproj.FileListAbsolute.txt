@@ -284,3 +284,6 @@ C:\github\TicTacToe\TicTacToe\TicTacToe.Api\obj\Release\net8.0\refint\TicTacToe.
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\obj\Release\net8.0\TicTacToe.Api.pdb
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\obj\Release\net8.0\TicTacToe.Api.genruntimeconfig.cache
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\obj\Release\net8.0\ref\TicTacToe.Api.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0\TicTacToe.Contracts.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0\TicTacToe.Contracts.pdb

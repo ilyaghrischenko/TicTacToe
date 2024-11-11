@@ -36,7 +36,7 @@ p {
     margin-bottom: 5%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .blocked-message {
         padding: 10%;
     }

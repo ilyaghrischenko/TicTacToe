@@ -2,12 +2,12 @@ using System.Net.PeerToPeer;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Contracts.Interfaces;
+using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts.Interfaces.TokenServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.Domain.Interfaces;
-using TicTacToe.Domain.Interfaces.DbModelsServices;
-using TicTacToe.Domain.Interfaces.Repositories;
-using TicTacToe.Domain.Interfaces.TokenServices;
 using TicTacToe.DTO.Models;
 
 namespace TicTacToe.Application.Services;

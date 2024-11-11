@@ -1555,12 +1555,25 @@
           }
         }
       },
+      "TicTacToe.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TicTacToe.DTO": "1.0.0",
+          "TicTacToe.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicTacToe.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicTacToe.Contracts.dll": {}
+        }
+      },
       "TicTacToe.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
-          "TicTacToe.DTO": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8"
         },
         "compile": {
           "bin/placeholder/TicTacToe.Domain.dll": {}
@@ -1572,12 +1585,18 @@
       "TicTacToe.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TicTacToe.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/TicTacToe.DTO.dll": {}
         },
         "runtime": {
           "bin/placeholder/TicTacToe.DTO.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4126,6 +4145,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "TicTacToe.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../TicTacToe.Contracts/TicTacToe.Contracts.csproj",
+      "msbuildProject": "../TicTacToe.Contracts/TicTacToe.Contracts.csproj"
+    },
     "TicTacToe.Domain/1.0.0": {
       "type": "project",
       "path": "../TicTacToe.Domain/TicTacToe.Domain.csproj",
@@ -4144,6 +4168,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.8",
       "System.Data.SqlClient >= 4.8.6",
+      "TicTacToe.Contracts >= 1.0.0",
       "TicTacToe.Domain >= 1.0.0"
     ]
   },
@@ -4180,6 +4205,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj": {
+              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj"
+            },
             "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
               "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj"
             }

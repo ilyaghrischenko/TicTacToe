@@ -1,13 +1,15 @@
 'use strict';
 
 const loginForm = document.querySelector('#loginForm');
-const authBtn = document.getElementById("authorize")
+const authBtn = document.getElementById("authorize");
+
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     authBtn.disabled = true;
     authBtn.innerText = 'Logging in...';
     authBtn.style.backgroundColor = 'black';
+    authBtn.style.cursor = 'wait';
 
     try {
         const login = document.getElementById('Login').value;
@@ -56,6 +58,7 @@ loginForm.addEventListener('submit', async (e) => {
         authBtn.disabled = false;
         authBtn.style.backgroundColor = 'var(--button-color)';
         authBtn.innerText = 'Log in';
+        authBtn.style.cursor = 'pointer';
     }
 });
 

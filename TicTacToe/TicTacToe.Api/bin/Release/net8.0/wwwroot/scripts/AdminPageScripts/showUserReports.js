@@ -2,11 +2,17 @@
 
 async function showUserReports(userId) {
     const token = sessionStorage.getItem('token');
+    const showReportsButton = document.getElementById(`show-reports-button-${userId}`);
 
     if (!token) {
         window.location.href = '../pages/auth.html';
         return;
     }
+
+    showReportsButton.disabled = true;
+    showReportsButton.textContent = 'Loading...';
+    showReportsButton.style.backgroundColor = 'black';
+    showReportsButton.style.cursor = 'wait';
 
     try {
         const response = await fetch("/api/Admin/getUserReports", {
@@ -39,25 +45,29 @@ async function showUserReports(userId) {
 
         data.forEach(report => {
             const li = document.createElement('li');
+            li.classList.add('report-item');
             const date = new Date(report.createdAt);
             const formattedDate =
                 `${date.toLocaleDateString('ru-RU')} ${date.toLocaleTimeString('ru-RU', {
                     hour: '2-digit',
                     minute: '2-digit'
                 })}`;
-            // li.textContent = `${formattedDate}: ${report.message}`;
 
             li.innerHTML = `
                 <span class="report-date">${formattedDate}</span>
                 <span class="report-message">${report.message}</span>
             `;
-
             reportList.appendChild(li);
         });
 
         modal.style.display = 'block';
     } catch (error) {
         console.error('Ошибка:', error.message);
+    } finally {
+        showReportsButton.disabled = false;
+        showReportsButton.style.backgroundColor = 'var(--button-color)';
+        showReportsButton.textContent = 'Show reports';
+        showReportsButton.style.cursor = 'pointer';
     }
 }
 

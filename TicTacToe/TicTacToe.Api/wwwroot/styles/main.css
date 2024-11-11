@@ -249,6 +249,13 @@ h1 {
     background-color: var(--button-hover-color);
 }
 
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
 .right-panel {
     flex: 1;
     margin-left: 10px;
@@ -408,6 +415,11 @@ h1 {
     
     .invitation-modal-content {
         width: 85%;
+    }
+    
+    .report-button {
+        width: 30px;
+        height: 30px;
     }
     
     .modal {

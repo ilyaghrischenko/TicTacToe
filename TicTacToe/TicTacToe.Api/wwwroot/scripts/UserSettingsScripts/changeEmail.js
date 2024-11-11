@@ -1,6 +1,7 @@
 'use strict';
 
 const changeEmailForm = document.querySelector('#change-email-form');
+const emailButton = document.querySelector('#change-email-button');
 
 changeEmailForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -11,12 +12,15 @@ changeEmailForm.addEventListener('submit', async (e) => {
         return;
     }
 
+    emailButton.disabled = true;
+    emailButton.innerText = 'Saving...';
+    emailButton.style.backgroundColor = 'black';
+    emailButton.style.cursor = 'wait';
+    
     try {
-
         const newEmail = {
             EmailInput: document.getElementById('EmailInput').value
         }
-
 
         const response = await fetch('/api/Settings/changeEmail', {
             method: 'POST',
@@ -48,6 +52,11 @@ changeEmailForm.addEventListener('submit', async (e) => {
         }
     } catch (error) {
         console.error('Error during request:', error);
+    } finally {
+        emailButton.disabled = false;
+        emailButton.style.backgroundColor = 'var(--button-color)';
+        emailButton.innerText = 'Save';
+        emailButton.style.cursor = 'pointer';
     }
 });
 
