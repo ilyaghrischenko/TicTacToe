@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace TicTacToe.Contracts.Interfaces.Controllers;
 
 public interface IFriendsControllerService: IBaseControllerService
