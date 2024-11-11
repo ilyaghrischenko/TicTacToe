@@ -16,6 +16,13 @@ closeModal.innerHTML = "&times;";
 const bugModalHeader = document.createElement("h2");
 bugModalHeader.textContent = "Bug Report";
 
+const actionContainer = document.createElement("div");
+actionContainer.classList.add("action-container");
+
+const actionSelectLabel = document.createElement("p");
+actionSelectLabel.classList.add("action-select-p");
+actionSelectLabel.textContent = "Select the event that caused the error:";
+
 const actionSelect = document.createElement("select");
 actionSelect.id = "triggeredAction";
 const actionOptions = [
@@ -32,9 +39,19 @@ actionOptions.forEach(action => {
     actionSelect.appendChild(option);
 });
 
+actionContainer.appendChild(actionSelectLabel);
+actionContainer.appendChild(actionSelect);
+
 const descriptionTextarea = document.createElement("textarea");
 descriptionTextarea.id = "description";
 descriptionTextarea.placeholder = "Enter your description...";
+
+const priorityContainer = document.createElement("div");
+priorityContainer.classList.add("priority-container");
+
+const prioritySelectLabel = document.createElement("p");
+prioritySelectLabel.classList.add("priority-select-p");
+prioritySelectLabel.textContent = "Choose how important and urgent you think it is to solve this problem:";
 
 const prioritySelect = document.createElement("select");
 prioritySelect.id = "priority";
@@ -47,6 +64,9 @@ priorityOptions.forEach(priority => {
     prioritySelect.appendChild(option);
 });
 
+priorityContainer.appendChild(prioritySelectLabel);
+priorityContainer.appendChild(prioritySelect);
+
 const sendBugBtn = document.createElement("button");
 sendBugBtn.id = "sendBugBtn";
 sendBugBtn.classList.add("btn", "bug-send-button");
@@ -54,9 +74,9 @@ sendBugBtn.textContent = "Send";
 
 bugModalContent.appendChild(closeModal);
 bugModalContent.appendChild(bugModalHeader);
-bugModalContent.appendChild(actionSelect);
+bugModalContent.appendChild(actionContainer);
 bugModalContent.appendChild(descriptionTextarea);
-bugModalContent.appendChild(prioritySelect);
+bugModalContent.appendChild(priorityContainer);
 bugModalContent.appendChild(sendBugBtn);
 bugModal.appendChild(bugModalContent);
 document.getElementById('central-panel').appendChild(bugModal);
