@@ -1,4 +1,31 @@
-/* Общие стили для модального окна */
+.bug-report-button {
+    position: absolute; /* Открываем кнопку в центре экрана */
+    top: 20px;
+    left: 20px;
+    background-color: darkred; /* Цвет фона для кнопки */
+    border: none; /* Без рамки */
+    border-radius: 50%; /* Кнопка круглая */
+    padding: 12px; /* Отступы */
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    display: flex; /* Для выравнивания иконки по центру */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Курсор при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы */
+}
+
+.bug-report-button:hover {
+    background-color: var(--button-hover-color); /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+.bug-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .bug-modal {
     display: none;
     position: fixed;
@@ -23,7 +50,6 @@
     box-sizing: border-box;
 }
 
-/* Закрытие модального окна */
 .close {
     position: absolute;
     top: 10px;
@@ -38,7 +64,6 @@
     color: black;
 }
 
-/* Стили для выпадающих списков и полей ввода */
 textarea, select {
     background-color: var(--secondary-color);
     color: white;
@@ -51,7 +76,6 @@ textarea, select {
     resize: none;
 }
 
-/* Кнопка отправки */
 .bug-send-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -67,9 +91,24 @@ textarea, select {
     background-color: var(--button-hover-color);
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
+    .bug-report-button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .bug-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .bug-modal {
+        justify-content: center;
+        align-items: center;
+    }
+    
     .bug-modal-content {
+        margin-top: 100px;
         width: 80%;
     }
 }
