@@ -1,0 +1,57 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+Database already exists.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:17982
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (134ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: lXatVF_F4EmfV71BZJhYig

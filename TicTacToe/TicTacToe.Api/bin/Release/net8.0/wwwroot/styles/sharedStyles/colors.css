@@ -1,0 +1,9 @@
+:root {
+    --main-color: #2b2b2b;
+    --secondary-color: #1e1e1e;
+    --button-color: var(--main-color);
+    --button-hover-color: #f62727;
+    --border-color: var(--button-hover-color);
+    --cell-color: var(--main-color);
+    --cell-hover-color: #4c2424;
+}

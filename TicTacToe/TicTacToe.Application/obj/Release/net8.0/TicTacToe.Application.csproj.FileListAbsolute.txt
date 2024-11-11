@@ -16,3 +16,5 @@ C:\github\TicTacToe\TicTacToe\TicTacToe.Application\obj\Release\net8.0\TicTacToe
 C:\github\TicTacToe\TicTacToe\TicTacToe.Application\obj\Release\net8.0\refint\TicTacToe.Application.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Application\obj\Release\net8.0\TicTacToe.Application.pdb
 C:\github\TicTacToe\TicTacToe\TicTacToe.Application\obj\Release\net8.0\ref\TicTacToe.Application.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Application\bin\Release\net8.0\TicTacToe.Contracts.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Application\bin\Release\net8.0\TicTacToe.Contracts.pdb

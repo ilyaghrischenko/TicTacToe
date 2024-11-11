@@ -1,0 +1,527 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (166ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (171ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+Database already exists.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:18046
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (180ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (158ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (140ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 2, ConnectionId: BQRz2MG4uclfBgRDfW1-KA
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (133ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (135ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (140ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__friendId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [f].[Id], [f].[FriendUserId], [f].[UserId]
+      FROM [Friends] AS [f]
+      WHERE [f].[UserId] = @__userId_0 AND [f].[FriendUserId] = @__friendId_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__friendId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [f].[Id], [f].[FriendUserId], [f].[UserId]
+      FROM [Friends] AS [f]
+      WHERE [f].[UserId] = @__userId_0 AND [f].[FriendUserId] = @__friendId_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Friends]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Friends]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (130ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (154ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (143ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__friendId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [f].[Id], [f].[FriendUserId], [f].[UserId]
+      FROM [Friends] AS [f]
+      WHERE [f].[UserId] = @__userId_0 AND [f].[FriendUserId] = @__friendId_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (147ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__friendId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [f].[Id], [f].[FriendUserId], [f].[UserId]
+      FROM [Friends] AS [f]
+      WHERE [f].[UserId] = @__userId_0 AND [f].[FriendUserId] = @__friendId_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (145ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Friends]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Friends]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (144ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (153ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (155ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (149ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (143ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (153ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: Kk3EAsPyCeO4de9Cxj6gvA
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (127ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (150ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (153ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (149ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (153ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (583ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (580ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (582ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (145ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (148ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (154ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (156ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (154ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (153ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (144ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: qLLqXV-j0PMOJ1135Z6EGQ
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (143ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (158ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (130ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (157ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (131ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (127ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: X0THPh1_4xzfaHTGYZ9-CQ
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (147ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 2, ConnectionId: 0jWHI_G8d5nccF_O21KDAw
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (126ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (143ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (144ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

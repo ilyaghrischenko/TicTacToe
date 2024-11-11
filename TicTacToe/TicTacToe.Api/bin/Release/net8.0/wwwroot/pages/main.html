@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main menu</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../styles/sharedStyles/scroll.css">
+    <link rel="stylesheet" href="../styles/reportModal.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
+    <link rel="stylesheet" href="../styles/friendProfileModal.css">
+    <link rel="stylesheet" href="../styles/bugModal.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+        <div class="profile">
+            <img alt="Avatar" class="avatar" id="avatar">
+            <h2 class="nickname" id="login">Login</h2>
+            <button class="settings-button btn" id="settings-button">Settings</button>
+        </div>
+        <div class="statistics" id="statistics">
+            <h3>Statistics</h3>
+            <p>Wins: </p> <span id="wins"></span>
+            <p>Losses: </p> <span id="losses"></span>
+        </div>
+    </div>
+
+    <div id="central-panel" class="central-panel">
+        <button class="bug-report-button" id="bugReportButton">
+            <img src="../images/bug-icon.png" alt="Bug Report Icon" class="bug-icon">
+        </button>
+        <button id="reportBtn" class="report-button hidden-report-button">!</button>
+
+        <h1>Game</h1>
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <p id="status"></p>
+        <div class="game-buttons-container">
+
+        </div>
+    </div>
+
+
+    <div class="right-panel">
+        <div class="friends-list">
+            <h3>Friends</h3>
+            <div class="scroll">
+                <ul id="friends-list"></ul>
+            </div>
+        </div>
+        <button class="friendsButton btn" id="friends-button">Manage Friends</button>
+    </div>
+</div>
+
+<script src="../scripts/MainPageScripts/loadUserInfo.js"></script>
+<script src="../scripts/MainPageScripts/main.js"></script>
+<script src="../scripts/MainPageScripts/game.js"></script>
+<script src="../scripts/MainPageScripts/renderFriendsList.js"></script>
+<script src="../scripts/MainPageScripts/report.js"></script>
+<script src="../scripts/MainPageScripts/friendProfileModal.js"></script>
+<script src="../scripts/MainPageScripts/bug.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.8/signalr.min.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/signalR.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/signalREventHandler.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/invitationModalWindow.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/game.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/restartButton.js"></script>
+<script src="../scripts/MainPageScripts/SignalRScripts/endGameButton.js"></script>
+</body>
+</html>

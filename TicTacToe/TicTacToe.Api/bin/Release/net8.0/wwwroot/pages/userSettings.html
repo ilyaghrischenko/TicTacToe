@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../styles/sharedStyles/errorTooltip.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
+    <link rel="stylesheet" href="../styles/userSettingsStyles.css">
+</head>
+<body>
+<div class="profile-container">
+    <div class="profile-sidebar">
+        <div class="avatar-section">
+            <img id="avatar" alt="Avatar" class="avatar">
+            <h2 id="login" class="username">Login</h2>
+            <h2 id="email" class="email">Email</h2>
+            <form id="change-avatar-form">
+                <input type="file" id="avatarImage" accept="image/*" name="Select image">
+                <button id="avatar-button" type="submit" class="btn-accept btn-change-avatar">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="profile-main">
+        <h2>Profile settings</h2>
+
+        <form class="profile-form" id="change-login-form">
+            <h3>Change login</h3>
+            <div class="form-group">
+                <label for="LoginInput">New login:</label>
+                <input type="text" id="LoginInput">
+            </div>
+            <button id="change-login-button" type="submit" class="btn-accept btn-save">Save</button>
+        </form>
+
+        <form class="profile-form" id="change-password-form">
+            <h3>Change password</h3>
+            <div class="form-group">
+                <label for="PasswordInput">New password:</label>
+                <input type="password" id="PasswordInput">
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm password:</label>
+                <input type="password" id="ConfirmPassword" name="confirm-password">
+            </div>
+            <button id="change-password-button" type="submit" class="btn-accept btn-save">Save</button>
+        </form>
+
+        <form class="profile-form" id="change-email-form">
+            <h3>Change email</h3>
+            <div class="form-group">
+                <label for="EmailInput">New email:</label>
+                <input type="email" id="EmailInput">
+            </div>
+            <button id="change-email-button" type="submit" class="btn-accept btn-save">Save</button>
+        </form>
+    </div>
+</div>
+
+<script src="../scripts/UserSettingsScripts/loadUserInfo.js"></script>
+<script src="../scripts/UserSettingsScripts/changeAvatar.js"></script>
+<script src="../scripts/UserSettingsScripts/changeLogin.js"></script>
+<script src="../scripts/UserSettingsScripts/changeEmail.js"></script>
+<script src="../scripts/UserSettingsScripts/changePassword.js"></script>
+</body>
+</html>
