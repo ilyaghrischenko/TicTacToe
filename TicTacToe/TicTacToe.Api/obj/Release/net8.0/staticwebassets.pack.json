@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\images\\block.png"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\bug-icon.png",
+      "PackagePath": "staticwebassets\\images\\bug-icon.png"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\images\\favicon.ico"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\blocked.html",
       "PackagePath": "staticwebassets\\pages\\blocked.html"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\bugs.html",
+      "PackagePath": "staticwebassets\\pages\\bugs.html"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\pages\\main.html",
@@ -51,6 +59,10 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\blockUser.js",
       "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\blockUser.js"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\bugs.js",
+      "PackagePath": "staticwebassets\\scripts\\AdminPageScripts\\bugs.js"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\AdminPageScripts\\loadAllUsers.js",
@@ -105,6 +117,10 @@
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js"
     },
     {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\bug.js",
+      "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\bug.js"
+    },
+    {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\friendProfileModal.js",
       "PackagePath": "staticwebassets\\scripts\\MainPageScripts\\friendProfileModal.js"
     },
@@ -155,6 +171,14 @@
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\blocked.css",
       "PackagePath": "staticwebassets\\styles\\blocked.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\bugModal.css",
+      "PackagePath": "staticwebassets\\styles\\bugModal.css"
+    },
+    {
+      "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\bugs.css",
+      "PackagePath": "staticwebassets\\styles\\bugs.css"
     },
     {
       "Id": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\styles\\friendProfileModal.css",

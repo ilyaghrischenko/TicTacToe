@@ -14,3 +14,5 @@ C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Release\net8.0\TicTacToe.
 C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Release\net8.0\refint\TicTacToe.Validation.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Release\net8.0\TicTacToe.Validation.pdb
 C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Release\net8.0\ref\TicTacToe.Validation.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Release\net8.0\TicTacToe.Domain.dll
+C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Release\net8.0\TicTacToe.Domain.pdb
