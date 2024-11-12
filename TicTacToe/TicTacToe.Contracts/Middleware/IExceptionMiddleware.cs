@@ -1,8 +1,7 @@
 using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace TicTacToe.Contracts.Interfaces.Middleware;
+namespace TicTacToe.Contracts.Middleware;
 
 public interface IExceptionMiddleware
 {

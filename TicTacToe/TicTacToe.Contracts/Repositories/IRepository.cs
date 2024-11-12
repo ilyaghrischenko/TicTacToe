@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using TicTacToe.Domain.DbModels;
 
-namespace TicTacToe.Contracts.Interfaces.Repositories;
+namespace TicTacToe.Contracts.Repositories;
 
 public interface IRepository<T> where T : BaseEntity
 {

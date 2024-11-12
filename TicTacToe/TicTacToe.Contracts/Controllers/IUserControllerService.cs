@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using TicTacToe.Domain.DbModels;
 
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface IUserControllerService : IBaseControllerService, ICurrentUserId
 {

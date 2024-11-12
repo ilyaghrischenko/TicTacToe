@@ -1,8 +1,8 @@
 using System.Security.Claims;
 using TicTacToe.Domain.DbModels;
 using Microsoft.AspNetCore.Http;
-using TicTacToe.Contracts.Interfaces.Controllers;
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Controllers;
+using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Application.Services.Controllers;

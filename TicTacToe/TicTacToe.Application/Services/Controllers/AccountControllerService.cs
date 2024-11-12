@@ -5,8 +5,8 @@ using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Application.AutentificationOptions;
-using TicTacToe.Contracts.Interfaces.Controllers;
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Controllers;
+using TicTacToe.Contracts.DbModelsServices;
 
 namespace TicTacToe.Application.Services.Controllers;
 

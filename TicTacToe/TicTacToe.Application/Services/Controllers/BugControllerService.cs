@@ -1,5 +1,5 @@
-using TicTacToe.Contracts.Interfaces.Controllers;
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
+using TicTacToe.Contracts.Controllers;
+using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.DTO.Models;
 

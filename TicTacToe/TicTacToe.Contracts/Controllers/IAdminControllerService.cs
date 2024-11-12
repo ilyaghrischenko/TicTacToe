@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using TicTacToe.Domain.DbModels;
 
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface IAdminControllerService
 {

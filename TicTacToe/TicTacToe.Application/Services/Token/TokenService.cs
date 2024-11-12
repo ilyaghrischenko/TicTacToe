@@ -2,7 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Application.AutentificationOptions;
-using TicTacToe.Contracts.Interfaces.TokenServices;
+using TicTacToe.Contracts.TokenServices;
 using TicTacToe.Domain.DbModels;
 
 namespace TicTacToe.Application.Services.Token;

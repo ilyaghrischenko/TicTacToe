@@ -1,9 +1,7 @@
-using System;
-using System.Linq;
-using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using TicTacToe.DTO.Models;
 
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface IBaseControllerService
 {

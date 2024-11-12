@@ -1,6 +1,4 @@
-using System.Threading.Tasks;
-
-namespace TicTacToe.Contracts.Interfaces.TokenServices;
+namespace TicTacToe.Contracts.TokenServices;
 
 public interface ITokenBlacklistService
 {

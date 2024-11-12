@@ -1,7 +1,6 @@
-using System.Threading.Tasks;
 using TicTacToe.DTO.Models;
 
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface IBugControllerService : IBaseControllerService
 {

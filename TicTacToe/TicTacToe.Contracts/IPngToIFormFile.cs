@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace TicTacToe.Contracts.Interfaces;
+namespace TicTacToe.Contracts;
 
 public interface IPngToIFormFile
 {

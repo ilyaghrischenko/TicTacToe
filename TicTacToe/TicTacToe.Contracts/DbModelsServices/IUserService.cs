@@ -1,10 +1,7 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.DTO.Models;
-using Microsoft.AspNetCore.Http;
 
-namespace TicTacToe.Contracts.Interfaces.DbModelsServices;
+namespace TicTacToe.Contracts.DbModelsServices;
 
 public interface IUserService
 {

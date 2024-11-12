@@ -1,12 +1,8 @@
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Threading.Tasks;
-using TicTacToe.DTO.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using TicTacToe.Domain.DbModels;
+using TicTacToe.DTO.Models;
 
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface IAccountControllerService : IBaseControllerService
 {

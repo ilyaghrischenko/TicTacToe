@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Controllers;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.DTO.Models;
 
-namespace TicTacToe.Contracts.Interfaces;
+namespace TicTacToe.Contracts;
 
 public interface IAdminService : ICurrentUserId, IPngToIFormFile
 {

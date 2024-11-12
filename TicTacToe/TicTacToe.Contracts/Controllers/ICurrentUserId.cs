@@ -1,4 +1,4 @@
-namespace TicTacToe.Contracts.Interfaces.Controllers;
+namespace TicTacToe.Contracts.Controllers;
 
 public interface ICurrentUserId
 {

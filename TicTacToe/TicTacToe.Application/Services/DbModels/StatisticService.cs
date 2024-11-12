@@ -1,5 +1,5 @@
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
-using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts.DbModelsServices;
+using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.DbModels;
 
 namespace TicTacToe.Application.Services.DbModels;

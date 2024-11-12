@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Caching.Memory;
-using TicTacToe.Contracts.Interfaces.TokenServices;
+using TicTacToe.Contracts.TokenServices;
 
 namespace TicTacToe.Application.Services.Token;
 
