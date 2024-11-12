@@ -1,0 +1,371 @@
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (164ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (158ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+Database already exists.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:17408
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Release\net8.0
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (163ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (145ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (141ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: 0aOl25CHSp6K3dhISYEHfw
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@__login_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Login] = @__login_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (725ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (134ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 2, ConnectionId: A2VW0vO1_A6w9lzoaeGEYw
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (196ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (141ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (130ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: gIF-VoFydGB8VTp5lsJgBw
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (141ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (144ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (143ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4,573ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = -1) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'TicTacToe.Data.TicTacToeContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The transaction log for database 'iluhahr_TicTacToe' is full due to 'ACTIVE_TRANSACTION'.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:10d9aba5-51ac-455e-99ed-6a0eda8331e4
+      Error Number:9002,State:4,Class:17
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The transaction log for database 'iluhahr_TicTacToe' is full due to 'ACTIVE_TRANSACTION'.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:10d9aba5-51ac-455e-99ed-6a0eda8331e4
+      Error Number:9002,State:4,Class:17
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (193ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (195ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: F6DaD3YpXs0qWtsqUNyrtQ
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (130ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (177ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (146ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Wins] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (133ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4,932ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32), @p8='?' (DbType = Int32), @p2='?' (Size = -1) (DbType = Binary), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Statistics] SET [Losses] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      UPDATE [Users] SET [Avatar] = @p2, [Email] = @p3, [Login] = @p4, [Password] = @p5, [Role] = @p6, [StatisticId] = @p7
+      OUTPUT 1
+      WHERE [Id] = @p8;
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'TicTacToe.Data.TicTacToeContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The transaction log for database 'iluhahr_TicTacToe' is full due to 'ACTIVE_TRANSACTION'.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:120849fd-872e-4230-9e26-5e2aeda430fb
+      Error Number:9002,State:4,Class:17
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The transaction log for database 'iluhahr_TicTacToe' is full due to 'ACTIVE_TRANSACTION'.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:120849fd-872e-4230-9e26-5e2aeda430fb
+      Error Number:9002,State:4,Class:17
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (130ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (134ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Users] AS [u]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (142ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [f].[Id], [f].[FriendUserId], [f].[UserId], [u].[Id], [u].[Avatar], [u].[Email], [u].[Login], [u].[Password], [u].[Role], [u].[StatisticId], [s].[Id], [s].[Losses], [s].[Wins]
+      FROM [Friends] AS [f]
+      INNER JOIN [Users] AS [u] ON [f].[FriendUserId] = [u].[Id]
+      INNER JOIN [Statistics] AS [s] ON [u].[StatisticId] = [s].[Id]
+      WHERE [f].[UserId] = @__userId_0
+User: 1, ConnectionId: hhU-NmXxIWfa2S8e5y0PGQ
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
