@@ -48,7 +48,7 @@
     margin: 10% auto;
     padding: 20px;
     border: 1px solid var(--border-color);
-    width: 40%;
+    width: 30%;
     border-radius: 12px;
     text-align: center;
     box-sizing: border-box;
@@ -117,6 +117,6 @@ textarea, select {
     
     .bug-modal-content {
         margin-top: 100px;
-        width: 80%;
+        width: 85%;
     }
 }

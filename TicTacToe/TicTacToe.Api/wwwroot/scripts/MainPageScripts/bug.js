@@ -42,9 +42,14 @@ actionOptions.forEach(action => {
 actionContainer.appendChild(actionSelectLabel);
 actionContainer.appendChild(actionSelect);
 
+const descriptionContainer = document.createElement("div");
+descriptionContainer.classList.add("description-container");
+
 const descriptionTextarea = document.createElement("textarea");
-descriptionTextarea.id = "description";
+descriptionTextarea.id = "Description";
 descriptionTextarea.placeholder = "Enter your description...";
+
+descriptionContainer.appendChild(descriptionTextarea);
 
 const priorityContainer = document.createElement("div");
 priorityContainer.classList.add("priority-container");
@@ -75,7 +80,7 @@ sendBugBtn.textContent = "Send";
 bugModalContent.appendChild(closeModal);
 bugModalContent.appendChild(bugModalHeader);
 bugModalContent.appendChild(actionContainer);
-bugModalContent.appendChild(descriptionTextarea);
+bugModalContent.appendChild(descriptionContainer);
 bugModalContent.appendChild(priorityContainer);
 bugModalContent.appendChild(sendBugBtn);
 bugModal.appendChild(bugModalContent);
@@ -105,12 +110,7 @@ sendBugBtn.onclick = async () => {
     const actionEnumValue = actionOptions.indexOf(triggeredAction);
     const priorityEnumValue = priorityOptions.indexOf(priority);
 
-    if (description.trim() !== "") {
-        await sendBug(actionEnumValue, description, priorityEnumValue);
-        bugModal.style.display = "none";
-    } else {
-        console.error("Please enter a description.");
-    }
+    await sendBug(actionEnumValue, description, priorityEnumValue);
 };
 
 async function sendBug(triggeredActionInt, description, importanceInt) {
@@ -129,13 +129,32 @@ async function sendBug(triggeredActionInt, description, importanceInt) {
             })
         });
 
+        document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
         if (!response.ok) {
-            console.error("Error in sending bug:", response.status);
+            const {errors} = await response.json();
+            Object.keys(errors).forEach(field => {
+                const inputField = document.getElementById(field);
+                if (inputField) {
+                    showTooltip(inputField, errors[field].join(', '));
+                } else {
+                    console.warn(`Field with ID "${field}" not found in form`);
+                }
+            });
         } else {
             console.log("Bug sent successfully");
             await response.json();
+            bugModal.style.display = "none";
         }
     } catch (error) {
         console.error("Error in sending bug:", error.toString());
     }
+}
+
+function showTooltip(inputField, message) {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'error-tooltip';
+    tooltip.innerText = message;
+
+    inputField.parentNode.appendChild(tooltip);
+    inputField.classList.add('input-error');
 }
