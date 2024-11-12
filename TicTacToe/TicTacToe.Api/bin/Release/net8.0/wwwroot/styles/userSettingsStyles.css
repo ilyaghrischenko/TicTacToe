@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.profile-container {
+    display: flex;
+    width: 65%;
+    max-width: 1200px;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.profile-sidebar {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 50%;
+}
+
+.avatar-section {
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--border-color);
+}
+
+.username {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.email {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-accept {
+    background-color: var(--button-color);
+    color: white;
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 80%;
+    margin: 10px auto 0;
+}
+
+.btn-accept:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--border-color);
+}
+
+.profile-main {
+    flex: 2;
+    padding: 20px;
+    background-color: var(--main-color);
+    max-width: 50%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-height: none;
+    }
+
+    .profile-sidebar {
+        max-width: 100%;
+        order: 1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-main {
+        max-width: 100%;
+        order: 2;
+        width: 100%;
+        padding: 20px;
+    }
+}
