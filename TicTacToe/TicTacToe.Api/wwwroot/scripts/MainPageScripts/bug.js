@@ -115,6 +115,11 @@ sendBugBtn.onclick = async () => {
 
 async function sendBug(triggeredActionInt, description, importanceInt) {
     const token = sessionStorage.getItem('token');
+    if (!token) {
+        window.location.href = '../pages/auth.html';
+        return;
+    }
+    
     try {
         const response = await fetch("/api/Bug/sendBug", {
             method: "POST",
