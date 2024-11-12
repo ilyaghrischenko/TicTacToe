@@ -35,7 +35,7 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
         return allBugs;
     }
     
-    public async Task<List<Bug>> GetBugsByStatusAsync(BugStatus status)
+    public async Task<List<Bug>> GetBugsByStatusAsync(int status)
     {
         var allBugs = await _bugRepository.GetAllAsync();
         if (allBugs == null)
@@ -43,7 +43,7 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
             return new();
         }
         
-        var bugs = allBugs.Where(b => b.Status == status).ToList();
+        var bugs = allBugs.Where(b => (int)b.Status == status).ToList();
         return bugs;
     }
 }

@@ -9,6 +9,15 @@ body {
     height: 100vh;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .table-container {
     width: 80%;
     margin: 20px;
@@ -37,12 +46,8 @@ th {
     font-weight: bold;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #e0f7ff;
+td {
+    color: white;
 }
 
 .description-column {

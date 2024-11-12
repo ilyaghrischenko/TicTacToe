@@ -7,5 +7,5 @@ public interface IBugService
 {
     Task SendBugAsync(Bug bug);
     Task<List<Bug>> GetAllBugsAsync();
-    Task<List<Bug>> GetBugsByStatusAsync(BugStatus status);
+    Task<List<Bug>> GetBugsByStatusAsync(int status);
 }

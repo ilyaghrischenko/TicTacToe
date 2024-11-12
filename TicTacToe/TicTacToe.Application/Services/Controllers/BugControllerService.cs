@@ -17,13 +17,43 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
         await _bugService.SendBugAsync(newBug);
     }
 
-    public async Task<List<Bug>> GetAllBugsAsync()
+    public async Task<List<object>> GetAllBugsAsync()
     {
-        return await _bugService.GetAllBugsAsync();
+        var bugs = await _bugService.GetAllBugsAsync();
+        
+        var bugsDto = new List<object>();
+        foreach (var bug in bugs)
+        {
+            var bugDto = new
+            {
+                description = bug.Description,
+                action = bug.Action.ToString(),
+                importance = bug.Importance.ToString(),
+                status = bug.Status.ToString(),
+                createdAt = bug.CreatedAt
+            };
+            bugsDto.Add(bugDto);
+        }
+        return bugsDto;
     }
     
-    public async Task<List<Bug>> GetBugsByStatusAsync(BugStatus status)
+    public async Task<List<object>> GetBugsByStatusAsync(int status)
     {
-        return await _bugService.GetBugsByStatusAsync(status);
+        var bugs = await _bugService.GetBugsByStatusAsync(status);
+        
+        var bugsDto = new List<object>();
+        foreach (var bug in bugs)
+        {
+            var bugDto = new
+            {
+                description = bug.Description,
+                action = bug.Action.ToString(),
+                importance = bug.Importance.ToString(),
+                status = bug.Status.ToString(),
+                createdAt = bug.CreatedAt
+            };
+            bugsDto.Add(bugDto);
+        }
+        return bugsDto;
     }
 }

@@ -10,7 +10,6 @@ using TicTacToe.DTO.Models;
 
 namespace TicTacToe.Api.Controllers
 {
-    [Role(Role.User)]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
@@ -18,6 +17,7 @@ namespace TicTacToe.Api.Controllers
     {
         private readonly IBugControllerService _bugControllerService = bugControllerService;
         
+        [Role(Role.User)]
         [HttpPost("sendBug")]
         public async Task<IActionResult> SendBug([FromBody] BugModel bug)
         {
@@ -26,16 +26,20 @@ namespace TicTacToe.Api.Controllers
             return Ok();
         }
         
+        [Role(Role.Admin)]
         [HttpGet("getBugs")]
-        public async Task<List<Bug>> GetAllBugsAsync()
+        public async Task<List<object>> GetAllBugs()
         {
-            return await _bugControllerService.GetAllBugsAsync();
+            var response = await _bugControllerService.GetAllBugsAsync();
+            return response;
         }
         
-        [HttpGet("getBugsByStatus")]
-        public async Task<List<Bug>> GetBugsByStatusAsync(BugStatus status)
+        [Role(Role.Admin)]
+        [HttpPost("getBugsByStatus")]
+        public async Task<List<object>> GetBugsByStatus(int status)
         {
-            return await _bugControllerService.GetBugsByStatusAsync(status);
+            var response = await _bugControllerService.GetBugsByStatusAsync(status);
+            return response;
         }
     }
 }
