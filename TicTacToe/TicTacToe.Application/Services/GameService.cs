@@ -1,5 +1,5 @@
-using TicTacToe.Contracts.Interfaces;
-using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts;
+using TicTacToe.Contracts.Repositories;
 
 namespace TicTacToe.Application.Services;
 

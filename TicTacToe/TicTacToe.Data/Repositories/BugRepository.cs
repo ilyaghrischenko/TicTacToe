@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
 

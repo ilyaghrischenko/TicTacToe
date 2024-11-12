@@ -21,7 +21,7 @@ public class RegisterModelValidator : AbstractValidator<RegisterModel>
             .NotEmpty().WithMessage("Password is required")
             .Length(6, 20).WithMessage("Password must be between 6 and 20 characters long")
             .Must((model, password) => password != model.Login).WithMessage("Password must not match the login")
-            .Matches("^[a-zA-Z0-9]+$").WithMessage("Password must contain only Latin letters and numbers");
+            .Matches(@"^[\x21-\x7E]+$").WithMessage("Password must contain only Latin letters, numbers, and symbols");
         
         RuleFor(x => x.ConfirmPassword)
             .NotEmpty().WithMessage("Confirm password is required")

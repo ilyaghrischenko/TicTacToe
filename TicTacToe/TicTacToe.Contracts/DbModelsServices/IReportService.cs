@@ -1,0 +1,10 @@
+using TicTacToe.Domain.DbModels;
+
+namespace TicTacToe.Contracts.DbModelsServices;
+
+public interface IReportService
+{
+    Task<List<Report>> GetUserReportsAsync(int userId);
+    Task SendReportAsync(int id, string message);
+    Task DeleteAllUserReportsAsync(int userId);
+}

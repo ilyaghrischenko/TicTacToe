@@ -1,6 +1,6 @@
 using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Mvc;
-using TicTacToe.Contracts.Interfaces.Controllers;
+using TicTacToe.Contracts.Controllers;
 
 namespace TicTacToe.Api.Controllers
 {

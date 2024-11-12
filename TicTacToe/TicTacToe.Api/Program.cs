@@ -15,17 +15,16 @@ using Microsoft.OpenApi.Models;
 using TicTacToe.Api.Middleware;
 using TicTacToe.Application.Services.Token;
 using TicTacToe.Application.SignalRHub;
-using TicTacToe.Contracts.Interfaces;
-using TicTacToe.Contracts.Interfaces.Controllers;
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
-using TicTacToe.Contracts.Interfaces.Repositories;
-using TicTacToe.Contracts.Interfaces.TokenServices;
+using TicTacToe.Contracts;
+using TicTacToe.Contracts.Controllers;
+using TicTacToe.Contracts.DbModelsServices;
+using TicTacToe.Contracts.Repositories;
+using TicTacToe.Contracts.TokenServices;
 using TicTacToe.Validation.AccountModelsValidators;
+using TicTacToe.Validation.MainModelsValidators;
 using TicTacToe.Validation.SettingsModelsValidators;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-
-//TODO: Доработать стили для модального окна для бага, и отправку на сервер
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -39,8 +38,10 @@ builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<BugModelValidator>();
 #endregion
 
+#region Dependency Injection
 #region Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<Statistic>, StatisticRepository>();
@@ -50,30 +51,37 @@ builder.Services.AddScoped<IRepository<Bug>, BugRepository>();
 #endregion
 
 #region Services
+#region DbModels
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
 builder.Services.AddScoped<IBugService, BugService>();
+#endregion
 
-builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddScoped<IGameService, GameService>();
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<ITokenBlacklistService, TokenBlacklistService>();
-
+#region Controllers
 builder.Services.AddScoped<IAccountControllerService, AccountControllerService>();
 builder.Services.AddScoped<IUserControllerService, UserControllerService>();
 builder.Services.AddScoped<IFriendsControllerService, FriendsControllerService>();
 builder.Services.AddScoped<ISettingsControllerService, SettingsControllerService>();
 builder.Services.AddScoped<IAdminControllerService, AdminControllerService>();
 builder.Services.AddScoped<IBugControllerService, BugControllerService>();
+#endregion
 
+#region Other
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<ITokenBlacklistService, TokenBlacklistService>();
+#endregion
+#endregion
+
+#region Other
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IMemoryCache, MemoryCache>();
 #endregion
+#endregion
 
-builder.Services.AddDbContext<TicTacToeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
-
+#region JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -119,9 +127,14 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+#endregion
+
+builder.Services.AddDbContext<TicTacToeContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
 
 WebApplication app = builder.Build();
 
+#region DatabseInitializer
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -135,6 +148,7 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine($"An error occurred while initializing the database: {ex.Message}");
     }
 }
+#endregion
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -151,7 +165,9 @@ app.UseStaticFiles();
 
 app.MapHub<GameHub>("/gameHub");
 
+#region Middlewares
 app.UseMiddleware<TokenBlacklistMiddleware>();
 app.UseMiddleware<ExceptionMiddleware>();
+#endregion
 
 app.Run();

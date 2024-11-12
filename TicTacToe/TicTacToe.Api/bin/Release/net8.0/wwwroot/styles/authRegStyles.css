@@ -13,10 +13,6 @@ body {
     background-color: var(--main-color);
 }
 
-.input-error {
-    border-color: red;
-}
-
 .auth-form {
     background-color: var(--secondary-color);
     padding: 3%;

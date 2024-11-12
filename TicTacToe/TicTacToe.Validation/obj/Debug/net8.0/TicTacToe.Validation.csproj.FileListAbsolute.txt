@@ -32,3 +32,5 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Validation\obj\D
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Validation\obj\Debug\net8.0\ref\TicTacToe.Validation.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Domain.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Domain.pdb
+D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Domain.dll
+D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Validation\bin\Debug\net8.0\TicTacToe.Domain.pdb

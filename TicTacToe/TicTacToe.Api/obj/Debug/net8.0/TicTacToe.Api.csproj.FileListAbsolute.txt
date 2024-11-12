@@ -573,3 +573,6 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\ne
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.dll
 C:\github\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.pdb
+D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.dll
+D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Api\bin\Debug\net8.0\TicTacToe.Contracts.pdb

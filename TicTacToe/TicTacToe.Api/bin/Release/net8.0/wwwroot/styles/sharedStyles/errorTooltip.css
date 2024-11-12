@@ -1,3 +1,7 @@
+.input-error {
+    border-color: red;
+}
+
 .error-tooltip {
     position: absolute;
     background-color: rgba(237, 190, 190, 0.9);

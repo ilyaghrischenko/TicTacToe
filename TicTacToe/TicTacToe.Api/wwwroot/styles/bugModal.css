@@ -1,24 +1,24 @@
 .bug-report-button {
-    position: absolute; /* Открываем кнопку в центре экрана */
+    position: absolute;
     top: 20px;
     left: 20px;
-    background-color: darkred; /* Цвет фона для кнопки */
-    border: none; /* Без рамки */
-    border-radius: 50%; /* Кнопка круглая */
-    padding: 12px; /* Отступы */
-    width: 40px; /* Ширина кнопки */
-    height: 40px; /* Высота кнопки */
-    display: flex; /* Для выравнивания иконки по центру */
+    background-color: darkred;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; /* Курсор при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
-    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .bug-report-button:hover {
-    background-color: var(--button-hover-color); /* Цвет кнопки при наведении */
-    transform: scale(1.1); /* Легкое увеличение при наведении */
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
 }
 
 .bug-icon {
@@ -38,13 +38,17 @@
 }
 
 .bug-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
     position: relative;
     background-color: var(--main-color);
     color: white;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid var(--border-color);
-    width: 40%;
+    width: 30%;
     border-radius: 12px;
     text-align: center;
     box-sizing: border-box;
@@ -64,11 +68,15 @@
     color: black;
 }
 
+.bug-modal-content p {
+    text-align: left;
+}
+
 textarea, select {
     background-color: var(--secondary-color);
     color: white;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 10px;
     font-size: 16px;
     border-radius: 6px;
@@ -109,6 +117,6 @@ textarea, select {
     
     .bug-modal-content {
         margin-top: 100px;
-        width: 80%;
+        width: 85%;
     }
 }

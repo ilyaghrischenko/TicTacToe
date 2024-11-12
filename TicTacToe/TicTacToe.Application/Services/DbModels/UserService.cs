@@ -3,8 +3,8 @@ using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using TicTacToe.Contracts.Interfaces.DbModelsServices;
-using TicTacToe.Contracts.Interfaces.Repositories;
+using TicTacToe.Contracts.DbModelsServices;
+using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Application.Services.DbModels;
