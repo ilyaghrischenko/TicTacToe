@@ -142,7 +142,6 @@ async function sendBug(triggeredActionInt, description, importanceInt) {
             });
         } else {
             console.log("Bug sent successfully");
-            await response.json();
             bugModal.style.display = "none";
         }
     } catch (error) {
