@@ -4173,19 +4173,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sannido\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj",
+      "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj",
       "projectName": "TicTacToe.Data",
-      "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj",
-      "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-      "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Data\\obj\\",
+      "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4200,11 +4205,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj"
+            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj": {
+              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj"
+            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
+              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj"
             }
           }
         }

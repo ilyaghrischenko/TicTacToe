@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {}
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {}
   },
   "projects": {
-    "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
+    "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+        "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
         "projectName": "TicTacToe.Domain",
-        "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
-        "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-        "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\obj\\",
+        "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
