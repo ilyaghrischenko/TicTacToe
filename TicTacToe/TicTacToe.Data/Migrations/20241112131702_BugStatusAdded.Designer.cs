@@ -12,8 +12,8 @@ using TicTacToe.Data;
 namespace TicTacToe.Data.Migrations
 {
     [DbContext(typeof(TicTacToeContext))]
-    [Migration("20241109215621_Initial")]
-    partial class Initial
+    [Migration("20241112131702_BugStatusAdded")]
+    partial class BugStatusAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,9 @@ namespace TicTacToe.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Importance")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

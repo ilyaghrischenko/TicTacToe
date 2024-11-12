@@ -43,6 +43,9 @@ namespace TicTacToe.Data.Migrations
                     b.Property<int>("Importance")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Bugs");

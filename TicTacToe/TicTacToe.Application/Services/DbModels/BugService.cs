@@ -1,6 +1,7 @@
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.DbModels;
+using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Application.Services.DbModels;
 
@@ -23,4 +24,17 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
         
         await _bugRepository.AddAsync(bug);
     }
+    
+    public async Task<List<Bug>> GetAllBugsAsync()
+    {
+        return await _bugRepository.GetAllAsync() ?? [];
+    }
+    
+    public async Task<List<Bug>> GetBugsByStatusAsync(BugStatus status)
+    {
+        return (await _bugRepository.GetAllAsync() ?? [])
+            .Where(b => b.Status == status)
+            .ToList();
+    }
+    
 }
