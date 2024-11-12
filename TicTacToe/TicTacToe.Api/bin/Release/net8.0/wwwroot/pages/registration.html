@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../styles/sharedStyles/errorTooltip.css">
+    <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
+    <link rel="stylesheet" href="../styles/authRegStyles.css">
+</head>
+<body>
+<div class="container">
+    <div class="auth-form">
+        <h2>Register</h2>
+        <div id="errors" class="card error"></div>
+        <form id="regForm">
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="text" id="Email">
+            </div>
+            <div class="form-group">
+                <label for="Login">Login:</label>
+                <input type="text" id="Login">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password">
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm Password:</label>
+                <input type="password" id="ConfirmPassword">
+            </div>
+            <button id="register" type="submit" class="btn">Register</button>
+        </form>
+        <div class="auth-link">
+            <p>Already have an account? <a href="../pages/auth.html">Log in</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/AccountControllerScripts/regScript.js"></script>
+</body>
+</html>
