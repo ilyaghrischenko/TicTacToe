@@ -12,8 +12,8 @@ using TicTacToe.Data;
 namespace TicTacToe.Data.Migrations
 {
     [DbContext(typeof(TicTacToeContext))]
-    [Migration("20241112131702_BugStatusAdded")]
-    partial class BugStatusAdded
+    [Migration("20241112171946_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

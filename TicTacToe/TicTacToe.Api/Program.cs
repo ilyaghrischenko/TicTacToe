@@ -134,21 +134,21 @@ builder.Services.AddDbContext<TicTacToeContext>(options =>
 
 WebApplication app = builder.Build();
 
-#region DatabseInitializer
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    try
-    {
-        var context = services.GetRequiredService<TicTacToeContext>();
-        DatabaseInitializer.Initialize(context);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"An error occurred while initializing the database: {ex.Message}");
-    }
-}
-#endregion
+// #region DatabseInitializer
+// using (var scope = app.Services.CreateScope())
+// {
+//     var services = scope.ServiceProvider;
+//     try
+//     {
+//         var context = services.GetRequiredService<TicTacToeContext>();
+//         DatabaseInitializer.Initialize(context);
+//     }
+//     catch (Exception ex)
+//     {
+//         Console.WriteLine($"An error occurred while initializing the database: {ex.Message}");
+//     }
+// }
+// #endregion
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
