@@ -27,11 +27,7 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
     
     public async Task<List<Bug>> GetAllBugsAsync()
     {
-        var allBugs = await _bugRepository.GetAllAsync();
-        if (allBugs == null)
-        {
-            return new();
-        }
+        var allBugs = await _bugRepository.GetAllAsync() ?? new();
         return allBugs;
     }
     

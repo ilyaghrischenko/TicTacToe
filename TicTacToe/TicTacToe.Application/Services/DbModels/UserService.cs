@@ -94,7 +94,7 @@ public class UserService(
         }
         if (friendToRemoveFriend == null)
         {
-            throw new ArgumentException("This user already hasn't you as a friend");
+            throw new ArgumentException("Friendship does not exist");
         }
 
         var deleteMyFriendTask = _friendRepository.DeleteAsync(meFriend.Id);
