@@ -3,6 +3,7 @@ using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.Enums;
@@ -20,82 +21,111 @@ public class UserService(
 
     public async Task AddFriendAsync(int userId, int friendId)
     {
-        var me = await _userRepository.GetAsync(userId);
+        var meTask = _userRepository.GetAsync(userId);
+        var friendToAddTask = _userRepository.GetAsync(friendId);
+        
+        await Task.WhenAll(meTask, friendToAddTask);
+        
+        var me = await meTask;
+        var friendToAdd = await friendToAddTask;
+        
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
         }
-
-        var friendToAdd = await _userRepository.GetAsync(friendId);
         if (friendToAdd == null)
         {
             throw new KeyNotFoundException("New friend not found");
         }
-
-        var meFriends = await _friendRepository.GetUserFriendsAsync(me.Id);
-        var friendToAddFriends = await _friendRepository.GetUserFriendsAsync(friendToAdd.Id);
-
+        
+        var meFriendsTask = _friendRepository.GetUserFriendsAsync(me.Id);
+        var friendToAddFriendsTask = _friendRepository.GetUserFriendsAsync(friendToAdd.Id);
+        
+        await Task.WhenAll(meFriendsTask, friendToAddFriendsTask);
+        
+        var meFriends = await meFriendsTask;
+        var friendToAddFriends = await friendToAddFriendsTask;
+        
         if (meFriends.Any(x => x.Id == friendToAdd.Id))
         {
             throw new ArgumentException("You already have this friend");
         }
-
         if (friendToAddFriends.Any(x => x.Id == me.Id))
         {
             throw new ArgumentException("This user already has you as a friend");
         }
 
-        await _friendRepository.AddAsync(new Friend(me, friendToAdd));
-        await _friendRepository.AddAsync(new Friend(friendToAdd, me));
+        var addFriendToMeTask = _friendRepository.AddAsync(new Friend(me, friendToAdd));
+        var addFriendToUserTask = _friendRepository.AddAsync(new Friend(friendToAdd, me));
+        
+        await Task.WhenAll(addFriendToMeTask, addFriendToUserTask);
     }
 
     public async Task DeleteFriendAsync(int userId, int friendId)
     {
-        var me = await _userRepository.GetAsync(userId);
+        var meTask = _userRepository.GetAsync(userId);
+        var friendToRemoveTask = _userRepository.GetAsync(friendId);
+        
+        await Task.WhenAll(meTask, friendToRemoveTask);
+        
+        var me = await meTask;
+        var friendToRemove = await friendToRemoveTask;
+
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
         }
-
-        var friendToRemove = await _userRepository.GetAsync(friendId);
         if (friendToRemove == null)
         {
             throw new KeyNotFoundException("Friend not found");
         }
 
-        var meFrend = await _friendRepository.GetAsync(me.Id, friendToRemove.Id);
-        var friendToRemoveFriend = await _friendRepository.GetAsync(friendToRemove.Id, me.Id);
+        var meFriendTask = _friendRepository.GetAsync(me.Id, friendToRemove.Id);
+        var friendToRemoveFriendTask = _friendRepository.GetAsync(friendToRemove.Id, me.Id);
+        
+        await Task.WhenAll(meFriendTask, friendToRemoveFriendTask);
+        
+        var meFriend = await meFriendTask;
+        var friendToRemoveFriend = await friendToRemoveFriendTask;
 
-        if (meFrend == null)
+        if (meFriend == null)
         {
-            throw new ArgumentException("This friend is not in your friends list");
+            throw new ArgumentException("This user is not in your friends list");
         }
-
         if (friendToRemoveFriend == null)
         {
             throw new ArgumentException("This user already hasn't you as a friend");
         }
 
-        await _friendRepository.DeleteAsync(meFrend.Id);
-        await _friendRepository.DeleteAsync(friendToRemoveFriend.Id);
+        var deleteMyFriendTask = _friendRepository.DeleteAsync(meFriend.Id);
+        var deleteUserFriendTask = _friendRepository.DeleteAsync(friendToRemoveFriend.Id);
+        
+        await Task.WhenAll(deleteMyFriendTask, deleteUserFriendTask);
     }
 
     public async Task ChangeLoginAsync(string userId, string newLogin)
     {
-        var me = await _userRepository.GetAsync(int.Parse(userId));
+        var meTask = _userRepository.GetAsync(int.Parse(userId));
+        var existingUserTask = _userRepository.GetAsync(newLogin);
+        
+        await Task.WhenAll(meTask, existingUserTask);
+        
+        var me = await meTask;
+        var existingUser = await existingUserTask;
+        
         if (me == null)
         {
             throw new KeyNotFoundException("You not found");
         }
 
+        if (existingUser != null)
+        {
+            throw new ArgumentException("New login already exists");
+        }
+        
         if (me.Login == newLogin)
         {
             throw new ArgumentException("New login is the same as old");
-        }
-
-        if (await _userRepository.GetAsync(newLogin) != null)
-        {
-            throw new ArgumentException("New login already exists");
         }
 
         await _userRepository.UpdateAsync(me, () =>
@@ -184,13 +214,19 @@ public class UserService(
 
     public async Task RegisterAsync(RegisterModel registerModel)
     {
-        var user = await _userRepository.GetAsync(registerModel.Login);
+        var userTask = _userRepository.GetAsync(registerModel.Login);
+        var adminTask = _userRepository.GetAdminAsync();
+        
+        await Task.WhenAll(userTask, adminTask);
+        
+        var user = await userTask;
+        var admin = await adminTask;
+        
         if (user != null)
         {
-            throw new ArgumentException("User already exists");
+            throw new ArgumentException("User with this login already exists");
         }
 
-        var admin = await _userRepository.GetAdminAsync();
         Role role = Role.User;
         if (admin != null)
         {
@@ -222,14 +258,11 @@ public class UserService(
 
     public async Task<List<User>> GetAllUsersAsync(int currentUserId)
     {
-        var allUsers = await _userRepository.GetAllAsync();
-        if (allUsers == null || allUsers.Count == 0)
-        {
-            return new List<User>();
-        }
+        var allUsers = await _userRepository.GetAllAsync() ?? new();
 
-        allUsers.RemoveAll(user => user.Id == currentUserId
-                                   || user.Role == Role.Admin);
+        allUsers.RemoveAll(user =>
+                user.Id == currentUserId
+                || user.Role == Role.Admin);
 
         return allUsers;
     }
@@ -241,7 +274,7 @@ public class UserService(
         {
             throw new KeyNotFoundException("User not found");
         }
-        var userFriends = await _friendRepository.GetUserFriendsAsync(user.Id);
-        return userFriends ?? new List<User>();
+        var userFriends = await _friendRepository.GetUserFriendsAsync(user.Id) ?? new();
+        return userFriends;
     }
 }
