@@ -43,7 +43,9 @@ public class BugService(IRepository<Bug> bugRepository) : IBugService
             return new();
         }
         
-        var bugs = allBugs.Where(b => (int)b.Status == status).ToList();
+        var bugs = allBugs
+            .Where(b => (int)b.Status == status)
+            .ToList();
         return bugs;
     }
 }
