@@ -1,0 +1,28 @@
+﻿<Window x:Class="BugView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bug Viewer" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="BugDataGrid" AutoGenerateColumns="False" IsReadOnly="True" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  ColumnWidth="*">
+            <!-- Определение колонок таблицы -->
+            <DataGrid.Columns>
+                <!-- Column for Action -->
+                <DataGridTextColumn Header="Action" Binding="{Binding Action}" />
+                
+                <!-- Column for Description -->
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                
+                <!-- Column for Importance -->
+                <DataGridTextColumn Header="Importance" Binding="{Binding Importance}" />
+                
+                <!-- Column for CreatedAt -->
+                <DataGridTextColumn Header="Created At" Binding="{Binding CreatedAt, StringFormat=d}" />
+                
+                <!-- Column for Status -->
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
