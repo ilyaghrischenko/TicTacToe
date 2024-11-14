@@ -10,6 +10,7 @@ using TicTacToe.Application.Services.DbModels;
 using TicTacToe.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.OpenApi.Models;
 using TicTacToe.Api.Middleware;
@@ -129,7 +130,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 #endregion
 
-builder.Services.AddDbContext<TicTacToeContext>(options =>
+builder.Services.AddDbContextFactory<TicTacToeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
 
 WebApplication app = builder.Build();

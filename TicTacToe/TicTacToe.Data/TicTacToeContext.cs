@@ -6,8 +6,6 @@ namespace TicTacToe.Data
 {
     public class TicTacToeContext : DbContext
     {
-        public TicTacToeContext() { }
-
         public TicTacToeContext(DbContextOptions<TicTacToeContext> options, IConfiguration configuration)
             : base(options)
         {

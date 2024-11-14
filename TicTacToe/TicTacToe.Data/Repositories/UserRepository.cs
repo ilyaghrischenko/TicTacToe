@@ -6,49 +6,59 @@ using TicTacToe.Domain.Enums;
 
 namespace TicTacToe.Data.Repositories;
 
-public class UserRepository(TicTacToeContext context) : IUserRepository
+public class UserRepository(IDbContextFactory<TicTacToeContext> contextFactory) : IUserRepository
 {
-    private readonly TicTacToeContext _context = context;
+    private readonly IDbContextFactory<TicTacToeContext> _contextFactory = contextFactory;
 
     public async Task<List<User>?> GetAllAsync()
     {
-        return await _context.Users
+        using var context = await _contextFactory.CreateDbContextAsync();
+        
+        return await context.Users
             .Include(u => u.Statistic)
             .ToListAsync();
     }
 
     public async Task<User?> GetAsync(int id)
     {
-        return await _context.Users
+        using var context = await _contextFactory.CreateDbContextAsync();
+
+        return await context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
     public async Task<User?> GetAsync(string login)
     {
-        return await _context.Users
+        using var context = await _contextFactory.CreateDbContextAsync();
+
+        return await context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(user => user.Login == login);
     }
 
     public async Task<User?> GetAdminAsync()
     {
-        return await _context.Users
+        using var context = await _contextFactory.CreateDbContextAsync();
+
+        return await context.Users
             .Include(u => u.Statistic)
             .FirstOrDefaultAsync(user => user.Role == Role.Admin);
     }
 
     public async Task<bool> AddAsync(User user)
     {
+        using var context = await _contextFactory.CreateDbContextAsync();
+
         var statistic = new Statistic();
-        await _context.Statistics.AddAsync(statistic);
-        await _context.SaveChangesAsync();
-        user.Statistic = await _context.Statistics.FirstAsync(s => s.Id == statistic.Id);
+        await context.Statistics.AddAsync(statistic);
+        await context.SaveChangesAsync();
+        user.Statistic = await context.Statistics.FirstAsync(s => s.Id == statistic.Id);
 
         try
         {
-            await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
+            await context.Users.AddAsync(user);
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -61,9 +71,11 @@ public class UserRepository(TicTacToeContext context) : IUserRepository
     {
         try
         {
-            var user = await _context.Users.FindAsync(id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+            using var context = await _contextFactory.CreateDbContextAsync();
+
+            var user = await context.Users.FindAsync(id);
+            context.Users.Remove(user);
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -76,9 +88,11 @@ public class UserRepository(TicTacToeContext context) : IUserRepository
     {
         try
         {
-            _context.Users.Update(user);
+            using var context = await _contextFactory.CreateDbContextAsync();
+
+            context.Users.Update(user);
             updateAction();
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
