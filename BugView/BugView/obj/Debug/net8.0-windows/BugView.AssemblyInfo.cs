@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugView")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be79655d8d0a376689bb6d82bfc0a206f96be3a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f03ee3aeda59cb174e9f93adf40bef768b1a43d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BugView")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BugView")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

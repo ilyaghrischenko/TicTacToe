@@ -9,19 +9,24 @@
             <!-- Определение колонок таблицы -->
             <DataGrid.Columns>
                 <!-- Column for Action -->
-                <DataGridTextColumn Header="Action" Binding="{Binding Action}" />
+                <!-- <DataGridTextColumn Header="Action" Binding="{Binding Action}" /> -->
+                <DataGridTextColumn Header="Action" />
                 
                 <!-- Column for Description -->
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <!-- <DataGridTextColumn Header="Description" Binding="{Binding Description}" /> -->
+                <DataGridTextColumn Header="Description" />
                 
                 <!-- Column for Importance -->
-                <DataGridTextColumn Header="Importance" Binding="{Binding Importance}" />
+                <!-- <DataGridTextColumn Header="Importance" Binding="{Binding Importance}" /> -->
+                <DataGridTextColumn Header="Importance" />
                 
                 <!-- Column for CreatedAt -->
-                <DataGridTextColumn Header="Created At" Binding="{Binding CreatedAt, StringFormat=d}" />
+                <!-- <DataGridTextColumn Header="Created At" Binding="{Binding CreatedAt, StringFormat=d}" /> -->
+                <DataGridTextColumn Header="Created At" />
                 
                 <!-- Column for Status -->
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                <!-- <DataGridTextColumn Header="Status" Binding="{Binding Status}" /> -->
+                <DataGridTextColumn Header="Status" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

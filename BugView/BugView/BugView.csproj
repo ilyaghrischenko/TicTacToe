@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Reference Include="TicTacToe.Domain">
-        <HintPath>..\..\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.dll</HintPath>
+      <Reference Include="TicTacToe.DTO">
+        <HintPath>..\..\TicTacToe\TicTacToe.DTO\bin\Debug\net8.0\TicTacToe.DTO.dll</HintPath>
       </Reference>
     </ItemGroup>
 
