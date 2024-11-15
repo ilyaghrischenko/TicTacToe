@@ -36,7 +36,6 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
                 description = bug.Description,
                 action = bug.Action.ToString(),
                 importance = bug.Importance.ToString(),
-                // status = bug.Status.ToString(),
                 status = (int)bug.Status,
                 createdAt = bug.CreatedAt
             };
@@ -58,7 +57,6 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
                 description = bug.Description,
                 action = bug.Action.ToString(),
                 importance = bug.Importance.ToString(),
-                // status = bug.Status.ToString(),
                 status = (int)bug.Status,
                 createdAt = bug.CreatedAt
             };
