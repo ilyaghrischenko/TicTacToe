@@ -30,6 +30,26 @@ public class FriendRepository(IDbContextFactory<TicTacToeContext> contextFactory
                 && x.FriendUserId == friendId);
     }
 
+    public async Task<bool> AddAsync(int userId, int friendId)
+    {
+        try
+        {
+            using var context = await _contextFactory.CreateDbContextAsync();
+            
+            var me = await context.Users.FirstAsync(u => u.Id == userId);
+            var user = await context.Users.FirstAsync(u => u.Id == friendId);
+            var newFriend = new Friend(me, user);
+            
+            await context.Friends.AddAsync(newFriend);
+            await context.SaveChangesAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+    }
+
     public async Task<List<User>?> GetUserFriendsAsync(int userId)
     {
         using var context = await _contextFactory.CreateDbContextAsync();
@@ -39,6 +59,7 @@ public class FriendRepository(IDbContextFactory<TicTacToeContext> contextFactory
             .Include(friend => friend.FriendUser.Statistic)
             .Where(x => x.UserId == userId)
             .ToListAsync();
+        
         var userFriends = new List<User>();
         friends.ForEach(friend =>
             userFriends.Add(friend.FriendUser));
@@ -50,11 +71,15 @@ public class FriendRepository(IDbContextFactory<TicTacToeContext> contextFactory
         try
         {
             using var context = await _contextFactory.CreateDbContextAsync();
-            await context.Friends.AddAsync(entity);
+            
+            var user1 = await context.Users.FirstAsync(u => u.Id == entity.User.Id);
+            var user2 = await context.Users.FirstAsync(u => u.Id == entity.FriendUser.Id);
+            await context.Friends.AddAsync(new Friend(user1, user2));
+            
             await context.SaveChangesAsync();
             return true;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             return false;
         }
@@ -66,7 +91,9 @@ public class FriendRepository(IDbContextFactory<TicTacToeContext> contextFactory
         {
             using var context = await _contextFactory.CreateDbContextAsync();
             context.Friends.Update(entity);
+            
             updateAction();
+            
             await context.SaveChangesAsync();
             return true;
         }

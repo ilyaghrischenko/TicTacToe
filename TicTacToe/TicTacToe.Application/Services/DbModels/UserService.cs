@@ -56,8 +56,8 @@ public class UserService(
             throw new ArgumentException("This user already has you as a friend");
         }
 
-        var addFriendToMeTask = _friendRepository.AddAsync(new Friend(me, friendToAdd));
-        var addFriendToUserTask = _friendRepository.AddAsync(new Friend(friendToAdd, me));
+        var addFriendToMeTask = _friendRepository.AddAsync(me.Id, friendToAdd.Id);
+        var addFriendToUserTask = _friendRepository.AddAsync(friendToAdd.Id, me.Id);
         
         await Task.WhenAll(addFriendToMeTask, addFriendToUserTask);
     }
