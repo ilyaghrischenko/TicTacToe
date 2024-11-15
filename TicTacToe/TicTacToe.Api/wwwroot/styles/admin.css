@@ -9,6 +9,8 @@ body {
     background-color: var(--main-color);
     color: white;
     display: flex;
+    flex-direction: column;
+    gap: 15px;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -29,7 +31,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-
 .panel-header {
     background-color: var(--main-color);
     padding: 10px;
@@ -40,6 +41,20 @@ body {
 .panel-header h3 {
     color: red;
     margin: 0;
+}
+
+.bugs-page-button {
+    padding: 3px 14px; /* Чуть увеличиваем размеры кнопки */
+    background-color: var(--button-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Увеличиваем размер шрифта на кнопке */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.bugs-page-button:hover {
+    background-color: var(--button-hover-color);
 }
 
 .panel-content {
@@ -115,6 +130,10 @@ ul {
     .panel {
         width: 100%;
         margin: 10px 0;
+    }
+    
+    .panel-header h3 {
+        font-size: 1em;
     }
     
     ul {
