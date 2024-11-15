@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.Enums;
@@ -31,11 +32,11 @@ public class UserService(
         
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
         if (friendToAdd == null)
         {
-            throw new KeyNotFoundException("New friend not found");
+            throw new EntityNotFoundException("New friend not found");
         }
         
         var meFriendsTask = _friendRepository.GetUserFriendsAsync(me.Id);
@@ -73,11 +74,11 @@ public class UserService(
 
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
         if (friendToRemove == null)
         {
-            throw new KeyNotFoundException("Friend not found");
+            throw new EntityNotFoundException("Friend not found");
         }
 
         var meFriendTask = _friendRepository.GetAsync(me.Id, friendToRemove.Id);
@@ -115,7 +116,7 @@ public class UserService(
         
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
 
         if (existingUser != null)
@@ -125,7 +126,7 @@ public class UserService(
         
         if (me.Login == newLogin)
         {
-            throw new ArgumentException("New login is the same as old");
+            throw new OldDataException("New login is the same as old");
         }
 
         await _userRepository.UpdateAsync(me, () =>
@@ -139,12 +140,12 @@ public class UserService(
         var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
 
         if (me.Password == newPassword)
         {
-            throw new ArgumentException("New password is the same as old");
+            throw new OldDataException("New password is the same as old");
         }
         
         await _userRepository.UpdateAsync(me, () =>
@@ -158,12 +159,12 @@ public class UserService(
         var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
 
         if (me.Email == newEmail)
         {
-            throw new ArgumentException("New email is the same as old");
+            throw new OldDataException("New email is the same as old");
         }
 
         await _userRepository.UpdateAsync(me, () =>
@@ -177,12 +178,12 @@ public class UserService(
         var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
         {
-            throw new KeyNotFoundException("You not found");
+            throw new EntityNotFoundException("You not found");
         }
         
         if (me.Avatar == changeAvatarModel.Avatar)
         {
-            throw new ArgumentException("New avatar is the same as old");
+            throw new OldDataException("New avatar is the same as old");
         }
         
         await _userRepository.UpdateAsync(me, () =>
@@ -196,11 +197,11 @@ public class UserService(
         var user = await _userRepository.GetAsync(loginModel.Login);
         if (user == null)
         {
-            throw new KeyNotFoundException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
         if (user.Login != loginModel.Login)
         {
-            throw new KeyNotFoundException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginModel.Password);
@@ -251,7 +252,7 @@ public class UserService(
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
-            throw new KeyNotFoundException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
         return user;
     }
@@ -272,7 +273,7 @@ public class UserService(
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
-            throw new KeyNotFoundException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
         var userFriends = await _friendRepository.GetUserFriendsAsync(user.Id) ?? new();
         return userFriends;

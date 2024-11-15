@@ -1,4 +1,5 @@
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.DbModels;
@@ -27,7 +28,7 @@ public class ReportService(
         var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
-            throw new Exception("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         var report = new Report(user, message);
@@ -46,7 +47,7 @@ public class ReportService(
         
         if (user == null)
         {
-            throw new Exception("User not found");
+            throw new EntityNotFoundException("User not found");
         }
         if (reports.IsNullOrEmpty())
         {

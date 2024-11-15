@@ -1,4 +1,5 @@
 using System.Net;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts.Middleware;
 
 namespace TicTacToe.Api.Middleware;
@@ -18,16 +19,28 @@ public class ExceptionMiddleware : IExceptionMiddleware
         {
             await _next(context);
         }
-        catch (KeyNotFoundException ex)
+        catch (EntityNotFoundException ex)
         {
             await HandleExceptionAsync(context,
                 HttpStatusCode.NotFound,
                 ex.Message);
         }
-        catch (ArgumentNullException ex)
+        catch (OldDataException ex)
         {
             await HandleExceptionAsync(context,
                 HttpStatusCode.BadRequest,
+                ex.Message);
+        }
+        catch (UserBlockedException ex)
+        {
+            await HandleExceptionAsync(context,
+                HttpStatusCode.Forbidden,
+                ex.Message);
+        }
+        catch (AuthenticationException ex)
+        {
+            await HandleExceptionAsync(context,
+                HttpStatusCode.Unauthorized,
                 ex.Message);
         }
         catch (ArgumentException ex)

@@ -1,3 +1,4 @@
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Domain.DbModels;
@@ -16,7 +17,7 @@ public class StatisticService(
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
-            throw new KeyNotFoundException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         var statistic = await _statisticRepository.GetAsync(user.Statistic.Id);

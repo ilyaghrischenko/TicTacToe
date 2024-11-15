@@ -2,6 +2,7 @@ using System.Net.PeerToPeer;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
@@ -49,7 +50,7 @@ public class AdminService(
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
-            throw new ArgumentNullException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         await _userRepository.UpdateAsync(user, () =>
@@ -72,7 +73,7 @@ public class AdminService(
 
         if (userIdClaim == null)
         {
-            throw new UnauthorizedAccessException("User is not authenticated");
+            throw new AuthenticationException("User is not authenticated");
         }
 
         return int.Parse(userIdClaim);
