@@ -19,6 +19,7 @@ public interface IBaseControllerService
                     Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
                 })
                 .ToList();
+            
             throw new ArgumentException(errors.ToString());
         }
     }
