@@ -9,6 +9,7 @@ public class Bug : BaseEntity
     public Importance Importance { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public BugStatus Status { get; set; } = BugStatus.Unresolved;
+    
     public Bug(TriggeredAction action, string description, Importance importance)
     {
         Action = action;

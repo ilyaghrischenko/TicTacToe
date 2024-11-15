@@ -28,18 +28,26 @@ namespace TicTacToe.Api.Controllers
         
         [Role(Role.Admin)]
         [HttpGet("getBugs")]
-        public async Task<List<object>> GetAllBugs()
+        public async Task<ActionResult<List<object>>> GetAllBugs()
         {
             var response = await _bugControllerService.GetAllBugsAsync();
-            return response;
+            return Ok(response);
         }
         
         [Role(Role.Admin)]
         [HttpPost("getBugsByStatus")]
-        public async Task<List<object>> GetBugsByStatus([FromBody] int status)
+        public async Task<ActionResult<List<object>>> GetBugsByStatus([FromBody] int status)
         {
             var response = await _bugControllerService.GetBugsByStatusAsync(status);
-            return response;
+            return Ok(response);
+        }
+
+        [Role(Role.Admin)]
+        [HttpPost("changeBugStatus")]
+        public async Task<ActionResult> ChangeBugStatus([FromBody] BugChangeStatusRequest request)
+        {
+            await _bugControllerService.ChangeBugStatusAsync(request);
+            return Ok();
         }
     }
 }

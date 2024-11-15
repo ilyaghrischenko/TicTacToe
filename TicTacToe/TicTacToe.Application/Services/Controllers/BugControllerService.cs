@@ -17,6 +17,12 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
         await _bugService.SendBugAsync(newBug);
     }
 
+    public async Task ChangeBugStatusAsync(BugChangeStatusRequest request)
+    {
+        var bugStatus = (BugStatus)request.Status;
+        await _bugService.ChangeBugStatusAsync(request.Id, bugStatus);
+    }
+
     public async Task<List<object>> GetAllBugsAsync()
     {
         var bugs = await _bugService.GetAllBugsAsync();
@@ -26,10 +32,12 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
         {
             var bugDto = new
             {
+                id = bug.Id,
                 description = bug.Description,
                 action = bug.Action.ToString(),
                 importance = bug.Importance.ToString(),
-                status = bug.Status.ToString(),
+                // status = bug.Status.ToString(),
+                status = (int)bug.Status,
                 createdAt = bug.CreatedAt
             };
             bugsDto.Add(bugDto);
@@ -46,10 +54,12 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
         {
             var bugDto = new
             {
+                id = bug.Id,
                 description = bug.Description,
                 action = bug.Action.ToString(),
                 importance = bug.Importance.ToString(),
-                status = bug.Status.ToString(),
+                // status = bug.Status.ToString(),
+                status = (int)bug.Status,
                 createdAt = bug.CreatedAt
             };
             bugsDto.Add(bugDto);

@@ -64,6 +64,11 @@ td {
     color: white;
 }
 
+.status-select {
+    background-color: var(--main-color);
+    color: white;
+}
+
 .description-column {
     width: 40%;
     white-space: normal;

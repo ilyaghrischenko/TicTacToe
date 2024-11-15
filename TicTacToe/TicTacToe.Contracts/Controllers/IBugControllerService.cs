@@ -9,6 +9,7 @@ namespace TicTacToe.Contracts.Controllers;
 public interface IBugControllerService : IBaseControllerService
 {
     Task SendBugAsync(BugModel bug);
+    Task ChangeBugStatusAsync(BugChangeStatusRequest request);
     Task<List<object>> GetAllBugsAsync();
     Task<List<object>> GetBugsByStatusAsync(int status);
 }
