@@ -27,7 +27,6 @@ async function getBugs() {
         console.error('Error during request:', error);
     }
 }
-
 async function getBugsByStatus(status) {
     const token = sessionStorage.getItem('token');
     if (!token) {
@@ -42,9 +41,7 @@ async function getBugsByStatus(status) {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                status: status
-            })
+            body: JSON.stringify(status)
         });
 
         if (!response.ok) {

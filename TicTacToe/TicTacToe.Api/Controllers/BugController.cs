@@ -36,7 +36,7 @@ namespace TicTacToe.Api.Controllers
         
         [Role(Role.Admin)]
         [HttpPost("getBugsByStatus")]
-        public async Task<List<object>> GetBugsByStatus(int status)
+        public async Task<List<object>> GetBugsByStatus([FromBody] int status)
         {
             var response = await _bugControllerService.GetBugsByStatusAsync(status);
             return response;
