@@ -1,6 +1,6 @@
 namespace TicTacToe.DTO.Models;
 
-public class ChangeLoginModel(string loginInput)
+public class ChangeLoginRequest(string loginInput)
 {
     public string LoginInput { get; set; } = loginInput;
 }

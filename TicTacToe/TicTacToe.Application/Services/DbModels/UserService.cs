@@ -173,7 +173,7 @@ public class UserService(
         });
     }
 
-    public async Task ChangeAvatarAsync(string userId, ChangeAvatarModel changeAvatarModel)
+    public async Task ChangeAvatarAsync(string userId, ChangeAvatarRequest changeAvatarRequest)
     {
         var me = await _userRepository.GetAsync(int.Parse(userId));
         if (me == null)
@@ -181,30 +181,30 @@ public class UserService(
             throw new EntityNotFoundException("You not found");
         }
         
-        if (me.Avatar == changeAvatarModel.Avatar)
+        if (me.Avatar == changeAvatarRequest.Avatar)
         {
             throw new OldDataException("New avatar is the same as old");
         }
         
         await _userRepository.UpdateAsync(me, () =>
         {
-            me.Avatar = changeAvatarModel.Avatar;
+            me.Avatar = changeAvatarRequest.Avatar;
         });
     }
 
-    public async Task<User> LoginAsync(LoginModel loginModel)
+    public async Task<User> LoginAsync(LogInRequest logInRequest)
     {
-        var user = await _userRepository.GetAsync(loginModel.Login);
+        var user = await _userRepository.GetAsync(logInRequest.Login);
         if (user == null)
         {
             throw new EntityNotFoundException("User not found");
         }
-        if (user.Login != loginModel.Login)
+        if (user.Login != logInRequest.Login)
         {
             throw new EntityNotFoundException("User not found");
         }
 
-        var result = _passwordHasher.VerifyHashedPassword(user, user.Password, loginModel.Password);
+        var result = _passwordHasher.VerifyHashedPassword(user, user.Password, logInRequest.Password);
         if (result == PasswordVerificationResult.Failed)
         {
             throw new ArgumentException("Wrong password");
@@ -213,9 +213,9 @@ public class UserService(
         return user;
     }
 
-    public async Task RegisterAsync(RegisterModel registerModel)
+    public async Task RegisterAsync(RegisterRequest registerRequest)
     {
-        var userTask = _userRepository.GetAsync(registerModel.Login);
+        var userTask = _userRepository.GetAsync(registerRequest.Login);
         var adminTask = _userRepository.GetAdminAsync();
         
         await Task.WhenAll(userTask, adminTask);
@@ -231,7 +231,7 @@ public class UserService(
         Role role = Role.User;
         if (admin != null)
         {
-            if (registerModel.Login == admin.Login && registerModel.Password == admin.Password)
+            if (registerRequest.Login == admin.Login && registerRequest.Password == admin.Password)
             {
                 role = Role.Admin;
             }
@@ -239,9 +239,9 @@ public class UserService(
 
         user = new User
         {
-            Login = registerModel.Login,
-            Email = registerModel.Email,
-            Password = _passwordHasher.HashPassword(null, registerModel.Password),
+            Login = registerRequest.Login,
+            Email = registerRequest.Email,
+            Password = _passwordHasher.HashPassword(null, registerRequest.Password),
             Role = role
         };
         await _userRepository.AddAsync(user);

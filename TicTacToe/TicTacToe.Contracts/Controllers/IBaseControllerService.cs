@@ -13,7 +13,7 @@ public interface IBaseControllerService
         {
             var errors = modelState
                 .Where(x => x.Value.Errors.Count > 0)
-                .Select(x => new ValidationError
+                .Select(x => new ValidationErrorResponse
                 {
                     Field = x.Key,
                     Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()

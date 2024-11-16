@@ -34,12 +34,12 @@ builder.Services.AddControllers()
 builder.Services.AddSignalR();
 
 #region Validators
-builder.Services.AddValidatorsFromAssemblyContaining<LoginModelValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailModelValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginModelValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordModelValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<BugModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<LogInRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeEmailRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeLoginRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangePasswordRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<SendBugRequestValidator>();
 #endregion
 
 #region Dependency Injection

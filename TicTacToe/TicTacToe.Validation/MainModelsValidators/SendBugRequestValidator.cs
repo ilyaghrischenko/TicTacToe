@@ -3,9 +3,9 @@ using TicTacToe.DTO.Models;
 
 namespace TicTacToe.Validation.MainModelsValidators;
 
-public class BugModelValidator : AbstractValidator<BugModel>
+public class SendBugRequestValidator : AbstractValidator<SendBugRequest>
 {
-    public BugModelValidator()
+    public SendBugRequestValidator()
     {
         RuleFor(x => x.Description)
             .NotEmpty().WithMessage("Description is required");

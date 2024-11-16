@@ -3,9 +3,9 @@ using TicTacToe.DTO.Models;
 
 namespace TicTacToe.Validation.SettingsModelsValidators;
 
-public class ChangePasswordModelValidator : AbstractValidator<ChangePasswordModel>
+public class ChangePasswordRequestValidator : AbstractValidator<ChangePasswordRequest>
 {
-    public ChangePasswordModelValidator()
+    public ChangePasswordRequestValidator()
     {
         RuleFor(x => x.PasswordInput)
             .NotEmpty().WithMessage("Password is required")

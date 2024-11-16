@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace TicTacToe.Validation.AccountModelsValidators;
 
-public class LoginModelValidator : AbstractValidator<LoginModel>
+public class LogInRequestValidator : AbstractValidator<LogInRequest>
 {
-    public LoginModelValidator()
+    public LogInRequestValidator()
     {
         RuleFor(x => x.Login)
             .NotEmpty().WithMessage("Login is required")

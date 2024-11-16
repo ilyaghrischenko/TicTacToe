@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TicTacToe.DTO.Models;
 
-public class RegisterModel(string email, string login, string password, string confirmPassword)
+public class RegisterRequest(string email, string login, string password, string confirmPassword)
 {
     public string Email { get; set; } = email;
     public string Login { get; set; } = login;

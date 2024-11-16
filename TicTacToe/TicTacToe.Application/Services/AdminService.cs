@@ -85,11 +85,11 @@ public class AdminService(
         await _userService.ChangeAvatarAsync(userId.ToString(), changeAvatarModel);
     }
 
-    public async Task<ChangeAvatarModel> GetChangeAvatarModelAsync(IFormFile avatar)
+    public async Task<ChangeAvatarRequest> GetChangeAvatarModelAsync(IFormFile avatar)
     {
         using var memoryStream = new MemoryStream();
         await avatar.CopyToAsync(memoryStream);
-        return new ChangeAvatarModel(memoryStream.ToArray());
+        return new ChangeAvatarRequest(memoryStream.ToArray());
     }
 
     public IFormFile ConvertPngToIFormFile(string filePath)

@@ -19,16 +19,16 @@ namespace TicTacToe.Api.Controllers
         
         [Role(Role.User)]
         [HttpPost("sendBug")]
-        public async Task<IActionResult> SendBug([FromBody] BugModel bug)
+        public async Task<IActionResult> SendBug([FromBody] SendBugRequest sendBug)
         {
             _bugControllerService.GetErrors(ModelState);
-            await _bugControllerService.SendBugAsync(bug);
+            await _bugControllerService.SendBugAsync(sendBug);
             return Ok();
         }
         
         [Role(Role.Admin)]
         [HttpGet("getBugs")]
-        public async Task<ActionResult<List<object>>> GetAllBugs()
+        public async Task<ActionResult<List<BugResponse>>> GetAllBugs()
         {
             var response = await _bugControllerService.GetAllBugsAsync();
             return Ok(response);
@@ -36,7 +36,7 @@ namespace TicTacToe.Api.Controllers
         
         [Role(Role.Admin)]
         [HttpPost("getBugsByStatus")]
-        public async Task<ActionResult<List<object>>> GetBugsByStatus([FromBody] int status)
+        public async Task<ActionResult<List<BugResponse>>> GetBugsByStatus([FromBody] int status)
         {
             var response = await _bugControllerService.GetBugsByStatusAsync(status);
             return Ok(response);
@@ -44,7 +44,7 @@ namespace TicTacToe.Api.Controllers
 
         [Role(Role.Admin)]
         [HttpPost("changeBugStatus")]
-        public async Task<ActionResult> ChangeBugStatus([FromBody] BugChangeStatusRequest request)
+        public async Task<IActionResult> ChangeBugStatus([FromBody] BugChangeStatusRequest request)
         {
             await _bugControllerService.ChangeBugStatusAsync(request);
             return Ok();
