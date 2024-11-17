@@ -1,4 +1,4 @@
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Requests;
 
 public class ChangeEmailRequest(string emailInput)
 {

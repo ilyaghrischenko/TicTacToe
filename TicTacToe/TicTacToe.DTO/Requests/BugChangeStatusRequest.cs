@@ -1,4 +1,4 @@
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Requests;
 
 public class BugChangeStatusRequest(int id, int status)
 {

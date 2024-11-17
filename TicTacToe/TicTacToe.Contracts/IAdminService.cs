@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Contracts;
 

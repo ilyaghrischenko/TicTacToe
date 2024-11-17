@@ -1,6 +1,6 @@
 using TicTacToe.Domain.Enums;
 
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Requests;
 
 public class SendBugRequest(TriggeredAction action, string description, Importance importance)
 {

@@ -1,10 +1,10 @@
-using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Api.Filters;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Domain.Enums;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Api.Controllers
 {

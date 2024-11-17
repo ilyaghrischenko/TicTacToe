@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Contracts.Controllers;
 

@@ -9,7 +9,7 @@ using TicTacToe.Contracts.Repositories;
 using TicTacToe.Contracts.TokenServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Application.Services;
 

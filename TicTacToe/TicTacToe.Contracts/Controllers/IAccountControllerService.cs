@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Contracts.Controllers;
 

@@ -6,7 +6,8 @@ using TicTacToe.Api.Filters;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
+using TicTacToe.DTO.Responses;
 
 namespace TicTacToe.Api.Controllers
 {

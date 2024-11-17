@@ -1,4 +1,4 @@
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Responses;
 
 public class BugResponse(int id, string description, string action, string importance, int status, DateTime dateTime)
 {

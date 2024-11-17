@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Requests;
 
 public class RegisterRequest(string email, string login, string password, string confirmPassword)
 {

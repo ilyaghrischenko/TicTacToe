@@ -1,5 +1,5 @@
 using FluentValidation;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Validation.SettingsModelsValidators;
 
