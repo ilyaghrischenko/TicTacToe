@@ -2,13 +2,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
+using TicTacToe.DTO.Responses;
 
 namespace TicTacToe.Contracts.Controllers;
 
 public interface IBugControllerService : IBaseControllerService
 {
-    Task SendBugAsync(BugModel bug);
-    Task<List<object>> GetAllBugsAsync();
-    Task<List<object>> GetBugsByStatusAsync(int status);
+    Task SendBugAsync(SendBugRequest sendBug);
+    Task ChangeBugStatusAsync(BugChangeStatusRequest request);
+    Task<List<BugResponse>> GetAllBugsAsync();
+    Task<List<BugResponse>> GetBugsByStatusAsync(int status);
 }

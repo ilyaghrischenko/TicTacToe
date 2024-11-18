@@ -1,11 +1,11 @@
 using FluentValidation;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Validation.SettingsModelsValidators;
 
-public class ChangeLoginModelValidator : AbstractValidator<ChangeLoginModel>
+public class ChangeLoginRequestValidator : AbstractValidator<ChangeLoginRequest>
 {
-    public ChangeLoginModelValidator()
+    public ChangeLoginRequestValidator()
     {
         RuleFor(x => x.LoginInput)
             .NotEmpty().WithMessage("This field is required")

@@ -1,14 +1,14 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Contracts.Controllers;
 
 public interface ISettingsControllerService : IBaseControllerService
 {
-    public Task ChangePasswordAsync(ChangePasswordModel changePasswordModel);
-    public Task ChangeEmailAsync(ChangeEmailModel changeEmailModel);
-    public Task ChangeLoginAsync(ChangeLoginModel changeLoginModel);
+    public Task ChangePasswordAsync(ChangePasswordRequest changePasswordRequest);
+    public Task ChangeEmailAsync(ChangeEmailRequest changeEmailRequest);
+    public Task ChangeLoginAsync(ChangeLoginRequest changeLoginRequest);
     public Task ChangeAvatarAsync(IFormFile avatar);
-    public Task<ChangeAvatarModel> GetChangeAvatarModelAsync(IFormFile avatar);
+    public Task<ChangeAvatarRequest> GetChangeAvatarModelAsync(IFormFile avatar);
 }

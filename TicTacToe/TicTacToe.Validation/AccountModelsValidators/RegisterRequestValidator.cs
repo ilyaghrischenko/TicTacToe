@@ -1,11 +1,11 @@
-using TicTacToe.DTO.Models;
 using FluentValidation;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Validation.AccountModelsValidators;
 
-public class RegisterModelValidator : AbstractValidator<RegisterModel>
+public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
 {
-    public RegisterModelValidator()
+    public RegisterRequestValidator()
     {
         RuleFor(x => x.Email)
             .NotEmpty().WithMessage("Email is required")

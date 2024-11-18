@@ -30,7 +30,7 @@ namespace TicTacToe.Application.SignalRHub
             }
             else
             {
-                throw new Exception("UserId is not valid");
+                throw new ArgumentException("UserId is not valid");
             }
 
             Console.WriteLine($"User: {userId}, ConnectionId: {Context.ConnectionId}");
@@ -179,7 +179,7 @@ namespace TicTacToe.Application.SignalRHub
             }
             else
             {
-                throw new Exception("Game not found");
+                throw new ArgumentException("Game not found");
             }
         }
 

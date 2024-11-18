@@ -1,6 +1,6 @@
-namespace TicTacToe.DTO.Models;
+namespace TicTacToe.DTO.Responses;
 
-public class ValidationError
+public class ValidationErrorResponse
 {
     public string Field { get; set; }
     public string[] Errors { get; set; }

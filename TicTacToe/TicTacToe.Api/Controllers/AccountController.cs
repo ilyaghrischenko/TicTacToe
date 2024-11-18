@@ -1,6 +1,6 @@
-using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Contracts.Controllers;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Api.Controllers
 {
@@ -11,18 +11,18 @@ namespace TicTacToe.Api.Controllers
         private readonly IAccountControllerService _accountControllerService = accountControllerService;
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
+        public async Task<IActionResult> Login([FromBody] LogInRequest logInRequest)
         {
             _accountControllerService.GetErrors(ModelState);
-            var response = await _accountControllerService.LoginAsync(loginModel);
+            var response = await _accountControllerService.LoginAsync(logInRequest);
             return Ok(response);
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
         {
             _accountControllerService.GetErrors(ModelState);
-            await _accountControllerService.RegisterAsync(registerModel);
+            await _accountControllerService.RegisterAsync(registerRequest);
             return Ok();
         }
     }

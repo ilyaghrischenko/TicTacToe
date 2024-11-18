@@ -18,6 +18,34 @@ body {
     width: 100%;
 }
 
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.buttons-container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
+    padding: 6px 14px; /* Чуть увеличиваем размеры кнопки */
+    background-color: var(--button-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Увеличиваем размер шрифта на кнопке */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn:hover {
+    background-color: var(--button-hover-color);
+}
+
 .table-container {
     width: 80%;
     margin: 20px;
@@ -50,6 +78,19 @@ td {
     color: white;
 }
 
+.status-select {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 5px;
+    width: 100%;
+}
+.status-select:hover {
+    background-color: var(--secondary-color);
+    color: red;
+}
+
 .description-column {
     width: 40%;
     white-space: normal;
@@ -58,4 +99,97 @@ td {
 
 .importance-column, .action-column, .date-column {
     width: 15%;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        justify-content: flex-start; /* Центрирование больше не требуется для мобильных устройств */
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .buttons-container {
+        flex-wrap: wrap;
+        gap: 10px; /* Уменьшение промежутка между кнопками */
+        justify-content: center; /* Центрируем кнопки */
+    }
+    
+    .buttons-container > div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 12px; /* Уменьшение размера текста для кнопок */
+        padding: 8px 12px;
+        width: 100%; /* Кнопки занимают всю ширину */
+        max-width: 200px; /* Максимальная ширина кнопки */
+        text-align: center;
+    }
+
+    .table-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: none; /* Убираем тени для упрощения интерфейса */
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+        border-collapse: collapse;
+    }
+
+    thead {
+        display: none; /* Убираем заголовок таблицы */
+    }
+
+    .bug-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background-color: var(--secondary-color);
+    }
+
+    td {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+    
+    .description-column {
+        width: 90%;
+    }
+
+    td::before {
+        content: attr(data-label); /* Динамически добавляем метку */
+        font-weight: bold;
+        color: red;
+        flex-shrink: 0; /* Предотвращаем сжатие метки */
+    }
+
+    .status-column {
+        justify-content: center;
+    }
+    
+    .status-select {
+        font-size: 12px;
+        padding: 5px;
+        width: 35%;
+    }
 }

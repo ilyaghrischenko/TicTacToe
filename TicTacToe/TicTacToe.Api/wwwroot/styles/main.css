@@ -249,12 +249,7 @@ h1 {
     background-color: var(--button-hover-color);
 }
 
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-}
+
 
 .right-panel {
     flex: 1;

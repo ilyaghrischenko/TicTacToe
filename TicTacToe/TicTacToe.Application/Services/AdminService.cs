@@ -2,13 +2,14 @@ using System.Net.PeerToPeer;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Contracts.Repositories;
 using TicTacToe.Contracts.TokenServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Application.Services;
 
@@ -49,7 +50,7 @@ public class AdminService(
         var user = await _userRepository.GetAsync(userId);
         if (user == null)
         {
-            throw new ArgumentNullException("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         await _userRepository.UpdateAsync(user, () =>
@@ -72,7 +73,7 @@ public class AdminService(
 
         if (userIdClaim == null)
         {
-            throw new UnauthorizedAccessException("User is not authenticated");
+            throw new AuthenticationException("User is not authenticated");
         }
 
         return int.Parse(userIdClaim);
@@ -84,11 +85,11 @@ public class AdminService(
         await _userService.ChangeAvatarAsync(userId.ToString(), changeAvatarModel);
     }
 
-    public async Task<ChangeAvatarModel> GetChangeAvatarModelAsync(IFormFile avatar)
+    public async Task<ChangeAvatarRequest> GetChangeAvatarModelAsync(IFormFile avatar)
     {
         using var memoryStream = new MemoryStream();
         await avatar.CopyToAsync(memoryStream);
-        return new ChangeAvatarModel(memoryStream.ToArray());
+        return new ChangeAvatarRequest(memoryStream.ToArray());
     }
 
     public IFormFile ConvertPngToIFormFile(string filePath)

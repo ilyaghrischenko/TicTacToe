@@ -1,11 +1,11 @@
 using FluentValidation;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Validation.SettingsModelsValidators;
 
-public class ChangeEmailModelValidator : AbstractValidator<ChangeEmailModel>
+public class ChangeEmailRequestValidator : AbstractValidator<ChangeEmailRequest>
 {
-    public ChangeEmailModelValidator()
+    public ChangeEmailRequestValidator()
     {
         RuleFor(x => x.EmailInput)
             .NotEmpty().WithMessage("Email is required")

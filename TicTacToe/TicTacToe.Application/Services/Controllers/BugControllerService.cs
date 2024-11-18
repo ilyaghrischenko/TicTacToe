@@ -3,7 +3,8 @@ using TicTacToe.Contracts.Controllers;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Domain.DbModels;
 using TicTacToe.Domain.Enums;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
+using TicTacToe.DTO.Responses;
 
 namespace TicTacToe.Application.Services.Controllers;
 
@@ -11,49 +12,53 @@ public class BugControllerService(IBugService bugService) : IBugControllerServic
 {
     private readonly IBugService _bugService = bugService;
     
-    public async Task SendBugAsync(BugModel bug)
+    public async Task SendBugAsync(SendBugRequest sendBug)
     {
-        var newBug = new Bug(bug.Action, bug.Description, bug.Importance);
+        var newBug = new Bug(sendBug.Action, sendBug.Description, sendBug.Importance);
         await _bugService.SendBugAsync(newBug);
     }
 
-    public async Task<List<object>> GetAllBugsAsync()
+    public async Task ChangeBugStatusAsync(BugChangeStatusRequest request)
+    {
+        var bugStatus = (BugStatus)request.Status;
+        await _bugService.ChangeBugStatusAsync(request.Id, bugStatus);
+    }
+
+    public async Task<List<BugResponse>> GetAllBugsAsync()
     {
         var bugs = await _bugService.GetAllBugsAsync();
         
-        var bugsDto = new List<object>();
+        var bugsResponse = new List<BugResponse>();
         foreach (var bug in bugs)
         {
-            var bugDto = new
-            {
-                description = bug.Description,
-                action = bug.Action.ToString(),
-                importance = bug.Importance.ToString(),
-                status = bug.Status.ToString(),
-                createdAt = bug.CreatedAt
-            };
-            bugsDto.Add(bugDto);
+            var item = new BugResponse(bug.Id,
+                bug.Description,
+                bug.Action.ToString(),
+                bug.Importance.ToString(),
+                (int)bug.Status,
+                bug.CreatedAt);
+            
+            bugsResponse.Add(item);
         }
-        return bugsDto;
+        return bugsResponse;
     }
     
-    public async Task<List<object>> GetBugsByStatusAsync(int status)
+    public async Task<List<BugResponse>> GetBugsByStatusAsync(int status)
     {
         var bugs = await _bugService.GetBugsByStatusAsync(status);
         
-        var bugsDto = new List<object>();
+        var bugsResponse = new List<BugResponse>();
         foreach (var bug in bugs)
         {
-            var bugDto = new
-            {
-                description = bug.Description,
-                action = bug.Action.ToString(),
-                importance = bug.Importance.ToString(),
-                status = bug.Status.ToString(),
-                createdAt = bug.CreatedAt
-            };
-            bugsDto.Add(bugDto);
+            var item = new BugResponse(bug.Id,
+                bug.Description,
+                bug.Action.ToString(),
+                bug.Importance.ToString(),
+                (int)bug.Status,
+                bug.CreatedAt);
+            
+            bugsResponse.Add(item);
         }
-        return bugsDto;
+        return bugsResponse;
     }
 }

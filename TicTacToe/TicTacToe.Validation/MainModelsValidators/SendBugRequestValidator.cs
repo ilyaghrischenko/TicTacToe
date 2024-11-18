@@ -1,11 +1,11 @@
 using FluentValidation;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Validation.MainModelsValidators;
 
-public class BugModelValidator : AbstractValidator<BugModel>
+public class SendBugRequestValidator : AbstractValidator<SendBugRequest>
 {
-    public BugModelValidator()
+    public SendBugRequestValidator()
     {
         RuleFor(x => x.Description)
             .NotEmpty().WithMessage("Description is required");
