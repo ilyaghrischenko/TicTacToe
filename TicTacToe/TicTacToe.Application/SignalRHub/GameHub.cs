@@ -63,16 +63,39 @@ namespace TicTacToe.Application.SignalRHub
             await Clients.All.SendAsync("ReceiveStatusUpdate", userId, isOnline);
         }
         
+        // public async Task SendInvitation(int toUserId)
+        // {
+        //     var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
+        //     var senderUserName = sender.Login;
+        //     var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
+        //     
+        //     if (toConnectionId != null)
+        //     {
+        //         await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName, sender.Id);
+        //     }
+        // }
+        
         public async Task SendInvitation(int toUserId)
         {
             var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
             var senderUserName = sender.Login;
             var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
+
+            // Проверяем, играет ли приглашенный пользователь (то есть указан ли он как PlayerX или PlayerO)
+            if (GameSessions.Any(gs => gs.Value.PlayerX == toUserId.ToString() || gs.Value.PlayerO == toUserId.ToString()))
+            {
+                // Если пользователь уже играет, уведомляем отправителя об этом
+                await Clients.Client(Context.ConnectionId).SendAsync("UserIsBusy");
+                return;
+            }
+
             if (toConnectionId != null)
             {
                 await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName, sender.Id);
             }
         }
+
+
 
         public async Task AcceptInvitation(int senderUserId)
         {

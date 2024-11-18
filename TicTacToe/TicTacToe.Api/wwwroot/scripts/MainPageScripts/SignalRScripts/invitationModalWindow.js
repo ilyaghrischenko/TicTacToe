@@ -61,4 +61,25 @@ function showInvitationModal(senderUserName, senderUserId) {
     }, 5000);
 }
 
+function showUserIsBusyModal() {
+    const modal = document.createElement('div');
+    modal.classList.add('invitation-modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('invitation-modal-content');
+
+    const message = document.createElement('p');
+    message.textContent = `$User is playing right now.`;
+
+    modalContent.appendChild(message);
+    modal.appendChild(modalContent);
+
+    const centralPanel = document.querySelector('.central-panel');
+    centralPanel.appendChild(modal);
+
+    setTimeout(() => {
+        modal.remove();
+    }, 3000);
+}
+
 

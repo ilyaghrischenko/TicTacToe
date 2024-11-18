@@ -9488,25 +9488,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\sannido\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\TicTacToe.Api.csproj",
+      "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\TicTacToe.Api.csproj",
       "projectName": "TicTacToe.Api",
-      "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\TicTacToe.Api.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Api\\obj\\",
+      "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\TicTacToe.Api.csproj",
+      "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
+      "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9521,17 +9516,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj": {
-              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj"
+            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj": {
+              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj"
             },
-            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj": {
-              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj"
+            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj": {
+              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Data\\TicTacToe.Data.csproj"
             },
-            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
-              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
+            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
             },
-            "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
-              "projectPath": "C:\\github\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj"
+            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj": {
+              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Validation\\TicTacToe.Validation.csproj"
             }
           }
         }

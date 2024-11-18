@@ -97,4 +97,9 @@ async function putOnEventHandlers() {
         });
         statusText.textContent = "Game finished";
     });
+
+    connection.on("UserIsBusy", function () {
+        showUserIsBusyModal(); 
+    });
+    
 }
