@@ -69,7 +69,7 @@ function showUserIsBusyModal() {
     modalContent.classList.add('invitation-modal-content');
 
     const message = document.createElement('p');
-    message.textContent = `$User is playing right now.`;
+    message.textContent = `User is playing right now.`;
 
     modalContent.appendChild(message);
     modal.appendChild(modalContent);

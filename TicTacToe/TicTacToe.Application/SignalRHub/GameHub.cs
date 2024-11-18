@@ -82,7 +82,7 @@ namespace TicTacToe.Application.SignalRHub
             var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
 
             // Проверяем, играет ли приглашенный пользователь (то есть указан ли он как PlayerX или PlayerO)
-            if (GameSessions.Any(gs => gs.Value.PlayerX == toUserId.ToString() || gs.Value.PlayerO == toUserId.ToString()))
+            if (GameSessions.Any(gs => gs.Value.PlayerX == toConnectionId || gs.Value.PlayerO == toConnectionId))
             {
                 // Если пользователь уже играет, уведомляем отправителя об этом
                 await Clients.Client(Context.ConnectionId).SendAsync("UserIsBusy");
