@@ -63,28 +63,14 @@ namespace TicTacToe.Application.SignalRHub
             await Clients.All.SendAsync("ReceiveStatusUpdate", userId, isOnline);
         }
         
-        // public async Task SendInvitation(int toUserId)
-        // {
-        //     var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
-        //     var senderUserName = sender.Login;
-        //     var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
-        //     
-        //     if (toConnectionId != null)
-        //     {
-        //         await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName, sender.Id);
-        //     }
-        // }
-        
         public async Task SendInvitation(int toUserId)
         {
             var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
             var senderUserName = sender.Login;
             var toConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == toUserId).Key;
 
-            // Проверяем, играет ли приглашенный пользователь (то есть указан ли он как PlayerX или PlayerO)
             if (GameSessions.Any(gs => gs.Value.PlayerX == toConnectionId || gs.Value.PlayerO == toConnectionId))
             {
-                // Если пользователь уже играет, уведомляем отправителя об этом
                 await Clients.Client(Context.ConnectionId).SendAsync("UserIsBusy");
                 return;
             }
@@ -109,15 +95,14 @@ namespace TicTacToe.Application.SignalRHub
                     GameId = gameId,
                     PlayerX = senderConnectionId,
                     PlayerO = Context.ConnectionId,
-                    CurrentTurn = senderConnectionId
                 };
                 GameSessions[gameId] = gameSession;
 
                 await Groups.AddToGroupAsync(senderConnectionId, gameId);
                 await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
 
-                await Clients.Client(senderConnectionId).SendAsync("StartGame", gameId, "X");
-                await Clients.Client(Context.ConnectionId).SendAsync("StartGame", gameId, "O");
+                await Clients.Client(senderConnectionId).SendAsync("StartGame", gameId, "X", gameSession.Board);
+                await Clients.Client(Context.ConnectionId).SendAsync("StartGame", gameId, "O", gameSession.Board);
             }
         }
 
@@ -132,18 +117,14 @@ namespace TicTacToe.Application.SignalRHub
             }
         }
 
-        public async Task MakeMove(string gameId, int cellIndex)
+        public async Task MakeMove(string gameId, int cellIndex, string symbol)
         {
             if (GameSessions.TryGetValue(gameId, out var gameSession))
             {
-                if (gameSession.CurrentTurn == Context.ConnectionId)
+                if (gameSession.CurrentTurn == symbol)
                 {
-                    gameSession.CurrentTurn = gameSession.PlayerX == Context.ConnectionId
-                        ? gameSession.PlayerO
-                        : gameSession.PlayerX;
-
-                    await Clients.Client(gameSession.CurrentTurn)
-                        .SendAsync("ReceiveMove", cellIndex, ConnectedUsers[Context.ConnectionId]);
+                    gameSession.WriteMove(cellIndex);
+                    await Clients.Group(gameSession.GameId).SendAsync("ReceiveMove", gameSession.Board, gameSession.CurrentTurn);
                 }
             }
         }

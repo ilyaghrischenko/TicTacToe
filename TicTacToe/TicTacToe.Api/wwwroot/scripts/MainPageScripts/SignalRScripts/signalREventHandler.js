@@ -23,7 +23,7 @@ async function putOnEventHandlers() {
         alert(`Your invitation is declined.`);
     });
 
-    await connection.on("StartGame", function (gameId, symbol) {
+    await connection.on("StartGame", function (gameId, symbol, boardArray) {
         const allButtons = document.querySelectorAll('.btn');
         allButtons.forEach(button => {
             if (button.innerText !== 'Restart') {
@@ -37,25 +37,23 @@ async function putOnEventHandlers() {
             renderReportModal();
         });
 
+        cells.forEach(cell => {
+            cell.textContent = '';
+            cell.classList.add('active');
+        });
+        
         currentGameId = gameId;
         playerSymbol = symbol;
-        gameActive = true;
         isMyTurn = symbol === 'X';
+        drawBoard(boardArray);
 
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
     });
 
-    connection.on("ReceiveMove", async function (cellIndex, playerId) {
-        const symbol = playerId === sessionStorage.getItem('userId') ? playerSymbol : (playerSymbol === 'X' ? 'O' : 'X');
-        board[cellIndex] = symbol;
-
-        const cell = document.querySelector(`.cell[data-index='${cellIndex}']`);
-        cell.textContent = symbol;
-        cell.classList.add('active');
-        isMyTurn = (playerId !== sessionStorage.getItem('userLogin'));
-        statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
-
-        await checkWinner();
+    connection.on("ReceiveMove", async function (boardArray, currentTurn) {
+        await drawBoard(boardArray);
+        statusText.textContent = playerSymbol === currentTurn ? "Your turn" : "Enemy's turn";
+        isMyTurn = playerSymbol === currentTurn;
     });
 
     connection.on("RestartGame", function () {
