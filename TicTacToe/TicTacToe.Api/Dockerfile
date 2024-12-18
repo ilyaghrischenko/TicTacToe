@@ -1,27 +1,36 @@
-﻿# 1. Используем официальный образ .NET SDK для сборки приложения
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+﻿# 1. Базовый образ для выполнения
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-
-# 2. Копируем все файлы решения и восстанавливаем зависимости
-COPY *.sln ./
-COPY TicTacToe.Api/*.csproj ./TicTacToe.Api/
-COPY TicTacToe.Application/*.csproj ./TicTacToe.Application/
-COPY TicTacToe.Contracts/*.csproj ./TicTacToe.Contracts/
-COPY TicTacToe.Data/*.csproj ./TicTacToe.Data/
-COPY TicTacToe.Domain/*.csproj ./TicTacToe.Domain/
-COPY TicTacToe.DTO/*.csproj ./TicTacToe.DTO/
-COPY TicTacToe.Validation/*.csproj ./TicTacToe.Validation/
-RUN dotnet restore
-
-# 3. Копируем остальной исходный код и публикуем проект API
-COPY . ./
-RUN dotnet publish TicTacToe.Api/TicTacToe.Api.csproj -c Release -o out
-
-# 4. Используем ASP.NET Runtime для запуска приложения
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
-
-# 5. Настройка порта и запуска приложения
 EXPOSE 8080
+
+# 2. Образ для сборки проекта
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Копируем все csproj-файлы и восстанавливаем зависимости
+COPY ["TicTacToe.Api/TicTacToe.Api.csproj", "TicTacToe.Api/"]
+COPY ["TicTacToe.Data/TicTacToe.Data.csproj", "TicTacToe.Data/"]
+COPY ["TicTacToe.Contracts/TicTacToe.Contracts.csproj", "TicTacToe.Contracts/"]
+COPY ["TicTacToe.Domain/TicTacToe.Domain.csproj", "TicTacToe.Domain/"]
+COPY ["TicTacToe.DTO/TicTacToe.DTO.csproj", "TicTacToe.DTO/"]
+COPY ["TicTacToe.Application/TicTacToe.Application.csproj", "TicTacToe.Application/"]
+COPY ["TicTacToe.Validation/TicTacToe.Validation.csproj", "TicTacToe.Validation/"]
+RUN dotnet restore "TicTacToe.Api/TicTacToe.Api.csproj"
+
+# Копируем исходники и выполняем сборку
+COPY . . 
+WORKDIR "/src/TicTacToe.Api"
+
+# Строим проект
+RUN dotnet build "TicTacToe.Api.csproj" -c Debug -o /app/build
+
+# 3. Публикация сборки
+FROM build AS publish
+RUN dotnet publish "TicTacToe.Api.csproj" -c Debug -o /app/publish /p:UseAppHost=false
+
+
+# 4. Финальный образ
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish . 
 ENTRYPOINT ["dotnet", "TicTacToe.Api.dll"]
