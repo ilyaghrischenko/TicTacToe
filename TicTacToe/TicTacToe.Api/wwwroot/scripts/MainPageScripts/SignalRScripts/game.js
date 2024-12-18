@@ -38,7 +38,9 @@ async function endGame(message) {
     gameActive = false;
     renderRestartButton();
     renderEndGameButton();
+    
     statusText.textContent = message;
+
 
     const token = sessionStorage.getItem('token');
     if (!token) {

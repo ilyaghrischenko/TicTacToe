@@ -570,8 +570,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6c6152q88n</Fingerprint>
-      <Integrity>qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=</Integrity>
+      <Fingerprint>5vpp0f7n7j</Fingerprint>
+      <Integrity>MRs2fPn2NdAA69dbuMnSQQ2Px/6KrkZZFgF8D2jzJLg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\game.js'))</OriginalItemSpec>
