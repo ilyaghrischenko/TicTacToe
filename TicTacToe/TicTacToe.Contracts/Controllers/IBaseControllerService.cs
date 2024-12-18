@@ -1,5 +1,7 @@
+using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using TicTacToe.DTO.Models;
+using TicTacToe.DTO.Responses;
 
 namespace TicTacToe.Contracts.Controllers;
 
@@ -11,12 +13,13 @@ public interface IBaseControllerService
         {
             var errors = modelState
                 .Where(x => x.Value.Errors.Count > 0)
-                .Select(x => new ValidationError
+                .Select(x => new ValidationErrorResponse
                 {
                     Field = x.Key,
                     Errors = x.Value.Errors.Select(e => e.ErrorMessage).ToArray()
                 })
                 .ToList();
+            
             throw new ArgumentException(errors.ToString());
         }
     }

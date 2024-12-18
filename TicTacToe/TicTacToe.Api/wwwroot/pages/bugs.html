@@ -10,16 +10,21 @@
     <link rel="stylesheet" href="../styles/sharedStyles/colors.css">
     <link rel="stylesheet" href="../styles/bugs.css">
 </head>
+
 <body>
 <div class="container">
     <div class="buttons-container">
-        <button class="btn" id="getBugsButton">Get Bugs</button>
-        <button class="btn" id="getUnresolvedBugsButton">Get Unresolved Bugs</button>
-        <button class="btn" id="getInProgressBugsButton">Get In Progress Bugs</button>
-        <button class="btn" id="getResolvedBugsButton">Get Resolved Bugs</button>
+        <div>
+            <button class="btn" id="getBugsButton">Get All Bugs</button>
+            <button class="btn" id="getUnresolvedBugsButton">Unresolved Bugs</button>
+        </div>
+        
+        <div>
+            <button class="btn" id="getInProgressBugsButton">In Progress Bugs</button>
+            <button class="btn" id="getResolvedBugsButton">Resolved Bugs</button>
+        </div>
     </div>
 
-<!--<div class="scroll">-->
     <div class="table-container">
         <table>
             <thead>
@@ -31,13 +36,11 @@
                 <th class="date-column">Created Date</th>
             </tr>
             </thead>
-
             <tbody id="bugsTableBody">
-
+                
             </tbody>
         </table>
     </div>
-<!--</div>-->
 </div>
 
 <script src="../scripts/AdminPageScripts/bugs.js"></script>

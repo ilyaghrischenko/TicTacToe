@@ -9,35 +9,16 @@ let currentGameId = null;
 let playerSymbol = null;
 let isMyTurn = false;
 
-const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-];
 
 function handleCellClick(event) {
-    if (!gameActive || !isMyTurn) return;
-
+    if (gameActive === false) return;
     const cell = event.target;
     const cellIndex = cell.getAttribute('data-index');
+    if (cell.textContent !== '') return;
 
-    if (board[cellIndex] !== '') return;
-
-    board[cellIndex] = playerSymbol;
-    cell.textContent = playerSymbol;
-    cell.classList.add('active');
-
-    connection.invoke("MakeMove", currentGameId, parseInt(cellIndex))
+    connection.invoke("MakeMove", currentGameId, parseInt(cellIndex), playerSymbol)
         .then(async () => {
-            if (await checkWinner()) {
-                isMyTurn = !isMyTurn;
-                return;
-            }
+            isMyTurn = !isMyTurn;
             endTurn();
         })
         .catch((err) => {
@@ -49,44 +30,21 @@ function handleCellClick(event) {
 
 function endTurn() {
     isMyTurn = false;
-    statusText.textContent = "Enemy's turn";
-}
-
-async function checkWinner() {
-    for (let condition of winningConditions) {
-        const [a, b, c] = condition;
-        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            if (isMyTurn && board[a] === playerSymbol) {
-                connection.invoke("WriteStatistic", currentGameId, board[a])
-                    .catch(function (err) {
-                        console.error("Error in write statistic:", err.toString());
-                    });
-            }
-
-            await endGame(`Player with symbol ${board[a]} won`);
-            return true;
-        }
-    }
-
-    if (!board.includes('')) {
-        await endGame('Draw');
-        return true;
-    }
-
-    return false;
+    if (gameActive)
+        statusText.textContent = "Enemy's turn";
 }
 
 async function endGame(message) {
+    gameActive = false;
     renderRestartButton();
     renderEndGameButton();
-    gameActive = false;
     statusText.textContent = message;
 
     const token = sessionStorage.getItem('token');
     if (!token) {
         window.location.href = '../pages/auth.html';
-    }    
-    
+    }
+
     const response = await fetch('/api/User/getUserStatistics', {
         method: 'GET',
         headers: {
@@ -101,5 +59,27 @@ async function endGame(message) {
         document.getElementById('losses').textContent = data.losses;
     }
 }
+
+async function drawBoard(boardArray) {
+    // Проверяем, что массив корректный
+    if (!Array.isArray(boardArray) || boardArray.length !== 9) {
+        console.error("Invalid board array:", boardArray);
+        return;
+    }
+
+    // Обновляем каждую ячейку игрового поля
+    boardArray.forEach((symbol, index) => {
+        const cell = document.querySelector(`[data-index="${index}"]`); // Находим ячейку по индексу
+        if (cell) {
+            cell.textContent = symbol || ''; // Устанавливаем символ (X, O или пустая строка)
+            if (symbol) {
+                cell.classList.add('active'); // Добавляем класс, если ячейка заполнена
+            } else {
+                cell.classList.remove('active'); // Убираем класс, если ячейка пуста
+            }
+        }
+    });
+}
+
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));

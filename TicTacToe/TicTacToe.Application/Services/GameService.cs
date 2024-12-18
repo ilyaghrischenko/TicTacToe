@@ -1,3 +1,4 @@
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts;
 using TicTacToe.Contracts.Repositories;
 
@@ -12,7 +13,7 @@ public class GameService(IUserRepository userRepository) : IGameService
         var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
-            throw new Exception("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         await _userRepository.UpdateAsync(user, () =>
@@ -26,7 +27,7 @@ public class GameService(IUserRepository userRepository) : IGameService
         var user = await _userRepository.GetAsync(id);
         if (user == null)
         {
-            throw new Exception("User not found");
+            throw new EntityNotFoundException("User not found");
         }
 
         await _userRepository.UpdateAsync(user, () =>

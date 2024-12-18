@@ -28,7 +28,13 @@ public class AdminControllerService(
 
     public async Task BlockUserAsync(int userId)
     {
-        var token = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+        var token = _httpContextAccessor
+            .HttpContext
+            .Request
+            .Headers["Authorization"]
+            .FirstOrDefault()?
+            .Split(" ")
+            .Last();
         if (string.IsNullOrEmpty(token))
         {
             throw new UnauthorizedAccessException("Token is not provided");

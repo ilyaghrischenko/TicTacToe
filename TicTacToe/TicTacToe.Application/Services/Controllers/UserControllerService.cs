@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using TicTacToe.Domain.DbModels;
 using Microsoft.AspNetCore.Http;
+using TicTacToe.Application.Exceptions;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Contracts.DbModelsServices;
 using TicTacToe.Domain.Enums;
@@ -22,7 +23,7 @@ public class UserControllerService(
         var user = await _userService.GetUserByIdAsync(userId);
         if (user.Role == Role.Blocked)
         {
-            throw new UnauthorizedAccessException("User is blocked");
+            throw new UserBlockedException("User is blocked");
         }
 
         return user;
@@ -56,7 +57,7 @@ public class UserControllerService(
 
         if (userIdClaim == null)
         {
-            throw new UnauthorizedAccessException("User is not authenticated");
+            throw new AuthenticationException("User is not authenticated");
         }
 
         return int.Parse(userIdClaim);

@@ -4,32 +4,62 @@ using TicTacToe.Contracts.Repositories;
 
 namespace TicTacToe.Data.Repositories;
 
-public class FriendRepository(TicTacToeContext context) : IFriendRepository
+public class FriendRepository(IDbContextFactory<TicTacToeContext> contextFactory) : IFriendRepository
 {
-    private readonly TicTacToeContext _context = context;
+    private readonly IDbContextFactory<TicTacToeContext> _contextFactory = contextFactory;
     
     public async Task<List<Friend>?> GetAllAsync()
     {
-        return await _context.Friends.ToListAsync();
+        using var context = await _contextFactory.CreateDbContextAsync();
+        var friends = await context.Friends.ToListAsync();
+        return friends;
     }
 
     public async Task<Friend?> GetAsync(int id)
     {
-        return await _context.Friends.FindAsync(id);
+        using var context = await _contextFactory.CreateDbContextAsync();
+        return await context.Friends.FindAsync(id);
     }
 
     public async Task<Friend?> GetAsync(int userId, int friendId)
     {
-        return await _context.Friends.FirstAsync(x => x.UserId == userId && x.FriendUserId == friendId);
+        using var context = await _contextFactory.CreateDbContextAsync();
+        return await context.Friends
+            .FirstAsync(x =>
+                x.UserId == userId
+                && x.FriendUserId == friendId);
+    }
+
+    public async Task<bool> AddAsync(int userId, int friendId)
+    {
+        try
+        {
+            using var context = await _contextFactory.CreateDbContextAsync();
+            
+            var me = await context.Users.FirstAsync(u => u.Id == userId);
+            var user = await context.Users.FirstAsync(u => u.Id == friendId);
+            var newFriend = new Friend(me, user);
+            
+            await context.Friends.AddAsync(newFriend);
+            await context.SaveChangesAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
     }
 
     public async Task<List<User>?> GetUserFriendsAsync(int userId)
     {
-        var friends = await _context.Friends
+        using var context = await _contextFactory.CreateDbContextAsync();
+        
+        var friends = await context.Friends
             .Include(friend => friend.FriendUser)
             .Include(friend => friend.FriendUser.Statistic)
             .Where(x => x.UserId == userId)
             .ToListAsync();
+        
         var userFriends = new List<User>();
         friends.ForEach(friend =>
             userFriends.Add(friend.FriendUser));
@@ -40,11 +70,16 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
     {
         try
         {
-            await _context.Friends.AddAsync(entity);
-            await _context.SaveChangesAsync();
+            using var context = await _contextFactory.CreateDbContextAsync();
+            
+            var user1 = await context.Users.FirstAsync(u => u.Id == entity.User.Id);
+            var user2 = await context.Users.FirstAsync(u => u.Id == entity.FriendUser.Id);
+            await context.Friends.AddAsync(new Friend(user1, user2));
+            
+            await context.SaveChangesAsync();
             return true;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             return false;
         }
@@ -54,9 +89,12 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
     {
         try
         {
-            _context.Friends.Update(entity);
+            using var context = await _contextFactory.CreateDbContextAsync();
+            context.Friends.Update(entity);
+            
             updateAction();
-            await _context.SaveChangesAsync();
+            
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -69,9 +107,10 @@ public class FriendRepository(TicTacToeContext context) : IFriendRepository
     {
         try
         {
+            using var context = await _contextFactory.CreateDbContextAsync();
             var friend = await context.Friends.FindAsync(id);
-            _context.Friends.Remove(friend);
-            await _context.SaveChangesAsync();
+            context.Friends.Remove(friend);
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)

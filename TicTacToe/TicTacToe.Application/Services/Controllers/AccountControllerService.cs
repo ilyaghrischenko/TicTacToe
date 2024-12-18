@@ -1,12 +1,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using TicTacToe.Domain.DbModels;
-using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using TicTacToe.Application.AutentificationOptions;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Contracts.DbModelsServices;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Application.Services.Controllers;
 
@@ -17,9 +17,9 @@ public class AccountControllerService(
     private readonly IUserService _userService = userService;
     private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
 
-    public async Task<object> LoginAsync(LoginModel loginModel)
+    public async Task<object> LoginAsync(LogInRequest logInRequest)
     {
-        var user = await _userService.LoginAsync(loginModel);
+        var user = await _userService.LoginAsync(logInRequest);
 
         var identity = GetIdentity(user);
         var token = GetToken(identity);
@@ -33,9 +33,9 @@ public class AccountControllerService(
         return response;
     }
 
-    public async Task RegisterAsync(RegisterModel registerModel)
+    public async Task RegisterAsync(RegisterRequest registerRequest)
     {
-        await _userService.RegisterAsync(registerModel);
+        await _userService.RegisterAsync(registerRequest);
     }
 
     public ClaimsIdentity GetIdentity(User user)

@@ -24,3 +24,16 @@ D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\refint\TicTacToe.Domain.dll
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.pdb
 D:\ForEdu\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\ref\TicTacToe.Domain.dll
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.deps.json
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.dll
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\bin\Debug\net8.0\TicTacToe.Domain.pdb
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.csproj.AssemblyReference.cache
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.AssemblyInfoInputs.cache
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.AssemblyInfo.cs
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.csproj.CoreCompileInputs.cache
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.sourcelink.json
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.dll
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\refint\TicTacToe.Domain.dll
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.pdb
+D:\ForProgramming\repos\MyProjects\CSharp\TicTacToe\TicTacToe\TicTacToe.Domain\obj\Debug\net8.0\ref\TicTacToe.Domain.dll

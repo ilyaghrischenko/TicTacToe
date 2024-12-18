@@ -13,7 +13,7 @@ async function putOnEventHandlers() {
             }
         }
     });
-    
+
     await connection.on("ReceiveInvitation", function (senderUserName, senderUserId) {
         console.log("ReceiveInvitation");
         showInvitationModal(senderUserName, senderUserId);
@@ -23,7 +23,7 @@ async function putOnEventHandlers() {
         alert(`Your invitation is declined.`);
     });
 
-    await connection.on("StartGame", function (gameId, symbol) {
+    await connection.on("StartGame", function (gameId, symbol, boardArray) {
         const allButtons = document.querySelectorAll('.btn');
         allButtons.forEach(button => {
             if (button.innerText !== 'Restart') {
@@ -37,35 +37,37 @@ async function putOnEventHandlers() {
             renderReportModal();
         });
 
+        cells.forEach(cell => {
+            cell.textContent = '';
+            cell.classList.add('active');
+        });
+
         currentGameId = gameId;
         playerSymbol = symbol;
         gameActive = true;
         isMyTurn = symbol === 'X';
+        drawBoard(boardArray);
 
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
     });
 
-    connection.on("ReceiveMove", async function (cellIndex, playerId) {
-        const symbol = playerId === sessionStorage.getItem('userId') ? playerSymbol : (playerSymbol === 'X' ? 'O' : 'X');
-        board[cellIndex] = symbol;
-
-        const cell = document.querySelector(`.cell[data-index='${cellIndex}']`);
-        cell.textContent = symbol;
-        cell.classList.add('active');
-        isMyTurn = (playerId !== sessionStorage.getItem('userLogin'));
-        statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
-
-        await checkWinner();
+    connection.on("ReceiveMove", async function (boardArray, currentTurn) {
+        await drawBoard(boardArray);
+        if (gameActive) {
+            statusText.textContent = playerSymbol === currentTurn ? "Your turn" : "Enemy's turn";
+        }
+            isMyTurn = playerSymbol === currentTurn;
     });
 
-    connection.on("RestartGame", function () {
+    connection.on("ReceiveWin", function (winner) {
+        endGame(winner);
+    });
+
+    connection.on("RestartGame", async function (boardArray) {
         gameActive = true;
-        board.fill('');
+        await drawBoard(boardArray);
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
-        cells.forEach(cell => {
-            cell.textContent = '';
-            cell.classList.remove('active');
-        });
+        
         
         document.getElementById('endGameBtn').remove();
         document.getElementById('restartBtn').remove();
@@ -97,4 +99,9 @@ async function putOnEventHandlers() {
         });
         statusText.textContent = "Game finished";
     });
+
+    connection.on("UserIsBusy", function () {
+        showUserIsBusyModal();
+    });
+
 }

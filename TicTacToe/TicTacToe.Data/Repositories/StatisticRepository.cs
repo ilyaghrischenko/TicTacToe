@@ -4,26 +4,29 @@ using TicTacToe.Contracts.Repositories;
 
 namespace TicTacToe.Data.Repositories;
 
-public class StatisticRepository(TicTacToeContext context) : IRepository<Statistic>
+public class StatisticRepository(IDbContextFactory<TicTacToeContext> contextFactory) : IRepository<Statistic>
 {
-    private readonly TicTacToeContext _context = context;
+    private readonly IDbContextFactory<TicTacToeContext> _contextFactory = contextFactory;
     
     public async Task<List<Statistic>?> GetAllAsync()
     {
-        return await _context.Statistics.ToListAsync();
+        using var context = await _contextFactory.CreateDbContextAsync();
+        return await context.Statistics.ToListAsync();
     }
 
     public async Task<Statistic?> GetAsync(int id)
     {
-        return await _context.Statistics.FindAsync(id);
+        using var context = await _contextFactory.CreateDbContextAsync();
+        return await context.Statistics.FindAsync(id);
     }
 
     public async Task<bool> AddAsync(Statistic statistic)
     {
         try
         {
-            await _context.Statistics.AddAsync(statistic);
-            await _context.SaveChangesAsync();
+            using var context = await _contextFactory.CreateDbContextAsync();
+            await context.Statistics.AddAsync(statistic);
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -36,9 +39,11 @@ public class StatisticRepository(TicTacToeContext context) : IRepository<Statist
     {
         try
         {
-            var statistic = await _context.Statistics.FindAsync(id);
-            _context.Statistics.Remove(statistic);
-            await _context.SaveChangesAsync();
+            using var context = await _contextFactory.CreateDbContextAsync();
+            
+            var statistic = await context.Statistics.FindAsync(id);
+            context.Statistics.Remove(statistic);
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)
@@ -51,9 +56,11 @@ public class StatisticRepository(TicTacToeContext context) : IRepository<Statist
     {
         try
         {
-            _context.Statistics.Update(statistic);
+            using var context = await _contextFactory.CreateDbContextAsync();
+
+            context.Statistics.Update(statistic);
             updateAction();
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return true;
         }
         catch (Exception)

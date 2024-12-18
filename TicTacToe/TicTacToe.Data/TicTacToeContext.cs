@@ -6,23 +6,8 @@ namespace TicTacToe.Data
 {
     public class TicTacToeContext : DbContext
     {
-        public TicTacToeContext() { }
-
-        public TicTacToeContext(DbContextOptions<TicTacToeContext> options, IConfiguration configuration)
-            : base(options)
-        {
-            _configuration = configuration;
-        }
-
-        private readonly IConfiguration _configuration;
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            // => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("TicTacToeContext"));
-            => optionsBuilder.UseSqlServer(
-                "Data Source=sql.bsite.net\\MSSQL2016;Initial Catalog=iluhahr_TicTacToe;User ID=iluhahr_TicTacToe;Password=1234; Trust Server Certificate=True;");
-            // => optionsBuilder.UseSqlServer(
-            //     "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TicTacToe;Integrated Security=True;TrustServerCertificate=True;");
-        
+        public TicTacToeContext(DbContextOptions<TicTacToeContext> options)
+            : base(options) {}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Friend>()
@@ -40,7 +25,6 @@ namespace TicTacToe.Data
                 .HasForeignKey(f => f.FriendUserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
-
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Friend> Friends { get; set; }
         public virtual DbSet<Statistic> Statistics { get; set; }

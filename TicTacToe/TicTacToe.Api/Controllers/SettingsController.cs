@@ -1,10 +1,10 @@
-using TicTacToe.DTO.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Api.Filters;
 using TicTacToe.Contracts.Controllers;
 using TicTacToe.Domain.Enums;
+using TicTacToe.DTO.Requests;
 
 namespace TicTacToe.Api.Controllers
 {
@@ -25,26 +25,26 @@ namespace TicTacToe.Api.Controllers
         }
 
         [HttpPost("changePassword")]
-        public async Task<IActionResult> ChangePassword(ChangePasswordModel changePasswordModel)
+        public async Task<IActionResult> ChangePassword(ChangePasswordRequest changePasswordRequest)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangePasswordAsync(changePasswordModel);
+            await _settingsControllerService.ChangePasswordAsync(changePasswordRequest);
             return Ok();
         }
 
         [HttpPost("changeEmail")]
-        public async Task<IActionResult> ChangeEmail(ChangeEmailModel changeEmailModel)
+        public async Task<IActionResult> ChangeEmail(ChangeEmailRequest changeEmailRequest)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangeEmailAsync(changeEmailModel);
+            await _settingsControllerService.ChangeEmailAsync(changeEmailRequest);
             return Ok();
         }
 
         [HttpPost("changeLogin")]
-        public async Task<IActionResult> ChangeLogin(ChangeLoginModel changeLoginModel)
+        public async Task<IActionResult> ChangeLogin(ChangeLoginRequest changeLoginRequest)
         {
             _settingsControllerService.GetErrors(ModelState);
-            await _settingsControllerService.ChangeLoginAsync(changeLoginModel);
+            await _settingsControllerService.ChangeLoginAsync(changeLoginRequest);
             return Ok();
         }
     }
