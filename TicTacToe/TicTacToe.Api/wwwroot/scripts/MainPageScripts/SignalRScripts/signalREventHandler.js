@@ -59,8 +59,8 @@ async function putOnEventHandlers() {
             isMyTurn = playerSymbol === currentTurn;
     });
 
-    connection.on("ReceiveWin", function (winner) {
-        endGame(winner);
+    connection.on("ReceiveGameResult", function (result) {
+        endGame(result);
     });
 
     connection.on("RestartGame", async function (boardArray) {

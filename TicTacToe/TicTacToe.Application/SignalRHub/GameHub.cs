@@ -130,9 +130,14 @@ namespace TicTacToe.Application.SignalRHub
                     if (moveResult != "Draw" && moveResult != "NoWinner")
                     {
                         gameStatus = false;
-                        await Clients.Group(gameSession.GameId).SendAsync("ReceiveWin", moveResult);
+                        var message = "Player with \"" + moveResult + "\" wins";
+                        await Clients.Group(gameSession.GameId).SendAsync("ReceiveGameResult", message);
                         await WriteStatistic(gameId, moveResult);
                     }
+                    
+                    if (moveResult == "Draw")
+                        await Clients.Group(gameSession.GameId).SendAsync("ReceiveGameResult", moveResult);
+
                     
                     await Clients.Group(gameSession.GameId)
                         .SendAsync("ReceiveMove", gameSession.Board, gameSession.CurrentTurn, gameStatus);
