@@ -20,20 +20,23 @@ public class GameSession
         [2, 4, 6]
     ];
 
-    public string CheckWinner(string[] board)
+    public  string CheckWinner()
     {
         foreach (var condition in WinningConditions)
         {
-            if (!string.IsNullOrEmpty(board[condition[0]]) &&
-                board[condition[0]] == board[condition[1]] &&
-                board[condition[0]] == board[condition[2]])
+            string currentSymbol = Board[condition[0]];
+            if (!string.IsNullOrEmpty(currentSymbol) &&
+                currentSymbol == Board[condition[1]] &&
+                currentSymbol == Board[condition[2]])
             {
-                return board[condition[0]]; // Возвращаем победивший символ
+                return currentSymbol; // Return the winning symbol (e.g., "X" or "O")
             }
         }
-
-        return board.All(cell => !string.IsNullOrEmpty(cell)) ? "Draw" : null;
+        // Check for a draw
+        bool isBoardFull = Board.All(cell => !string.IsNullOrEmpty(cell));
+        return isBoardFull ? "Draw" : "NoWinner";
     }
+
 
     public void WriteMove(int cell)
     {

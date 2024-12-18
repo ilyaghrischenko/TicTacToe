@@ -14,7 +14,7 @@ namespace TicTacToe.Application.SignalRHub
         private readonly IGameService _gameService = gameService;
         private readonly IReportService _reportService = reportService;
         private readonly IUserRepository _userRepository = userRepository;
-        
+
         private static ConcurrentDictionary<int, bool> OnlineStatus = new();
         private static ConcurrentDictionary<string, int> ConnectedUsers = new();
         private static ConcurrentDictionary<string, GameSession> GameSessions = new();
@@ -39,12 +39,13 @@ namespace TicTacToe.Application.SignalRHub
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
+            await EndGameOnDisconnect(Context.ConnectionId);
+            
             if (ConnectedUsers.TryRemove(Context.ConnectionId, out var userId))
             {
                 OnlineStatus[userId] = false;
             }
-            
-            await EndGameOnDisconnect(Context.ConnectionId);
+
             await NotifyStatusChange(userId, false);
             await base.OnDisconnectedAsync(exception);
         }
@@ -57,12 +58,12 @@ namespace TicTacToe.Application.SignalRHub
             );
             return Task.FromResult(friendsStatus);
         }
-        
+
         public async Task NotifyStatusChange(int userId, bool isOnline)
         {
             await Clients.All.SendAsync("ReceiveStatusUpdate", userId, isOnline);
         }
-        
+
         public async Task SendInvitation(int toUserId)
         {
             var sender = await _userRepository.GetAsync(ConnectedUsers[Context.ConnectionId]);
@@ -80,7 +81,6 @@ namespace TicTacToe.Application.SignalRHub
                 await Clients.Client(toConnectionId).SendAsync("ReceiveInvitation", senderUserName, sender.Id);
             }
         }
-
 
 
         public async Task AcceptInvitation(int senderUserId)
@@ -108,7 +108,7 @@ namespace TicTacToe.Application.SignalRHub
 
         public async Task DeclineInvitation(string senderUserLogin)
         {
-            var senderUserId = (await  _userRepository.GetAsync(senderUserLogin)).Id;
+            var senderUserId = (await _userRepository.GetAsync(senderUserLogin)).Id;
             var senderConnectionId = ConnectedUsers.FirstOrDefault(u => u.Value == senderUserId).Key;
             if (senderConnectionId != null)
             {
@@ -124,7 +124,18 @@ namespace TicTacToe.Application.SignalRHub
                 if (gameSession.CurrentTurn == symbol)
                 {
                     gameSession.WriteMove(cellIndex);
-                    await Clients.Group(gameSession.GameId).SendAsync("ReceiveMove", gameSession.Board, gameSession.CurrentTurn);
+                    var moveResult = gameSession.CheckWinner();
+                    bool gameStatus = true;
+                    
+                    if (moveResult != "Draw" && moveResult != "NoWinner")
+                    {
+                        gameStatus = false;
+                        await Clients.Group(gameSession.GameId).SendAsync("ReceiveWin", moveResult);
+                        await WriteStatistic(gameId, moveResult);
+                    }
+                    
+                    await Clients.Group(gameSession.GameId)
+                        .SendAsync("ReceiveMove", gameSession.Board, gameSession.CurrentTurn, gameStatus);
                 }
             }
         }
@@ -146,7 +157,11 @@ namespace TicTacToe.Application.SignalRHub
 
         public async Task RestartGame(string gameId)
         {
-            await Clients.Group(gameId).SendAsync("RestartGame");
+            if (GameSessions.TryGetValue(gameId, out var gameSession))
+            {
+                gameSession.Reset();
+                await Clients.Group(gameId).SendAsync("RestartGame", gameSession.Board);
+            }
         }
 
         public async Task EndGame(string gameId)
@@ -186,7 +201,7 @@ namespace TicTacToe.Application.SignalRHub
                 }
             }
         }
-        
+
         private async Task EndGameOnDisconnect(string connectionId)
         {
             var gameSession = GameSessions.Values.FirstOrDefault(session =>
@@ -201,7 +216,7 @@ namespace TicTacToe.Application.SignalRHub
 
                 string remainingPlayer =
                     gameSession.PlayerX == connectionId ? gameSession.PlayerO : gameSession.PlayerX;
-        
+
                 string gameId = gameSession.GameId;
                 GameSessions.TryRemove(gameId, out _);
 

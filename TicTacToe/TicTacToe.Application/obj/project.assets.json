@@ -2422,13 +2422,12 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj",
+      "projectUniqueName": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj",
       "projectName": "TicTacToe.Application",
-      "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj",
+      "projectPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\TicTacToe.Application.csproj",
       "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-      "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\obj\\",
+      "outputPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -2445,11 +2444,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj"
+            "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj": {
+              "projectPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj"
             },
-            "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
-              "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
+            "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj": {
+              "projectPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj"
             }
           }
         }
@@ -2462,8 +2461,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2494,8 +2494,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Security.Cryptography.Xml' 4.5.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vh55-786g-wjwj",
+      "libraryId": "System.Security.Cryptography.Xml",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Encodings.Web' 4.5.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-ghhp-997w-qr28",
+      "libraryId": "System.Text.Encodings.Web",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

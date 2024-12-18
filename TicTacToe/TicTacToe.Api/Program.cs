@@ -131,7 +131,7 @@ builder.Services.AddSwaggerGen(options =>
 #endregion
 
 builder.Services.AddDbContextFactory<TicTacToeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TicTacToeContext")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("TicTacToeContext")));
 
 WebApplication app = builder.Build();
 

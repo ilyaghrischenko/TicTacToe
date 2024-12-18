@@ -324,13 +324,12 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+      "projectUniqueName": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
       "projectName": "TicTacToe.Domain",
-      "projectPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+      "projectPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
       "packagesPath": "C:\\Users\\sannido\\.nuget\\packages\\",
-      "outputPath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\obj\\",
+      "outputPath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "C:\\Users\\sannido\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -357,8 +356,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -385,7 +385,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

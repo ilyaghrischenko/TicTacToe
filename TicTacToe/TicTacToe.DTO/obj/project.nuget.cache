@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AvRr2r7MHmo=",
+  "dgSpecHash": "ndklwZlFa2I=",
   "success": true,
-  "projectFilePath": "D:\\ForEdu\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
+  "projectFilePath": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.DTO\\TicTacToe.DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sannido\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "C:\\Users\\sannido\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",

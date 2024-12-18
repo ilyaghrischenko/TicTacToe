@@ -11,6 +11,7 @@ let isMyTurn = false;
 
 
 function handleCellClick(event) {
+    if (gameActive === false) return;
     const cell = event.target;
     const cellIndex = cell.getAttribute('data-index');
     if (cell.textContent !== '') return;
@@ -29,12 +30,14 @@ function handleCellClick(event) {
 
 function endTurn() {
     isMyTurn = false;
-    statusText.textContent = "Enemy's turn";
+    if (gameActive)
+        statusText.textContent = "Enemy's turn";
 }
+
 async function endGame(message) {
+    gameActive = false;
     renderRestartButton();
     renderEndGameButton();
-    gameActive = false;
     statusText.textContent = message;
 
     const token = sessionStorage.getItem('token');
@@ -77,7 +80,6 @@ async function drawBoard(boardArray) {
         }
     });
 }
-
 
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));

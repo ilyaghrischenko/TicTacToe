@@ -13,7 +13,7 @@ async function putOnEventHandlers() {
             }
         }
     });
-    
+
     await connection.on("ReceiveInvitation", function (senderUserName, senderUserId) {
         console.log("ReceiveInvitation");
         showInvitationModal(senderUserName, senderUserId);
@@ -41,9 +41,10 @@ async function putOnEventHandlers() {
             cell.textContent = '';
             cell.classList.add('active');
         });
-        
+
         currentGameId = gameId;
         playerSymbol = symbol;
+        gameActive = true;
         isMyTurn = symbol === 'X';
         drawBoard(boardArray);
 
@@ -52,18 +53,21 @@ async function putOnEventHandlers() {
 
     connection.on("ReceiveMove", async function (boardArray, currentTurn) {
         await drawBoard(boardArray);
-        statusText.textContent = playerSymbol === currentTurn ? "Your turn" : "Enemy's turn";
-        isMyTurn = playerSymbol === currentTurn;
+        if (gameActive) {
+            statusText.textContent = playerSymbol === currentTurn ? "Your turn" : "Enemy's turn";
+        }
+            isMyTurn = playerSymbol === currentTurn;
     });
 
-    connection.on("RestartGame", function () {
+    connection.on("ReceiveWin", function (winner) {
+        endGame(winner);
+    });
+
+    connection.on("RestartGame", async function (boardArray) {
         gameActive = true;
-        board.fill('');
+        await drawBoard(boardArray);
         statusText.textContent = isMyTurn ? "Your turn" : "Enemy's turn";
-        cells.forEach(cell => {
-            cell.textContent = '';
-            cell.classList.remove('active');
-        });
+        
         
         document.getElementById('endGameBtn').remove();
         document.getElementById('restartBtn').remove();
@@ -97,7 +101,7 @@ async function putOnEventHandlers() {
     });
 
     connection.on("UserIsBusy", function () {
-        showUserIsBusyModal(); 
+        showUserIsBusyModal();
     });
-    
+
 }
