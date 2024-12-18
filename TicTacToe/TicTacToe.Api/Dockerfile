@@ -22,11 +22,11 @@ COPY . .
 WORKDIR "/src/TicTacToe.Api"
 
 # Строим проект
-RUN dotnet build "TicTacToe.Api.csproj" -c Debug -o /app/build
+RUN dotnet build "TicTacToe.Api.csproj" -c Release -o /app/build
 
 # 3. Публикация сборки
 FROM build AS publish
-RUN dotnet publish "TicTacToe.Api.csproj" -c Debug -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "TicTacToe.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 
 # 4. Финальный образ
