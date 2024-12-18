@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4gf+vw15Vzdw8CAITcWpxpWG36j8edtaIypk8z0TjNU=",
+  "Hash": "2eq0Ohh3WFFvfcchIEz/jntEyIfAs31e+5MeU+9wOUk=",
   "Source": "TicTacToe.Api",
   "BasePath": "_content/TicTacToe.Api",
   "Mode": "Default",
@@ -682,8 +682,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gfq3h688qw",
-      "Integrity": "dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=",
+      "Fingerprint": "6c6152q88n",
+      "Integrity": "qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\game.js"
@@ -766,8 +766,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "53fwbw0aw7",
-      "Integrity": "nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=",
+      "Fingerprint": "dla2vean50",
+      "Integrity": "IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js"
@@ -3716,7 +3716,7 @@
       ]
     },
     {
-      "Route": "scripts/MainPageScripts/SignalRScripts/game.gfq3h688qw.js",
+      "Route": "scripts/MainPageScripts/SignalRScripts/game.6c6152q88n.js",
       "AssetFile": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\game.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3726,7 +3726,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2784"
+          "Value": "2848"
         },
         {
           "Name": "Content-Type",
@@ -3734,11 +3734,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=\""
+          "Value": "\"qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:35:15 GMT"
+          "Value": "Wed, 18 Dec 2024 12:40:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3748,7 +3748,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gfq3h688qw"
+          "Value": "6c6152q88n"
         },
         {
           "Name": "label",
@@ -3756,7 +3756,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8="
+          "Value": "sha256-qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4="
         }
       ]
     },
@@ -3771,7 +3771,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2784"
+          "Value": "2848"
         },
         {
           "Name": "Content-Type",
@@ -3779,11 +3779,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=\""
+          "Value": "\"qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:35:15 GMT"
+          "Value": "Wed, 18 Dec 2024 12:40:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3793,7 +3793,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8="
+          "Value": "sha256-qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4="
         }
       ]
     },
@@ -4044,7 +4044,7 @@
       ]
     },
     {
-      "Route": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.53fwbw0aw7.js",
+      "Route": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.dla2vean50.js",
       "AssetFile": "D:\\ForProgramming\\repos\\MyProjects\\CSharp\\TicTacToe\\TicTacToe\\TicTacToe.Api\\wwwroot\\scripts\\MainPageScripts\\SignalRScripts\\signalREventHandler.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4054,7 +4054,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "3887"
         },
         {
           "Name": "Content-Type",
@@ -4062,11 +4062,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\""
+          "Value": "\"IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:58:28 GMT"
+          "Value": "Wed, 18 Dec 2024 12:48:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4076,7 +4076,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "53fwbw0aw7"
+          "Value": "dla2vean50"
         },
         {
           "Name": "label",
@@ -4084,7 +4084,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="
+          "Value": "sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="
         }
       ]
     },
@@ -4099,7 +4099,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "3887"
         },
         {
           "Name": "Content-Type",
@@ -4107,11 +4107,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\""
+          "Value": "\"IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:58:28 GMT"
+          "Value": "Wed, 18 Dec 2024 12:48:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4121,7 +4121,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="
+          "Value": "sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="
         }
       ]
     },

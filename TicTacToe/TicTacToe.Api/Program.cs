@@ -130,8 +130,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 #endregion
 
-builder.Services.AddDbContextFactory<TicTacToeContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("TicTacToeContext")));
+builder.Services.AddPooledDbContextFactory<TicTacToeContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
 
 WebApplication app = builder.Build();
 

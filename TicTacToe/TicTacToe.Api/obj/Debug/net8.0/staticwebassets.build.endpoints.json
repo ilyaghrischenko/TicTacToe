@@ -2053,7 +2053,7 @@
       ]
     },
     {
-      "Route": "scripts/MainPageScripts/SignalRScripts/game.gfq3h688qw.js",
+      "Route": "scripts/MainPageScripts/SignalRScripts/game.6c6152q88n.js",
       "AssetFile": "scripts/MainPageScripts/SignalRScripts/game.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2067,7 +2067,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2784"
+          "Value": "2848"
         },
         {
           "Name": "Content-Type",
@@ -2075,21 +2075,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=\""
+          "Value": "\"qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:35:15 GMT"
+          "Value": "Wed, 18 Dec 2024 12:40:22 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gfq3h688qw"
+          "Value": "6c6152q88n"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8="
+          "Value": "sha256-qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4="
         },
         {
           "Name": "label",
@@ -2112,7 +2112,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2784"
+          "Value": "2848"
         },
         {
           "Name": "Content-Type",
@@ -2120,17 +2120,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=\""
+          "Value": "\"qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:35:15 GMT"
+          "Value": "Wed, 18 Dec 2024 12:40:22 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8="
+          "Value": "sha256-qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4="
         }
       ]
     },
@@ -2381,7 +2381,7 @@
       ]
     },
     {
-      "Route": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.53fwbw0aw7.js",
+      "Route": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.dla2vean50.js",
       "AssetFile": "scripts/MainPageScripts/SignalRScripts/signalREventHandler.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2395,7 +2395,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "3887"
         },
         {
           "Name": "Content-Type",
@@ -2403,21 +2403,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\""
+          "Value": "\"IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:58:28 GMT"
+          "Value": "Wed, 18 Dec 2024 12:48:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "53fwbw0aw7"
+          "Value": "dla2vean50"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="
+          "Value": "sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="
         },
         {
           "Name": "label",
@@ -2440,7 +2440,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3923"
+          "Value": "3887"
         },
         {
           "Name": "Content-Type",
@@ -2448,17 +2448,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\""
+          "Value": "\"IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 11:58:28 GMT"
+          "Value": "Wed, 18 Dec 2024 12:48:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="
+          "Value": "sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="
         }
       ]
     },

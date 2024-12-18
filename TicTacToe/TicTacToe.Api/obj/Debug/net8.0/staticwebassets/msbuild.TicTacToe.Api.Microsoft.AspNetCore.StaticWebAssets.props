@@ -570,8 +570,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gfq3h688qw</Fingerprint>
-      <Integrity>dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x+8=</Integrity>
+      <Fingerprint>6c6152q88n</Fingerprint>
+      <Integrity>qhysi+GHugCz6dVyrXIG67eKo2n+izyOb27exMbCFr4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\game.js'))</OriginalItemSpec>
@@ -642,8 +642,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>53fwbw0aw7</Fingerprint>
-      <Integrity>nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=</Integrity>
+      <Fingerprint>dla2vean50</Fingerprint>
+      <Integrity>IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\signalREventHandler.js'))</OriginalItemSpec>

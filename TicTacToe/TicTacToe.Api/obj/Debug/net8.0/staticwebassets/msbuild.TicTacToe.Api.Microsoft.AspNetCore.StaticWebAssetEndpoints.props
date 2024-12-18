@@ -372,17 +372,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-c3Rr0ZjwaaKMplvttmETNM942X5DIjtPQveiTOIgUzA="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"744"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022c3Rr0ZjwaaKMplvttmETNM942X5DIjtPQveiTOIgUzA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 12 Nov 2024 16:55:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/game.gfq3h688qw.js">
+    <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/game.6c6152q88n.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\game.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gfq3h688qw"},{"Name":"integrity","Value":"sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x\u002B8="},{"Name":"label","Value":"_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/game.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 11:35:15 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6c6152q88n"},{"Name":"integrity","Value":"sha256-qhysi\u002BGHugCz6dVyrXIG67eKo2n\u002BizyOb27exMbCFr4="},{"Name":"label","Value":"_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/game.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2848"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022qhysi\u002BGHugCz6dVyrXIG67eKo2n\u002BizyOb27exMbCFr4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 12:40:22 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/game.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\game.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x\u002B8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022dE6FzQA5lJvUaIIQ9sC9nJ4KRtn4VBja6TVMGKW7x\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 11:35:15 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qhysi\u002BGHugCz6dVyrXIG67eKo2n\u002BizyOb27exMbCFr4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2848"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022qhysi\u002BGHugCz6dVyrXIG67eKo2n\u002BizyOb27exMbCFr4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 12:40:22 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/invitationModalWindow.5e27yhvkka.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\invitationModalWindow.js'))</AssetFile>
@@ -420,17 +420,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3eSUFGcF/kPPooAEMJNHyasX6jbp7ENe8nMXuo9JjFI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"333"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00223eSUFGcF/kPPooAEMJNHyasX6jbp7ENe8nMXuo9JjFI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 12 Nov 2024 16:55:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/signalREventHandler.53fwbw0aw7.js">
+    <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/signalREventHandler.dla2vean50.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\signalREventHandler.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"53fwbw0aw7"},{"Name":"integrity","Value":"sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="},{"Name":"label","Value":"_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/signalREventHandler.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3923"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 11:58:28 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dla2vean50"},{"Name":"integrity","Value":"sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="},{"Name":"label","Value":"_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/signalREventHandler.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3887"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 12:48:55 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/MainPageScripts/SignalRScripts/signalREventHandler.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\MainPageScripts\SignalRScripts\signalREventHandler.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3923"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022nwCgi55gHmPQLCmTBrIwRMW4Sbgxi9kGKqEOrkC0pRk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 11:58:28 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3887"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022IXmUaCcig1VZbl2GgYMIZm7CYAGRGjoJBfv5XE8mOOA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 12:48:55 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TicTacToe.Api/scripts/UserSettingsScripts/changeAvatar.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\scripts\UserSettingsScripts\changeAvatar.js'))</AssetFile>
